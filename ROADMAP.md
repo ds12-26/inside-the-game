@@ -32,6 +32,9 @@ describes only what exists.
   *Tech:* Azure Kubernetes Service (AKS) with autoscaling per match.
 
 ## Cut during the build
+- **Pressure that matters.** In the synthetic data, passes under pressure succeed exactly as
+  often as other passes. Next: have the generator lower success under pressure so
+  "composure under pressure" becomes a real, measurable story.
 - **Dribble success rate.** Every dribble in the synthetic data is recorded as "lost", so a
   success rate would always read 0%. Next: extend the data generator to record successful
   dribbles too (the brief's "data innovation" track).

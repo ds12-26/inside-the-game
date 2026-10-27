@@ -93,3 +93,26 @@ def test_replay_streams_events_in_order():
         return [e["id"] async for e in stream(EVENTS[:3], speed=10_000)]
 
     assert asyncio.run(first_three()) == [1, 2, 3]
+
+
+def test_score_matches_the_score_recorded_on_every_goal():
+    for goal in (e for e in EVENTS if "score" in e):
+        assert stats.score(stats.events_until(EVENTS, goal["id"])) == goal["score"], stats.clock(goal)
+    assert stats.score(EVENTS) == INFO["final_score"]
+
+
+def test_shares_and_counts_stay_consistent_throughout_the_match():
+    for i in range(50, len(EVENTS) + 1, 50):
+        state = stats.match_state(EVENTS[:i], INFO)
+        tilt, possession = zip(*((t["field_tilt_pct"], t["possession_pct"]) for t in state["territory"].values()))
+        assert sum(tilt) == 100 and sum(possession) == 100
+        assert all(p["completed"] <= p["attempted"] for p in state["passing"].values())
+        assert all(x["on_target"] <= x["shots"] for x in state["expected_goals"].values())
+
+
+def test_pass_distance_and_difficulty_by_hand():
+    lane = next(e for e in EVENTS if e["id"] == 351)    # Lane's pass before Fox's goal
+    # along 13.9 x 1.05 = 14.6 m, across 6.8 x 0.68 = 4.6 m
+    assert round(stats.metres(lane["start"], lane["end"]), 1) == 15.3
+    # distance 15.3/50*40 = 12.2, no pressure, 14.6/30*20 = 9.7 forward, not into the box
+    assert stats.pass_difficulty(lane) == 22
