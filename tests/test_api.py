@@ -67,3 +67,31 @@ def test_countdown_holds_kick_off_until_the_page_has_counted_down():
     start = time.time()
     messages = sse(client.get("/api/live/match_002", params={"role": "analyst", "speed": 1e9, "countdown": 1}).text)
     assert messages[0][1]["countdown"] == 1 and time.time() - start >= 1
+
+
+def test_live_commentary_arrives_before_play_moves_on(monkeypatch):
+    """When agents write live, play waits at each moment so the words match the pitch."""
+    import asyncio
+    from matchmind import agents, api
+
+    async def write_card(agents_, match_id, moment, mode, viewer):
+        await asyncio.sleep(0.01)                              # the agents take a moment
+        return {"event_id": moment["event_id"], "clock": moment["clock"], "kind": moment["kind"], "mode": mode,
+                "language": "en", "content": {"text": "line"}, "source": "ai", "fact_check": {}}
+
+    class Tools:
+        async def __aenter__(self): return self
+        async def __aexit__(self, *a): pass
+
+    monkeypatch.setattr(agents, "write_card", write_card)
+    monkeypatch.setattr(agents, "match_tools", lambda: Tools())
+    monkeypatch.setattr(agents, "build_agents", lambda tools=None: {})
+    messages = sse(client.get("/api/live/match_002", params={"role": "fan", "language": "fr", "speed": 1e9}).text)
+    assert messages[0][1]["source"] == "live"
+    last_event, late = 0, []
+    for kind, data in messages:
+        if kind == "event":
+            last_event = data["id"]
+        if kind == "card" and data["kind"] != "recap" and data["event_id"] != last_event:
+            late.append(data["clock"])
+    assert late == []

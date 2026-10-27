@@ -34,6 +34,7 @@ from matchmind.welcome_agent import welcome
 
 WEB_DIR = Path(__file__).resolve().parent.parent / "web"
 STATS_EVERY = 10          # events between live stats updates
+CARD_WAIT_S = 20          # live play waits this long at a moment for its commentary, so words match the pitch
 MAX_LIVE_MATCHES = int(os.environ.get("MAX_LIVE_MATCHES", "2"))   # caps model cost on a public URL
 live_matches = 0
 
@@ -189,7 +190,11 @@ async def _live(request, match_id, viewer, speed, start_after, countdown=0):
                 for card in cards_at.get(e["id"], []):
                     yield _sse("card", who(card))
             else:
-                tasks += [asyncio.create_task(write(m)) for m in pending.get(e["id"], [])]
+                new = [asyncio.create_task(write(m)) for m in pending.get(e["id"], []) if m["kind"] != "recap"]
+                tasks += new
+                if new:                    # hold play at the moment until its commentary is ready
+                    await asyncio.wait(new, timeout=CARD_WAIT_S)
+                tasks += [asyncio.create_task(write(m)) for m in pending.get(e["id"], []) if m["kind"] == "recap"]
             while not out.empty():
                 yield out.get_nowait()
         for task in asyncio.as_completed(tasks):

@@ -5,10 +5,11 @@ const PITCH_W = 105, PITCH_H = 68;
 const COUNTDOWN_S = 3;
 // Only actions worth calling out get a play-by-play line and a name tag.
 const KEY_TYPES = new Set(["shot", "own_goal", "save", "card", "corner"]);
+// Shown automatically while quiet play is skipped; nothing to click.
 const FAST_FORWARD = {
-  en: "⏩ Fast-forwarding to the next big moment", es: "⏩ Avanzando a la próxima jugada clave",
-  fr: "⏩ Avance rapide jusqu'au prochain temps fort", pt: "⏩ Avançando para o próximo lance importante",
-  hi: "⏩ अगले बड़े पल तक आगे बढ़ रहे हैं",
+  en: "⏩ Skipping quiet play: the next big moment is coming up", es: "⏩ Saltando el juego tranquilo: se acerca la próxima jugada clave",
+  fr: "⏩ On passe les temps calmes : le prochain temps fort arrive", pt: "⏩ Pulando o jogo parado: o próximo lance importante está chegando",
+  hi: "⏩ शांत खेल छोड़ रहे हैं: अगला बड़ा पल आने वाला है",
 };
 // One short line per moment for the fan timeline.
 const ICONS = { goal: "⚽", own_goal: "⚽", big_chance: "🎯", card: "🟨", kick_off: "▶️", period_end: "⏸️",
