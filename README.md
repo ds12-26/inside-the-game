@@ -10,7 +10,7 @@ data by another agent before it reaches the screen.
 Built for the *Inside the Game* developer hackathon (Microsoft × Premier League).
 All data is synthetic.
 
-**Live demo:** _URL added after deployment_ · **Roadmap:** [ROADMAP.md](ROADMAP.md)
+**Live demo:** https://inside-the-game.calmocean-9ce9113c.eastus2.azurecontainerapps.io (first load after a quiet spell can take ~30 s while the app wakes up) · **Roadmap:** [ROADMAP.md](ROADMAP.md)
 
 ## The problem
 Scorelines don't explain matches, and one broadcast can't serve everyone. A casual fan
