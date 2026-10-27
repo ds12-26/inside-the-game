@@ -35,9 +35,13 @@ match_002.json ──► Replay engine (live stream, speed-up)
 ## Product decisions (from Diti)
 - **Welcome agent** asks who you are (fan, analyst, broadcaster) and takes each to their own experience.
 - **Fan experience is the star**: a Narrator agent gives live TV-style commentary on a TV-broadcast
-  screen (animated pitch, scoreboard bug, caption bar), spoken aloud with a mute button.
+  screen (animated pitch, scoreboard bug, caption bar). Spoken commentary cut (flat TTS; see ROADMAP).
 - **Analyst and broadcaster**: lighter but real. Analyst cards explain why moments matter;
-  the broadcaster gets timed overlay graphics and a recap.
+  the broadcaster gets on-screen graphics plus director cues (what to put on air next).
+- **Orchestration**: Welcome agent routes to the specialist (routed orchestration); each moment
+  runs writer -> Fact-Checker (sequential with a feedback loop); at full time the Narrator,
+  Analyst and Broadcaster write concurrently and a Coordinator merges them (fan-out / fan-in),
+  then the Fact-Checker verifies the merge.
 - **xG**: decimals for analysts and broadcasters; fans get it in plain words, never decimals.
 - Insights that matter most: pass quality, territorial dominance, expected goals, player stories.
 
@@ -49,7 +53,6 @@ match_002.json ──► Replay engine (live stream, speed-up)
 | Azure MCP | Match Data MCP server exposing events and stats as tools |
 | Microsoft Foundry project | Model deployment and tracing |
 | Azure Container Apps | Hosting the API and MCP server |
-| Azure AI Speech | Stretch: spoken commentary for key moments |
 | GitHub Copilot Agent Mode | Used for real on part of the build (frontend or tests) |
 | Fabric, Cosmos DB, AKS | Roadmap only (see ROADMAP.md) |
 

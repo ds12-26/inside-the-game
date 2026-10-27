@@ -32,6 +32,13 @@ describes only what exists.
   *Tech:* Azure Kubernetes Service (AKS) with autoscaling per match.
 
 ## Cut during the build
+- **Spoken commentary.** Cut to make room for the director alerts and the ensemble report, and
+  because flat text-to-speech would undercut the TV feel. Next: Azure AI Speech neural voices with
+  SSML speaking styles (e.g. "excited" for goals, calm for check-ins) and per-language voices.
+  *Tech:* Azure AI Speech.
+- **Chat-style handoff.** The Welcome agent routes each viewer to a specialist workflow
+  (routed orchestration). Next: Agent Framework handoff orchestration so a viewer can switch
+  mid-match ("explain that like an analyst") without starting over.
 - **Pressure that matters.** In the synthetic data, passes under pressure succeed exactly as
   often as other passes. Next: have the generator lower success under pressure so
   "composure under pressure" becomes a real, measurable story.

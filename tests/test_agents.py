@@ -125,3 +125,25 @@ def test_recap_knows_every_goal_and_the_final_score():
     recap = recap_moment(EVENTS, INFO)
     assert [g["scorer"] for g in recap["facts"]["goals"]] == ["Fox", "Gray", "Reid", "Cruz", "Bell"]
     assert recap["facts"]["score"] == {"Red Lions": 3, "Blue Sharks": 2}
+
+
+def test_ensemble_fans_out_to_three_views_and_fact_checks_the_merge():
+    from matchmind.ensemble import ensemble_report
+
+    view = {"title": "Red Lions win", "paragraphs": ["Red Lions won 3-2."]}
+    report = {"title": "Red Lions edge it", "summary": "Red Lions won 3-2 after extra time.",
+              "sections": [{"perspective": "The numbers", "text": "4.61 xG to 2.48."}]}
+    wrong = {**report, "summary": "Red Lions won 4-2."}
+    recap, checker = FakeAgent(view, view, view), FakeAgent({"approved": True, "problems": []})
+    coordinator = FakeAgent(wrong, report)
+    result = asyncio.run(ensemble_report("match_002", {"recap": recap, "checker": checker}, coordinator))
+    assert set(result["views"]) == {"fan", "analyst", "broadcaster"}
+    assert result["report"] == report and result["fact_check"]["attempts"] == 2   # 4-2 caught in code
+    assert "4-2" in result["fact_check"]["history"][0]["problems"][0]
+
+
+def test_passing_drop_alerts_the_director():
+    drops = [m for m in MOMENTS if m["kind"] == "passing_drop"]
+    assert len(drops) == 4 and all(m["team"] == "Blue Sharks" for m in drops)
+    first = drops[0]["facts"]["passing_drop"]
+    assert first["pass_accuracy_pct_match_so_far"] - first["pass_accuracy_pct_last_5_min"] >= 15

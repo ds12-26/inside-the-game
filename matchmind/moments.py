@@ -10,6 +10,9 @@ from matchmind import stats
 BIG_CHANCE_XG = stats.BIG_CHANCE_XG
 CHECK_IN_EVERY_MIN = 15       # a "how's it going" summary this often
 SWING_POINTS = 25             # field-tilt change over 10 minutes that counts as a momentum swing
+PASSING_DROP_POINTS = 15      # pass accuracy over the last 5 minutes this far below the match so far
+PASSING_CHECK_EVERY = 20      # events between passing checks
+PASSING_COOLDOWN_MIN = 10     # at most one passing alert per team in this many minutes
 EVENT_KINDS = ("goal", "own_goal", "big_chance", "card")
 # Summaries where the favourite player is always worth a mention; otherwise only when involved.
 FAVOURITE_KINDS = ("kick_off", "check_in", "momentum_swing", "period_end", "recap")
@@ -18,7 +21,7 @@ PERIOD_NAMES = {1: "first half", 2: "second half", 3: "first half of extra time"
 
 def scout(events, match_info):
     """Every moment in the match, in order. `events` must be in event order."""
-    moments, last_check_in, last_tilt = [], 0, None
+    moments, last_check_in, last_tilt, last_drop = [], 0, None, {}
     for i, e in enumerate(events):
         nxt = events[i + 1] if i + 1 < len(events) else None
         starts_period = i == 0 or events[i - 1]["period"] != e["period"]
@@ -36,6 +39,14 @@ def scout(events, match_info):
             swing = last_tilt is not None and abs(tilt - last_tilt) >= SWING_POINTS
             moments.append(_moment("momentum_swing" if swing else "check_in", so_far, match_info))
             last_tilt = tilt
+        if i % PASSING_CHECK_EVERY == 0:
+            for drop in passing_drops(events[:i + 1], match_info):
+                if minute - last_drop.get(drop["team"], -99) >= PASSING_COOLDOWN_MIN:
+                    last_drop[drop["team"]] = minute
+                    moment = _moment("passing_drop", events[:i + 1], match_info)
+                    moment["team"], moment["player"] = drop["team"], None
+                    moment["facts"]["passing_drop"] = drop
+                    moments.append(moment)
         if nxt is None or nxt["period"] != e["period"]:
             moments.append(_moment("period_end", events[:i + 1], match_info, final=nxt is None))
     return moments
@@ -155,3 +166,16 @@ def _keeper_of_team_conceding(moment, match_info, player):
                 scorer_team = moment["facts"]["event"].get("credited_to") or moment["team"]
                 return scorer_team != team["name"]
     return False
+
+
+def passing_drops(so_far, match_info):
+    """Teams whose pass accuracy over the last 5 minutes has fallen well below their match so far."""
+    recent = stats.last_minutes(so_far, 5)
+    drops = []
+    for side in ("home", "away"):
+        team = match_info[side]["name"]
+        now, overall = stats.pass_quality(recent, team=team), stats.pass_quality(so_far, team=team)
+        if now["attempted"] >= 8 and overall["accuracy_pct"] - now["accuracy_pct"] >= PASSING_DROP_POINTS:
+            drops.append({"team": team, "pass_accuracy_pct_match_so_far": overall["accuracy_pct"],
+                          "pass_accuracy_pct_last_5_min": now["accuracy_pct"], "passes_last_5_min": now["attempted"]})
+    return drops

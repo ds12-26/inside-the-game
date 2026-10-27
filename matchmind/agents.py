@@ -19,6 +19,7 @@ import os
 import re
 import sys
 from dataclasses import dataclass, field
+from typing import Literal
 
 from agent_framework import (Agent, Executor, MCPStdioTool, MCPStreamableHTTPTool, WorkflowBuilder,
                              WorkflowContext, function_middleware, handler)
@@ -56,10 +57,17 @@ class AnalystCard(BaseModel):
     evidence: list[Evidence] = Field(description="2-4 statistics, copied exactly from the facts or tools")
 
 
+class DirectorCue(BaseModel):
+    action: Literal["cut_to_replay", "show_graphic", "player_camera", "stats_package", "stay_live"]
+    priority: Literal["high", "medium", "low"]
+    reason: str = Field(description="One short sentence telling the director why, with the supporting statistic")
+
+
 class StudioCard(BaseModel):
     headline: str = Field(description="At most 5 words, for a full-screen graphic")
     lower_third: str = Field(description="At most 12 words, factual caption under the picture")
     talking_point: str = Field(description="One sentence the presenter can say")
+    director_cue: DirectorCue = Field(description="What the match director should put on air next")
 
 
 class Recap(BaseModel):
@@ -80,7 +88,8 @@ SCHEMAS = {"fan": FanLine, "analyst": AnalystCard, "broadcaster": StudioCard, "r
 SHARED_RULES = """
 Facts:
 - Use ONLY the FACTS given and the match_data tools (always pass match_id and at_event).
-- Nothing after the clock exists yet. Never hint at what happens later.
+- Nothing after the clock exists yet. Never hint at what happens later, and before the final
+  whistle never call a goal "the winner", "decisive" or say it "seals" the match.
 - Never say "again", "another", "first" or "second" about a goal, card or save unless the
   facts show how many there have been.
 - Refer to players by name, never "he" or "she".
@@ -107,10 +116,16 @@ INSTRUCTIONS = {
   field tilt, pressure, finishing against xG, or game rhythm. Explain cause, not just events.
 - evidence: 2-4 statistics with units, copied exactly from the FACTS or tools. Decimals are fine.
 """ + SHARED_RULES,
-    "broadcaster": """You produce on-screen graphics for a live football broadcast.
+    "broadcaster": """You are the producer's assistant on a live football broadcast. For each moment you write
+the on-screen graphics and tell the match director what to put on air next.
 - headline: at most 5 words, punchy, for a full-screen graphic.
 - lower_third: at most 12 words, a factual caption under the picture.
 - talking_point: one sentence the studio presenter can say, with one supporting statistic.
+- director_cue: the best next shot. cut_to_replay for goals, big chances and cards;
+  player_camera when one player is the story; stats_package when a pattern explains the game
+  (a momentum swing, a passing drop, territorial dominance); show_graphic for score or match
+  state; stay_live when nothing should interrupt play. Priority high for goals and red-hot
+  moments, medium for big chances and swings, low otherwise.
 - Neutral: never favour either team.
 """ + SHARED_RULES,
     "recap": """You write the full-time match recap for one viewer.
@@ -129,6 +144,12 @@ CHECKER_INSTRUCTIONS = """You are the Fact-Checker for a live football broadcast
 - Approve only if every factual claim in the draft is supported: the score, who did what, which team
   is on top, counts, how good a chance was, the minute, and words like "again" or "first".
 - If a claim is not in the FACTS, check it with the match_data tools (pass match_id and at_event).
+- Before final_whistle, calling a goal "the winner", "decisive" or saying it "seals" the match is a
+  problem: nobody knows yet.
+- Invented context is a problem: the crowd, competition, a final or title, venue, weather or history
+  are not in the facts.
+- Judgements about finishing must agree with finishing_vs_xg: below zero is not "efficient" or
+  "clinical".
 - Descriptions of how good a chance was must agree with chance_in_plain_words: a 1-in-4 chance is
   not "very clear", a long shot is not "a great chance".
 - Judge facts, not style or tone. Commentary is allowed opinion and emotion ("a huge night",
@@ -354,6 +375,7 @@ def fallback_content(moment, mode):
     return {
         "fan": {"text": line},
         "analyst": {"headline": line, "why_it_matters": "", "evidence": []},
-        "broadcaster": {"headline": moment["kind"].replace("_", " ").upper(), "lower_third": line, "talking_point": ""},
+        "broadcaster": {"headline": moment["kind"].replace("_", " ").upper(), "lower_third": line, "talking_point": "",
+                        "director_cue": {"action": "stay_live", "priority": "low", "reason": ""}},
         "recap": {"title": line, "paragraphs": []},
     }[mode]
