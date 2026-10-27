@@ -87,7 +87,10 @@ ENV_VARS=(FOUNDRY_PROJECT_ENDPOINT="$FOUNDRY_PROJECT_ENDPOINT" FOUNDRY_MODEL="$F
           AZURE_OPENAI_ENDPOINT="$AZURE_OPENAI_ENDPOINT" AZURE_OPENAI_DEPLOYMENT="$AZURE_OPENAI_DEPLOYMENT"
           AZURE_OPENAI_API_KEY=secretref:aoai-key)
 if az containerapp show -n "$WEB" -g "$RG" >/dev/null 2>&1; then
-  az containerapp secret set -n "$WEB" -g "$RG" --secrets aoai-key="$AZURE_OPENAI_API_KEY" -o none
+  # Secrets are set when the app is created; rotate with ROTATE_SECRETS=1 (this call can be slow).
+  if [ "${ROTATE_SECRETS:-0}" = 1 ]; then
+    az containerapp secret set -n "$WEB" -g "$RG" --secrets aoai-key="$AZURE_OPENAI_API_KEY" -o none
+  fi
   az containerapp update -n "$WEB" -g "$RG" --set-env-vars "${ENV_VARS[@]}" --no-wait -o none
 else
   az containerapp create -n "$WEB" -g "$RG" --environment "$ENV_NAME" --system-assigned \
