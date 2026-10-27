@@ -220,7 +220,7 @@ function startMatch() {
   source.addEventListener("stats", (e) => onStats(JSON.parse(e.data)));
   source.addEventListener("pace", (e) => onPace(JSON.parse(e.data).pace));
   source.addEventListener("card", (e) => onCard(JSON.parse(e.data)));
-  source.addEventListener("end", () => stop());
+  source.addEventListener("end", () => { onPace("slow"); stop(); });
 }
 
 // Loading message until the server is ready, then 3, 2, 1, Kick-off! timed to the first event.

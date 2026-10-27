@@ -79,6 +79,7 @@ def _moment(kind, so_far, match_info, final=False):
         "control_last_10_min": state["control_last_10_min"]["state"],
     }
     facts["scores_so_far"] = scores_so_far(so_far, match_info)
+    facts["leaders"] = leaders(facts["scores_so_far"], match_info)
     if kind in EVENT_KINDS:
         facts["event"] = ({k: e[k] for k in ("type", "outcome", "team", "player") if k in e}
                           | {k: e[k] for k in ("xg", "assist", "set_piece", "body_part", "credited_to") if k in e})
@@ -87,7 +88,8 @@ def _moment(kind, so_far, match_info, final=False):
         facts["player"] = {k: story[k] for k in ("player", "team", "position", "notes", "goals", "assists",
                                                   "shots", "saves", "cards")}
     if kind == "own_goal":
-        facts["own_goal"] = {"scored_by": e["player"], "into_the_net_of": e["team"], "goal_counts_for": e["credited_to"]}
+        facts["own_goal"] = {"scored_by": e["player"], "into_the_net_of": e["team"], "goal_counts_for": e["credited_to"],
+                             "what_happened": own_goal_words(e)}
     if kind == "big_chance":
         nxt_save = e["outcome"] == "saved"
         facts["chance_in_plain_words"] = plain_xg(e["xg"])
@@ -142,7 +144,7 @@ def recap_moment(events, match_info):
     end = _moment("recap", events, match_info, final=True)
     goals = [{"clock": stats.clock(e), "team": e["team"] if e["type"] == "shot" else e["credited_to"],
               "scorer": e["player"], "own_goal": e["type"] == "own_goal", "assist": e.get("assist"),
-              "score_after": e["score"]}
+              "score_after": e["score"]} | ({"what_happened": own_goal_words(e)} if e["type"] == "own_goal" else {})
              for e in events if e["type"] == "own_goal" or (e["type"] == "shot" and e["outcome"] == "goal")]
     xg = stats.expected_goals(events, match_info)
     end["facts"].update({
@@ -179,3 +181,55 @@ def passing_drops(so_far, match_info):
             drops.append({"team": team, "pass_accuracy_pct_match_so_far": overall["accuracy_pct"],
                           "pass_accuracy_pct_last_5_min": now["accuracy_pct"], "passes_last_5_min": now["attempted"]})
     return drops
+
+
+def leaders(scores, match_info):
+    """Who has led, and how often the lead changed hands (an equaliser is not a lead change)."""
+    home, away = match_info["home"]["name"], match_info["away"]["name"]
+    led, changes, current = [], 0, None
+    for s in scores:
+        h, a = map(int, s.split("-"))
+        leader = home if h > a else away if a > h else None
+        if leader and leader not in led:
+            led.append(leader)
+        if leader and current and leader != current:
+            changes += 1
+        current = leader or current
+    return {"teams_that_led": led, "lead_changes": changes}
+
+
+def own_goal_words(e):
+    """An own goal in one unambiguous sentence (models often put it in the wrong net)."""
+    owner = e["team"] + ("'" if e["team"].endswith("s") else "'s")
+    return f"{e['player']} of {e['team']} put the ball into {owner} own net; the goal counts for {e['credited_to']}."
+
+
+def plain_words(facts):
+    """Full-time facts for a fan: the story in words, no percentages or decimals to copy."""
+    out = {k: v for k, v in facts.items()
+           if k not in ("territory_whole_match", "territory_last_10_min", "passing", "expected_goals", "best_chances")}
+    (home, h), (away, a) = [(t, v) for t, v in facts["territory_whole_match"].items()]
+    words = []
+    for team, other, share in ((home, away, h["possession_pct"]), (away, home, a["possession_pct"])):
+        if share >= 65:
+            words.append(f"{team} had the ball about two-thirds of the time.")
+        elif share >= 55:
+            words.append(f"{team} had more of the ball.")
+    for team, other, tilt in ((home, away, h["field_tilt_pct"]), (away, home, a["field_tilt_pct"])):
+        if tilt >= 70:
+            words.append(f"{team} spent most of the match in {other}{chr(39) if other.endswith('s') else chr(39) + 's'} half.")
+    xg = facts.get("expected_goals", {})
+    if xg:
+        (t1, x1), (t2, x2) = xg.items()
+        words.append(f"{t1} had {x1['shots']} shots to {t2}{chr(39) if t2.endswith('s') else chr(39) + 's'} {x2['shots']}.")
+        better = t1 if x1["xg"] > x2["xg"] else t2
+        words.append(f"{better} created the better chances.")
+    fav = facts.get("favourite_player")
+    if fav and fav.get("pass_accuracy_pct") is not None:
+        acc = fav["pass_accuracy_pct"]
+        out["favourite_player"] = {k: v for k, v in fav.items() if k != "pass_accuracy_pct"}
+        out["favourite_player"]["passing_in_words"] = (
+            "almost every pass found a teammate" if acc >= 90 else
+            "most passes found a teammate" if acc >= 75 else "passing was patchy")
+    out["in_plain_words"] = words
+    return out

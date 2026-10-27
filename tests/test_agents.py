@@ -3,6 +3,7 @@ Tests for the agent workflow and the Moment Scout, using fake agents (free, no A
 """
 
 import asyncio
+import json
 from types import SimpleNamespace
 
 from matchmind.agents import current_event, no_spoilers, write_card
@@ -48,8 +49,9 @@ def test_moment_facts_only_know_the_past():
 
 def test_own_goal_says_whose_net_it_went_into():
     own_goal = next(m for m in MOMENTS if m["kind"] == "own_goal")
-    assert own_goal["facts"]["own_goal"] == {"scored_by": "Bell", "into_the_net_of": "Blue Sharks",
-                                            "goal_counts_for": "Red Lions"}
+    assert own_goal["facts"]["own_goal"] == {
+        "scored_by": "Bell", "into_the_net_of": "Blue Sharks", "goal_counts_for": "Red Lions",
+        "what_happened": "Bell of Blue Sharks put the ball into Blue Sharks' own net; the goal counts for Red Lions."}
 
 
 def test_favourite_player_facts_only_when_relevant():
@@ -218,3 +220,33 @@ def test_own_goal_into_the_wrong_net_is_caught_in_code():
     facts = recap_moment(EVENTS, INFO)["facts"]
     assert own_net_problems("Bell put the ball into Red Lions' own net", facts)
     assert not own_net_problems("Bell put the ball into Blue Sharks' own net", facts)
+
+
+def test_equalisers_are_not_lead_changes():
+    leaders = recap_moment(EVENTS, INFO)["facts"]["leaders"]
+    assert leaders == {"teams_that_led": ["Red Lions"], "lead_changes": 0}
+
+
+def test_fallback_recap_still_gives_the_result_and_the_goals():
+    from matchmind.agents import fallback_recap
+    recap = fallback_recap(recap_moment(EVENTS, INFO), "es")
+    assert recap["title"] == "Final: Red Lions 3–2 Blue Sharks"
+    assert recap["paragraphs"] == ["⚽ Fox 28' · Gray 62' · Reid 95' · Cruz 105' · Bell 113' (o.g.)"]
+
+
+def test_fan_recap_gets_plain_words_not_percentages():
+    from matchmind.moments import plain_words
+    facts = plain_words(recap_moment(EVENTS, INFO)["facts"])
+    assert "passing" not in facts and "territory_whole_match" not in facts
+    assert "Red Lions had the ball about two-thirds of the time." in facts["in_plain_words"]
+    assert "%" not in json.dumps(facts["in_plain_words"])
+    own = next(g for g in facts["goals"] if g["own_goal"])
+    assert own["what_happened"] == "Bell of Blue Sharks put the ball into Blue Sharks' own net; the goal counts for Red Lions."
+    assert "Red Lions spent most of the match in Blue Sharks' half." in facts["in_plain_words"]
+
+
+def test_fan_recap_favourite_player_in_words():
+    from matchmind.moments import plain_words
+    facts = plain_words(viewer_facts(recap_moment(EVENTS, INFO), EVENTS, INFO, "Fox")["facts"])
+    assert "pass_accuracy_pct" not in facts["favourite_player"]
+    assert facts["favourite_player"]["passing_in_words"] == "most passes found a teammate"

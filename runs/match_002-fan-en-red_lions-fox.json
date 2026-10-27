@@ -15,7 +15,7 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "Kick-off here, and it’s all square at 0-0. Fox hasn’t had a touch yet, but Red Lions look settled and level with Blue Sharks early on."
+        "text": "We’re underway, and Red Lions are on level terms at 0-0. Fox has not touched it yet, but Red Lions are right in the game as the opening pattern settles."
       },
       "source": "ai",
       "fact_check": {
@@ -24,7 +24,7 @@
         "history": [
           {
             "draft": {
-              "text": "Kick-off here, and it’s all square at 0-0. Fox hasn’t had a touch yet, but Red Lions look settled and level with Blue Sharks early on."
+              "text": "We’re underway, and Red Lions are on level terms at 0-0. Fox has not touched it yet, but Red Lions are right in the game as the opening pattern settles."
             },
             "problems": [],
             "notes": []
@@ -39,7 +39,7 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "Blue Sharks are booked early, Ward goes into the referee’s notebook at 2'. Red Lions can look to Fox and settle into this one, with the opening spell still feeling chaotic."
+        "text": "Yellow card for Ward, and the Blue Sharks are already walking a tightrope at 2'. Red Lions will fancy the next spell, with the game still goalless and a bit chaotic."
       },
       "source": "ai",
       "fact_check": {
@@ -48,7 +48,7 @@
         "history": [
           {
             "draft": {
-              "text": "Blue Sharks are booked early, Ward goes into the referee’s notebook at 2'. Red Lions can look to Fox and settle into this one, with the opening spell still feeling chaotic."
+              "text": "Yellow card for Ward, and the Blue Sharks are already walking a tightrope at 2'. Red Lions will fancy the next spell, with the game still goalless and a bit chaotic."
             },
             "problems": [],
             "notes": []
@@ -63,16 +63,25 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "Yellow for Price of Blue Sharks, and Red Lions will like that with the pressure already building. Fox and the Red Lions have been camped in Blue Sharks territory in this spell."
+        "text": "Yellow card for Price, and the Blue Sharks are already under the cosh. Red Lions have had the ball almost all the way in this spell and are camped in the Blue Sharks' half."
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 1,
+        "attempts": 2,
         "history": [
           {
             "draft": {
-              "text": "Yellow for Price of Blue Sharks, and Red Lions will like that with the pressure already building. Fox and the Red Lions have been camped in Blue Sharks territory in this spell."
+              "text": "Yellow card for Price, and the Blue Sharks are already on the back foot here. Red Lions have 83% of the final-third action in this spell and are camped in the Blue Sharks' half."
+            },
+            "problems": [
+              "fans should not see percentages or analyst terms; say it in plain words"
+            ],
+            "notes": []
+          },
+          {
+            "draft": {
+              "text": "Yellow card for Price, and the Blue Sharks are already under the cosh. Red Lions have had the ball almost all the way in this spell and are camped in the Blue Sharks' half."
             },
             "problems": [],
             "notes": []
@@ -87,16 +96,26 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "Ten minutes gone, and Red Lions are camped in Blue Sharks' half, but the breakthrough still hasn't come. Blue Sharks' passing has dropped badly over the last five minutes, and this is turning scrappy."
+        "text": "Red Lions are camped in Blue Sharks’ half and dominating the territory battle, but it’s still 0-0 at 10'. Blue Sharks’ passing has dropped sharply over the last 5 minutes, and the pressure is starting to tell."
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 1,
+        "attempts": 2,
         "history": [
           {
             "draft": {
-              "text": "Ten minutes gone, and Red Lions are camped in Blue Sharks' half, but the breakthrough still hasn't come. Blue Sharks' passing has dropped badly over the last five minutes, and this is turning scrappy."
+              "text": "Red Lions are on top of the territory battle, camped in Blue Sharks’ half, but it’s still 0-0 at 10'. Fox is involved in the build-up as Red Lions keep the pressure on, while Blue Sharks’ passing has just gone flat."
+            },
+            "problems": [
+              "UNSUPPORTED: \"Fox is involved in the build-up\" is not supported by the facts provided; no player involvement is given.",
+              "UNSUPPORTED: \"Blue Sharks’ passing has just gone flat\" is not stated in the facts as written. The facts only show a recent passing drop, not that it has \"gone flat\"."
+            ],
+            "notes": []
+          },
+          {
+            "draft": {
+              "text": "Red Lions are camped in Blue Sharks’ half and dominating the territory battle, but it’s still 0-0 at 10'. Blue Sharks’ passing has dropped sharply over the last 5 minutes, and the pressure is starting to tell."
             },
             "problems": [],
             "notes": []
@@ -111,7 +130,7 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "Fox is at the heart of it for Red Lions, and that is a huge chance kept out by the keeper. Red Lions are camped in Blue Sharks' half, but it stays 0-0."
+        "text": "Fox lets fly and the keeper turns it away! Red Lions are camped in Blue Sharks’ half, with Fox pulling the strings early."
       },
       "source": "ai",
       "fact_check": {
@@ -120,7 +139,7 @@
         "history": [
           {
             "draft": {
-              "text": "Fox is at the heart of it for Red Lions, and that is a huge chance kept out by the keeper. Red Lions are camped in Blue Sharks' half, but it stays 0-0."
+              "text": "Fox lets fly and the keeper turns it away! Red Lions are camped in Blue Sharks’ half, with Fox pulling the strings early."
             },
             "problems": [],
             "notes": []
@@ -135,7 +154,7 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "Red Lions are camped in Blue Sharks’ half and Fox is pulling the strings, but that big chance still stays out. It’s all Red Lions so far, with Blue Sharks barely getting a touch on it."
+        "text": "Red Lions are on top here, camped in Blue Sharks' half, but still no breakthrough at 16'. Fox has already threatened twice, including a good save at 12', and the pressure is building."
       },
       "source": "ai",
       "fact_check": {
@@ -144,7 +163,7 @@
         "history": [
           {
             "draft": {
-              "text": "Red Lions are camped in Blue Sharks’ half and Fox is pulling the strings, but that big chance still stays out. It’s all Red Lions so far, with Blue Sharks barely getting a touch on it."
+              "text": "Red Lions are on top here, camped in Blue Sharks' half, but still no breakthrough at 16'. Fox has already threatened twice, including a good save at 12', and the pressure is building."
             },
             "problems": [],
             "notes": []
@@ -159,7 +178,7 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "Fox puts Red Lions in front at 28'! Lane tees it up and the captain finishes, with Red Lions camped in Blue Sharks' half and fully in control."
+        "text": "Fox lashes Red Lions in front at 28'! The captain has been electric, and Red Lions are in control, camped in Blue Sharks' half and forcing the issue."
       },
       "source": "ai",
       "fact_check": {
@@ -168,7 +187,7 @@
         "history": [
           {
             "draft": {
-              "text": "Fox puts Red Lions in front at 28'! Lane tees it up and the captain finishes, with Red Lions camped in Blue Sharks' half and fully in control."
+              "text": "Fox lashes Red Lions in front at 28'! The captain has been electric, and Red Lions are in control, camped in Blue Sharks' half and forcing the issue."
             },
             "problems": [],
             "notes": []
@@ -183,28 +202,31 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "Red Lions are 1-0 up at 31', and Fox has his goal from the captain's role. Blue Sharks have offered little threat, while Red Lions have been the controlled side in this spell."
+        "text": "31' Red Lions 1 Blue Sharks 0"
       },
-      "source": "ai",
+      "source": "template",
       "fact_check": {
-        "approved": true,
+        "approved": false,
         "attempts": 2,
         "history": [
           {
             "draft": {
-              "text": "Red Lions are on top at 31', 1-0, and Fox has lit it up for the captain's side. Blue Sharks have barely laid a glove on them, with Fox's goal backed by a strong, controlled spell."
+              "text": "Red Lions are on top and Fox has the opener, with 95% passing and a captain's finish to his name. Blue Sharks have barely threatened, and Red Lions are controlling this spell."
             },
             "problems": [
-              "FALSE: \"Fox has lit it up\" overstates the available evidence; the facts support that Fox scored once and has had a strong match, but not that he has \"lit it up\" as a factual claim.",
-              "FALSE: \"Blue Sharks have barely laid a glove on them\" is stronger than the facts show; Blue Sharks have 1 shot, 0 on target and low xG, but \"barely\" is subjective and not directly supported as a fact."
+              "fans should not see percentages or analyst terms; say it in plain words"
             ],
             "notes": []
           },
           {
             "draft": {
-              "text": "Red Lions are 1-0 up at 31', and Fox has his goal from the captain's role. Blue Sharks have offered little threat, while Red Lions have been the controlled side in this spell."
+              "text": "Red Lions are on top, with Fox’s captain’s finish giving them the edge and Blue Sharks barely threatening. Red Lions have been in control of this spell, and Fox is right in the thick of it with sharp passing and four shots."
             },
-            "problems": [],
+            "problems": [
+              "UNSUPPORTED: \"Blue Sharks barely threatening\" is not supported by the facts provided.",
+              "UNSUPPORTED: \"Red Lions have been in control of this spell\" is broader than the supplied control information, which only says the last 10 minutes were controlled.",
+              "UNSUPPORTED: \"sharp passing\" is not directly supported by the facts; only Fox's pass accuracy is given, not a general passing quality description."
+            ],
             "notes": []
           }
         ]
@@ -217,7 +239,7 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "Blue Sharks are suddenly sloppy in possession, and Red Lions are camped in their half with Fox helping keep the pressure on. It’s 1-0, and the home side are controlling this with real energy."
+        "text": "35' and Red Lions still have the edge, but this has turned frantic with Blue Sharks losing their passing rhythm. Red Lions are camped in Blue Sharks' half and Fox stays right in the thick of it."
       },
       "source": "ai",
       "fact_check": {
@@ -226,7 +248,7 @@
         "history": [
           {
             "draft": {
-              "text": "Blue Sharks are suddenly sloppy in possession, and Red Lions are camped in their half with Fox helping keep the pressure on. It’s 1-0, and the home side are controlling this with real energy."
+              "text": "35' and Red Lions still have the edge, but this has turned frantic with Blue Sharks losing their passing rhythm. Red Lions are camped in Blue Sharks' half and Fox stays right in the thick of it."
             },
             "problems": [],
             "notes": []
@@ -241,7 +263,7 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "Vale lets fly and the Red Lions keeper holds firm at the near post! Blue Sharks are pushing, but Red Lions still have the lead at 45+1'."
+        "text": "45+1' and Red Lions still hold the lead, but Blue Sharks break through with a real chance and Vale is denied! Red Lions have had the territory in this spell, yet that stop keeps it 1-0."
       },
       "source": "ai",
       "fact_check": {
@@ -250,7 +272,7 @@
         "history": [
           {
             "draft": {
-              "text": "Vale lets fly and the Red Lions keeper holds firm at the near post! Blue Sharks are pushing, but Red Lions still have the lead at 45+1'."
+              "text": "45+1' and Red Lions still hold the lead, but Blue Sharks break through with a real chance and Vale is denied! Red Lions have had the territory in this spell, yet that stop keeps it 1-0."
             },
             "problems": [],
             "notes": []
@@ -265,7 +287,7 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "Half-time and Red Lions go in 1-0 up, with Fox on the scoresheet and pulling the strings as captain. It’s been a lively, chaotic spell, and Red Lions have had the edge in territory and the better openings."
+        "text": "Half-time at 1-0 to Red Lions, and Fox has been at the heart of it as captain with the goal and 46 touches. The last 10 minutes have been chaotic, but Red Lions are still the side on top and Fox keeps pulling the strings."
       },
       "source": "ai",
       "fact_check": {
@@ -274,7 +296,7 @@
         "history": [
           {
             "draft": {
-              "text": "Half-time and Red Lions go in 1-0 up, with Fox on the scoresheet and pulling the strings as captain. It’s been a lively, chaotic spell, and Red Lions have had the edge in territory and the better openings."
+              "text": "Half-time at 1-0 to Red Lions, and Fox has been at the heart of it as captain with the goal and 46 touches. The last 10 minutes have been chaotic, but Red Lions are still the side on top and Fox keeps pulling the strings."
             },
             "problems": [],
             "notes": []
@@ -289,26 +311,16 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "46' and Red Lions keep the upper hand, with Fox still pulling the strings as captain after that goal. Blue Sharks are hanging on in a frantic spell, but Red Lions are spending more time in the right areas."
+        "text": "46' and Red Lions still on top, with Fox’s goal keeping them in control. Blue Sharks have had more of a spell after the break, but Red Lions are still seeing most of the ball and territory."
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 2,
+        "attempts": 1,
         "history": [
           {
             "draft": {
-              "text": "46' and the Red Lions are still in control, Fox at the heart of it as captain, driving them forward with 95% passing and that goal already on the board. The Blue Sharks are hanging on in a chaotic spell, but Red Lions have the territory and the chances."
-            },
-            "problems": [
-              "fans should not see percentages or analyst terms; say it in plain words",
-              "too long to read aloud: keep it under 45 words"
-            ],
-            "notes": []
-          },
-          {
-            "draft": {
-              "text": "46' and Red Lions keep the upper hand, with Fox still pulling the strings as captain after that goal. Blue Sharks are hanging on in a frantic spell, but Red Lions are spending more time in the right areas."
+              "text": "46' and Red Lions still on top, with Fox’s goal keeping them in control. Blue Sharks have had more of a spell after the break, but Red Lions are still seeing most of the ball and territory."
             },
             "problems": [],
             "notes": []
@@ -323,7 +335,7 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "Yellow for Fox at 47', and that tempers the mood for Red Lions after the break. Red Lions still hold the lead, but Blue Sharks have made it a messy spell."
+        "text": "Fox is booked at 47', and that stings for Red Lions after such a bright first half. Red Lions still lead 1-0, with Fox already on the scoresheet and pulling the strings despite the yellow."
       },
       "source": "ai",
       "fact_check": {
@@ -332,7 +344,7 @@
         "history": [
           {
             "draft": {
-              "text": "Yellow for Fox at 47', and that tempers the mood for Red Lions after the break. Red Lions still hold the lead, but Blue Sharks have made it a messy spell."
+              "text": "Fox is booked at 47', and that stings for Red Lions after such a bright first half. Red Lions still lead 1-0, with Fox already on the scoresheet and pulling the strings despite the yellow."
             },
             "problems": [],
             "notes": []
@@ -347,7 +359,7 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "Yellow for Brooks, and Red Lions still hold the edge at 1-0. Blue Sharks have had some pressure, but Red Lions are still edging the territory and possession."
+        "text": "Yellow for Brooks, and Red Lions will not mind the scoreline despite the bit of chaos in the last 10 minutes. Fox stays in the picture too, with Red Lions still on top at 1-0."
       },
       "source": "ai",
       "fact_check": {
@@ -356,7 +368,7 @@
         "history": [
           {
             "draft": {
-              "text": "Yellow for Brooks, and Red Lions still hold the edge at 1-0. Blue Sharks have had some pressure, but Red Lions are still edging the territory and possession."
+              "text": "Yellow for Brooks, and Red Lions will not mind the scoreline despite the bit of chaos in the last 10 minutes. Fox stays in the picture too, with Red Lions still on top at 1-0."
             },
             "problems": [],
             "notes": []
@@ -371,16 +383,28 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "Frost lets fly, but it’s saved! Blue Sharks are pushing hard, yet Red Lions still lead 1-0 at 54'."
+        "text": "54' and Blue Sharks come close, Frost hitting a real chance but Red Lions' keeper gets down to save it. Red Lions still lead 1-0, and the last spell has been chaotic."
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 1,
+        "attempts": 2,
         "history": [
           {
             "draft": {
-              "text": "Frost lets fly, but it’s saved! Blue Sharks are pushing hard, yet Red Lions still lead 1-0 at 54'."
+              "text": "54' and Blue Sharks come close, Frost hitting a real chance but Red Lions' keeper gets down to save it. Red Lions still lead 1-0, and the last spell has been chaotic, with Fox still a threat up front."
+            },
+            "problems": [
+              "FALSE: \"Fox\" is not supported by the facts; the shot was by Frost, not Fox.",
+              "UNSUPPORTED: \"still a threat up front\" is not shown by the facts for Fox or any player."
+            ],
+            "notes": [
+              "WORDING: \"come close\" is acceptable narrative, but if intended as a factual chance assessment it should stay aligned with the provided chance description ('a real chance, about 1 in 3')."
+            ]
+          },
+          {
+            "draft": {
+              "text": "54' and Blue Sharks come close, Frost hitting a real chance but Red Lions' keeper gets down to save it. Red Lions still lead 1-0, and the last spell has been chaotic."
             },
             "problems": [],
             "notes": []
@@ -395,7 +419,7 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "61' and Red Lions still lead 1-0, with Fox’s captain’s display right in the middle of this. Blue Sharks are hanging on after a chaotic spell, but Red Lions are camped in their half and pressing hard."
+        "text": "61' and Red Lions still in front, with Fox’s side controlling this spell and camping in Blue Sharks' half. Fox has been busy all match, though that yellow card still hangs over the captain."
       },
       "source": "ai",
       "fact_check": {
@@ -404,7 +428,7 @@
         "history": [
           {
             "draft": {
-              "text": "61' and Red Lions still lead 1-0, with Fox’s captain’s display right in the middle of this. Blue Sharks are hanging on after a chaotic spell, but Red Lions are camped in their half and pressing hard."
+              "text": "61' and Red Lions still in front, with Fox’s side controlling this spell and camping in Blue Sharks' half. Fox has been busy all match, though that yellow card still hangs over the captain."
             },
             "problems": [],
             "notes": []
@@ -419,7 +443,7 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "Gray lashes Blue Sharks level at 1-1, and that is a sharp finish from close to a 50-50 chance. Red Lions have still had the better of the territory, but this has turned chaotic."
+        "text": "Blue Sharks level it at 1-1 through Gray! Close to a 50-50 chance, and Gray takes it coolly after Frost’s assist."
       },
       "source": "ai",
       "fact_check": {
@@ -428,7 +452,7 @@
         "history": [
           {
             "draft": {
-              "text": "Gray lashes Blue Sharks level at 1-1, and that is a sharp finish from close to a 50-50 chance. Red Lions have still had the better of the territory, but this has turned chaotic."
+              "text": "Blue Sharks level it at 1-1 through Gray! Close to a 50-50 chance, and Gray takes it coolly after Frost’s assist."
             },
             "problems": [],
             "notes": []
@@ -443,7 +467,7 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "Park lashes at a real chance, but it flies off target for Red Lions. The score stays level at 1-1, with this one still feeling chaotic."
+        "text": "Park lets fly from a real chance, but it skews wide for Red Lions. They’re nudging this game forward, with Fox still one to watch every time Red Lions break."
       },
       "source": "ai",
       "fact_check": {
@@ -452,7 +476,7 @@
         "history": [
           {
             "draft": {
-              "text": "Park lashes at a real chance, but it flies off target for Red Lions. The score stays level at 1-1, with this one still feeling chaotic."
+              "text": "Park lets fly from a real chance, but it skews wide for Red Lions. They’re nudging this game forward, with Fox still one to watch every time Red Lions break."
             },
             "problems": [],
             "notes": []
@@ -467,25 +491,16 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "Yellow for Dean, and the Red Lions will like that as they keep pressing and pinning Blue Sharks back. It’s 1-1 at 70', with Fox still in the middle of a lively Red Lions push."
+        "text": "Yellow for Dean of Blue Sharks at 70', and Red Lions keep the pressure on. Fox is in the thick of it as the game stays level at 1-1."
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 2,
+        "attempts": 1,
         "history": [
           {
             "draft": {
-              "text": "Yellow for Dean, and the Red Lions will like that as they keep pressing with 66% of the final-third action in the last 10 minutes. It’s 1-1 at 70', with Fox still part of a lively Red Lions push."
-            },
-            "problems": [
-              "fans should not see percentages or analyst terms; say it in plain words"
-            ],
-            "notes": []
-          },
-          {
-            "draft": {
-              "text": "Yellow for Dean, and the Red Lions will like that as they keep pressing and pinning Blue Sharks back. It’s 1-1 at 70', with Fox still in the middle of a lively Red Lions push."
+              "text": "Yellow for Dean of Blue Sharks at 70', and Red Lions keep the pressure on. Fox is in the thick of it as the game stays level at 1-1."
             },
             "problems": [],
             "notes": []
@@ -500,7 +515,7 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "Big chance for Blue Sharks, but Vale pulls it wide. Red Lions are still holding their shape at 1-1, with Fox ready to spark things if the next opening comes."
+        "text": "72', and Vale has just flashed a real chance wide for Blue Sharks. Red Lions are hanging in there at 1-1, but Blue Sharks are pushing with real intent."
       },
       "source": "ai",
       "fact_check": {
@@ -509,7 +524,7 @@
         "history": [
           {
             "draft": {
-              "text": "Big chance for Blue Sharks, but Vale pulls it wide. Red Lions are still holding their shape at 1-1, with Fox ready to spark things if the next opening comes."
+              "text": "72', and Vale has just flashed a real chance wide for Blue Sharks. Red Lions are hanging in there at 1-1, but Blue Sharks are pushing with real intent."
             },
             "problems": [],
             "notes": []
@@ -524,16 +539,16 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "76' and Red Lions are on the front foot, pinned deep in Blue Sharks’ half and keeping the pressure on. Fox has been busy all evening, and Red Lions look the likelier side to nick it from here."
+        "text": "76' Red Lions 1 Blue Sharks 1"
       },
-      "source": "ai",
+      "source": "template",
       "fact_check": {
-        "approved": true,
+        "approved": false,
         "attempts": 2,
         "history": [
           {
             "draft": {
-              "text": "76' and Red Lions are still pressing hard, camped in Blue Sharks’ half with 94% of the last-10-minute field tilt. Fox has been busy all evening, and Red Lions look the likelier side to nick it from here."
+              "text": "76' and it’s level at 1-1, with Red Lions still camped in Blue Sharks’ half and pressing hard. Fox has been everywhere too, already with a goal, a yellow, and a superb 89% passing touch."
             },
             "problems": [
               "fans should not see percentages or analyst terms; say it in plain words"
@@ -542,9 +557,13 @@
           },
           {
             "draft": {
-              "text": "76' and Red Lions are on the front foot, pinned deep in Blue Sharks’ half and keeping the pressure on. Fox has been busy all evening, and Red Lions look the likelier side to nick it from here."
+              "text": "76' and it’s level at 1-1, with Red Lions pinned in Blue Sharks’ half and pressing hard. Fox has been superb too, already with a goal, a yellow, and really sharp passing all evening."
             },
-            "problems": [],
+            "problems": [
+              "FALSE: The draft says Red Lions are \"pinned in Blue Sharks’ half and pressing hard\" as a factual match-state claim, but the provided facts show the last 10 minutes were controlled by Red Lions with 94% field tilt and 76% possession, not Blue Sharks pinning them back.",
+              "FALSE: The draft says Fox has \"really sharp passing all evening,\" but the provided facts only support pass accuracy of 89% and a 50th completed pass; \"really sharp\" is an interpretation not established by the facts.",
+              "UNSUPPORTED: The draft says Fox has \"been superb too\"; this is an opinion/judgement not shown by the facts."
+            ],
             "notes": []
           }
         ]
@@ -557,26 +576,16 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "79' and Red Lions are camped in Blue Sharks' half, pouring forward. Crane's shot from a chance that is usually scored is saved, and it's still 1-1."
+        "text": "Crane is denied! Red Lions have pinned Blue Sharks deep, but the keeper keeps that usually scored chance out and the pressure stays on at 79'."
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 2,
+        "attempts": 1,
         "history": [
           {
             "draft": {
-              "text": "79' and Red Lions are camped in Blue Sharks' half now, with Fox's side pouring forward. Crane is denied from a chance that is usually scored, and Red Lions keep pressing at 1-1."
-            },
-            "problems": [
-              "FALSE: The draft says \"Fox's side\" but the facts only identify the teams as Red Lions and Blue Sharks; Fox is not supported.",
-              "FALSE: The draft implies Crane's saved shot is \"from a chance that is usually scored\" and this is supported, but it omits that the chance was Crane's own shot and that it was saved; more importantly, nothing supports attributing the side to Fox."
-            ],
-            "notes": []
-          },
-          {
-            "draft": {
-              "text": "79' and Red Lions are camped in Blue Sharks' half, pouring forward. Crane's shot from a chance that is usually scored is saved, and it's still 1-1."
+              "text": "Crane is denied! Red Lions have pinned Blue Sharks deep, but the keeper keeps that usually scored chance out and the pressure stays on at 79'."
             },
             "problems": [],
             "notes": []
@@ -591,7 +600,7 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "Huge opening for Red Lions, but Park lashes it off target from close to a 50-50 chance. The pressure is relentless at 1-1, with Red Lions camped in Blue Sharks' half."
+        "text": "Park lets fly from a really good opening, but it flashes wide for Red Lions. They’ve been camped in Blue Sharks’ half, and Fox’s side are still pressing for the breakthrough."
       },
       "source": "ai",
       "fact_check": {
@@ -600,7 +609,7 @@
         "history": [
           {
             "draft": {
-              "text": "Huge opening for Red Lions, but Park lashes it off target from close to a 50-50 chance. The pressure is relentless at 1-1, with Red Lions camped in Blue Sharks' half."
+              "text": "Park lets fly from a really good opening, but it flashes wide for Red Lions. They’ve been camped in Blue Sharks’ half, and Fox’s side are still pressing for the breakthrough."
             },
             "problems": [],
             "notes": []
@@ -615,7 +624,7 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "Red Lions are camped in Blue Sharks' half, but it stays 1-1 and Fox’s side are still pushing hard. Blue Sharks' passing has dropped off badly, and this finish is turning chaotic."
+        "text": "90+3' and Red Lions are pouring forward, camped in Blue Sharks' half, but the equaliser has made this a tense finish. Blue Sharks' passing has fallen away badly in the last 5 minutes, and Fox's side are pressing hard for a late breakthrough."
       },
       "source": "ai",
       "fact_check": {
@@ -624,7 +633,7 @@
         "history": [
           {
             "draft": {
-              "text": "Red Lions are camped in Blue Sharks' half, but it stays 1-1 and Fox’s side are still pushing hard. Blue Sharks' passing has dropped off badly, and this finish is turning chaotic."
+              "text": "90+3' and Red Lions are pouring forward, camped in Blue Sharks' half, but the equaliser has made this a tense finish. Blue Sharks' passing has fallen away badly in the last 5 minutes, and Fox's side are pressing hard for a late breakthrough."
             },
             "problems": [],
             "notes": []
@@ -639,16 +648,25 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "90+4' and it’s still level at 1-1, but Red Lions are camped in Blue Sharks’ half, squeezing every second of pressure. Fox has been everywhere as captain, and Red Lions have had the better chances, yet they still need one more clear opening."
+        "text": "Still 1-1 at 90+4', and Red Lions are camped in Blue Sharks' half with the game in chaos. Fox has been everywhere for Red Lions — a goal, 108 touches, and that yellow — but the equaliser still stands."
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 1,
+        "attempts": 2,
         "history": [
           {
             "draft": {
-              "text": "90+4' and it’s still level at 1-1, but Red Lions are camped in Blue Sharks’ half, squeezing every second of pressure. Fox has been everywhere as captain, and Red Lions have had the better chances, yet they still need one more clear opening."
+              "text": "Still 1-1 at 90+4', and Red Lions are camped in Blue Sharks' half with 68% possession, but the finish is all scramble and chaos. Fox has been everywhere for Red Lions — a goal, 108 touches, and that yellow — yet the equaliser still stands."
+            },
+            "problems": [
+              "fans should not see percentages or analyst terms; say it in plain words"
+            ],
+            "notes": []
+          },
+          {
+            "draft": {
+              "text": "Still 1-1 at 90+4', and Red Lions are camped in Blue Sharks' half with the game in chaos. Fox has been everywhere for Red Lions — a goal, 108 touches, and that yellow — but the equaliser still stands."
             },
             "problems": [],
             "notes": []
@@ -663,7 +681,7 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "91', and it’s still level in extra time, but Red Lions are camped in Blue Sharks’ half. Fox has been everywhere again, and Red Lions have the territory and the pressure to force a breakthrough."
+        "text": "91' and Red Lions are still pushing in extra time, camped in Blue Sharks' half, but it stays 1-1. Fox has been busy as captain all night, and Red Lions have had the better of the chances without finding the breakthrough."
       },
       "source": "ai",
       "fact_check": {
@@ -672,7 +690,7 @@
         "history": [
           {
             "draft": {
-              "text": "91', and it’s still level in extra time, but Red Lions are camped in Blue Sharks’ half. Fox has been everywhere again, and Red Lions have the territory and the pressure to force a breakthrough."
+              "text": "91' and Red Lions are still pushing in extra time, camped in Blue Sharks' half, but it stays 1-1. Fox has been busy as captain all night, and Red Lions have had the better of the chances without finding the breakthrough."
             },
             "problems": [],
             "notes": []
@@ -687,7 +705,7 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "Reid rises to meet Rook’s corner and powers Red Lions in front at 2-1! Fox’s side are camped in Blue Sharks territory, and this has been wild in extra time."
+        "text": "Reid powers in a header from Rook's corner, and Red Lions are back in front at 2-1! It has been chaotic in this extra period, but Fox's side are still pressing hard and look to be finishing stronger."
       },
       "source": "ai",
       "fact_check": {
@@ -696,10 +714,12 @@
         "history": [
           {
             "draft": {
-              "text": "Reid rises to meet Rook’s corner and powers Red Lions in front at 2-1! Fox’s side are camped in Blue Sharks territory, and this has been wild in extra time."
+              "text": "Reid powers in a header from Rook's corner, and Red Lions are back in front at 2-1! It has been chaotic in this extra period, but Fox's side are still pressing hard and look to be finishing stronger."
             },
             "problems": [],
-            "notes": []
+            "notes": [
+              "WORDING: \"are back in front\" is fine, but \"look to be finishing stronger\" is an unsupported interpretation of the live state rather than a factual claim."
+            ]
           }
         ]
       }
@@ -711,16 +731,27 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "103', and Red Lions are still on top as Crane lashes a real chance wide! Fox and company are keeping Blue Sharks pinned back, with Red Lions controlling the extra-time tempo."
+        "text": "Red Lions are still pressing, and Crane sends a real chance wide from a promising position. The score stays 2-1 in extra time, with Red Lions on top."
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 1,
+        "attempts": 2,
         "history": [
           {
             "draft": {
-              "text": "103', and Red Lions are still on top as Crane lashes a real chance wide! Fox and company are keeping Blue Sharks pinned back, with Red Lions controlling the extra-time tempo."
+              "text": "Red Lions are still pressing, and Crane sends a real chance wide from a promising position. Fox and the home side stay on top at 2-1 in extra time."
+            },
+            "problems": [
+              "FALSE: The draft says \"Fox and the home side\" are on top, but the facts say the score is Red Lions 2, Blue Sharks 1. No team named Fox appears in the facts."
+            ],
+            "notes": [
+              "WORDING: \"still pressing\" and \"promising position\" are supported as narrative/opinion, but \"stay on top\" is a vague restatement of the score rather than a precise factual claim."
+            ]
+          },
+          {
+            "draft": {
+              "text": "Red Lions are still pressing, and Crane sends a real chance wide from a promising position. The score stays 2-1 in extra time, with Red Lions on top."
             },
             "problems": [],
             "notes": []
@@ -735,16 +766,28 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "Blue Sharks hit back through Cruz, and it’s 2-2 in extra time. A close-range finish from about a 50-50 chance, with Wells slipping the pass through."
+        "text": "Cruz lashes Blue Sharks level at 2-2 in extra time! Red Lions have to reset, with Wells setting up that strike and Fox still needing a big say for the Reds."
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 1,
+        "attempts": 2,
         "history": [
           {
             "draft": {
-              "text": "Blue Sharks hit back through Cruz, and it’s 2-2 in extra time. A close-range finish from about a 50-50 chance, with Wells slipping the pass through."
+              "text": "Cruz has hammered Blue Sharks back in front at 105', and Red Lions are suddenly chasing the game again. Fox and company need a response fast after that close-range finish."
+            },
+            "problems": [
+              "FALSE: \"back in front\" is contradicted by the facts. The match is 2-2 at 105', and Blue Sharks never led.",
+              "FALSE: \"again\" / \"chasing the game again\" is contradicted by the facts. Blue Sharks never led, so Red Lions are not chasing after a lead change.",
+              "UNSUPPORTED: \"Fox and company\" is not supported by the provided facts; no player or squad member named Fox is given in the event or facts.",
+              "FALSE: \"close-range finish\" is contradicted by the shot information. The chance was 0.49 xG, described as about 49 in 100, not specifically a close-range finish."
+            ],
+            "notes": []
+          },
+          {
+            "draft": {
+              "text": "Cruz lashes Blue Sharks level at 2-2 in extra time! Red Lions have to reset, with Wells setting up that strike and Fox still needing a big say for the Reds."
             },
             "problems": [],
             "notes": []
@@ -759,7 +802,7 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "105+1' at the break in extra time, and it's still all square at 2-2. Red Lions have had the better of the chances, and Fox has been everywhere: a goal, 119 touches, and a captain's shift full of bite."
+        "text": "105+1' at the break in extra time, and it's still level at 2-2. Red Lions have had the edge over the night, with Fox busy all over again and still driving this from midfield."
       },
       "source": "ai",
       "fact_check": {
@@ -768,7 +811,7 @@
         "history": [
           {
             "draft": {
-              "text": "105+1' at the break in extra time, and it's still all square at 2-2. Red Lions have had the better of the chances, and Fox has been everywhere: a goal, 119 touches, and a captain's shift full of bite."
+              "text": "105+1' at the break in extra time, and it's still level at 2-2. Red Lions have had the edge over the night, with Fox busy all over again and still driving this from midfield."
             },
             "problems": [],
             "notes": []
@@ -783,7 +826,7 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "106' and still level at 2-2, with Red Lions now having to ride out a tense spell. Fox has been busy all night as captain, but the Sharks are pressing higher in this stretch."
+        "text": "106' and it’s still level at 2-2 in extra time, with Red Lions having had the better of the chances all night. Fox has been right in the thick of it too, with a goal, strong passing, and real bite in the tackle."
       },
       "source": "ai",
       "fact_check": {
@@ -792,7 +835,7 @@
         "history": [
           {
             "draft": {
-              "text": "106' and still level at 2-2, with Red Lions now having to ride out a tense spell. Fox has been busy all night as captain, but the Sharks are pressing higher in this stretch."
+              "text": "106' and it’s still level at 2-2 in extra time, with Red Lions having had the better of the chances all night. Fox has been right in the thick of it too, with a goal, strong passing, and real bite in the tackle."
             },
             "problems": [],
             "notes": []
@@ -807,16 +850,25 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "113' and it’s Red Lions still pushing hard, camped deep in Blue Sharks’ half. Blue Sharks’ passing has dipped badly in the last few minutes, and this is getting frantic."
+        "text": "113' and Red Lions are pouring forward at 2-2, with Blue Sharks under real pressure and struggling to keep the ball. Fox is still in the thick of it, and this has turned frantic."
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 1,
+        "attempts": 2,
         "history": [
           {
             "draft": {
-              "text": "113' and it’s Red Lions still pushing hard, camped deep in Blue Sharks’ half. Blue Sharks’ passing has dipped badly in the last few minutes, and this is getting frantic."
+              "text": "113' and Red Lions are pouring forward at 2-2, with 85% of the final-third action and Fox still at the heart of it. Blue Sharks have to find some calm fast, because this has gone chaotic."
+            },
+            "problems": [
+              "fans should not see percentages or analyst terms; say it in plain words"
+            ],
+            "notes": []
+          },
+          {
+            "draft": {
+              "text": "113' and Red Lions are pouring forward at 2-2, with Blue Sharks under real pressure and struggling to keep the ball. Fox is still in the thick of it, and this has turned frantic."
             },
             "problems": [],
             "notes": []
@@ -831,7 +883,7 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "Oh no for Blue Sharks — Bell turns it into his own net, and Red Lions go 3-2 up at 113'. Red Lions have been camped in Blue Sharks’ half, and Fox’s side are hanging on in a chaotic finish."
+        "text": "113' and Red Lions are back in front! Bell turns it into Blue Sharks' own net, and Red Lions lead 3-2 in a frantic spell."
       },
       "source": "ai",
       "fact_check": {
@@ -840,7 +892,7 @@
         "history": [
           {
             "draft": {
-              "text": "Oh no for Blue Sharks — Bell turns it into his own net, and Red Lions go 3-2 up at 113'. Red Lions have been camped in Blue Sharks’ half, and Fox’s side are hanging on in a chaotic finish."
+              "text": "113' and Red Lions are back in front! Bell turns it into Blue Sharks' own net, and Red Lions lead 3-2 in a frantic spell."
             },
             "problems": [],
             "notes": []
@@ -855,7 +907,7 @@
       "mode": "fan",
       "language": "en",
       "content": {
-        "text": "Red Lions have won it 3-2 after extra time, and what a fight from Fox as captain to the very end. Blue Sharks kept pushing, but Red Lions dug deep and held on through a chaotic finish."
+        "text": "Full time at 3-2, and Red Lions have won it after extra time! Fox’s captain’s shift was immense, with 140 touches and a goal, while Red Lions camped in Blue Sharks’ half late on."
       },
       "source": "ai",
       "fact_check": {
@@ -864,7 +916,7 @@
         "history": [
           {
             "draft": {
-              "text": "Red Lions have won it 3-2 after extra time, and what a fight from Fox as captain to the very end. Blue Sharks kept pushing, but Red Lions dug deep and held on through a chaotic finish."
+              "text": "Full time at 3-2, and Red Lions have won it after extra time! Fox’s captain’s shift was immense, with 140 touches and a goal, while Red Lions camped in Blue Sharks’ half late on."
             },
             "problems": [],
             "notes": []
@@ -879,40 +931,25 @@
       "mode": "recap",
       "language": "en",
       "content": {
-        "title": "Fox Drives Red Lions Through an Extra-Time Classic",
+        "title": "Fox sparks Red Lions in an extra-time classic",
         "paragraphs": [
-          "Red Lions won 3-2 after extra time, and Fox set the early pace by finishing Lane’s pass in the 28th minute. Blue Sharks replied through Gray in the 62nd minute, Red Lions moved back ahead when Reid scored from Rook’s pass in the 95th minute, and Cruz levelled for Blue Sharks in the 105th minute from Wells’ assist.",
-          "The turning point came in the 113th minute, when Bell turned the ball into Blue Sharks’ net for an own goal, sending Red Lions back in front. Fox was central to the story all night as captain, with 1 goal, 6 shots, 5 tackles won, 4 interceptions, 140 touches, and a yellow card.",
-          "Red Lions had the better of the match for long spells, moving the ball more sharply and spending much more time in Blue Sharks’ half. The closing stages were wild, but Red Lions kept pushing forward and spent the last part of extra time camped on the front foot to see it through."
+          "Red Lions won 3-2 after extra time, with Fox setting the tone early and finishing as the standout for the home side. Fox put Red Lions in front at 28' from Lane's pass, and Red Lions stayed on the front foot for long spells, spending most of the match in Blue Sharks' half and having more of the ball and more shots.",
+          "Blue Sharks fought back through Gray at 62', then Reid restored Red Lions' lead at 95' before Cruz levelled it at 105'. The turning point came at 113', when Bell of Blue Sharks put the ball into Blue Sharks' own net, handing Red Lions the lead for good in a match that had turned increasingly chaotic late on.",
+          "Red Lions created the better chances and finished with 27 shots to 15, so the result matched the pressure they kept building. Fox's goal, his work all game, and Red Lions' steady control made this a hard-earned win for the Red Lions fanbase."
         ]
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 2,
+        "attempts": 1,
         "history": [
           {
             "draft": {
-              "title": "Fox Sparks Red Lions in Extra-Time Thriller",
+              "title": "Fox sparks Red Lions in an extra-time classic",
               "paragraphs": [
-                "Red Lions won 3-2 after extra time, with Fox setting the tone early by finishing Lane’s assist in the 28th minute. Blue Sharks answered through Gray in the 62nd minute, then Red Lions went back in front when Reid converted Rook’s pass in the 95th minute. Blue Sharks forced it level yet again in the 105th minute through Cruz from Wells’ assist.",
-                "The swing came in the 113th minute when Bell put the ball into Red Lions’ net, and that own goal put Red Lions ahead for good at 3-2. Fox’s night still stood out: captain, goal scorer, 140 touches, 6 shots, 5 tackles won, 4 interceptions, and a yellow card, all while helping Red Lions keep the ball moving.",
-                "Red Lions controlled the match overall with 69% possession, 85% of final-third action, and 776 completed passes. The last 10 minutes were frantic, but Red Lions had the upper hand there too, with 79% possession and 91% of the territory, and that pressure carried them through the finish."
-              ]
-            },
-            "problems": [
-              "FALSE: the own goal went into the other team's net, not Red Lions's",
-              "fans should not see percentages or analyst terms; say it in plain words"
-            ],
-            "notes": []
-          },
-          {
-            "draft": {
-              "title": "Fox Drives Red Lions Through an Extra-Time Classic",
-              "paragraphs": [
-                "Red Lions won 3-2 after extra time, and Fox set the early pace by finishing Lane’s pass in the 28th minute. Blue Sharks replied through Gray in the 62nd minute, Red Lions moved back ahead when Reid scored from Rook’s pass in the 95th minute, and Cruz levelled for Blue Sharks in the 105th minute from Wells’ assist.",
-                "The turning point came in the 113th minute, when Bell turned the ball into Blue Sharks’ net for an own goal, sending Red Lions back in front. Fox was central to the story all night as captain, with 1 goal, 6 shots, 5 tackles won, 4 interceptions, 140 touches, and a yellow card.",
-                "Red Lions had the better of the match for long spells, moving the ball more sharply and spending much more time in Blue Sharks’ half. The closing stages were wild, but Red Lions kept pushing forward and spent the last part of extra time camped on the front foot to see it through."
+                "Red Lions won 3-2 after extra time, with Fox setting the tone early and finishing as the standout for the home side. Fox put Red Lions in front at 28' from Lane's pass, and Red Lions stayed on the front foot for long spells, spending most of the match in Blue Sharks' half and having more of the ball and more shots.",
+                "Blue Sharks fought back through Gray at 62', then Reid restored Red Lions' lead at 95' before Cruz levelled it at 105'. The turning point came at 113', when Bell of Blue Sharks put the ball into Blue Sharks' own net, handing Red Lions the lead for good in a match that had turned increasingly chaotic late on.",
+                "Red Lions created the better chances and finished with 27 shots to 15, so the result matched the pressure they kept building. Fox's goal, his work all game, and Red Lions' steady control made this a hard-earned win for the Red Lions fanbase."
               ]
             },
             "problems": [],

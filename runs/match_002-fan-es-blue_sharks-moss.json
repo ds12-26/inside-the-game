@@ -15,7 +15,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "Arranca el partido y los Blue Sharks ya están en marcha. Moss, atento en la portería, todavía espera su primera intervención."
+        "text": "Arranca el partido con todo en equilibrio: 0-0 y posesión repartida, sin un dominador claro. Moss todavía no entra en juego, pero Blue Sharks ya están establecidos desde atrás."
       },
       "source": "ai",
       "fact_check": {
@@ -24,7 +24,7 @@
         "history": [
           {
             "draft": {
-              "text": "Arranca el partido y los Blue Sharks ya están en marcha. Moss, atento en la portería, todavía espera su primera intervención."
+              "text": "Arranca el partido con todo en equilibrio: 0-0 y posesión repartida, sin un dominador claro. Moss todavía no entra en juego, pero Blue Sharks ya están establecidos desde atrás."
             },
             "problems": [],
             "notes": []
@@ -39,16 +39,25 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "¡Tarjeta amarilla para Ward! Blue Sharks mandan en campo rival, pero el arranque es caótico y Moss aún espera entrar en juego."
+        "text": "Tarjeta amarilla para Ward de Blue Sharks tan pronto, y eso frena el empuje azul. Moss sigue en el campo, y Blue Sharks mandan con claridad este tramo, pero el partido está muy desordenado."
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 1,
+        "attempts": 2,
         "history": [
           {
             "draft": {
-              "text": "¡Tarjeta amarilla para Ward! Blue Sharks mandan en campo rival, pero el arranque es caótico y Moss aún espera entrar en juego."
+              "text": "Tarjeta amarilla para Ward de Blue Sharks tan temprano, y eso corta el impulso azul. Moss sigue en el campo y Blue Sharks manda el 100% del terreno en este tramo, pero el juego está caótico."
+            },
+            "problems": [
+              "fans should not see percentages or analyst terms; say it in plain words"
+            ],
+            "notes": []
+          },
+          {
+            "draft": {
+              "text": "Tarjeta amarilla para Ward de Blue Sharks tan pronto, y eso frena el empuje azul. Moss sigue en el campo, y Blue Sharks mandan con claridad este tramo, pero el partido está muy desordenado."
             },
             "problems": [],
             "notes": []
@@ -63,7 +72,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "Tarjeta amarilla para Price de Blue Sharks, y eso corta el ritmo para los de azul. Red Lions están mandando en el campo en estos minutos, con Blue Sharks aguantando bajo presión."
+        "text": "Tarjeta amarilla para Price, y Blue Sharks tienen que calmarse ya. El tramo está muy caótico y Red Lions manda claramente en territorio."
       },
       "source": "ai",
       "fact_check": {
@@ -72,7 +81,7 @@
         "history": [
           {
             "draft": {
-              "text": "Tarjeta amarilla para Price de Blue Sharks, y eso corta el ritmo para los de azul. Red Lions están mandando en el campo en estos minutos, con Blue Sharks aguantando bajo presión."
+              "text": "Tarjeta amarilla para Price, y Blue Sharks tienen que calmarse ya. El tramo está muy caótico y Red Lions manda claramente en territorio."
             },
             "problems": [],
             "notes": []
@@ -87,7 +96,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "10' y sigue el 0-0, pero los Blue Sharks están atascados: 0 tiros y ninguna entrada al último tercio. Moss y compañía necesitan calma, porque el partido está caótico y el pase se ha caído en los últimos minutos."
+        "text": "Se le está haciendo cuesta arriba a Blue Sharks: Red Lions los está encerrando en su campo y la circulación azul se ha atascado. Moss necesita entrar más en juego para que los Sharks respiren."
       },
       "source": "ai",
       "fact_check": {
@@ -96,7 +105,7 @@
         "history": [
           {
             "draft": {
-              "text": "10' y sigue el 0-0, pero los Blue Sharks están atascados: 0 tiros y ninguna entrada al último tercio. Moss y compañía necesitan calma, porque el partido está caótico y el pase se ha caído en los últimos minutos."
+              "text": "Se le está haciendo cuesta arriba a Blue Sharks: Red Lions los está encerrando en su campo y la circulación azul se ha atascado. Moss necesita entrar más en juego para que los Sharks respiren."
             },
             "problems": [],
             "notes": []
@@ -111,7 +120,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "¡Aviso para Blue Sharks! Fox prueba de cerca, pero el guardameta la saca; Red Lions está metiendo a Blue Sharks en su mitad. Moss todavía espera entrar en juego."
+        "text": "¡Salvan a Blue Sharks! Fox se encuentra con una muy clara, pero el portero la tapa; Blue Sharks aguanta con Moss siguiendo muy de cerca el partido."
       },
       "source": "ai",
       "fact_check": {
@@ -120,7 +129,7 @@
         "history": [
           {
             "draft": {
-              "text": "¡Aviso para Blue Sharks! Fox prueba de cerca, pero el guardameta la saca; Red Lions está metiendo a Blue Sharks en su mitad. Moss todavía espera entrar en juego."
+              "text": "¡Salvan a Blue Sharks! Fox se encuentra con una muy clara, pero el portero la tapa; Blue Sharks aguanta con Moss siguiendo muy de cerca el partido."
             },
             "problems": [],
             "notes": []
@@ -135,7 +144,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "16' y sigue 0-0, pero los Red Lions mandan con el balón y han empujado a Blue Sharks muy atrás. Moss ya firma 2 paradas y mantiene viva la portería de Blue Sharks."
+        "text": "16' y sigue el 0-0, pero Moss ya sostiene al Blue Sharks con dos paradas importantes. El Red Lions manda por completo, con el Blue Sharks defendiendo muy atrás."
       },
       "source": "ai",
       "fact_check": {
@@ -144,7 +153,7 @@
         "history": [
           {
             "draft": {
-              "text": "16' y sigue 0-0, pero los Red Lions mandan con el balón y han empujado a Blue Sharks muy atrás. Moss ya firma 2 paradas y mantiene viva la portería de Blue Sharks."
+              "text": "16' y sigue el 0-0, pero Moss ya sostiene al Blue Sharks con dos paradas importantes. El Red Lions manda por completo, con el Blue Sharks defendiendo muy atrás."
             },
             "problems": [],
             "notes": []
@@ -159,16 +168,26 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "Gol de Fox para el Red Lions. Duro golpe para Blue Sharks, que aguantaba pero ahora queda por detrás en 28'; Moss sigue muy activo con tres paradas y buscando mantener vivo al equipo."
+        "text": "Gol de Fox para los Red Lions tras una ocasión real, de las que entran una de cada cuatro. Moss ya lleva 3 paradas para Blue Sharks y sigue siendo clave bajo palos."
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 1,
+        "attempts": 2,
         "history": [
           {
             "draft": {
-              "text": "Gol de Fox para el Red Lions. Duro golpe para Blue Sharks, que aguantaba pero ahora queda por detrás en 28'; Moss sigue muy activo con tres paradas y buscando mantener vivo al equipo."
+              "text": "Gol de Fox para los Red Lions, y Blue Sharks paga un error en una ocasión muy clara para el rival. Moss ya ha firmado tres paradas y sigue manteniendo a Blue Sharks con vida."
+            },
+            "problems": [
+              "FALSE: \"una ocasión muy clara\" no está respaldado; la propia FACTS describe la jugada como \"a real chance, scored about 1 time in 4\", que no equivale a una ocasión muy clara.",
+              "FALSE: \"Moss ya ha firmado tres paradas\" sí está respaldado, pero \"sigue manteniendo a Blue Sharks con vida\" es una interpretación/opinión no dada como hecho."
+            ],
+            "notes": []
+          },
+          {
+            "draft": {
+              "text": "Gol de Fox para los Red Lions tras una ocasión real, de las que entran una de cada cuatro. Moss ya lleva 3 paradas para Blue Sharks y sigue siendo clave bajo palos."
             },
             "problems": [],
             "notes": []
@@ -183,7 +202,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "31' y el Blue Sharks sigue sufriendo: Moss ya ha sacado 4 manos enormes, pero el Red Lions manda con claridad y domina el territorio. Hace falta una respuesta azul, porque arriba casi no están apareciendo."
+        "text": "31' y el Blue Sharks sufre: el Red Lions manda y ha tenido las llegadas más claras, con Moss sosteniendo al equipo con 4 paradas. Hace falta una reacción ya, porque el partido se está jugando muy cerca del área de Moss."
       },
       "source": "ai",
       "fact_check": {
@@ -192,7 +211,7 @@
         "history": [
           {
             "draft": {
-              "text": "31' y el Blue Sharks sigue sufriendo: Moss ya ha sacado 4 manos enormes, pero el Red Lions manda con claridad y domina el territorio. Hace falta una respuesta azul, porque arriba casi no están apareciendo."
+              "text": "31' y el Blue Sharks sufre: el Red Lions manda y ha tenido las llegadas más claras, con Moss sosteniendo al equipo con 4 paradas. Hace falta una reacción ya, porque el partido se está jugando muy cerca del área de Moss."
             },
             "problems": [],
             "notes": []
@@ -207,7 +226,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "35' y el Blue Sharks sigue sufriendo: el pase se ha enfriado y el Red Lions le tiene metido atrás, con el balón casi siempre en su campo. Moss necesita aparecer ya para cambiar este guion."
+        "text": "35' y el Blue Sharks necesita calma: la pelota no está saliendo limpia y Moss tiene que bajar mucho a recibir. El Red Lions está metido en su campo, con el partido torcido para los de azul."
       },
       "source": "ai",
       "fact_check": {
@@ -216,7 +235,7 @@
         "history": [
           {
             "draft": {
-              "text": "35' y el Blue Sharks sigue sufriendo: el pase se ha enfriado y el Red Lions le tiene metido atrás, con el balón casi siempre en su campo. Moss necesita aparecer ya para cambiar este guion."
+              "text": "35' y el Blue Sharks necesita calma: la pelota no está saliendo limpia y Moss tiene que bajar mucho a recibir. El Red Lions está metido en su campo, con el partido torcido para los de azul."
             },
             "problems": [],
             "notes": []
@@ -231,7 +250,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "¡Qué ocasión para Blue Sharks! Vale saca un tiro claro y el portero la manda fuera en una parada importante justo antes del descanso."
+        "text": "¡La tiene Vale para Blue Sharks, pero el portero la saca! Qué ocasión de Blue Sharks justo antes del descanso, y Moss sigue esperando para dejar su huella."
       },
       "source": "ai",
       "fact_check": {
@@ -240,7 +259,7 @@
         "history": [
           {
             "draft": {
-              "text": "¡Qué ocasión para Blue Sharks! Vale saca un tiro claro y el portero la manda fuera en una parada importante justo antes del descanso."
+              "text": "¡La tiene Vale para Blue Sharks, pero el portero la saca! Qué ocasión de Blue Sharks justo antes del descanso, y Moss sigue esperando para dejar su huella."
             },
             "problems": [],
             "notes": []
@@ -255,7 +274,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "Descanso en 45+2': el Blue Sharks va 1-0 abajo y Moss ya ha sostenido al equipo con 5 paradas. El Red Lions lleva más empuje, pero el partido sigue abierto."
+        "text": "Descanso con ventaja para Red Lions, 1-0, pero Blue Sharks sigue vivo gracias a Moss, que ya lleva 5 paradas. Partido caótico y Blue Sharks necesita más colmillo arriba."
       },
       "source": "ai",
       "fact_check": {
@@ -264,7 +283,7 @@
         "history": [
           {
             "draft": {
-              "text": "Descanso en 45+2': el Blue Sharks va 1-0 abajo y Moss ya ha sostenido al equipo con 5 paradas. El Red Lions lleva más empuje, pero el partido sigue abierto."
+              "text": "Descanso con ventaja para Red Lions, 1-0, pero Blue Sharks sigue vivo gracias a Moss, que ya lleva 5 paradas. Partido caótico y Blue Sharks necesita más colmillo arriba."
             },
             "problems": [],
             "notes": []
@@ -279,7 +298,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "Descanso y el Blue Sharks sigue por detrás, pero Moss está sosteniendo al equipo con paradas enormes. El Red Lions domina el balón y el territorio, aunque el tramo reciente ha sido caótico."
+        "text": "46' y el Blue Sharks sigue por detrás: el Red Lions manda 1-0 y ha tenido más control en el tramo final, con el partido bastante caótico. Moss ya lleva 5 paradas y mantiene con vida a los suyos."
       },
       "source": "ai",
       "fact_check": {
@@ -288,7 +307,7 @@
         "history": [
           {
             "draft": {
-              "text": "Descanso y el Blue Sharks sigue por detrás, pero Moss está sosteniendo al equipo con paradas enormes. El Red Lions domina el balón y el territorio, aunque el tramo reciente ha sido caótico."
+              "text": "46' y el Blue Sharks sigue por detrás: el Red Lions manda 1-0 y ha tenido más control en el tramo final, con el partido bastante caótico. Moss ya lleva 5 paradas y mantiene con vida a los suyos."
             },
             "problems": [],
             "notes": []
@@ -303,7 +322,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "47' y amarilla para Fox, el capitán de Red Lions, por una entrada tardía. Blue Sharks necesitan calmarse y Moss tiene que aparecer más con el balón para cambiar esto."
+        "text": "Tarjeta amarilla para Fox, y el capitán de Red Lions se mete en problemas al arrancar la segunda parte. Blue Sharks sigue 1-0 abajo, pero el partido está muy caótico y Moss necesita aparecer."
       },
       "source": "ai",
       "fact_check": {
@@ -312,7 +331,7 @@
         "history": [
           {
             "draft": {
-              "text": "47' y amarilla para Fox, el capitán de Red Lions, por una entrada tardía. Blue Sharks necesitan calmarse y Moss tiene que aparecer más con el balón para cambiar esto."
+              "text": "Tarjeta amarilla para Fox, y el capitán de Red Lions se mete en problemas al arrancar la segunda parte. Blue Sharks sigue 1-0 abajo, pero el partido está muy caótico y Moss necesita aparecer."
             },
             "problems": [],
             "notes": []
@@ -327,7 +346,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "Tarjeta amarilla para Brooks, y los Red Lions siguen mandando 1-0 al inicio de la segunda parte. Los Blue Sharks necesitan asentarse y Moss aún busca entrar más en juego."
+        "text": "47' y amarilla para Brooks: Blue Sharks presionan y Red Lions siguen con la ventaja. Moss y los de azul necesitan reaccionar ya."
       },
       "source": "ai",
       "fact_check": {
@@ -336,7 +355,7 @@
         "history": [
           {
             "draft": {
-              "text": "Tarjeta amarilla para Brooks, y los Red Lions siguen mandando 1-0 al inicio de la segunda parte. Los Blue Sharks necesitan asentarse y Moss aún busca entrar más en juego."
+              "text": "47' y amarilla para Brooks: Blue Sharks presionan y Red Lions siguen con la ventaja. Moss y los de azul necesitan reaccionar ya."
             },
             "problems": [],
             "notes": []
@@ -351,7 +370,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "¡La salva el portero! Frost se mete en una muy buena ocasión para Blue Sharks, pero el disparo queda frustrado con el 1-0 aún en contra."
+        "text": "¡Frost la ha tenido de verdad, pero el portero la saca! Blue Sharks aprietan en este tramo, aunque Red Lions siguen mandando 1-0."
       },
       "source": "ai",
       "fact_check": {
@@ -360,7 +379,7 @@
         "history": [
           {
             "draft": {
-              "text": "¡La salva el portero! Frost se mete en una muy buena ocasión para Blue Sharks, pero el disparo queda frustrado con el 1-0 aún en contra."
+              "text": "¡Frost la ha tenido de verdad, pero el portero la saca! Blue Sharks aprietan en este tramo, aunque Red Lions siguen mandando 1-0."
             },
             "problems": [],
             "notes": []
@@ -375,29 +394,18 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "61' Red Lions 1 Blue Sharks 0"
+        "text": "61' y el Blue Sharks sigue a remolque, pero Moss está sosteniendo al equipo con 5 paradas y mantiene viva la pelea. El Red Lions aprieta mucho más en el tramo reciente, con el partido bastante caótico."
       },
-      "source": "template",
+      "source": "ai",
       "fact_check": {
-        "approved": false,
-        "attempts": 2,
+        "approved": true,
+        "attempts": 1,
         "history": [
           {
             "draft": {
-              "text": "61' y Blue Sharks siguen buscando el empate, pero Red Lions aprieta con 79% de campo y el juego está caótico. Moss ya lleva 5 paradas y mantiene a Blue Sharks con vida."
+              "text": "61' y el Blue Sharks sigue a remolque, pero Moss está sosteniendo al equipo con 5 paradas y mantiene viva la pelea. El Red Lions aprieta mucho más en el tramo reciente, con el partido bastante caótico."
             },
-            "problems": [
-              "fans should not see percentages or analyst terms; say it in plain words"
-            ],
-            "notes": []
-          },
-          {
-            "draft": {
-              "text": "61' y Blue Sharks siguen buscando el empate, pero Red Lions manda claramente en el tramo final y el partido está muy desordenado. Moss ya lleva 5 paradas y mantiene a Blue Sharks con vida."
-            },
-            "problems": [
-              "FALSE: \"Moss ya lleva 5 paradas\" is supported, but the draft implies he is the reason Blue Sharks are still alive; that causal framing is opinion, not a factual problem. However, the factual issue is that \"Red Lions manda claramente en el tramo final\" is not accurately grounded in the 10-minute window unless you specify it as territory/possession dominance; the facts show 79% field tilt and 64% possession in the last 10 minutes, so the statement is supportable but slightly imprecise."
-            ],
+            "problems": [],
             "notes": []
           }
         ]
@@ -410,7 +418,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "¡Gol de Blue Sharks! Gray la mete tras la asistencia de Frost y empata el partido en el 62'. Blue Sharks golpea justo cuando Red Lions manda en campo, y ahora todo vuelve a estar abierto."
+        "text": "¡Gol de Blue Sharks! Gray aparece con sangre fría y empata el partido; Moss sigue metido en un duelo muy vivo, con Blue Sharks resistiendo en medio del caos."
       },
       "source": "ai",
       "fact_check": {
@@ -419,7 +427,7 @@
         "history": [
           {
             "draft": {
-              "text": "¡Gol de Blue Sharks! Gray la mete tras la asistencia de Frost y empata el partido en el 62'. Blue Sharks golpea justo cuando Red Lions manda en campo, y ahora todo vuelve a estar abierto."
+              "text": "¡Gol de Blue Sharks! Gray aparece con sangre fría y empata el partido; Moss sigue metido en un duelo muy vivo, con Blue Sharks resistiendo en medio del caos."
             },
             "problems": [],
             "notes": []
@@ -434,7 +442,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "¡Uf, Park se gira y suelta un disparo muy franco, pero se va fuera! El 1-1 sigue vivo en un tramo muy loco, y Moss debe estar muy atento para Blue Sharks."
+        "text": "¡Park se marcha por muy poco! El Red Lions está empujando en un tramo caótico, pero el Blue Sharks aguanta y Moss sigue metido en un partido muy igualado."
       },
       "source": "ai",
       "fact_check": {
@@ -443,7 +451,7 @@
         "history": [
           {
             "draft": {
-              "text": "¡Uf, Park se gira y suelta un disparo muy franco, pero se va fuera! El 1-1 sigue vivo en un tramo muy loco, y Moss debe estar muy atento para Blue Sharks."
+              "text": "¡Park se marcha por muy poco! El Red Lions está empujando en un tramo caótico, pero el Blue Sharks aguanta y Moss sigue metido en un partido muy igualado."
             },
             "problems": [],
             "notes": []
@@ -458,7 +466,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "Tarjeta amarilla para Dean en los Blue Sharks, y eso corta un poco el impulso en un tramo muy parejo. Moss sigue atento en la creación, con el partido todavía igualado a 1-1."
+        "text": "Tarjeta amarilla para Dean de Blue Sharks en el 70', y ojo porque el partido sigue igualadísimo, 1-1. Blue Sharks no afloja, pero Red Lions ha llevado más peligro con 14 tiros y 6 a puerta."
       },
       "source": "ai",
       "fact_check": {
@@ -467,7 +475,7 @@
         "history": [
           {
             "draft": {
-              "text": "Tarjeta amarilla para Dean en los Blue Sharks, y eso corta un poco el impulso en un tramo muy parejo. Moss sigue atento en la creación, con el partido todavía igualado a 1-1."
+              "text": "Tarjeta amarilla para Dean de Blue Sharks en el 70', y ojo porque el partido sigue igualadísimo, 1-1. Blue Sharks no afloja, pero Red Lions ha llevado más peligro con 14 tiros y 6 a puerta."
             },
             "problems": [],
             "notes": []
@@ -482,7 +490,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "Vale se planta y se gira para sacar el disparo, pero se va desviado. El 1-1 sigue vivo en el 72', con Blue Sharks buscando el golpe mientras Moss permanece atento arriba."
+        "text": "72': Vale lo intenta para Blue Sharks, una ocasión real, pero se va fuera. Blue Sharks siguen dentro del partido, con Moss y compañía buscando el golpe."
       },
       "source": "ai",
       "fact_check": {
@@ -491,7 +499,7 @@
         "history": [
           {
             "draft": {
-              "text": "Vale se planta y se gira para sacar el disparo, pero se va desviado. El 1-1 sigue vivo en el 72', con Blue Sharks buscando el golpe mientras Moss permanece atento arriba."
+              "text": "72': Vale lo intenta para Blue Sharks, una ocasión real, pero se va fuera. Blue Sharks siguen dentro del partido, con Moss y compañía buscando el golpe."
             },
             "problems": [],
             "notes": []
@@ -506,7 +514,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "76' y sigue el 1-1: los Blue Sharks resisten mientras los Red Lions mandan en el territorio y aprietan arriba. Moss está firme, con 5 paradas y una actuación enorme bajo palos."
+        "text": "76' y sigue el 1-1: los Blue Sharks aguantan mientras Moss sigue muy atento bajo palos con 5 paradas. En los últimos 10 minutos, el Red Lions está encerrando el juego en campo rival."
       },
       "source": "ai",
       "fact_check": {
@@ -515,7 +523,7 @@
         "history": [
           {
             "draft": {
-              "text": "76' y sigue el 1-1: los Blue Sharks resisten mientras los Red Lions mandan en el territorio y aprietan arriba. Moss está firme, con 5 paradas y una actuación enorme bajo palos."
+              "text": "76' y sigue el 1-1: los Blue Sharks aguantan mientras Moss sigue muy atento bajo palos con 5 paradas. En los últimos 10 minutos, el Red Lions está encerrando el juego en campo rival."
             },
             "problems": [],
             "notes": []
@@ -530,7 +538,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "¡Moss y los Blue Sharks resisten! Crane acaba de topar con una ocasión muy clara, y Blue Sharks siguen vivos en un tramo en el que Red Lions están encerrando el partido."
+        "text": "¡Qué parada de Moss! Crane conecta una ocasión muy clara, pero Blue Sharks respira en el 79' con el 1-1 y aguanta bajo una presión tremenda."
       },
       "source": "ai",
       "fact_check": {
@@ -539,7 +547,7 @@
         "history": [
           {
             "draft": {
-              "text": "¡Moss y los Blue Sharks resisten! Crane acaba de topar con una ocasión muy clara, y Blue Sharks siguen vivos en un tramo en el que Red Lions están encerrando el partido."
+              "text": "¡Qué parada de Moss! Crane conecta una ocasión muy clara, pero Blue Sharks respira en el 79' con el 1-1 y aguanta bajo una presión tremenda."
             },
             "problems": [],
             "notes": []
@@ -554,28 +562,31 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "¡Park desperdicia una ocasión que estaba cerca del 50-50 para Red Lions! Sigue el 1-1 en el 85', con Blue Sharks resistiendo en un tramo final caótico."
+        "text": "85' Red Lions 1 Blue Sharks 1"
       },
-      "source": "ai",
+      "source": "template",
       "fact_check": {
-        "approved": true,
+        "approved": false,
         "attempts": 2,
         "history": [
           {
             "draft": {
-              "text": "¡Park acaba de perdonar una muy clara para Red Lions! El 1-1 sigue vivo en el 85', y Blue Sharks aguanta mientras Moss busca aparecer en este tramo final."
+              "text": "85' y sigue todo igual: Red Lions aprieta con 68% de posesión y domina el campo, pero Moss sigue sosteniendo a Blue Sharks con paradas clave. Park acaba de mandar una muy buena ocasión fuera; qué alivio para los visitantes."
             },
             "problems": [
-              "FALSE: \"muy clara\" is not supported by the facts; the chance is described as about 58 in 100, which is close to a 50-50 chance, not a very clear chance.",
-              "UNSUPPORTED: \"Moss busca aparecer en este tramo final\" introduces Moss, who is not mentioned in the provided facts for this event."
+              "fans should not see percentages or analyst terms; say it in plain words"
             ],
             "notes": []
           },
           {
             "draft": {
-              "text": "¡Park desperdicia una ocasión que estaba cerca del 50-50 para Red Lions! Sigue el 1-1 en el 85', con Blue Sharks resistiendo en un tramo final caótico."
+              "text": "85' y Blue Sharks siguen vivos: Park acaba de mandar fuera una ocasión muy clara para Red Lions. Moss sigue sosteniendo el empate con intervenciones clave mientras los visitantes aguantan bajo mucha presión."
             },
-            "problems": [],
+            "problems": [
+              "FALSE: \"una ocasión muy clara\" no encaja con la oportunidad descrita; el disparo de Park fue fuera y su xG fue 0.58, una ocasión cercana al 50-50, no una gran ocasión muy clara.",
+              "UNSUPPORTED: \"Moss sigue sosteniendo el empate con intervenciones clave\" no está respaldado por los FACTS; no se indica ninguna parada o intervención de Moss en este evento.",
+              "UNSUPPORTED: \"los visitantes aguantan bajo mucha presión\" es una generalización no mostrada por los FACTS, que solo aportan presión/territorio en los últimos 10 minutos, no una afirmación global de que aguanten bajo mucha presión."
+            ],
             "notes": []
           }
         ]
@@ -588,7 +599,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "90+3' y el Blue Sharks se atasca con la pelota, con la salida mucho más imprecisa en estos minutos, pero sigue con vida en el empate. Red Lions aprieta con todo, lo encierra en su campo y el cierre es un caos."
+        "text": "90+3' y el Blue Sharks sufre: el Red Lions está encerrando el partido en campo rival y el ritmo es caótico. Moss y compañía necesitan calma ya para sostener el empate."
       },
       "source": "ai",
       "fact_check": {
@@ -597,7 +608,7 @@
         "history": [
           {
             "draft": {
-              "text": "90+3' y el Blue Sharks se atraganta en la salida: la precisión baja al 67% en los últimos minutos, pero sigue vivo con el empate. Red Lions aprieta a fondo, encierra al Blue Sharks y el cierre está caótico."
+              "text": "90+3' y el Blue Sharks la está pasando mal: el Red Lions manda con 98% del tramo reciente en campo rival y Wells acaba de perderla bajo presión. Moss y compañía necesitan calma ya, porque el empate sigue vivo."
             },
             "problems": [
               "fans should not see percentages or analyst terms; say it in plain words"
@@ -606,7 +617,7 @@
           },
           {
             "draft": {
-              "text": "90+3' y el Blue Sharks se atasca con la pelota, con la salida mucho más imprecisa en estos minutos, pero sigue con vida en el empate. Red Lions aprieta con todo, lo encierra en su campo y el cierre es un caos."
+              "text": "90+3' y el Blue Sharks sufre: el Red Lions está encerrando el partido en campo rival y el ritmo es caótico. Moss y compañía necesitan calma ya para sostener el empate."
             },
             "problems": [],
             "notes": []
@@ -621,7 +632,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "90+4' y sigue 1-1: Blue Sharks resisten como pueden en un tramo muy caótico, con Moss sosteniendo el empate con 7 paradas. Red Lions aprietan a fondo, pero no encuentran el golpe final."
+        "text": "90+4' y sigue 1-1: los Blue Sharks resisten con Moss gigantesco, con 7 paradas y una de ellas hace un rato. Los Red Lions empujan sin parar, pero el tramo final está caótico y el empate sigue vivo."
       },
       "source": "ai",
       "fact_check": {
@@ -630,7 +641,7 @@
         "history": [
           {
             "draft": {
-              "text": "90+4' y sigue 1-1: Blue Sharks resisten como pueden en un tramo muy caótico, con Moss sosteniendo el empate con 7 paradas. Red Lions aprietan a fondo, pero no encuentran el golpe final."
+              "text": "90+4' y sigue 1-1: los Blue Sharks resisten con Moss gigantesco, con 7 paradas y una de ellas hace un rato. Los Red Lions empujan sin parar, pero el tramo final está caótico y el empate sigue vivo."
             },
             "problems": [],
             "notes": []
@@ -645,16 +656,25 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "91' y sigue el 1-1: los Blue Sharks resisten con Moss enorme bajo palos, ya con 7 paradas. Los Red Lions aprietan y dominan el tramo, pero el partido está caótico."
+        "text": "91' y sigue el 1-1: los Blue Sharks resisten con Moss, que ya suma 7 paradas y acaba de volver a salvarla al 87'. Los Red Lions están encerrando al rival en su campo, pero ahora mismo todo es un caos."
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 1,
+        "attempts": 2,
         "history": [
           {
             "draft": {
-              "text": "91' y sigue el 1-1: los Blue Sharks resisten con Moss enorme bajo palos, ya con 7 paradas. Los Red Lions aprietan y dominan el tramo, pero el partido está caótico."
+              "text": "91' y sigue el 1-1: los Blue Sharks aguantan con Moss, que ya lleva 7 paradas y viene de una más a los 87'. Los Red Lions aprietan con 67% de posesión en los últimos 10 minutos, pero todo está caótico."
+            },
+            "problems": [
+              "fans should not see percentages or analyst terms; say it in plain words"
+            ],
+            "notes": []
+          },
+          {
+            "draft": {
+              "text": "91' y sigue el 1-1: los Blue Sharks resisten con Moss, que ya suma 7 paradas y acaba de volver a salvarla al 87'. Los Red Lions están encerrando al rival en su campo, pero ahora mismo todo es un caos."
             },
             "problems": [],
             "notes": []
@@ -669,7 +689,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "¡Gol de Red Lions! Reid se eleva en el córner y cabecea al gol: 2-1 en el 95', y Blue Sharks sufre con Moss resistiendo como puede bajo un bombardeo."
+        "text": "Gol de Reid para los Red Lions, de cabeza tras el córner de Rook. Qué golpe para los Blue Sharks en el 95'; Moss ha estado enorme, pero no puede con todo."
       },
       "source": "ai",
       "fact_check": {
@@ -678,7 +698,7 @@
         "history": [
           {
             "draft": {
-              "text": "¡Gol de Red Lions! Reid se eleva en el córner y cabecea al gol: 2-1 en el 95', y Blue Sharks sufre con Moss resistiendo como puede bajo un bombardeo."
+              "text": "Gol de Reid para los Red Lions, de cabeza tras el córner de Rook. Qué golpe para los Blue Sharks en el 95'; Moss ha estado enorme, pero no puede con todo."
             },
             "problems": [],
             "notes": []
@@ -693,7 +713,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "103': ¡Crane roza el empate con una ocasión clara, pero se marcha fuera! Blue Sharks sufre con Red Lions empujando y Moss sigue esperando su momento."
+        "text": "¡Crane la manda fuera para el Red Lions! El Blue Sharks sigue a un gol y Moss necesita entrar en juego pronto, porque el partido se está jugando casi todo en su campo."
       },
       "source": "ai",
       "fact_check": {
@@ -702,7 +722,7 @@
         "history": [
           {
             "draft": {
-              "text": "103': ¡Crane roza el empate con una ocasión clara, pero se marcha fuera! Blue Sharks sufre con Red Lions empujando y Moss sigue esperando su momento."
+              "text": "¡Crane la manda fuera para el Red Lions! El Blue Sharks sigue a un gol y Moss necesita entrar en juego pronto, porque el partido se está jugando casi todo en su campo."
             },
             "problems": [],
             "notes": []
@@ -717,7 +737,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "¡Gol de Blue Sharks! Cruz la mete tras un pase de Wells y el 2-2 vuelve a encender todo en la prórroga; Blue Sharks están empujando con fuerza por la banda."
+        "text": "¡Gol de Blue Sharks! Cruz la manda a la red tras el pase de Wells, y el 2-2 pone el partido al rojo vivo en la prórroga."
       },
       "source": "ai",
       "fact_check": {
@@ -726,7 +746,7 @@
         "history": [
           {
             "draft": {
-              "text": "¡Gol de Blue Sharks! Cruz la mete tras un pase de Wells y el 2-2 vuelve a encender todo en la prórroga; Blue Sharks están empujando con fuerza por la banda."
+              "text": "¡Gol de Blue Sharks! Cruz la manda a la red tras el pase de Wells, y el 2-2 pone el partido al rojo vivo en la prórroga."
             },
             "problems": [],
             "notes": []
@@ -741,7 +761,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "105+1' y sigue el 2-2: los Blue Sharks han resistido con Moss enorme bajo palos, ya suma 8 paradas. Ahora mandan en el tramo final y aún buscan el golpe en la prórroga."
+        "text": "Descanso en la primera parte de la prórroga: 2-2, y Blue Sharks siguen vivos. Moss ha respondido con 8 paradas y mantiene a los suyos en pie."
       },
       "source": "ai",
       "fact_check": {
@@ -750,7 +770,7 @@
         "history": [
           {
             "draft": {
-              "text": "105+1' y sigue el 2-2: los Blue Sharks han resistido con Moss enorme bajo palos, ya suma 8 paradas. Ahora mandan en el tramo final y aún buscan el golpe en la prórroga."
+              "text": "Descanso en la primera parte de la prórroga: 2-2, y Blue Sharks siguen vivos. Moss ha respondido con 8 paradas y mantiene a los suyos en pie."
             },
             "problems": [],
             "notes": []
@@ -765,7 +785,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "106' y seguimos 2-2: Blue Sharks están aguantando con alma, y Moss ha sido clave con 8 paradas. En la prórroga, el partido está muy igualado y Blue Sharks viven peligrosos al contragolpe."
+        "text": "106' y sigue el 2-2, con los Blue Sharks empujando más en estos minutos. Moss sigue firme bajo palos, ya con 8 paradas, y mantiene vivos a los suyos."
       },
       "source": "ai",
       "fact_check": {
@@ -774,7 +794,7 @@
         "history": [
           {
             "draft": {
-              "text": "106' y seguimos 2-2: Blue Sharks están aguantando con alma, y Moss ha sido clave con 8 paradas. En la prórroga, el partido está muy igualado y Blue Sharks viven peligrosos al contragolpe."
+              "text": "106' y sigue el 2-2, con los Blue Sharks empujando más en estos minutos. Moss sigue firme bajo palos, ya con 8 paradas, y mantiene vivos a los suyos."
             },
             "problems": [],
             "notes": []
@@ -789,25 +809,16 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "Red Lions aprieta muchísimo y Blue Sharks está sufriendo con la pelota en este tramo caótico. Moss y compañía necesitan aguantar y encontrar aire para salir de su campo."
+        "text": "Momento muy tenso: los Blue Sharks han perdido claridad con el balón y el pase se ha caído en los últimos minutos. Red Lions está encerrando el partido en campo rival, con Moss buscando una vía de salida para los Blue Sharks."
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 2,
+        "attempts": 1,
         "history": [
           {
             "draft": {
-              "text": "El Red Lions manda ahora, con 85% de la posesión en los últimos 10 minutos, y Blue Sharks sufre un bajón claro en el pase. Moss y compañía tienen que aguantar este tramo caótico."
-            },
-            "problems": [
-              "fans should not see percentages or analyst terms; say it in plain words"
-            ],
-            "notes": []
-          },
-          {
-            "draft": {
-              "text": "Red Lions aprieta muchísimo y Blue Sharks está sufriendo con la pelota en este tramo caótico. Moss y compañía necesitan aguantar y encontrar aire para salir de su campo."
+              "text": "Momento muy tenso: los Blue Sharks han perdido claridad con el balón y el pase se ha caído en los últimos minutos. Red Lions está encerrando el partido en campo rival, con Moss buscando una vía de salida para los Blue Sharks."
             },
             "problems": [],
             "notes": []
@@ -822,7 +833,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "¡Gol en propia puerta de Bell! Qué golpe para Blue Sharks en el 113', y Red Lions se pone 3-2; Moss había sostenido todo con 9 paradas, pero ahora toca remar otra vez."
+        "text": "¡Gol en propia puerta de Bell! Blue Sharks se hunde en el 113' y Red Lions se pone 3-2; Moss sigue sosteniendo al equipo con paradas, pero ahora queda un golpe durísimo."
       },
       "source": "ai",
       "fact_check": {
@@ -831,7 +842,7 @@
         "history": [
           {
             "draft": {
-              "text": "¡Gol en propia puerta de Bell! Qué golpe para Blue Sharks en el 113', y Red Lions se pone 3-2; Moss había sostenido todo con 9 paradas, pero ahora toca remar otra vez."
+              "text": "¡Gol en propia puerta de Bell! Blue Sharks se hunde en el 113' y Red Lions se pone 3-2; Moss sigue sosteniendo al equipo con paradas, pero ahora queda un golpe durísimo."
             },
             "problems": [],
             "notes": []
@@ -846,7 +857,7 @@
       "mode": "fan",
       "language": "es",
       "content": {
-        "text": "Final del tiempo extra: Blue Sharks pierden 3-2. Moss firma 9 paradas y mantiene viva la pelea hasta el final, pero Red Lions se lo llevan en un cierre caótico."
+        "text": "Final del partido: el Blue Sharks pierde 3-2. Qué actuación de Moss, con 9 paradas para mantener viva la esperanza hasta el último suspiro, pero el Red Lions se lleva el triunfo."
       },
       "source": "ai",
       "fact_check": {
@@ -855,7 +866,7 @@
         "history": [
           {
             "draft": {
-              "text": "Final del tiempo extra: Blue Sharks pierden 3-2. Moss firma 9 paradas y mantiene viva la pelea hasta el final, pero Red Lions se lo llevan en un cierre caótico."
+              "text": "Final del partido: el Blue Sharks pierde 3-2. Qué actuación de Moss, con 9 paradas para mantener viva la esperanza hasta el último suspiro, pero el Red Lions se lleva el triunfo."
             },
             "problems": [],
             "notes": []
@@ -870,39 +881,25 @@
       "mode": "recap",
       "language": "es",
       "content": {
-        "title": "Blue Sharks pelearon hasta el final, pero Red Lions se llevaron una prórroga caótica",
+        "title": "Blue Sharks pelean hasta el final, pero Red Lions se lleva el partido en la prórroga",
         "paragraphs": [
-          "Blue Sharks cayeron 3-2 ante Red Lions tras una prórroga llena de golpes. Fox abrió el marcador a los 28', Gray empató a los 62', Reid volvió a poner por delante a Red Lions a los 95', Cruz igualó a los 105' y, en el 113', Bell metió el balón en su propia portería para el 3-2 definitivo para Red Lions.",
-          "Red Lions llevaron el peso del partido casi todo el tiempo y terminaron imponiendo su juego con el balón y más presencia arriba. En el global, tuvieron más remates, más disparos a puerta y más llegadas al área, y en los últimos 10 minutos dominaron por completo en medio de un tramo muy caótico.",
-          "Moss sostuvo a Blue Sharks con 9 paradas y dejó varias intervenciones importantes en el 87', 96' y 107', pero no fue suficiente para evitar la derrota. Para Blue Sharks, la nota más dura fue ese own goal de Bell, que cambió el cierre del partido cuando todo parecía todavía abierto."
+          "Red Lions se puso por delante en el 28' con el gol de Fox tras el pase de Lane, pero Blue Sharks respondió en el 62' con Gray asistido por Frost. En la prórroga, Red Lions golpeó de nuevo en el 95' con Reid, Blue Sharks empató en el 105' por medio de Cruz tras pase de Wells, y el desenlace llegó en el 113' con un gol en propia puerta de Bell de Blue Sharks, que contó para Red Lions. Blue Sharks cayó 3-2 al final del tiempo extra.",
+          "Red Lions controló el partido durante casi todo el encuentro: tuvo el balón la mayor parte del tiempo, pasó más minutos en campo rival y generó más remates, 27 contra 15. Blue Sharks resistió con orden y llevó peligro cuando pudo, pero le costó sostener el ritmo cuando el choque se volvió caótico en el tramo final.",
+          "Moss mantuvo viva a Blue Sharks con 9 paradas, incluyendo intervenciones claras en el 87', 96' y 107'. Aun así, la jugada que cambió todo fue el propio gol de Bell en el 113', justo cuando el partido ya se había convertido en una batalla de ida y vuelta."
         ]
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 2,
+        "attempts": 1,
         "history": [
           {
             "draft": {
-              "title": "Blue Sharks se quedan a un paso tras una batalla de extra time",
+              "title": "Blue Sharks pelean hasta el final, pero Red Lions se lleva el partido en la prórroga",
               "paragraphs": [
-                "Blue Sharks lucharon hasta el final, pero Red Lions ganaron 3-2 en el 120+1'. El marcador fue cambiando con Fox para Red Lions a los 28', Gray para Blue Sharks a los 62', Reid para Red Lions a los 95' y Cruz para Blue Sharks a los 105'. En el 113', Bell terminó metiendo el balón en su propia portería, y ese own goal dio el 3-2 a Red Lions.",
-                "El partido tuvo muchas idas y vueltas, pero Red Lions mandaron casi siempre con el balón: 69% de posesión en todo el partido, 85% de presencia en el último tramo y 110 entradas al último tercio. También acabaron con 27 remates y 11 a portería, frente a 15 y 7 de Blue Sharks. Blue Sharks tuvieron momentos para volver a engancharse, pero Red Lions llevaron más peso durante la mayor parte del encuentro.",
-                "Para Blue Sharks, Moss estuvo enorme bajo palos con 9 paradas, incluyendo acciones clave en el 87', 96' y 107'. Aun así, la balanza se inclinó en los últimos minutos de la prórroga, cuando Red Lions empujaron más y encontraron la jugada que dejó a Blue Sharks sin premio."
-              ]
-            },
-            "problems": [
-              "fans should not see percentages or analyst terms; say it in plain words"
-            ],
-            "notes": []
-          },
-          {
-            "draft": {
-              "title": "Blue Sharks pelearon hasta el final, pero Red Lions se llevaron una prórroga caótica",
-              "paragraphs": [
-                "Blue Sharks cayeron 3-2 ante Red Lions tras una prórroga llena de golpes. Fox abrió el marcador a los 28', Gray empató a los 62', Reid volvió a poner por delante a Red Lions a los 95', Cruz igualó a los 105' y, en el 113', Bell metió el balón en su propia portería para el 3-2 definitivo para Red Lions.",
-                "Red Lions llevaron el peso del partido casi todo el tiempo y terminaron imponiendo su juego con el balón y más presencia arriba. En el global, tuvieron más remates, más disparos a puerta y más llegadas al área, y en los últimos 10 minutos dominaron por completo en medio de un tramo muy caótico.",
-                "Moss sostuvo a Blue Sharks con 9 paradas y dejó varias intervenciones importantes en el 87', 96' y 107', pero no fue suficiente para evitar la derrota. Para Blue Sharks, la nota más dura fue ese own goal de Bell, que cambió el cierre del partido cuando todo parecía todavía abierto."
+                "Red Lions se puso por delante en el 28' con el gol de Fox tras el pase de Lane, pero Blue Sharks respondió en el 62' con Gray asistido por Frost. En la prórroga, Red Lions golpeó de nuevo en el 95' con Reid, Blue Sharks empató en el 105' por medio de Cruz tras pase de Wells, y el desenlace llegó en el 113' con un gol en propia puerta de Bell de Blue Sharks, que contó para Red Lions. Blue Sharks cayó 3-2 al final del tiempo extra.",
+                "Red Lions controló el partido durante casi todo el encuentro: tuvo el balón la mayor parte del tiempo, pasó más minutos en campo rival y generó más remates, 27 contra 15. Blue Sharks resistió con orden y llevó peligro cuando pudo, pero le costó sostener el ritmo cuando el choque se volvió caótico en el tramo final.",
+                "Moss mantuvo viva a Blue Sharks con 9 paradas, incluyendo intervenciones claras en el 87', 96' y 107'. Aun así, la jugada que cambió todo fue el propio gol de Bell en el 113', justo cuando el partido ya se había convertido en una batalla de ida y vuelta."
               ]
             },
             "problems": [],

@@ -28,6 +28,7 @@ from dotenv import load_dotenv
 from pydantic import BaseModel, Field
 
 from matchmind.guards import check_script, scorelines
+from matchmind.moments import plain_words
 from matchmind.profile import LANGUAGES
 
 load_dotenv()
@@ -309,13 +310,17 @@ def writer_prompt(job):
         "at_event": job.moment["event_id"],
         "moment": job.moment["kind"],
         "viewer": viewer_text(job.viewer),
-        "FACTS": job.moment["facts"],
+        "FACTS": plain_words(job.moment["facts"]) if fan_recap(job) else job.moment["facts"],
     }
     if job.problems:
         request["your_previous_draft"] = job.draft
         request["fact_checker_found"] = job.problems
         request["instruction"] = "Rewrite the draft so every problem is fixed."
     return json.dumps(request, ensure_ascii=False)
+
+
+def fan_recap(job):
+    return job.mode == "recap" and job.viewer.get("role", "fan") == "fan" and "territory_whole_match" in job.moment["facts"]
 
 
 def checker_prompt(job):
@@ -337,6 +342,12 @@ def match_status(moment):
         if goal.get("own_goal"):
             settled.append(f"{goal['clock']}: {goal['scorer']} scored an own goal; it counts for {goal['team']}, "
                            f"and went into the other team's net. Saying it counted for {goal['team']} is correct.")
+    lead = facts.get("leaders")
+    if lead:
+        never = [t for t in facts["score"] if t not in lead["teams_that_led"]]
+        if never and lead["teams_that_led"]:
+            settled.append(f"{never[0]} never led. Equalisers are not lead changes: there were "
+                           f"{lead['lead_changes']} lead changes, so 'lead changes' or '{never[0]} led' is FALSE.")
     settled.append("Narrative words (swung, chaotic, frantic, turning point, thriller) are WORDING, never FALSE.")
     return " ".join(settled)
 
@@ -427,7 +438,7 @@ def card(job, approved):
         "kind": job.moment["kind"],
         "mode": job.mode,
         "language": job.viewer.get("language", "en"),
-        "content": job.draft if approved else fallback_content(job.moment, job.mode),
+        "content": job.draft if approved else fallback_content(job.moment, job.mode, job.viewer.get("language", "en")),
         "source": "ai" if approved else "template",
         "fact_check": {"approved": approved, "attempts": job.attempts, "history": job.history},
     }
@@ -436,7 +447,7 @@ def card(job, approved):
 def fallback_card(moment, mode, viewer, reason):
     return {
         "event_id": moment["event_id"], "clock": moment["clock"], "kind": moment["kind"], "mode": mode,
-        "language": viewer.get("language", "en"), "content": fallback_content(moment, mode),
+        "language": viewer.get("language", "en"), "content": fallback_content(moment, mode, viewer.get("language", "en")),
         "source": "template", "fact_check": {"approved": False, "attempts": 0, "error": reason},
     }
 
@@ -455,9 +466,24 @@ FALLBACK_CUES = {
 }
 
 
-def fallback_content(moment, mode):
+FULL_TIME = {"en": "Full time", "es": "Final", "fr": "Fin du match", "pt": "Fim de jogo", "hi": "फ़ुल टाइम"}
+
+
+def fallback_recap(moment, language):
+    """The result and the goals, built from the data: always true, in any language."""
+    facts = moment["facts"]
+    (home, h), (away, a) = facts["score"].items()
+    goals = " · ".join(f"{g['scorer']} {g['clock']}" + (" (o.g.)" if g["own_goal"] else "")
+                       for g in facts.get("goals", []))
+    return {"title": f"{FULL_TIME.get(language, 'Full time')}: {home} {h}–{a} {away}",
+            "paragraphs": [f"⚽ {goals}"] if goals else []}
+
+
+def fallback_content(moment, mode, language="en"):
     """A plain, always-true line for when the agents can't produce an approved one."""
     facts = moment["facts"]
+    if mode == "recap":
+        return fallback_recap(moment, language)
     score = " ".join(f"{team} {goals}" for team, goals in facts["score"].items())
     line = f"{moment['clock']} {score}"
     headline, action, priority, reason = FALLBACK_CUES.get(moment["kind"], ("UPDATE", "stay_live", "low", ""))
@@ -468,5 +494,4 @@ def fallback_content(moment, mode):
         "analyst": {"headline": line, "why_it_matters": "", "evidence": []},
         "broadcaster": {"headline": headline, "lower_third": line, "talking_point": "",
                         "director_cue": {"action": action, "priority": priority, "reason": reason}},
-        "recap": {"title": line, "paragraphs": []},
     }[mode]
