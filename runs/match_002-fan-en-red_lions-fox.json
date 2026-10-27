@@ -931,25 +931,54 @@
       "mode": "recap",
       "language": "en",
       "content": {
-        "title": "Fox sparks Red Lions in an extra-time classic",
+        "title": "Fox Sets the Tone as Red Lions Edge a Wild Extra-Time Battle",
         "paragraphs": [
-          "Red Lions won 3-2 after extra time, with Fox setting the tone early and finishing as the standout for the home side. Fox put Red Lions in front at 28' from Lane's pass, and Red Lions stayed on the front foot for long spells, spending most of the match in Blue Sharks' half and having more of the ball and more shots.",
-          "Blue Sharks fought back through Gray at 62', then Reid restored Red Lions' lead at 95' before Cruz levelled it at 105'. The turning point came at 113', when Bell of Blue Sharks put the ball into Blue Sharks' own net, handing Red Lions the lead for good in a match that had turned increasingly chaotic late on.",
-          "Red Lions created the better chances and finished with 27 shots to 15, so the result matched the pressure they kept building. Fox's goal, his work all game, and Red Lions' steady control made this a hard-earned win for the Red Lions fanbase."
+          "Red Lions won 3-2 after extra time in a frantic contest, and Fox put them in front in the 28th minute with Lane's assist. Blue Sharks answered through Gray in the 62nd minute, Red Lions went back ahead when Reid finished Rook's pass in the 95th minute, and Cruz pulled Blue Sharks level in the 105th minute.",
+          "The turning point came in the 113th minute when Bell of Blue Sharks turned the ball into Blue Sharks' own net, and that goal counted for Red Lions. That gave Red Lions the edge at the finish, after a last stretch that was chaotic and full of pressure.",
+          "Red Lions had the ball for most of the match and spent long spells in Blue Sharks' half, with more shots and the better chances. Fox, the captain, was heavily involved throughout with a goal, 140 touches, and a strong all-round display, making the early breakthrough that set Red Lions on their way."
         ]
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 1,
+        "attempts": 3,
         "history": [
           {
             "draft": {
-              "title": "Fox sparks Red Lions in an extra-time classic",
+              "title": "Fox Sparks Red Lions in a Five-Goal Extra-Time Classic",
               "paragraphs": [
-                "Red Lions won 3-2 after extra time, with Fox setting the tone early and finishing as the standout for the home side. Fox put Red Lions in front at 28' from Lane's pass, and Red Lions stayed on the front foot for long spells, spending most of the match in Blue Sharks' half and having more of the ball and more shots.",
-                "Blue Sharks fought back through Gray at 62', then Reid restored Red Lions' lead at 95' before Cruz levelled it at 105'. The turning point came at 113', when Bell of Blue Sharks put the ball into Blue Sharks' own net, handing Red Lions the lead for good in a match that had turned increasingly chaotic late on.",
-                "Red Lions created the better chances and finished with 27 shots to 15, so the result matched the pressure they kept building. Fox's goal, his work all game, and Red Lions' steady control made this a hard-earned win for the Red Lions fanbase."
+                "Red Lions won 3-2 after extra time in a wild, back-and-forth finish, with Fox setting the tone early by converting Lane’s assist in the 28th minute. Blue Sharks levelled through Gray in the 62nd minute, but Red Lions kept pushing and went back in front when Reid finished Rook’s pass in the 95th minute.",
+                "Blue Sharks hit back through Cruz in the 105th minute, and the match turned chaotic in the closing stretch. The decisive moment came in the 113th minute, when Bell of Blue Sharks turned the ball into Blue Sharks’ own net, giving Red Lions the goal that put the match beyond reach.",
+                "Red Lions controlled the match for long spells, with the ball for about two-thirds of the game and most of the action in Blue Sharks’ half. They also had more shots, 27 to 15, and created the better chances. Fox was central throughout as captain, with one goal, 140 touches, and a lively all-round display before Red Lions closed out a dramatic win."
+              ]
+            },
+            "problems": [
+              "FALSE: The third paragraph says Red Lions had the ball for about two-thirds of the game; the match facts show Red Lions had 69% possession, which is closer to about seven-tenths than two-thirds.",
+              "FALSE: The second paragraph says the 113th-minute goal was the decisive moment and put the match beyond reach / sealed the match; while the result is final now, this wording is not supported by the match facts as a factual claim about that moment being decisive."
+            ],
+            "notes": []
+          },
+          {
+            "draft": {
+              "title": "Fox Inspires Red Lions in Extra-Time Thriller",
+              "paragraphs": [
+                "Red Lions won 3-2 after extra time in a wild, back-and-forth finish, and Fox got them moving early with Lane’s assist in the 28th minute. Blue Sharks answered through Gray in the 62nd minute, Red Lions went back ahead when Reid finished Rook’s pass in the 95th minute, and Cruz pulled Blue Sharks level again in the 105th minute.",
+                "The turning point came in the 113th minute when Bell of Blue Sharks put the ball into Blue Sharks’ own net, and that goal counted for Red Lions. Red Lions then saw it out in the closing stages and took the win, with the match ending in chaos after a frantic extra-time spell.",
+                "Red Lions controlled most of the game, with 69% possession, 27 shots to 15, and the better chances overall. Fox, the captain, was central throughout with a goal, 140 touches, and a busy all-round display, while Red Lions spent most of the match in Blue Sharks’ half."
+              ]
+            },
+            "problems": [
+              "fans should not see percentages or analyst terms; say it in plain words"
+            ],
+            "notes": []
+          },
+          {
+            "draft": {
+              "title": "Fox Sets the Tone as Red Lions Edge a Wild Extra-Time Battle",
+              "paragraphs": [
+                "Red Lions won 3-2 after extra time in a frantic contest, and Fox put them in front in the 28th minute with Lane's assist. Blue Sharks answered through Gray in the 62nd minute, Red Lions went back ahead when Reid finished Rook's pass in the 95th minute, and Cruz pulled Blue Sharks level in the 105th minute.",
+                "The turning point came in the 113th minute when Bell of Blue Sharks turned the ball into Blue Sharks' own net, and that goal counted for Red Lions. That gave Red Lions the edge at the finish, after a last stretch that was chaotic and full of pressure.",
+                "Red Lions had the ball for most of the match and spent long spells in Blue Sharks' half, with more shots and the better chances. Fox, the captain, was heavily involved throughout with a goal, 140 touches, and a strong all-round display, making the early breakthrough that set Red Lions on their way."
               ]
             },
             "problems": [],

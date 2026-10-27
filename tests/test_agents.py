@@ -250,3 +250,15 @@ def test_fan_recap_favourite_player_in_words():
     facts = plain_words(viewer_facts(recap_moment(EVENTS, INFO), EVENTS, INFO, "Fox")["facts"])
     assert "pass_accuracy_pct" not in facts["favourite_player"]
     assert facts["favourite_player"]["passing_in_words"] == "most passes found a teammate"
+
+
+def test_code_catches_xg_as_percent_wrong_language_and_pronouns():
+    from matchmind.agents import Job, rule_problems
+    def problems(text, language="en", mode="fan"):
+        job = Job("match_002", FOX_GOAL, mode, {"role": mode, "language": language}, draft={"text": text})
+        return " ".join(rule_problems(job))
+    assert "xG is not a percentage" in problems("Red Lions have 81% xG so far", mode="broadcaster")
+    assert "not English" in problems("Yellow for Ward, and the Blue Sharks are getting a talking-to early on.", "pt")
+    assert problems("Amarelo para Ward, e o Blue Sharks leva a primeira advertência do jogo.", "pt") == ""
+    assert "not he/his" in problems("Fox's goal, his work all game")
+    assert problems("Fox scores for Red Lions!") == ""

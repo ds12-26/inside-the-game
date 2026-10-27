@@ -380,6 +380,22 @@ def draft_text(draft, skip=()):
     return " | ".join(parts)
 
 
+# Common short words, to tell Spanish, French and Portuguese text from English.
+STOPWORDS = {
+    "es": {"el", "los", "las", "del", "que", "con", "para", "por", "en", "un", "una", "y", "es"},
+    "fr": {"le", "les", "des", "du", "que", "avec", "pour", "est", "et", "un", "une", "dans", "sur"},
+    "pt": {"o", "os", "do", "da", "que", "com", "para", "por", "em", "um", "uma", "e", "no", "na"},
+}
+
+
+def wrong_language(text, language):
+    """True if the text reads as English rather than the viewer's language."""
+    words = re.findall(r"[a-zà-ÿ]+", text.lower())
+    english = sum(w in {"the", "and", "with", "for", "is", "are", "has", "have", "on", "of", "to", "in"} for w in words)
+    target = sum(w in STOPWORDS[language] for w in words)
+    return english >= 3 and english > target
+
+
 def own_net_problems(text, facts):
     """An own goal said to go into the wrong team's net ("into Red Lions' own net")."""
     own_goals = [g for g in facts.get("goals", []) if g.get("own_goal")]
@@ -414,6 +430,13 @@ def rule_problems(job):
     problems += own_net_problems(prose, job.moment["facts"])
     if not for_fan and re.search(r"\b\d{1,3}\s+(?:possession|field tilt|pass accuracy|accuracy)\b", prose, re.IGNORECASE):
         problems.append("write percentages with the % sign, e.g. 69% possession")
+    if re.search(r"\d\s*%\s*(?:of\s+)?(?:the\s+)?xG|xG\s+(?:of\s+)?\d+\s*%", text, re.IGNORECASE):
+        problems.append("FALSE: xG is not a percentage (e.g. 0.81 xG, not 81% xG)")
+    language = job.viewer.get("language", "en")
+    if language == "en" and re.search(r"\b(he|his|him|himself|she|her|hers|herself)\b", prose, re.IGNORECASE):
+        problems.append("refer to players by name, not he/his/she/her: the data doesn't record genders")
+    if language in STOPWORDS and wrong_language(prose, language):
+        problems.append(f"write in {WRITING_LANGUAGES[language]}, not English")
     if job.viewer.get("language") == "hi" and devanagari_share(text) < 0.5:
         problems.append("the viewer chose Hindi: write in Hindi (Devanagari), keeping only names in Latin letters")
     if job.mode == "fan" or (job.mode == "recap" and job.viewer.get("role", "fan") == "fan"):

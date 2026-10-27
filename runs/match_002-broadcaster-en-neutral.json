@@ -168,28 +168,46 @@
       "language": "en",
       "content": {
         "headline": "Fox Denied",
-        "lower_third": "Fox's shot is saved after a close chance",
-        "talking_point": "Fox has already had 2 shots, and Red Lions are piling on pressure with 81% xG so far.",
+        "lower_third": "Fox's 54% shot is saved, Red Lions keep pressing.",
+        "talking_point": "Fox tested the keeper with a 54% chance, and Red Lions now have 0.81 xG to Blue Sharks' 0.",
         "director_cue": {
           "action": "cut_to_replay",
           "priority": "medium",
-          "reason": "Fox's saved effort was a big chance, and Red Lions have 0.81 xG with 100% field tilt in the last 10 minutes."
+          "reason": "Fox's saved shot had 0.54 xG, and Red Lions have 0.81 xG with no Blue Sharks shot yet."
         }
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 1,
+        "attempts": 2,
         "history": [
           {
             "draft": {
               "headline": "Fox Denied",
-              "lower_third": "Fox's shot is saved after a close chance",
-              "talking_point": "Fox has already had 2 shots, and Red Lions are piling on pressure with 81% xG so far.",
+              "lower_third": "Fox's 54% chance is saved, Red Lions still pressing.",
+              "talking_point": "Fox came close with a 54% chance, and Red Lions have 0.81 xG to none for Blue Sharks.",
               "director_cue": {
                 "action": "cut_to_replay",
                 "priority": "medium",
-                "reason": "Fox's saved effort was a big chance, and Red Lions have 0.81 xG with 100% field tilt in the last 10 minutes."
+                "reason": "Fox's saved shot carried 0.54 xG, a clear big chance worth revisiting."
+              }
+            },
+            "problems": [
+              "UNSUPPORTED: The director cue calls Fox's saved shot 'a clear big chance'. The facts only say it was a shot with xG 0.54 / about a 54-in-100 chance, which does not support calling it a clear big chance."
+            ],
+            "notes": [
+              "WORDING: 'Fox Denied' and 'Red Lions still pressing' are supported in spirit by the saved shot and territorial pressure, but 'pressing' is a narrative gloss rather than a strict factual claim."
+            ]
+          },
+          {
+            "draft": {
+              "headline": "Fox Denied",
+              "lower_third": "Fox's 54% shot is saved, Red Lions keep pressing.",
+              "talking_point": "Fox tested the keeper with a 54% chance, and Red Lions now have 0.81 xG to Blue Sharks' 0.",
+              "director_cue": {
+                "action": "cut_to_replay",
+                "priority": "medium",
+                "reason": "Fox's saved shot had 0.54 xG, and Red Lions have 0.81 xG with no Blue Sharks shot yet."
               }
             },
             "problems": [],
@@ -681,28 +699,44 @@
       "language": "en",
       "content": {
         "headline": "Gray Levels It",
-        "lower_third": "Gray scores for Blue Sharks at 62'.",
-        "talking_point": "Gray has brought Blue Sharks level at 1-1, finishing a chance worth 47% xG.",
+        "lower_third": "Gray scores for Blue Sharks from close range.",
+        "talking_point": "Gray has Blue Sharks level at 1-1, and the chance was worth 0.47 xG.",
         "director_cue": {
           "action": "cut_to_replay",
           "priority": "high",
-          "reason": "Gray has just scored from a 47% xG chance, and the equaliser is the key moment."
+          "reason": "Gray has just scored to make it 1-1, and the shot was worth 0.47 xG."
         }
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 1,
+        "attempts": 2,
         "history": [
           {
             "draft": {
               "headline": "Gray Levels It",
-              "lower_third": "Gray scores for Blue Sharks at 62'.",
-              "talking_point": "Gray has brought Blue Sharks level at 1-1, finishing a chance worth 47% xG.",
+              "lower_third": "Gray scores for Blue Sharks from close range.",
+              "talking_point": "Gray has Blue Sharks level at 1-1, and the chance was close to 50-50 at 47% xG.",
               "director_cue": {
                 "action": "cut_to_replay",
                 "priority": "high",
-                "reason": "Gray has just scored from a 47% xG chance, and the equaliser is the key moment."
+                "reason": "Gray has just scored to make it 1-1, and the shot carried 0.47 xG."
+              }
+            },
+            "problems": [
+              "FALSE: xG is not a percentage (e.g. 0.81 xG, not 81% xG)"
+            ],
+            "notes": []
+          },
+          {
+            "draft": {
+              "headline": "Gray Levels It",
+              "lower_third": "Gray scores for Blue Sharks from close range.",
+              "talking_point": "Gray has Blue Sharks level at 1-1, and the chance was worth 0.47 xG.",
+              "director_cue": {
+                "action": "cut_to_replay",
+                "priority": "high",
+                "reason": "Gray has just scored to make it 1-1, and the shot was worth 0.47 xG."
               }
             },
             "problems": [],
