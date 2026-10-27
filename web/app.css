@@ -121,7 +121,11 @@ input { flex: 1; }
 .checked { position: absolute; right: 12px; bottom: 12px; background: rgba(26,127,55,.08); color: var(--good); border: 1px solid rgba(26,127,55,.35); border-radius: 999px; padding: 4px 10px; font-size: 13px; }
 .checked.rewritten { color: var(--accent-text); background: rgba(245,197,66,.15); border-color: rgba(138,90,0,.35); }
 
-.lower-third { position: absolute; left: 6%; right: 30%; bottom: 128px; z-index: 2; animation: rise .4s ease-out; }
+.lower-third { position: absolute; left: 6%; max-width: 70%; bottom: 128px; z-index: 2; animation: rise .4s ease-out;
+  display: flex; flex-direction: column; align-items: flex-start; }
+.end-label { transition: opacity .3s; }
+.program.lt-on .end-label { opacity: 0; }      /* the graphic sits where the direction labels are */
+.presenter { color: var(--accent-text); font-size: .7em; text-transform: uppercase; letter-spacing: .08em; margin-right: 8px; }
 .lt-headline { display: inline-block; background: var(--accent); color: #111; font-weight: 900; text-transform: uppercase; padding: 6px 12px; letter-spacing: .04em; }
 .lt-text { background: rgba(10, 14, 20, .92); color: var(--on-dark); padding: 8px 12px; }
 
@@ -170,7 +174,7 @@ dialog pre { max-height: 60vh; overflow: auto; background: var(--bg); padding: 1
 @media (max-width: 900px) {
   .stage { grid-template-columns: 1fr; }
   .roles { grid-template-columns: 1fr; }
-  .lower-third { right: 6%; bottom: 140px; }
+  .lower-third { max-width: 88%; bottom: 140px; }
   .narration { padding-right: 0; padding-bottom: 28px; }
   .bug { font-size: 12px; top: 8px; left: 8px; }
   .bug > span { padding: 4px 7px; }

@@ -171,6 +171,7 @@ function startMatch() {
   $("pbp").textContent = " ";
   $("checked").hidden = true;
   $("lower-third").hidden = true;
+  $("lower-third").parentElement.classList.remove("lt-on");
   $("fulltime").hidden = true;
   $("fav").hidden = !state.player;
   overlayFeed = [];
@@ -228,7 +229,9 @@ function onEvent(e) {
   $("ball-tag").textContent = e.player;
   const tag = ball.querySelector(".tag");
   tag.setAttribute("class", `tag ${e.side}`);
-  tag.setAttribute("transform", ey < 8 ? "translate(0 9.5)" : "");   // near the top edge: name below the ball
+  // keep the name on the pitch: below the ball at the top edge, nudged inwards at the goal lines
+  const dx = ex > PITCH_W - 9 ? PITCH_W - 9 - ex : ex < 9 ? 9 - ex : 0;
+  tag.setAttribute("transform", `translate(${dx} ${ey < 8 ? 9.5 : 0})`);
   if (e.line) $("pbp").textContent = `${e.clock}  ${e.line}`;
   if ((e.type === "shot" && e.outcome === "goal") || e.type === "own_goal") {
     const flash = $("flash");
@@ -284,12 +287,14 @@ function onCard(card) {
     addFeed("analyst-feed", `<span class="h"><span class="t">${card.clock}</span>${escapeHtml(c.headline)}</span>${escapeHtml(c.why_it_matters || "")}<div class="ev">${evidence}</div>`);
   } else if (card.mode === "broadcaster") {
     setNarration(c.talking_point || c.lower_third, card);
+    if (c.talking_point) $("narration").innerHTML = `<span class="presenter">Presenter</span>${escapeHtml(c.talking_point)}`;
     $("lt-headline").textContent = c.headline;
     $("lt-text").textContent = c.lower_third;
     const lt = $("lower-third");
     lt.hidden = false; lt.style.animation = "none"; void lt.offsetWidth; lt.style.animation = "";
+    lt.parentElement.classList.add("lt-on");
     clearTimeout(onCard.ltTimer);
-    onCard.ltTimer = setTimeout(() => { lt.hidden = true; }, 6000);
+    onCard.ltTimer = setTimeout(() => { lt.hidden = true; lt.parentElement.classList.remove("lt-on"); }, 6000);
     const cue = c.director_cue || {};
     addFeed("cues", `<span class="cue-action">${escapeHtml((cue.action || "").replaceAll("_", " "))}</span> · <span class="t">${card.clock}</span>${escapeHtml(cue.reason || "")}`, cue.priority);
     if (c.talking_point) addFeed("talking", `<span class="t">${card.clock}</span>${escapeHtml(c.talking_point)}`);
