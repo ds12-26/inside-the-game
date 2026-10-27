@@ -15,13 +15,13 @@
       "mode": "broadcaster",
       "language": "en",
       "content": {
-        "headline": "Kick-off",
-        "lower_third": "Red Lions 0-0 Blue Sharks, 1'",
-        "talking_point": "We are underway, with both sides starting evenly at 50% possession and 50% field tilt.",
+        "headline": "Kickoff Level",
+        "lower_third": "Red Lions 0-0 Blue Sharks after 1'",
+        "talking_point": "It’s even at the start, with both teams on 50% possession and 0 shots so far.",
         "director_cue": {
-          "action": "stay_live",
+          "action": "show_graphic",
           "priority": "low",
-          "reason": "Nothing has happened yet, and the match is level at 0-0 with even territory."
+          "reason": "The match is just underway and the score is 0-0 with no shots yet."
         }
       },
       "source": "ai",
@@ -31,16 +31,17 @@
         "history": [
           {
             "draft": {
-              "headline": "Kick-off",
-              "lower_third": "Red Lions 0-0 Blue Sharks, 1'",
-              "talking_point": "We are underway, with both sides starting evenly at 50% possession and 50% field tilt.",
+              "headline": "Kickoff Level",
+              "lower_third": "Red Lions 0-0 Blue Sharks after 1'",
+              "talking_point": "It’s even at the start, with both teams on 50% possession and 0 shots so far.",
               "director_cue": {
-                "action": "stay_live",
+                "action": "show_graphic",
                 "priority": "low",
-                "reason": "Nothing has happened yet, and the match is level at 0-0 with even territory."
+                "reason": "The match is just underway and the score is 0-0 with no shots yet."
               }
             },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -53,12 +54,12 @@
       "language": "en",
       "content": {
         "headline": "Ward Booked Early",
-        "lower_third": "Blue Sharks left-back Ward shown a yellow card",
-        "talking_point": "Ward is in the book inside 2 minutes, and Blue Sharks have 53% possession so far.",
+        "lower_third": "Ward shown a yellow card for Blue Sharks.",
+        "talking_point": "Ward is into the book at 2', and Blue Sharks have already seen 53% of the ball in a chaotic opening.",
         "director_cue": {
           "action": "cut_to_replay",
           "priority": "high",
-          "reason": "A yellow card has just been shown to Ward at 2', a clear disciplinary moment worth replaying."
+          "reason": "Yellow card at 2' is a major early moment, and the opening has been chaotic with Blue Sharks on 53% possession."
         }
       },
       "source": "ai",
@@ -69,15 +70,16 @@
           {
             "draft": {
               "headline": "Ward Booked Early",
-              "lower_third": "Blue Sharks left-back Ward shown a yellow card",
-              "talking_point": "Ward is in the book inside 2 minutes, and Blue Sharks have 53% possession so far.",
+              "lower_third": "Ward shown a yellow card for Blue Sharks.",
+              "talking_point": "Ward is into the book at 2', and Blue Sharks have already seen 53% of the ball in a chaotic opening.",
               "director_cue": {
                 "action": "cut_to_replay",
                 "priority": "high",
-                "reason": "A yellow card has just been shown to Ward at 2', a clear disciplinary moment worth replaying."
+                "reason": "Yellow card at 2' is a major early moment, and the opening has been chaotic with Blue Sharks on 53% possession."
               }
             },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -91,11 +93,11 @@
       "content": {
         "headline": "Price Booked",
         "lower_third": "Blue Sharks defender Price shown a yellow card",
-        "talking_point": "Blue Sharks are on a warning early, with Price booked in a spell where Red Lions have 83% field tilt.",
+        "talking_point": "Price has the yellow card, and Blue Sharks have spent just 17% of the last 10 minutes in the final third.",
         "director_cue": {
           "action": "cut_to_replay",
           "priority": "high",
-          "reason": "Yellow card for Price; discipline is now part of the story, and Blue Sharks have only 17% field tilt in the last 10 minutes."
+          "reason": "Yellow card at 6' is a hot moment, and Blue Sharks have only 17% field tilt over the last 10 minutes."
         }
       },
       "source": "ai",
@@ -107,14 +109,15 @@
             "draft": {
               "headline": "Price Booked",
               "lower_third": "Blue Sharks defender Price shown a yellow card",
-              "talking_point": "Blue Sharks are on a warning early, with Price booked in a spell where Red Lions have 83% field tilt.",
+              "talking_point": "Price has the yellow card, and Blue Sharks have spent just 17% of the last 10 minutes in the final third.",
               "director_cue": {
                 "action": "cut_to_replay",
                 "priority": "high",
-                "reason": "Yellow card for Price; discipline is now part of the story, and Blue Sharks have only 17% field tilt in the last 10 minutes."
+                "reason": "Yellow card at 6' is a hot moment, and Blue Sharks have only 17% field tilt over the last 10 minutes."
               }
             },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -126,13 +129,13 @@
       "mode": "broadcaster",
       "language": "en",
       "content": {
-        "headline": "Blue Sharks Struggle",
-        "lower_third": "Pass accuracy down to 45% in the last 5 minutes",
-        "talking_point": "Blue Sharks are having a rough spell in possession, with pass accuracy dropping to 45% over the last 5 minutes.",
+        "headline": "Blue Sharks Misfiring",
+        "lower_third": "Blue Sharks at 45% pass accuracy in the last 5 minutes",
+        "talking_point": "Blue Sharks have lost their passing rhythm, with just 45% accuracy in the last 5 minutes and 71% overall so far.",
         "director_cue": {
           "action": "stats_package",
           "priority": "medium",
-          "reason": "Blue Sharks' pass accuracy has fallen to 45% in the last 5 minutes, pointing to a clear passing drop."
+          "reason": "Blue Sharks’ passing has dropped to 45% in the last 5 minutes, and the last 10 minutes have been chaotic."
         }
       },
       "source": "ai",
@@ -142,16 +145,17 @@
         "history": [
           {
             "draft": {
-              "headline": "Blue Sharks Struggle",
-              "lower_third": "Pass accuracy down to 45% in the last 5 minutes",
-              "talking_point": "Blue Sharks are having a rough spell in possession, with pass accuracy dropping to 45% over the last 5 minutes.",
+              "headline": "Blue Sharks Misfiring",
+              "lower_third": "Blue Sharks at 45% pass accuracy in the last 5 minutes",
+              "talking_point": "Blue Sharks have lost their passing rhythm, with just 45% accuracy in the last 5 minutes and 71% overall so far.",
               "director_cue": {
                 "action": "stats_package",
                 "priority": "medium",
-                "reason": "Blue Sharks' pass accuracy has fallen to 45% in the last 5 minutes, pointing to a clear passing drop."
+                "reason": "Blue Sharks’ passing has dropped to 45% in the last 5 minutes, and the last 10 minutes have been chaotic."
               }
             },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -163,13 +167,13 @@
       "mode": "broadcaster",
       "language": "en",
       "content": {
-        "headline": "Big Save",
-        "lower_third": "Fox denied from close range by the keeper",
-        "talking_point": "Fox came within a 54% chance of scoring, but the keeper kept it out to preserve 0-0.",
+        "headline": "Fox Denied",
+        "lower_third": "Fox's shot is saved after a close chance",
+        "talking_point": "Fox has already had 2 shots, and Red Lions are piling on pressure with 81% xG so far.",
         "director_cue": {
           "action": "cut_to_replay",
           "priority": "medium",
-          "reason": "A big chance was just saved, and Fox's shot carried 0.54 xG."
+          "reason": "Fox's saved effort was a big chance, and Red Lions have 0.81 xG with 100% field tilt in the last 10 minutes."
         }
       },
       "source": "ai",
@@ -179,16 +183,17 @@
         "history": [
           {
             "draft": {
-              "headline": "Big Save",
-              "lower_third": "Fox denied from close range by the keeper",
-              "talking_point": "Fox came within a 54% chance of scoring, but the keeper kept it out to preserve 0-0.",
+              "headline": "Fox Denied",
+              "lower_third": "Fox's shot is saved after a close chance",
+              "talking_point": "Fox has already had 2 shots, and Red Lions are piling on pressure with 81% xG so far.",
               "director_cue": {
                 "action": "cut_to_replay",
                 "priority": "medium",
-                "reason": "A big chance was just saved, and Fox's shot carried 0.54 xG."
+                "reason": "Fox's saved effort was a big chance, and Red Lions have 0.81 xG with 100% field tilt in the last 10 minutes."
               }
             },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -200,13 +205,13 @@
       "mode": "broadcaster",
       "language": "en",
       "content": {
-        "headline": "Red Lions on top",
-        "lower_third": "Red Lions have 98% field tilt in the last 10 minutes.",
-        "talking_point": "Red Lions are dominating territory, with 98% field tilt and 81% possession over the last 10 minutes.",
+        "headline": "Red Lions In Control",
+        "lower_third": "Red Lions have 81% possession and 98% field tilt in the last 10 minutes",
+        "talking_point": "Red Lions are driving the game, with 0.81 xG from 4 shots while Blue Sharks have yet to register a shot.",
         "director_cue": {
-          "action": "show_graphic",
+          "action": "stats_package",
           "priority": "low",
-          "reason": "Red Lions have 98% field tilt and 81% possession in the last 10 minutes, so a stats graphic explains the pressure."
+          "reason": "Red Lions have 98% field tilt and 81% possession in the last 10 minutes, so a territory graphic explains the pattern."
         }
       },
       "source": "ai",
@@ -216,16 +221,17 @@
         "history": [
           {
             "draft": {
-              "headline": "Red Lions on top",
-              "lower_third": "Red Lions have 98% field tilt in the last 10 minutes.",
-              "talking_point": "Red Lions are dominating territory, with 98% field tilt and 81% possession over the last 10 minutes.",
+              "headline": "Red Lions In Control",
+              "lower_third": "Red Lions have 81% possession and 98% field tilt in the last 10 minutes",
+              "talking_point": "Red Lions are driving the game, with 0.81 xG from 4 shots while Blue Sharks have yet to register a shot.",
               "director_cue": {
-                "action": "show_graphic",
+                "action": "stats_package",
                 "priority": "low",
-                "reason": "Red Lions have 98% field tilt and 81% possession in the last 10 minutes, so a stats graphic explains the pressure."
+                "reason": "Red Lions have 98% field tilt and 81% possession in the last 10 minutes, so a territory graphic explains the pattern."
               }
             },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -237,13 +243,13 @@
       "mode": "broadcaster",
       "language": "en",
       "content": {
-        "headline": "FOX STRIKES",
-        "lower_third": "Fox scores for Red Lions from a Lane assist",
-        "talking_point": "Fox has Red Lions ahead with a 1-in-4 chance converted, after 1 goal from 4 shots.",
+        "headline": "Fox Strikes First",
+        "lower_third": "Fox puts Red Lions 1-0 up at 28'.",
+        "talking_point": "Fox has the breakthrough for Red Lions, and the captain now has 1 goal from 4 shots.",
         "director_cue": {
           "action": "cut_to_replay",
           "priority": "high",
-          "reason": "Fox has just scored from a 0.26 xG chance, and Red Lions lead 1-0."
+          "reason": "Fox has scored from a 0.26 xG chance to make it 1-0, so this is the key moment to replay."
         }
       },
       "source": "ai",
@@ -253,16 +259,17 @@
         "history": [
           {
             "draft": {
-              "headline": "FOX STRIKES",
-              "lower_third": "Fox scores for Red Lions from a Lane assist",
-              "talking_point": "Fox has Red Lions ahead with a 1-in-4 chance converted, after 1 goal from 4 shots.",
+              "headline": "Fox Strikes First",
+              "lower_third": "Fox puts Red Lions 1-0 up at 28'.",
+              "talking_point": "Fox has the breakthrough for Red Lions, and the captain now has 1 goal from 4 shots.",
               "director_cue": {
                 "action": "cut_to_replay",
                 "priority": "high",
-                "reason": "Fox has just scored from a 0.26 xG chance, and Red Lions lead 1-0."
+                "reason": "Fox has scored from a 0.26 xG chance to make it 1-0, so this is the key moment to replay."
               }
             },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -274,53 +281,33 @@
       "mode": "broadcaster",
       "language": "en",
       "content": {
-        "headline": "MOMENTUM SWING",
-        "lower_third": "31' Red Lions 1 Blue Sharks 0",
-        "talking_point": "",
+        "headline": "Red Lions On Top",
+        "lower_third": "Red Lions lead 1-0 after 31 minutes",
+        "talking_point": "Red Lions are controlling this spell, with 67% of final-third action and 1.46 xG to Blue Sharks' 0.08.",
         "director_cue": {
-          "action": "stay_live",
-          "priority": "low",
-          "reason": ""
+          "action": "stats_package",
+          "priority": "medium",
+          "reason": "Red Lions have 67% of final-third action in the last 10 minutes and a 1.46 to 0.08 xG edge."
         }
       },
-      "source": "template",
+      "source": "ai",
       "fact_check": {
-        "approved": false,
-        "attempts": 2,
+        "approved": true,
+        "attempts": 1,
         "history": [
           {
             "draft": {
               "headline": "Red Lions On Top",
-              "lower_third": "1-0 after 31'; Red Lions lead xG 1.46 to 0.08",
-              "talking_point": "Red Lions have dominated the ball and territory, leading xG 1.46 to 0.08 and field tilt 88% to 12%.",
+              "lower_third": "Red Lions lead 1-0 after 31 minutes",
+              "talking_point": "Red Lions are controlling this spell, with 67% of final-third action and 1.46 xG to Blue Sharks' 0.08.",
               "director_cue": {
                 "action": "stats_package",
                 "priority": "medium",
-                "reason": "The swing is tactical: Red Lions hold 69% possession and 88% field tilt, while Blue Sharks have only 0.08 xG."
+                "reason": "Red Lions have 67% of final-third action in the last 10 minutes and a 1.46 to 0.08 xG edge."
               }
             },
-            "problems": [
-              "\"Red Lions have dominated the ball and territory\" is broadly supported, but the draft's specific numbers are wrong: the facts show 69% possession and 88% field tilt overall, not 88% to 12% in the talking point.",
-              "\"Red Lions hold 69% possession and 88% field tilt\" is supported by the facts, but the director cue incorrectly says Blue Sharks have 69% possession and Red Lions have 88% field tilt? No: the problem is that the cue implies a 'swing' based on those numbers, which is fine, but the stated field tilt in the talking point is incorrect only if interpreted as last-10-minutes; the facts show last-10-minute field tilt is 67% to 33%, not 88% to 12%.",
-              "\"Blue Sharks have only 0.08 xG\" is supported, but the draft omits that Red Lions are actually ahead 1-0 at 31', which is fine in the lower third; no issue there.",
-              "The talking point's 'field tilt 88% to 12%' conflicts with the match facts if it is meant as the current/overall matchup at 31': the facts show overall field tilt is 88% to 12%, but the draft pairs it with 'have dominated the ball and territory' and a 1-0 lead after 31', while the provided territory_last_10_min is 67% to 33%. This is ambiguous and should be corrected to specify whether it is overall or last 10 minutes.",
-              "The director cue says 'Red Lions hold 69% possession and 88% field tilt' which is supported by the match state, but the reason 'The swing is tactical' is interpretive and not directly supported by facts; however, this is stylistic rather than factual."
-            ]
-          },
-          {
-            "draft": {
-              "headline": "Red Lions On Top",
-              "lower_third": "31': Red Lions lead 1-0, with 1.46 xG to 0.08",
-              "talking_point": "Red Lions lead 1-0 at 31', with 1.46 xG to 0.08 and 88% to 12% field tilt overall.",
-              "director_cue": {
-                "action": "stats_package",
-                "priority": "medium",
-                "reason": "The match pattern is clear: Red Lions have 1.46 xG to 0.08 and 88% to 12% field tilt overall."
-              }
-            },
-            "problems": [
-              "“88% to 12% field tilt overall” is not supported by the facts provided. The only territorial figures given are for the last 10 minutes, where Red Lions have 67% field tilt and Blue Sharks 33%."
-            ]
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -332,13 +319,13 @@
       "mode": "broadcaster",
       "language": "en",
       "content": {
-        "headline": "Blue Sharks Under Pressure",
-        "lower_third": "Blue Sharks pass accuracy has dropped to 62% in the last 5 minutes.",
-        "talking_point": "Blue Sharks are struggling to keep the ball, with pass accuracy down to 62% in the last 5 minutes compared with 80% overall.",
+        "headline": "Sharks Losing Rhythm",
+        "lower_third": "Blue Sharks pass accuracy down to 62% in the last 5 minutes",
+        "talking_point": "Blue Sharks are struggling to keep the ball moving, with pass accuracy dropping to 62% over the last 5 minutes.",
         "director_cue": {
           "action": "stats_package",
           "priority": "medium",
-          "reason": "Blue Sharks' pass accuracy has fallen to 62% in the last 5 minutes, alongside just 8% field tilt in the last 10 minutes."
+          "reason": "Blue Sharks' pass accuracy has fallen to 62% in the last 5 minutes, matching a chaotic spell."
         }
       },
       "source": "ai",
@@ -348,16 +335,17 @@
         "history": [
           {
             "draft": {
-              "headline": "Blue Sharks Under Pressure",
-              "lower_third": "Blue Sharks pass accuracy has dropped to 62% in the last 5 minutes.",
-              "talking_point": "Blue Sharks are struggling to keep the ball, with pass accuracy down to 62% in the last 5 minutes compared with 80% overall.",
+              "headline": "Sharks Losing Rhythm",
+              "lower_third": "Blue Sharks pass accuracy down to 62% in the last 5 minutes",
+              "talking_point": "Blue Sharks are struggling to keep the ball moving, with pass accuracy dropping to 62% over the last 5 minutes.",
               "director_cue": {
                 "action": "stats_package",
                 "priority": "medium",
-                "reason": "Blue Sharks' pass accuracy has fallen to 62% in the last 5 minutes, alongside just 8% field tilt in the last 10 minutes."
+                "reason": "Blue Sharks' pass accuracy has fallen to 62% in the last 5 minutes, matching a chaotic spell."
               }
             },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -370,12 +358,12 @@
       "language": "en",
       "content": {
         "headline": "Vale Denied",
-        "lower_third": "Blue Sharks chance saved at 45+1'",
-        "talking_point": "Vale came close there, but the shot was saved; Blue Sharks remain on 0.43 xG from 3 shots.",
+        "lower_third": "Vale's shot saved at 45+1' as Blue Sharks press",
+        "talking_point": "Vale came close for Blue Sharks, but the save kept it 1-0; Blue Sharks have 3 shots to Red Lions' 12.",
         "director_cue": {
           "action": "cut_to_replay",
           "priority": "medium",
-          "reason": "Vale's effort was a real chance at 0.33 xG, and the save is the key moment to show."
+          "reason": "Vale had a real chance from 0.33 xG, and the save is the key moment to show."
         }
       },
       "source": "ai",
@@ -386,15 +374,16 @@
           {
             "draft": {
               "headline": "Vale Denied",
-              "lower_third": "Blue Sharks chance saved at 45+1'",
-              "talking_point": "Vale came close there, but the shot was saved; Blue Sharks remain on 0.43 xG from 3 shots.",
+              "lower_third": "Vale's shot saved at 45+1' as Blue Sharks press",
+              "talking_point": "Vale came close for Blue Sharks, but the save kept it 1-0; Blue Sharks have 3 shots to Red Lions' 12.",
               "director_cue": {
                 "action": "cut_to_replay",
                 "priority": "medium",
-                "reason": "Vale's effort was a real chance at 0.33 xG, and the save is the key moment to show."
+                "reason": "Vale had a real chance from 0.33 xG, and the save is the key moment to show."
               }
             },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -406,32 +395,53 @@
       "mode": "broadcaster",
       "language": "en",
       "content": {
-        "headline": "Red Lions Lead",
-        "lower_third": "Red Lions 1-0 Blue Sharks at the break",
-        "talking_point": "Red Lions go in 1-0 up, with 1.5 expected goals from 12 shots, while Blue Sharks have only 0.47 xG.",
+        "headline": "Red Lions Ahead",
+        "lower_third": "Red Lions lead Blue Sharks 1-0 in first-half stoppage time.",
+        "talking_point": "Red Lions are 1-0 up at 45+2', with 1.5 xG from 12 shots to Blue Sharks' 0.47 from 5.",
         "director_cue": {
           "action": "show_graphic",
-          "priority": "medium",
-          "reason": "The scoreline is confirmed at half-time, and the stats show Red Lions have had more threat with 1.5 xG to 0.47."
+          "priority": "low",
+          "reason": "The score and match state are the key on-air facts, with Red Lions leading 1-0 in first-half stoppage time."
         }
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 1,
+        "attempts": 2,
         "history": [
           {
             "draft": {
-              "headline": "Red Lions Lead",
-              "lower_third": "Red Lions 1-0 Blue Sharks at the break",
-              "talking_point": "Red Lions go in 1-0 up, with 1.5 expected goals from 12 shots, while Blue Sharks have only 0.47 xG.",
+              "headline": "Red Lions Ahead",
+              "lower_third": "Red Lions lead Blue Sharks 1-0 at half-time.",
+              "talking_point": "Red Lions go in 1-0 up, with 1.5 xG from 12 shots compared with Blue Sharks' 0.47 from 5.",
               "director_cue": {
                 "action": "show_graphic",
-                "priority": "medium",
-                "reason": "The scoreline is confirmed at half-time, and the stats show Red Lions have had more threat with 1.5 xG to 0.47."
+                "priority": "low",
+                "reason": "Half-time score and match state are the key on-air facts, with Red Lions leading 1-0."
               }
             },
-            "problems": []
+            "problems": [
+              "FALSE: \"at half-time\" is wrong; the facts say it is 45+2' in the first half and final_whistle is false.",
+              "FALSE: The director cue says \"Half-time score\"; the match is not at half-time yet.",
+              "FALSE: The director cue says \"Red Lions leading 1-0\" in a half-time context; the score is correct, but the half-time framing is unsupported/wrong at 45+2'."
+            ],
+            "notes": [
+              "WORDING: \"go in 1-0 up\" is fine as commentary, but it should not be presented as a completed half-time state while the match is still in the first half."
+            ]
+          },
+          {
+            "draft": {
+              "headline": "Red Lions Ahead",
+              "lower_third": "Red Lions lead Blue Sharks 1-0 in first-half stoppage time.",
+              "talking_point": "Red Lions are 1-0 up at 45+2', with 1.5 xG from 12 shots to Blue Sharks' 0.47 from 5.",
+              "director_cue": {
+                "action": "show_graphic",
+                "priority": "low",
+                "reason": "The score and match state are the key on-air facts, with Red Lions leading 1-0 in first-half stoppage time."
+              }
+            },
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -443,32 +453,52 @@
       "mode": "broadcaster",
       "language": "en",
       "content": {
-        "headline": "Red Lions Ahead",
-        "lower_third": "Red Lions lead 1-0 at 46' after a lively first half",
-        "talking_point": "Red Lions go into the second half ahead 1-0, and the numbers point to a stronger attacking output with 12 shots to Blue Sharks' 5 and a 1.5 to 0.47 xG edge.",
+        "headline": "Red Lions On Top",
+        "lower_third": "Red Lions lead 1-0 at 46' with 67% final-third tilt last 10.",
+        "talking_point": "Red Lions are still ahead at 46', and the numbers back it up with 1.5 xG to Blue Sharks' 0.47 plus 67% of final-third actions in the last 10 minutes.",
         "director_cue": {
           "action": "show_graphic",
           "priority": "low",
-          "reason": "The restart is underway, and the scoreline plus 1.5 to 0.47 xG explain the match state clearly."
+          "reason": "The score and territorial control explain the match, with Red Lions at 1-0 and 67% field tilt in the last 10 minutes."
         }
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 1,
+        "attempts": 2,
         "history": [
           {
             "draft": {
-              "headline": "Red Lions Ahead",
-              "lower_third": "Red Lions lead 1-0 at 46' after a lively first half",
-              "talking_point": "Red Lions go into the second half ahead 1-0, and the numbers point to a stronger attacking output with 12 shots to Blue Sharks' 5 and a 1.5 to 0.47 xG edge.",
+              "headline": "Red Lions On Top",
+              "lower_third": "Red Lions lead 1-0 at 46' with 67% final-third tilt last 10.",
+              "talking_point": "Red Lions have the edge at the break, with 1.5 xG to Blue Sharks' 0.47 and 67% of final-third actions in the last 10 minutes.",
               "director_cue": {
                 "action": "show_graphic",
                 "priority": "low",
-                "reason": "The restart is underway, and the scoreline plus 1.5 to 0.47 xG explain the match state clearly."
+                "reason": "The score and territorial control explain the match, with Red Lions at 1-0 and 67% field tilt in the last 10 minutes."
               }
             },
-            "problems": []
+            "problems": [
+              "FALSE: The draft says \"at the break,\" but the facts show 46' in the second half, so the match is not at halftime."
+            ],
+            "notes": [
+              "WORDING: \"Red Lions On Top\" is supported by the 1-0 score, but it is a headline/opinion rather than a factual issue.",
+              "WORDING: \"lead ... with 67% final-third tilt\" is slightly imprecise because the facts give 67% field tilt in the last 10 minutes, not explicitly final-third tilt in the lower_third line."
+            ]
+          },
+          {
+            "draft": {
+              "headline": "Red Lions On Top",
+              "lower_third": "Red Lions lead 1-0 at 46' with 67% final-third tilt last 10.",
+              "talking_point": "Red Lions are still ahead at 46', and the numbers back it up with 1.5 xG to Blue Sharks' 0.47 plus 67% of final-third actions in the last 10 minutes.",
+              "director_cue": {
+                "action": "show_graphic",
+                "priority": "low",
+                "reason": "The score and territorial control explain the match, with Red Lions at 1-0 and 67% field tilt in the last 10 minutes."
+              }
+            },
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -482,11 +512,11 @@
       "content": {
         "headline": "Fox Booked",
         "lower_third": "Red Lions captain Fox shown a yellow card",
-        "talking_point": "Red Lions captain Fox has been booked, and Fox already has 1 goal in the match.",
+        "talking_point": "Fox has a yellow card now, and Red Lions still lead 1-0 with 1.5 xG to 0.47.",
         "director_cue": {
           "action": "cut_to_replay",
           "priority": "high",
-          "reason": "A yellow card has just been shown to Fox, and disciplinary moments need immediate replay coverage."
+          "reason": "Yellow card for Red Lions captain Fox at 47' deserves immediate replay."
         }
       },
       "source": "ai",
@@ -498,14 +528,15 @@
             "draft": {
               "headline": "Fox Booked",
               "lower_third": "Red Lions captain Fox shown a yellow card",
-              "talking_point": "Red Lions captain Fox has been booked, and Fox already has 1 goal in the match.",
+              "talking_point": "Fox has a yellow card now, and Red Lions still lead 1-0 with 1.5 xG to 0.47.",
               "director_cue": {
                 "action": "cut_to_replay",
                 "priority": "high",
-                "reason": "A yellow card has just been shown to Fox, and disciplinary moments need immediate replay coverage."
+                "reason": "Yellow card for Red Lions captain Fox at 47' deserves immediate replay."
               }
             },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -518,12 +549,12 @@
       "language": "en",
       "content": {
         "headline": "Brooks Booked",
-        "lower_third": "Red Lions right-back Brooks shown a yellow card",
-        "talking_point": "Brooks is into the book, and Red Lions still lead 1-0 with Blue Sharks on 0.47 xG.",
+        "lower_third": "Red Lions defender Brooks shown a yellow card at 47'",
+        "talking_point": "Brooks is the latest name in the referee’s notebook, with Red Lions already on 1 goal from 1.5 xG.",
         "director_cue": {
           "action": "cut_to_replay",
-          "priority": "high",
-          "reason": "Yellow card for Brooks at 47' after a 1-0 scoreline shift, so show the booking immediately."
+          "priority": "medium",
+          "reason": "Yellow card at 47' needs a replay, and Red Lions still lead 1-0 with 1.5 xG to 0.47."
         }
       },
       "source": "ai",
@@ -534,15 +565,16 @@
           {
             "draft": {
               "headline": "Brooks Booked",
-              "lower_third": "Red Lions right-back Brooks shown a yellow card",
-              "talking_point": "Brooks is into the book, and Red Lions still lead 1-0 with Blue Sharks on 0.47 xG.",
+              "lower_third": "Red Lions defender Brooks shown a yellow card at 47'",
+              "talking_point": "Brooks is the latest name in the referee’s notebook, with Red Lions already on 1 goal from 1.5 xG.",
               "director_cue": {
                 "action": "cut_to_replay",
-                "priority": "high",
-                "reason": "Yellow card for Brooks at 47' after a 1-0 scoreline shift, so show the booking immediately."
+                "priority": "medium",
+                "reason": "Yellow card at 47' needs a replay, and Red Lions still lead 1-0 with 1.5 xG to 0.47."
               }
             },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -554,51 +586,51 @@
       "mode": "broadcaster",
       "language": "en",
       "content": {
-        "headline": "BIG CHANCE",
-        "lower_third": "54' Red Lions 1 Blue Sharks 0",
-        "talking_point": "",
+        "headline": "Frost Denied",
+        "lower_third": "Frost's 0.35 xG shot is kept out",
+        "talking_point": "Blue Sharks have pushed, and Frost has 2 shots with no goal yet.",
         "director_cue": {
-          "action": "stay_live",
-          "priority": "low",
-          "reason": ""
+          "action": "cut_to_replay",
+          "priority": "medium",
+          "reason": "Frost’s saved shot was worth 0.35 xG, and the match has been chaotic in the last 10 minutes."
         }
       },
-      "source": "template",
+      "source": "ai",
       "fact_check": {
-        "approved": false,
+        "approved": true,
         "attempts": 2,
         "history": [
           {
             "draft": {
               "headline": "Frost Denied",
-              "lower_third": "Blue Sharks striker Frost saved from 0.35 xG at 54'.",
-              "talking_point": "Frost has had two shots and reached 0.43 xG, but Red Lions still lead 1-0.",
+              "lower_third": "Blue Sharks striker Frost saved from 0.35 xG chance",
+              "talking_point": "Blue Sharks are still waiting for a breakthrough, and Frost has had 2 shots but no goal.",
               "director_cue": {
                 "action": "cut_to_replay",
                 "priority": "medium",
-                "reason": "Frost’s saved shot at 54' was a 0.35 xG chance, and Blue Sharks now have 2 big chances."
+                "reason": "Frost’s saved effort was a real chance worth 0.35 xG, and Blue Sharks now have 2 big chances but no goal."
               }
             },
             "problems": [
-              "\"Blue Sharks now have 2 big chances\" is supported by the facts, but the draft also says Frost \"has had two shots and reached 0.43 xG\"; the match facts only support Frost having 2 shots and this shot being worth 0.35 xG, not 0.43 xG.",
-              "The talking_point implies Frost's total xG is 0.43, which is unsupported and contradicts the available player/match data (the team xG at this point is 0.82; Frost's saved chance in the facts is 0.35 xG).",
-              "The director cue says the saved shot at 54' was a 0.35 xG chance, which is supported, but the added claim \"Blue Sharks now have 2 big chances\" is supported only if referring to team big chances; the cue does not make that distinction clear enough and could be misread as a fresh event-specific tally."
-            ]
+              "FALSE: The director cue says Blue Sharks now have 2 big chances, but the facts only show Frost's saved shot was worth 0.35 xG and do not say it was a big chance or that the team has 2 big chances.",
+              "UNSUPPORTED: The lower third says \"saved from 0.35 xG chance\"; the facts support that Frost had a saved shot worth 0.35 xG, but do not explicitly label it as a \"chance\" in the broadcast data.",
+              "UNSUPPORTED: The talking point says Blue Sharks are \"still waiting for a breakthrough\"; that is a narrative inference not directly stated in the facts."
+            ],
+            "notes": []
           },
           {
             "draft": {
               "headline": "Frost Denied",
-              "lower_third": "Blue Sharks striker Frost saved from 0.35 xG at 54'.",
-              "talking_point": "Frost has two shots and 0.43 xG, but Red Lions still lead 1-0.",
+              "lower_third": "Frost's 0.35 xG shot is kept out",
+              "talking_point": "Blue Sharks have pushed, and Frost has 2 shots with no goal yet.",
               "director_cue": {
                 "action": "cut_to_replay",
                 "priority": "medium",
-                "reason": "Frost’s saved chance at 54' was worth 0.35 xG, and Blue Sharks have 2 big chances so far."
+                "reason": "Frost’s saved shot was worth 0.35 xG, and the match has been chaotic in the last 10 minutes."
               }
             },
-            "problems": [
-              "The talking_point says Frost has 0.43 xG, which is supported, but the director_cue claims Blue Sharks have 2 big chances so far; the facts show Blue Sharks do have 2 big chances, so that part is supported. However, the draft’s lower_third wording “saved from 0.35 xG” is awkward but supported. No unsupported factual claims remain in the provided draft."
-            ]
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -610,13 +642,13 @@
       "mode": "broadcaster",
       "language": "en",
       "content": {
-        "headline": "Red Lions On Top",
-        "lower_third": "Red Lions lead 1-0 at 61' with 79% field tilt last 10 minutes.",
-        "talking_point": "Red Lions are controlling the game, with 79% field tilt in the last 10 minutes and a 1-0 lead.",
+        "headline": "Red Lions Control",
+        "lower_third": "Red Lions lead 1-0, with 79% field tilt in the last 10 minutes.",
+        "talking_point": "Red Lions are pinning Blue Sharks back, with 79% field tilt and 64% possession in the last 10 minutes.",
         "director_cue": {
           "action": "stats_package",
-          "priority": "low",
-          "reason": "The pattern is clear: Red Lions have 79% field tilt and 64% possession in the last 10 minutes."
+          "priority": "medium",
+          "reason": "The pattern is clear: Red Lions have 79% field tilt and 64% possession in the last 10 minutes in a chaotic spell."
         }
       },
       "source": "ai",
@@ -626,16 +658,17 @@
         "history": [
           {
             "draft": {
-              "headline": "Red Lions On Top",
-              "lower_third": "Red Lions lead 1-0 at 61' with 79% field tilt last 10 minutes.",
-              "talking_point": "Red Lions are controlling the game, with 79% field tilt in the last 10 minutes and a 1-0 lead.",
+              "headline": "Red Lions Control",
+              "lower_third": "Red Lions lead 1-0, with 79% field tilt in the last 10 minutes.",
+              "talking_point": "Red Lions are pinning Blue Sharks back, with 79% field tilt and 64% possession in the last 10 minutes.",
               "director_cue": {
                 "action": "stats_package",
-                "priority": "low",
-                "reason": "The pattern is clear: Red Lions have 79% field tilt and 64% possession in the last 10 minutes."
+                "priority": "medium",
+                "reason": "The pattern is clear: Red Lions have 79% field tilt and 64% possession in the last 10 minutes in a chaotic spell."
               }
             },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -648,12 +681,12 @@
       "language": "en",
       "content": {
         "headline": "Gray Levels It",
-        "lower_third": "Gray scores for Blue Sharks from a 47% chance",
-        "talking_point": "Gray has brought Blue Sharks level, turning a 47% chance into a goal after 62 minutes.",
+        "lower_third": "Gray scores for Blue Sharks at 62'.",
+        "talking_point": "Gray has brought Blue Sharks level at 1-1, finishing a chance worth 47% xG.",
         "director_cue": {
           "action": "cut_to_replay",
           "priority": "high",
-          "reason": "Gray has just scored from a 0.47 xG chance to make it 1-1."
+          "reason": "Gray has just scored from a 47% xG chance, and the equaliser is the key moment."
         }
       },
       "source": "ai",
@@ -664,15 +697,16 @@
           {
             "draft": {
               "headline": "Gray Levels It",
-              "lower_third": "Gray scores for Blue Sharks from a 47% chance",
-              "talking_point": "Gray has brought Blue Sharks level, turning a 47% chance into a goal after 62 minutes.",
+              "lower_third": "Gray scores for Blue Sharks at 62'.",
+              "talking_point": "Gray has brought Blue Sharks level at 1-1, finishing a chance worth 47% xG.",
               "director_cue": {
                 "action": "cut_to_replay",
                 "priority": "high",
-                "reason": "Gray has just scored from a 0.47 xG chance to make it 1-1."
+                "reason": "Gray has just scored from a 47% xG chance, and the equaliser is the key moment."
               }
             },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -684,13 +718,13 @@
       "mode": "broadcaster",
       "language": "en",
       "content": {
-        "headline": "Big Chance Missed",
-        "lower_third": "Park fires off target after a real chance",
-        "talking_point": "Park has had 4 shots, and that one carried 0.39 xG for Red Lions.",
+        "headline": "Park Misses Big Chance",
+        "lower_third": "Park fires wide after a real chance for Red Lions",
+        "talking_point": "Park just missed a real chance, with a 0.39 xG shot that went off target.",
         "director_cue": {
           "action": "cut_to_replay",
           "priority": "medium",
-          "reason": "Park’s off-target effort came from a real chance worth 0.39 xG, and the match has been chaotic in the last 10 minutes."
+          "reason": "Park's 0.39 xG effort was a genuine opening, even if it went wide."
         }
       },
       "source": "ai",
@@ -700,16 +734,17 @@
         "history": [
           {
             "draft": {
-              "headline": "Big Chance Missed",
-              "lower_third": "Park fires off target after a real chance",
-              "talking_point": "Park has had 4 shots, and that one carried 0.39 xG for Red Lions.",
+              "headline": "Park Misses Big Chance",
+              "lower_third": "Park fires wide after a real chance for Red Lions",
+              "talking_point": "Park just missed a real chance, with a 0.39 xG shot that went off target.",
               "director_cue": {
                 "action": "cut_to_replay",
                 "priority": "medium",
-                "reason": "Park’s off-target effort came from a real chance worth 0.39 xG, and the match has been chaotic in the last 10 minutes."
+                "reason": "Park's 0.39 xG effort was a genuine opening, even if it went wide."
               }
             },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -723,11 +758,11 @@
       "content": {
         "headline": "Dean Booked",
         "lower_third": "Blue Sharks midfielder Dean shown a yellow card",
-        "talking_point": "Dean is in the referee’s book, with Blue Sharks now on one yellow at 70' in a 1-1 match.",
+        "talking_point": "Dean goes into the book for Blue Sharks, and Blue Sharks remain level at 1-1 with Red Lions.",
         "director_cue": {
           "action": "cut_to_replay",
           "priority": "high",
-          "reason": "Yellow card at 70' is a key flashpoint, and Blue Sharks already trail the territory battle 66% to 34% in the last 10 minutes."
+          "reason": "Yellow card shown to Dean at 70' in a 1-1 match."
         }
       },
       "source": "ai",
@@ -739,14 +774,15 @@
             "draft": {
               "headline": "Dean Booked",
               "lower_third": "Blue Sharks midfielder Dean shown a yellow card",
-              "talking_point": "Dean is in the referee’s book, with Blue Sharks now on one yellow at 70' in a 1-1 match.",
+              "talking_point": "Dean goes into the book for Blue Sharks, and Blue Sharks remain level at 1-1 with Red Lions.",
               "director_cue": {
                 "action": "cut_to_replay",
                 "priority": "high",
-                "reason": "Yellow card at 70' is a key flashpoint, and Blue Sharks already trail the territory battle 66% to 34% in the last 10 minutes."
+                "reason": "Yellow card shown to Dean at 70' in a 1-1 match."
               }
             },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -758,13 +794,13 @@
       "mode": "broadcaster",
       "language": "en",
       "content": {
-        "headline": "Vale Goes Close",
-        "lower_third": "Vale’s shot goes off target for Blue Sharks",
-        "talking_point": "Vale has a real chance there, with the effort rated at 0.31 xG.",
+        "headline": "Big Chance Missed",
+        "lower_third": "Vale's shot goes off target for Blue Sharks",
+        "talking_point": "Vale has come close for Blue Sharks, with that chance carrying 0.31 xG.",
         "director_cue": {
           "action": "cut_to_replay",
           "priority": "medium",
-          "reason": "Vale’s off-target shot carried 0.31 xG, a genuine chance worth revisiting."
+          "reason": "Vale just missed a real chance worth 0.31 xG, so this is worth a replay."
         }
       },
       "source": "ai",
@@ -774,16 +810,17 @@
         "history": [
           {
             "draft": {
-              "headline": "Vale Goes Close",
-              "lower_third": "Vale’s shot goes off target for Blue Sharks",
-              "talking_point": "Vale has a real chance there, with the effort rated at 0.31 xG.",
+              "headline": "Big Chance Missed",
+              "lower_third": "Vale's shot goes off target for Blue Sharks",
+              "talking_point": "Vale has come close for Blue Sharks, with that chance carrying 0.31 xG.",
               "director_cue": {
                 "action": "cut_to_replay",
                 "priority": "medium",
-                "reason": "Vale’s off-target shot carried 0.31 xG, a genuine chance worth revisiting."
+                "reason": "Vale just missed a real chance worth 0.31 xG, so this is worth a replay."
               }
             },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -795,13 +832,13 @@
       "mode": "broadcaster",
       "language": "en",
       "content": {
-        "headline": "Level, But Red Pressure",
-        "lower_third": "1-1 at 76'; Red Lions have 94% field tilt in last 10",
-        "talking_point": "Red Lions have forced the issue with 76% possession and 94% field tilt over the last 10 minutes.",
+        "headline": "All Square, Heavy Pressure",
+        "lower_third": "Red Lions have 94% field tilt in the last 10 minutes.",
+        "talking_point": "Red Lions have 94% field tilt and 76% possession over the last 10 minutes.",
         "director_cue": {
           "action": "stats_package",
           "priority": "medium",
-          "reason": "Red Lions have dominated territory recently with 94% field tilt and 76% possession, so a pattern graphic explains the momentum."
+          "reason": "Red Lions have 94% field tilt and 76% possession in the last 10 minutes."
         }
       },
       "source": "ai",
@@ -812,32 +849,35 @@
           {
             "draft": {
               "headline": "Red Lions On Top",
-              "lower_third": "Level at 1-1, Red Lions have 94% field tilt in last 10",
-              "talking_point": "Red Lions have pinned Blue Sharks back, with 76% possession and 94% field tilt over the last 10 minutes.",
+              "lower_third": "Red Lions have 94% field tilt in the last 10 minutes.",
+              "talking_point": "Red Lions are pinning Blue Sharks back, with 94% field tilt and 76% possession over the last 10 minutes.",
               "director_cue": {
                 "action": "stats_package",
                 "priority": "medium",
-                "reason": "Red Lions have dominated territory recently with 94% field tilt and 76% possession, so a pattern graphic explains the momentum."
+                "reason": "Red Lions have 94% field tilt and 76% possession in the last 10 minutes, so a territory graphic explains the pressure."
               }
             },
             "problems": [
-              "Headline says 'Red Lions On Top', but the match is level at 1-1; the facts do not show Red Lions leading.",
-              "The draft says 'Red Lions have 94% field tilt in last 10' and '76% possession over the last 10 minutes.' Those figures are supported, but 'On Top' overstates the scoreboard situation.",
-              "The talking point and director cue imply Red Lions are dominating overall; the facts only support strong territorial control in the last 10 minutes and say the last-10 control is 'controlled', not that they are ahead or have won control of the match."
-            ]
+              "FALSE: The headline says \"Red Lions On Top,\" but the match is 1-1, so Red Lions are not on top in the score.",
+              "FALSE: The lower third says Red Lions have 94% field tilt in the last 10 minutes; the provided facts and territory tool confirm that 94% field tilt is correct, but the match_state tool also shows the same. No problem there.",
+              "FALSE: The talking point says Red Lions are pinning Blue Sharks back with 94% field tilt and 76% possession over the last 10 minutes; those territory numbers are supported, but describing them as \"pinning back\" is a stylistic interpretation rather than a factual claim.",
+              "FALSE: The director cue says a territory graphic explains the pressure; this is a production judgment/opinion, not a factual claim."
+            ],
+            "notes": []
           },
           {
             "draft": {
-              "headline": "Level, But Red Pressure",
-              "lower_third": "1-1 at 76'; Red Lions have 94% field tilt in last 10",
-              "talking_point": "Red Lions have forced the issue with 76% possession and 94% field tilt over the last 10 minutes.",
+              "headline": "All Square, Heavy Pressure",
+              "lower_third": "Red Lions have 94% field tilt in the last 10 minutes.",
+              "talking_point": "Red Lions have 94% field tilt and 76% possession over the last 10 minutes.",
               "director_cue": {
                 "action": "stats_package",
                 "priority": "medium",
-                "reason": "Red Lions have dominated territory recently with 94% field tilt and 76% possession, so a pattern graphic explains the momentum."
+                "reason": "Red Lions have 94% field tilt and 76% possession in the last 10 minutes."
               }
             },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -849,13 +889,13 @@
       "mode": "broadcaster",
       "language": "en",
       "content": {
-        "headline": "Crane Denied",
-        "lower_third": "Crane saved from a 0.65 xG chance at 79'",
-        "talking_point": "Crane came agonisingly close there, and that effort carried 0.65 xG, a chance usually scored about 65 in 100 times.",
+        "headline": "Big Chance Denied",
+        "lower_third": "Crane denied from a 0.65 xG chance for Red Lions",
+        "talking_point": "Crane has had 4 shots already, and that saved chance was worth 0.65 xG.",
         "director_cue": {
           "action": "cut_to_replay",
           "priority": "medium",
-          "reason": "Crane’s saved shot was a big chance at 0.65 xG, and the replay will show how close Red Lions came."
+          "reason": "Crane’s saved chance was worth 0.65 xG, so a replay best captures the major moment."
         }
       },
       "source": "ai",
@@ -865,16 +905,17 @@
         "history": [
           {
             "draft": {
-              "headline": "Crane Denied",
-              "lower_third": "Crane saved from a 0.65 xG chance at 79'",
-              "talking_point": "Crane came agonisingly close there, and that effort carried 0.65 xG, a chance usually scored about 65 in 100 times.",
+              "headline": "Big Chance Denied",
+              "lower_third": "Crane denied from a 0.65 xG chance for Red Lions",
+              "talking_point": "Crane has had 4 shots already, and that saved chance was worth 0.65 xG.",
               "director_cue": {
                 "action": "cut_to_replay",
                 "priority": "medium",
-                "reason": "Crane’s saved shot was a big chance at 0.65 xG, and the replay will show how close Red Lions came."
+                "reason": "Crane’s saved chance was worth 0.65 xG, so a replay best captures the major moment."
               }
             },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -886,49 +927,33 @@
       "mode": "broadcaster",
       "language": "en",
       "content": {
-        "headline": "Park Misses Target",
-        "lower_third": "Park’s shot goes off target for Red Lions.",
-        "talking_point": "Park has six shots now, while Red Lions still lead the xG count 3.27 to 1.62.",
+        "headline": "Big Chance Missed",
+        "lower_third": "Park's shot goes off target at 85'",
+        "talking_point": "Park comes close with a 58% chance, but Red Lions still need a finishing touch at 1-1.",
         "director_cue": {
           "action": "cut_to_replay",
           "priority": "medium",
-          "reason": "Park’s 0.58 xG chance is worth a replay, and Red Lions lead xG 3.27 to 1.62."
+          "reason": "Park's 0.58 xG chance went off target in a chaotic spell, and Red Lions have 94% field tilt over the last 10 minutes."
         }
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 2,
+        "attempts": 1,
         "history": [
           {
             "draft": {
-              "headline": "Park Comes Closer",
-              "lower_third": "Park fires wide after a 0.58 xG chance for Red Lions.",
-              "talking_point": "Park has now had six shots, and Red Lions still lead the xG count 3.27 to 1.62.",
+              "headline": "Big Chance Missed",
+              "lower_third": "Park's shot goes off target at 85'",
+              "talking_point": "Park comes close with a 58% chance, but Red Lions still need a finishing touch at 1-1.",
               "director_cue": {
                 "action": "cut_to_replay",
                 "priority": "medium",
-                "reason": "Park’s 0.58 xG chance is a major moment, and Red Lions have created 3.27 xG to Blue Sharks’ 1.62."
+                "reason": "Park's 0.58 xG chance went off target in a chaotic spell, and Red Lions have 94% field tilt over the last 10 minutes."
               }
             },
-            "problems": [
-              "The lower third says Park 'fires wide', but the facts only say the shot was off target; 'wide' is not explicitly supported.",
-              "The lower third says the chance was 'for Red Lions', which is supported, but the phrasing implies a goal-threatening chance without matching the plain-words description unless kept neutral; however the main issue is the unsupported 'wide'.",
-              "The director cue calls Park’s 0.58 xG chance 'a major moment'; that is a subjective judgment and not directly supported by the facts."
-            ]
-          },
-          {
-            "draft": {
-              "headline": "Park Misses Target",
-              "lower_third": "Park’s shot goes off target for Red Lions.",
-              "talking_point": "Park has six shots now, while Red Lions still lead the xG count 3.27 to 1.62.",
-              "director_cue": {
-                "action": "cut_to_replay",
-                "priority": "medium",
-                "reason": "Park’s 0.58 xG chance is worth a replay, and Red Lions lead xG 3.27 to 1.62."
-              }
-            },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -940,13 +965,13 @@
       "mode": "broadcaster",
       "language": "en",
       "content": {
-        "headline": "Blue Sharks Slipping",
-        "lower_third": "Blue Sharks' pass accuracy down to 67% in the last 5 minutes",
-        "talking_point": "Blue Sharks are under real pressure here, with their pass accuracy dropping to 67% over the last 5 minutes.",
+        "headline": "Blue Sharks Under Pressure",
+        "lower_third": "Blue Sharks pass accuracy has dropped to 67% in the last 5 minutes.",
+        "talking_point": "Blue Sharks are being squeezed hard now, with pass accuracy down to 67% in the last 5 minutes from 85% overall.",
         "director_cue": {
           "action": "stats_package",
           "priority": "medium",
-          "reason": "Blue Sharks' passing has fallen to 67% in the last 5 minutes, helping explain Red Lions' 98% field tilt in the last 10 minutes."
+          "reason": "Blue Sharks' passing has dipped sharply to 67% in the last 5 minutes, while Red Lions have 98% of final-third actions in the last 10 minutes."
         }
       },
       "source": "ai",
@@ -956,16 +981,17 @@
         "history": [
           {
             "draft": {
-              "headline": "Blue Sharks Slipping",
-              "lower_third": "Blue Sharks' pass accuracy down to 67% in the last 5 minutes",
-              "talking_point": "Blue Sharks are under real pressure here, with their pass accuracy dropping to 67% over the last 5 minutes.",
+              "headline": "Blue Sharks Under Pressure",
+              "lower_third": "Blue Sharks pass accuracy has dropped to 67% in the last 5 minutes.",
+              "talking_point": "Blue Sharks are being squeezed hard now, with pass accuracy down to 67% in the last 5 minutes from 85% overall.",
               "director_cue": {
                 "action": "stats_package",
                 "priority": "medium",
-                "reason": "Blue Sharks' passing has fallen to 67% in the last 5 minutes, helping explain Red Lions' 98% field tilt in the last 10 minutes."
+                "reason": "Blue Sharks' passing has dipped sharply to 67% in the last 5 minutes, while Red Lions have 98% of final-third actions in the last 10 minutes."
               }
             },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -977,47 +1003,33 @@
       "mode": "broadcaster",
       "language": "en",
       "content": {
-        "headline": "Level At 90+4'",
-        "lower_third": "Red Lions 1-1 Blue Sharks at 90+4'",
-        "talking_point": "Red Lions have posted 3.31 xG to Blue Sharks' 1.62, but the score is still level.",
+        "headline": "Late Chaos, All Square",
+        "lower_third": "Red Lions 1-1 Blue Sharks in 90+4'",
+        "talking_point": "Red Lions have had 3.31 xG and 20 shots, but the match is still level at 1-1.",
         "director_cue": {
           "action": "show_graphic",
           "priority": "medium",
-          "reason": "The match is level at 1-1 in 90+4', and Red Lions lead the xG battle 3.31 to 1.62."
+          "reason": "The match is still level at 1-1, and Red Lions have dominated territory with 98% field tilt in the last 10 minutes."
         }
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 2,
+        "attempts": 1,
         "history": [
           {
             "draft": {
-              "headline": "All Square At The End",
-              "lower_third": "Red Lions 1-1 Blue Sharks at 90+4'",
-              "talking_point": "Red Lions have driven the numbers, with 3.31 xG to Blue Sharks' 1.62, but the score remains level.",
+              "headline": "Late Chaos, All Square",
+              "lower_third": "Red Lions 1-1 Blue Sharks in 90+4'",
+              "talking_point": "Red Lions have had 3.31 xG and 20 shots, but the match is still level at 1-1.",
               "director_cue": {
                 "action": "show_graphic",
                 "priority": "medium",
-                "reason": "The match is level at 1-1, and the key stat line is Red Lions 3.31 xG to Blue Sharks' 1.62."
+                "reason": "The match is still level at 1-1, and Red Lions have dominated territory with 98% field tilt in the last 10 minutes."
               }
             },
-            "problems": [
-              "Headline 'All Square At The End' is unsupported because final whistle has not been reached; the match is only at 90+4'."
-            ]
-          },
-          {
-            "draft": {
-              "headline": "Level At 90+4'",
-              "lower_third": "Red Lions 1-1 Blue Sharks at 90+4'",
-              "talking_point": "Red Lions have posted 3.31 xG to Blue Sharks' 1.62, but the score is still level.",
-              "director_cue": {
-                "action": "show_graphic",
-                "priority": "medium",
-                "reason": "The match is level at 1-1 in 90+4', and Red Lions lead the xG battle 3.31 to 1.62."
-              }
-            },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -1029,13 +1041,13 @@
       "mode": "broadcaster",
       "language": "en",
       "content": {
-        "headline": "Extra Time, Level",
-        "lower_third": "Red Lions 1-1 Blue Sharks after 91 minutes",
-        "talking_point": "Red Lions have dominated territory, with 93% field tilt in the last 10 minutes, but Blue Sharks are still level at 1-1.",
+        "headline": "Extra Time Chaos",
+        "lower_third": "91' | 1-1 after a frantic opening to extra time",
+        "talking_point": "Red Lions have had 20 shots to Blue Sharks' 9, yet the match remains level at 1-1.",
         "director_cue": {
           "action": "stats_package",
-          "priority": "medium",
-          "reason": "Red Lions have 93% field tilt and 67% possession in the last 10 minutes, showing a clear territorial squeeze."
+          "priority": "high",
+          "reason": "Red Lions have 93% field tilt and 67% possession in the last 10 minutes, but the game is still 1-1."
         }
       },
       "source": "ai",
@@ -1045,16 +1057,17 @@
         "history": [
           {
             "draft": {
-              "headline": "Extra Time, Level",
-              "lower_third": "Red Lions 1-1 Blue Sharks after 91 minutes",
-              "talking_point": "Red Lions have dominated territory, with 93% field tilt in the last 10 minutes, but Blue Sharks are still level at 1-1.",
+              "headline": "Extra Time Chaos",
+              "lower_third": "91' | 1-1 after a frantic opening to extra time",
+              "talking_point": "Red Lions have had 20 shots to Blue Sharks' 9, yet the match remains level at 1-1.",
               "director_cue": {
                 "action": "stats_package",
-                "priority": "medium",
-                "reason": "Red Lions have 93% field tilt and 67% possession in the last 10 minutes, showing a clear territorial squeeze."
+                "priority": "high",
+                "reason": "Red Lions have 93% field tilt and 67% possession in the last 10 minutes, but the game is still 1-1."
               }
             },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -1067,12 +1080,12 @@
       "language": "en",
       "content": {
         "headline": "Reid Heads Home",
-        "lower_third": "Red Lions lead 2-1 after Reid’s corner header",
-        "talking_point": "Reid has scored from one shot, converting a chance worth 0.68 xG.",
+        "lower_third": "Reid scores from a Rook corner for Red Lions",
+        "talking_point": "Reid has put Red Lions back in front with a header from a corner, and Red Lions now have 4.19 xG from 22 shots.",
         "director_cue": {
           "action": "cut_to_replay",
           "priority": "high",
-          "reason": "Reid has scored from a corner, and the chance was worth 0.68 xG."
+          "reason": "Reid’s headed goal came from a corner and Red Lions have 4.19 xG with 22 shots."
         }
       },
       "source": "ai",
@@ -1083,15 +1096,16 @@
           {
             "draft": {
               "headline": "Reid Heads Home",
-              "lower_third": "Red Lions lead 2-1 after Reid’s corner header",
-              "talking_point": "Reid has scored from one shot, converting a chance worth 0.68 xG.",
+              "lower_third": "Reid scores from a Rook corner for Red Lions",
+              "talking_point": "Reid has put Red Lions back in front with a header from a corner, and Red Lions now have 4.19 xG from 22 shots.",
               "director_cue": {
                 "action": "cut_to_replay",
                 "priority": "high",
-                "reason": "Reid has scored from a corner, and the chance was worth 0.68 xG."
+                "reason": "Reid’s headed goal came from a corner and Red Lions have 4.19 xG with 22 shots."
               }
             },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -1103,13 +1117,13 @@
       "mode": "broadcaster",
       "language": "en",
       "content": {
-        "headline": "Crane Misses Big Chance",
-        "lower_third": "Crane fires off target from a 0.34 xG chance",
-        "talking_point": "Crane has now had 6 shots, and that latest chance was worth 0.34 xG.",
+        "headline": "Crane Off Target",
+        "lower_third": "Crane misses a 0.34 xG chance at 103'.",
+        "talking_point": "Crane has now had 6 shots, but that one went off target from 0.34 xG.",
         "director_cue": {
           "action": "cut_to_replay",
           "priority": "medium",
-          "reason": "Crane’s off-target effort was a real chance worth 0.34 xG, so it deserves a replay."
+          "reason": "Crane just missed a real chance, and Red Lions still have 64% of the territory in the last 10 minutes."
         }
       },
       "source": "ai",
@@ -1119,16 +1133,17 @@
         "history": [
           {
             "draft": {
-              "headline": "Crane Misses Big Chance",
-              "lower_third": "Crane fires off target from a 0.34 xG chance",
-              "talking_point": "Crane has now had 6 shots, and that latest chance was worth 0.34 xG.",
+              "headline": "Crane Off Target",
+              "lower_third": "Crane misses a 0.34 xG chance at 103'.",
+              "talking_point": "Crane has now had 6 shots, but that one went off target from 0.34 xG.",
               "director_cue": {
                 "action": "cut_to_replay",
                 "priority": "medium",
-                "reason": "Crane’s off-target effort was a real chance worth 0.34 xG, so it deserves a replay."
+                "reason": "Crane just missed a real chance, and Red Lions still have 64% of the territory in the last 10 minutes."
               }
             },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -1140,32 +1155,53 @@
       "mode": "broadcaster",
       "language": "en",
       "content": {
-        "headline": "Cruz Fires Blue Level",
-        "lower_third": "Cruz scores from a 49% chance to make it 2-2.",
-        "talking_point": "Cruz has levelled it for Blue Sharks, and the chance was rated at 0.49 xG from Wells' assist.",
+        "headline": "Cruz Levels It",
+        "lower_third": "Cruz scores for Blue Sharks at 105', assisted by Wells.",
+        "talking_point": "Cruz turns a close to 50-50 chance into a level score, and Blue Sharks now have 15 shots with 7 on target.",
         "director_cue": {
           "action": "cut_to_replay",
           "priority": "high",
-          "reason": "Cruz has just scored from a 0.49 xG chance, so the goal replay is the priority."
+          "reason": "Goal at 105' from Cruz puts the match at 2-2."
         }
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 1,
+        "attempts": 2,
         "history": [
           {
             "draft": {
-              "headline": "Cruz Fires Blue Level",
-              "lower_third": "Cruz scores from a 49% chance to make it 2-2.",
-              "talking_point": "Cruz has levelled it for Blue Sharks, and the chance was rated at 0.49 xG from Wells' assist.",
+              "headline": "Cruz Strikes Late",
+              "lower_third": "Cruz scores for Blue Sharks at 105' after Wells assist.",
+              "talking_point": "Cruz finishes a close-to-50-50 chance, and Blue Sharks have now taken 15 shots with 7 on target.",
               "director_cue": {
                 "action": "cut_to_replay",
                 "priority": "high",
-                "reason": "Cruz has just scored from a 0.49 xG chance, so the goal replay is the priority."
+                "reason": "Goal at 105' from Cruz, with Blue Sharks now level at 2-2."
               }
             },
-            "problems": []
+            "problems": [
+              "FALSE: \"Cruz Strikes Late\" implies the goal came late in the match; the facts only say it was at 105' in the first half of extra time, and the match is still live.",
+              "FALSE: The lower third says \"Cruz scores for Blue Sharks at 105' after Wells assist.\" but the goal is a live event at 105' and should not be framed as a completed match-deciding moment; the wording is otherwise supported, but the headline is problematic.",
+              "FALSE: \"Cruz finishes a close-to-50-50 chance\" matches the 0.49 xG, but the draft omits that this was the goal event at 105'; no separate factual error here.",
+              "FALSE: \"Blue Sharks have now taken 15 shots with 7 on target.\" is supported by the facts, but the phrasing \"have now\" is fine.",
+              "FALSE: \"Goal at 105' from Cruz, with Blue Sharks now level at 2-2.\" is supported by the facts, but any implication that this seals or decides anything would be unsupported; here it does not explicitly do so, so no issue."
+            ],
+            "notes": []
+          },
+          {
+            "draft": {
+              "headline": "Cruz Levels It",
+              "lower_third": "Cruz scores for Blue Sharks at 105', assisted by Wells.",
+              "talking_point": "Cruz turns a close to 50-50 chance into a level score, and Blue Sharks now have 15 shots with 7 on target.",
+              "director_cue": {
+                "action": "cut_to_replay",
+                "priority": "high",
+                "reason": "Goal at 105' from Cruz puts the match at 2-2."
+              }
+            },
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -1179,30 +1215,48 @@
       "content": {
         "headline": "Level at Extra Time",
         "lower_third": "Red Lions 2-2 Blue Sharks at 105+1'",
-        "talking_point": "Red Lions have 4.55 xG to Blue Sharks' 2.48, yet the score stays level at 2-2.",
+        "talking_point": "Red Lions have 24 shots to Blue Sharks' 15, but the score stays 2-2 at 105+1'.",
         "director_cue": {
           "action": "show_graphic",
           "priority": "high",
-          "reason": "The match is level at 2-2 in extra time, with Red Lions leading xG 4.55 to 2.48."
+          "reason": "The match is level at 2-2 in extra time, so the score state should be on screen."
         }
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 1,
+        "attempts": 2,
         "history": [
           {
             "draft": {
               "headline": "Level at Extra Time",
               "lower_third": "Red Lions 2-2 Blue Sharks at 105+1'",
-              "talking_point": "Red Lions have 4.55 xG to Blue Sharks' 2.48, yet the score stays level at 2-2.",
+              "talking_point": "Red Lions have 68% possession and 83% field tilt overall, but Blue Sharks have matched the score at 2-2.",
               "director_cue": {
                 "action": "show_graphic",
                 "priority": "high",
-                "reason": "The match is level at 2-2 in extra time, with Red Lions leading xG 4.55 to 2.48."
+                "reason": "The match is level at 2-2 in extra time, so the score state should be on screen."
               }
             },
-            "problems": []
+            "problems": [
+              "FALSE: The talking point says Red Lions have 68% possession and 83% field tilt overall, but the provided facts only support 59% possession and 38% field tilt for Red Lions in the last 10 minutes, not those overall numbers.",
+              "UNSUPPORTED: The draft states overall possession and field tilt figures that are not given in the facts or supported by match_data here."
+            ],
+            "notes": []
+          },
+          {
+            "draft": {
+              "headline": "Level at Extra Time",
+              "lower_third": "Red Lions 2-2 Blue Sharks at 105+1'",
+              "talking_point": "Red Lions have 24 shots to Blue Sharks' 15, but the score stays 2-2 at 105+1'.",
+              "director_cue": {
+                "action": "show_graphic",
+                "priority": "high",
+                "reason": "The match is level at 2-2 in extra time, so the score state should be on screen."
+              }
+            },
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -1214,51 +1268,33 @@
       "mode": "broadcaster",
       "language": "en",
       "content": {
-        "headline": "KICK OFF",
-        "lower_third": "106' Red Lions 2 Blue Sharks 2",
-        "talking_point": "",
+        "headline": "Extra Time Level",
+        "lower_third": "Red Lions and Blue Sharks are tied 2-2 at 106'.",
+        "talking_point": "It is level at 2-2, with Red Lions on 4.55 xG to Blue Sharks' 2.48.",
         "director_cue": {
-          "action": "stay_live",
-          "priority": "low",
-          "reason": ""
+          "action": "show_graphic",
+          "priority": "high",
+          "reason": "The match is tied 2-2 in the 106' and both teams have created plenty, with 24 shots for Red Lions and 15 for Blue Sharks."
         }
       },
-      "source": "template",
+      "source": "ai",
       "fact_check": {
-        "approved": false,
-        "attempts": 2,
+        "approved": true,
+        "attempts": 1,
         "history": [
           {
             "draft": {
-              "headline": "Extra Time Still Level",
-              "lower_third": "106': Red Lions 2-2 Blue Sharks",
-              "talking_point": "Red Lions have 83% field tilt and 68% possession overall, but the game remains level at 2-2.",
+              "headline": "Extra Time Level",
+              "lower_third": "Red Lions and Blue Sharks are tied 2-2 at 106'.",
+              "talking_point": "It is level at 2-2, with Red Lions on 4.55 xG to Blue Sharks' 2.48.",
               "director_cue": {
                 "action": "show_graphic",
-                "priority": "medium",
-                "reason": "The match is level at 106' and the wider numbers show Red Lions with 83% field tilt and 68% possession overall."
+                "priority": "high",
+                "reason": "The match is tied 2-2 in the 106' and both teams have created plenty, with 24 shots for Red Lions and 15 for Blue Sharks."
               }
             },
-            "problems": [
-              "The talking point says Red Lions have 83% field tilt and 68% possession overall, but the draft labels this as overall while the match data shows those are overall numbers only; this is supported. However, the director cue says the reason is the ‘wider numbers’ showing Red Lions with 83% field tilt and 68% possession overall, which is also supported.",
-              "The only unsupported part is the headline ‘Extra Time Still Level’ if intended as a factual claim about game state? No, the match is 2-2 at 106', so that is supported. No factual problems found."
-            ]
-          },
-          {
-            "draft": {
-              "headline": "Extra Time Still Level",
-              "lower_third": "106': Red Lions 2-2 Blue Sharks",
-              "talking_point": "Red Lions have 83% field tilt and 68% possession overall, but the match remains level at 2-2.",
-              "director_cue": {
-                "action": "show_graphic",
-                "priority": "medium",
-                "reason": "The match is level at 106', and the wider numbers show Red Lions with 83% field tilt and 68% possession overall."
-              }
-            },
-            "problems": [
-              "The talking point and director cue claim Red Lions have 83% field tilt and 68% possession overall, but the supplied facts only give last-10-minute territory: Red Lions 42% field tilt and 60% possession, Blue Sharks 58% and 40%. No overall territory figures are provided.",
-              "The lower third is fine on the score and clock, but the draft should not present unsupported overall dominance numbers as fact."
-            ]
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -1270,13 +1306,13 @@
       "mode": "broadcaster",
       "language": "en",
       "content": {
-        "headline": "Red Lions Pressing",
-        "lower_third": "Blue Sharks accuracy down to 60% in last 5 minutes",
-        "talking_point": "Blue Sharks have dropped to 60% pass accuracy in the last 5 minutes, while Red Lions have had 85% of final-third actions in the last 10 minutes.",
+        "headline": "Red Lions Squeeze",
+        "lower_third": "Blue Sharks passing down to 60% in the last 5 minutes",
+        "talking_point": "Blue Sharks have dipped to 60% passing accuracy in the last 5 minutes, while Red Lions have 85% of field tilt over the last 10.",
         "director_cue": {
           "action": "stats_package",
           "priority": "medium",
-          "reason": "Blue Sharks are under pressure, with 60% pass accuracy in the last 5 minutes and Red Lions holding 85% of final-third actions."
+          "reason": "The match is chaotic and Red Lions have 85% of field tilt in the last 10 minutes, so a pattern graphic explains the pressure."
         }
       },
       "source": "ai",
@@ -1286,16 +1322,17 @@
         "history": [
           {
             "draft": {
-              "headline": "Red Lions Pressing",
-              "lower_third": "Blue Sharks accuracy down to 60% in last 5 minutes",
-              "talking_point": "Blue Sharks have dropped to 60% pass accuracy in the last 5 minutes, while Red Lions have had 85% of final-third actions in the last 10 minutes.",
+              "headline": "Red Lions Squeeze",
+              "lower_third": "Blue Sharks passing down to 60% in the last 5 minutes",
+              "talking_point": "Blue Sharks have dipped to 60% passing accuracy in the last 5 minutes, while Red Lions have 85% of field tilt over the last 10.",
               "director_cue": {
                 "action": "stats_package",
                 "priority": "medium",
-                "reason": "Blue Sharks are under pressure, with 60% pass accuracy in the last 5 minutes and Red Lions holding 85% of final-third actions."
+                "reason": "The match is chaotic and Red Lions have 85% of field tilt in the last 10 minutes, so a pattern graphic explains the pressure."
               }
             },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -1307,55 +1344,33 @@
       "mode": "broadcaster",
       "language": "en",
       "content": {
-        "headline": "OWN GOAL",
-        "lower_third": "113' Red Lions 3 Blue Sharks 2",
-        "talking_point": "",
+        "headline": "Own Goal Turns It",
+        "lower_third": "Bell puts the ball into Blue Sharks' net.",
+        "talking_point": "Bell’s own goal has put Red Lions ahead 3-2, and Red Lions now have 4.61 xG from 27 shots.",
         "director_cue": {
-          "action": "stay_live",
-          "priority": "low",
-          "reason": ""
+          "action": "cut_to_replay",
+          "priority": "high",
+          "reason": "Own goals are high-priority moments, and Bell’s own goal has changed the score to 3-2."
         }
       },
-      "source": "template",
+      "source": "ai",
       "fact_check": {
-        "approved": false,
-        "attempts": 2,
+        "approved": true,
+        "attempts": 1,
         "history": [
           {
             "draft": {
-              "headline": "Red Lions Lead Again",
-              "lower_third": "Bell own goal puts Red Lions 3-2 up in 113'",
-              "talking_point": "Red Lions are back in front at 3-2, and their 4.61 xG from 27 shots shows the pressure has been relentless.",
+              "headline": "Own Goal Turns It",
+              "lower_third": "Bell puts the ball into Blue Sharks' net.",
+              "talking_point": "Bell’s own goal has put Red Lions ahead 3-2, and Red Lions now have 4.61 xG from 27 shots.",
               "director_cue": {
                 "action": "cut_to_replay",
                 "priority": "high",
-                "reason": "Bell’s own goal changes the score at 113', with Red Lions leading 3-2 and 4.61 xG to 2.48."
+                "reason": "Own goals are high-priority moments, and Bell’s own goal has changed the score to 3-2."
               }
             },
-            "problems": [
-              "Headline says \"Red Lions Lead Again\": this is supported by the score context, but as a broadcast fact-check issue it is acceptable only if the writer intends a factual statement; no problem here.",
-              "Lower third says \"Bell own goal puts Red Lions 3-2 up in 113'\" — supported by the facts.",
-              "Talking point says Red Lions are back in front at 3-2, and their 4.61 xG from 27 shots shows the pressure has been relentless — supported by the facts.",
-              "Director cue says Bell’s own goal changes the score at 113', with Red Lions leading 3-2 and 4.61 xG to 2.48 — supported by the facts."
-            ]
-          },
-          {
-            "draft": {
-              "headline": "Red Lions Go Ahead",
-              "lower_third": "Bell own goal puts Red Lions 3-2 up in 113'",
-              "talking_point": "Red Lions lead 3-2 in 113', and their 4.61 xG from 27 shots shows sustained pressure.",
-              "director_cue": {
-                "action": "cut_to_replay",
-                "priority": "high",
-                "reason": "Bell’s own goal changes the score at 113', with Red Lions leading 3-2 and 4.61 xG to 2.48."
-              }
-            },
-            "problems": [
-              "“Red Lions Go Ahead” is too strong if presented as a fact headline at 113' in extra time; the facts only show they lead 3-2 at that moment, not any broader conclusion.",
-              "“Bell own goal puts Red Lions 3-2 up in 113'” is supported by the facts.",
-              "“their 4.61 xG from 27 shots shows sustained pressure” is supported by the xG and shot totals, but “sustained pressure” is an interpretation rather than a direct fact; acceptable only if treated as commentary.",
-              "“Bell’s own goal changes the score at 113', with Red Lions leading 3-2 and 4.61 xG to 2.48.” is supported by the facts."
-            ]
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -1367,49 +1382,33 @@
       "mode": "broadcaster",
       "language": "en",
       "content": {
-        "headline": "Red Lions Lead 3-2",
-        "lower_third": "Red Lions lead 3-2 at 120+1' in extra time",
-        "talking_point": "Red Lions lead 3-2 at 120+1', with 27 shots and 4.61 expected goals as the last 10 minutes stayed chaotic.",
+        "headline": "Red Lions Win",
+        "lower_third": "Red Lions beat Blue Sharks 3-2 after extra time",
+        "talking_point": "Red Lions have won 3-2 after extra time, with 4.61 xG to Blue Sharks' 2.48.",
         "director_cue": {
           "action": "show_graphic",
           "priority": "high",
-          "reason": "The match is at 120+1' with Red Lions leading 3-2, so the score graphic is the clearest on-air update."
+          "reason": "Final whistle is in, and the result plus 4.61 xG to 2.48 should go straight to a full-screen score graphic."
         }
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 2,
+        "attempts": 1,
         "history": [
           {
             "draft": {
-              "headline": "Red Lions Edge It",
-              "lower_third": "Red Lions lead 3-2 at 120+1' after extra time",
-              "talking_point": "Red Lions are 3-2 ahead at 120+1', with 27 shots and 4.61 expected goals in a chaotic finish.",
+              "headline": "Red Lions Win",
+              "lower_third": "Red Lions beat Blue Sharks 3-2 after extra time",
+              "talking_point": "Red Lions have won 3-2 after extra time, with 4.61 xG to Blue Sharks' 2.48.",
               "director_cue": {
                 "action": "show_graphic",
                 "priority": "high",
-                "reason": "The match is at 120+1' with the score 3-2, so the key on-air need is the final score graphic."
+                "reason": "Final whistle is in, and the result plus 4.61 xG to 2.48 should go straight to a full-screen score graphic."
               }
             },
-            "problems": [
-              "Headline says “Red Lions Edge It,” but “edge it” implies the match is decided on a winning goal in a way that is not supported by the facts alone; the only supported fact is that Red Lions lead 3-2 at 120+1' with final_whistle true.",
-              "Lower third says “after extra time,” which is vague/inexact against the facts: the match is specifically at 120+1' in the second half of extra time, not simply “after extra time.”",
-              "Talking point says “in a chaotic finish,” which is supported only if referring to the last 10 minutes control being chaotic; it should be tied more precisely to the provided control_last_10_min rather than stated as a broader factual summary of the whole finish."
-            ]
-          },
-          {
-            "draft": {
-              "headline": "Red Lions Lead 3-2",
-              "lower_third": "Red Lions lead 3-2 at 120+1' in extra time",
-              "talking_point": "Red Lions lead 3-2 at 120+1', with 27 shots and 4.61 expected goals as the last 10 minutes stayed chaotic.",
-              "director_cue": {
-                "action": "show_graphic",
-                "priority": "high",
-                "reason": "The match is at 120+1' with Red Lions leading 3-2, so the score graphic is the clearest on-air update."
-              }
-            },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }
@@ -1421,58 +1420,43 @@
       "mode": "recap",
       "language": "en",
       "content": {
-        "title": "Red Lions edge Blue Sharks in extra-time thriller",
+        "title": "Red Lions edge a wild extra-time battle 3-2",
         "paragraphs": [
-          "Red Lions beat Blue Sharks 3-2 after extra time in a match that swung back and forth. Fox put Red Lions ahead in the 28th minute, Gray levelled for Blue Sharks in the 62nd, Reid restored the lead in the 95th, Cruz brought Blue Sharks back at 105 minutes, and Bell scored at 113 minutes to make it 3-2.",
-          "The numbers show Red Lions carried the greater share of the game. Red Lions finished with 69 possession, 85 field tilt, 110 final-third entries and 27 shots, compared with Blue Sharks on 31 possession, 15 field tilt, 31 final-third entries and 15 shots. Red Lions also had 6 big chances to Blue Sharks’ 5, and Blue Sharks spent much more of the match defending deep.",
-          "The late stages were messy and tense, with the last 10 minutes described as chaotic. Red Lions still had 91 field tilt and 79 possession in that spell, which underlined how much of the play was in Blue Sharks’ end before the match ended at 120+1'."
+          "Red Lions won 3-2 after extra time in a match that kept swinging until 120+1'. Fox put Red Lions ahead at 28', Gray levelled for Blue Sharks at 62', Reid restored the lead at 95', and Cruz brought Blue Sharks back at 105'. The final twist came at 113', when Bell scored an own goal into Blue Sharks' net, and that counted for Red Lions.",
+          "Red Lions had the stronger grip for most of the game. They finished with 69% possession, 85% of the territory, 27 shots to 15, 11 on target and 6 big chances, while their passing stayed sharp at 93% accuracy with 110 final-third entries. Blue Sharks were dangerous in bursts and kept answering, but they spent long spells under pressure and could not match Red Lions' control.",
+          "The turning point was the long spell after 95', when Red Lions kept pushing Blue Sharks deeper and kept creating the clearer chances. Even with Blue Sharks twice fighting back, Red Lions finished the night on top by sheer volume, pressure and persistence."
         ]
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 3,
+        "attempts": 2,
         "history": [
           {
             "draft": {
-              "title": "Red Lions edge Blue Sharks in extra-time thriller",
+              "title": "Red Lions survive a wild extra-time finish to beat Blue Sharks 3-2",
               "paragraphs": [
-                "Red Lions won 3 to 2 after extra time in a match that swung back and forth from start to finish. Fox put Red Lions ahead in the 28th minute, Gray levelled for Blue Sharks on 62 minutes, Reid restored the lead in the 95th minute, and Cruz brought Blue Sharks back at 105 minutes before Bell’s own goal in the 113th minute settled the score.",
-                "Red Lions controlled the game for long spells and did most of the ball work, finishing with 69 possession, 85 field tilt and 110 entries into the final third, while Blue Sharks were forced deeper and ended on 31 possession and 15 field tilt. Red Lions also created more, with 27 shots and 6 big chances compared with 15 shots and 5 big chances, but the finishing was wasteful on both sides.",
-                "The turning point came in extra time, when Red Lions kept pinning Blue Sharks back and kept asking the harder questions in the box. Even in a chaotic last stretch, Red Lions stayed on the front foot long enough to finally get over the line."
+                "Red Lions won 3-2 after extra time in a match that swung back and forth all the way to 120+1'. Fox put Red Lions in front at 28', Gray levelled for Blue Sharks at 62', Reid restored the lead at 95', Cruz made it 2-2 at 105', and then Bell turned the ball into Red Lions' net at 113', which counted for Blue Sharks and settled the final score at 3-2 to Red Lions.",
+                "Red Lions controlled most of the night. Across the match they had 69% possession, 85% of the territory, and 27 shots to Blue Sharks' 15, with 11 on target and 6 big chances. The passing was crisp too, with 93% accuracy and 110 entries into the final third, while Blue Sharks were more direct and far less comfortable on the ball.",
+                "The turning point came in extra time. Blue Sharks kept finding replies, but Red Lions kept pinning them back, and the pressure told in the closing stages when Red Lions spent the last 10 minutes camped in Blue Sharks' half, with 91% of the final-third actions and 79% of possession. In the end, Red Lions won by sheer volume and territory, even if the last twist came through Bell's own goal."
               ]
             },
             "problems": [
-              "The headline says 'Red Lions edge Blue Sharks in extra-time thriller' and the body says Bell’s own goal in the 113th minute 'settled the score' / Red Lions 'finally get over the line.' Since the draft is written at 120+1' but the facts show the match has reached final whistle, any claim that a goal 'settled' or 'got them over the line' is only supportable if framed as the final score, not as a decisive/winning description without explicit confirmation of finality from the draft context.",
-              "The phrase 'swung back and forth from start to finish' is an unsupported broad characterization. The facts show a back-and-forth scoreline, but not necessarily from the start to the finish in those exact terms."
-            ]
+              "FALSE: the own goal went into the other team's net, not Red Lions's"
+            ],
+            "notes": []
           },
           {
             "draft": {
-              "title": "Red Lions survive a wild extra-time finish",
+              "title": "Red Lions edge a wild extra-time battle 3-2",
               "paragraphs": [
-                "Red Lions beat Blue Sharks 3-2 after extra time in a match that kept turning. Fox gave Red Lions the lead in the 28th minute, Gray replied for Blue Sharks in the 62nd, Reid put Red Lions back ahead in the 95th, Cruz equalized at 105 minutes, and Bell’s own goal in the 113th minute made the final score 3-2.",
-                "Red Lions had the clearer control for most of the match and especially in the closing stages. Across the game they finished with 69 possession, 85 field tilt, 110 final-third entries and 27 shots, while Blue Sharks had 31 possession, 15 field tilt and 15 shots. Red Lions also had 6 big chances to Blue Sharks’ 5, so the numbers matched the pressure they kept building.",
-                "The turning point came in extra time, when Red Lions stayed on top territorially and kept creating the better openings even as the game became chaotic late on. Blue Sharks kept fighting back to level the score, but Red Lions were the side doing most of the attacking when the match ended at 120+1'."
+                "Red Lions won 3-2 after extra time in a match that kept swinging until 120+1'. Fox put Red Lions ahead at 28', Gray levelled for Blue Sharks at 62', Reid restored the lead at 95', and Cruz brought Blue Sharks back at 105'. The final twist came at 113', when Bell scored an own goal into Blue Sharks' net, and that counted for Red Lions.",
+                "Red Lions had the stronger grip for most of the game. They finished with 69% possession, 85% of the territory, 27 shots to 15, 11 on target and 6 big chances, while their passing stayed sharp at 93% accuracy with 110 final-third entries. Blue Sharks were dangerous in bursts and kept answering, but they spent long spells under pressure and could not match Red Lions' control.",
+                "The turning point was the long spell after 95', when Red Lions kept pushing Blue Sharks deeper and kept creating the clearer chances. Even with Blue Sharks twice fighting back, Red Lions finished the night on top by sheer volume, pressure and persistence."
               ]
             },
-            "problems": [
-              "“Bell’s own goal in the 113th minute” is unsupported by the facts: the 113' goal is listed as a Red Lions goal by Bell, but the own_goal field is true while the scorer field is not enough to state Bell scored an own goal without clarification from the data.",
-              "“Red Lions had the clearer control for most of the match and especially in the closing stages” goes beyond the supported facts; the data supports strong territorial dominance, but “clearer control” and “for most of the match” are interpretive claims not directly stated.",
-              "“The turning point came in extra time” is a judgment not established by the facts.",
-              "“Red Lions stayed on top territorially and kept creating the better openings even as the game became chaotic late on” is only partly supported: chaos late on is supported, but “kept creating the better openings” is not directly stated, and “stayed on top territorially” should be limited to the numeric territory data rather than asserted as a narrative fact if not explicitly tied to the period in question."
-            ]
-          },
-          {
-            "draft": {
-              "title": "Red Lions edge Blue Sharks in extra-time thriller",
-              "paragraphs": [
-                "Red Lions beat Blue Sharks 3-2 after extra time in a match that swung back and forth. Fox put Red Lions ahead in the 28th minute, Gray levelled for Blue Sharks in the 62nd, Reid restored the lead in the 95th, Cruz brought Blue Sharks back at 105 minutes, and Bell scored at 113 minutes to make it 3-2.",
-                "The numbers show Red Lions carried the greater share of the game. Red Lions finished with 69 possession, 85 field tilt, 110 final-third entries and 27 shots, compared with Blue Sharks on 31 possession, 15 field tilt, 31 final-third entries and 15 shots. Red Lions also had 6 big chances to Blue Sharks’ 5, and Blue Sharks spent much more of the match defending deep.",
-                "The late stages were messy and tense, with the last 10 minutes described as chaotic. Red Lions still had 91 field tilt and 79 possession in that spell, which underlined how much of the play was in Blue Sharks’ end before the match ended at 120+1'."
-              ]
-            },
-            "problems": []
+            "problems": [],
+            "notes": []
           }
         ]
       }

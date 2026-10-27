@@ -21,8 +21,8 @@ from dataclasses import dataclass
 from agent_framework import Agent, Executor, WorkflowBuilder, WorkflowContext, handler
 from pydantic import BaseModel, Field
 
-from matchmind.agents import (CHECKER_INSTRUCTIONS, MAX_RECAP_ATTEMPTS, Recap, Verdict, Job, build_agents,
-                              chat_client, current_event, match_tools, no_spoilers, rule_problems)
+from matchmind.agents import (MAX_RECAP_ATTEMPTS, Job, Recap, Verdict, blocking, build_agents, chat_client,
+                              checker_prompt, current_event, match_tools, no_spoilers, rule_problems)
 from matchmind.commentary import RUNS_DIR
 from matchmind.data import load_match
 from matchmind.moments import recap_moment
@@ -111,12 +111,8 @@ class Coordinator(Executor):
             job = Job(self.brief.match_id, self.brief.moment, "ensemble", {"role": "broadcaster"}, draft=report)
             problems = rule_problems(job)
             if not problems:
-                verdict = await self.checker.run(json.dumps({"match_id": self.brief.match_id,
-                                                             "at_event": self.brief.moment["event_id"],
-                                                             "FACTS": self.brief.moment["facts"], "DRAFT": report},
-                                                            ensure_ascii=False),
-                                                 options={"response_format": Verdict})
-                problems = [] if verdict.value.approved else verdict.value.problems or ["not approved"]
+                verdict = await self.checker.run(checker_prompt(job), options={"response_format": Verdict})
+                problems = blocking(verdict.value)
             history.append({"draft": report, "problems": problems})
             if not problems:
                 break

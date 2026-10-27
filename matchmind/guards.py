@@ -31,8 +31,14 @@ def check_script(text, language):
 # "3-2" or "3–2", but not "11-pass", and not a stat like "27-15 on shots".
 _PAIR = re.compile(r"\b(\d{1,2})\s*[-–]\s*(\d{1,2})\b(?!\s*-?\s*pass)")
 _STAT_WORDS = re.compile(
-    r"^\W*(?:(?:edge|advantage|margin|split|count|tally)\s+)?(?:(?:on|in|for)\s+)?(?:the\s+)?(?:shots?|passes|passing|saves?|corners?|fouls?|tackles?|"
+    r"^\W*(?:(?:edge|advantage|margin|split|count|tally)\s+)?(?:(?:on|in|for)\s+)?(?:the\s+)?(?:big\s+)?(?:shots?|passes|passing|saves?|corners?|fouls?|tackles?|"
     r"chances?|attempts?|possession|xg|touches|on target|ball wins?)\b",
+    re.IGNORECASE,
+)
+# ...or with the statistic named just before it: "the big chances 6-5", "shot count 27-15".
+_STAT_BEFORE = re.compile(
+    r"(?:shots?|shot count|(?:big )?chances?|corners?|saves?|fouls?|tackles?|passes|attempts?|xg|"
+    r"cards?|bookings?|touches|on target)\s*(?:count|tally|split|edge|of|at|was|were)?\s*$",
     re.IGNORECASE,
 )
 MAX_GOALS = 9  # a pair with a bigger number is a statistic, not a score
@@ -45,7 +51,7 @@ def scorelines(text):
         a, b = int(match.group(1)), int(match.group(2))
         if a > MAX_GOALS or b > MAX_GOALS:
             continue
-        if _STAT_WORDS.match(text[match.end():]):
+        if _STAT_WORDS.match(text[match.end():]) or _STAT_BEFORE.search(text[:match.start()]):
             continue
         found.append((a, b))
     return found

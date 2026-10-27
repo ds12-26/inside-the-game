@@ -116,3 +116,11 @@ def test_pass_distance_and_difficulty_by_hand():
     assert round(stats.metres(lane["start"], lane["end"]), 1) == 15.3
     # distance 15.3/50*40 = 12.2, no pressure, 14.6/30*20 = 9.7 forward, not into the box
     assert stats.pass_difficulty(lane) == 22
+
+
+def test_scorelines_skip_statistics_named_before_or_after():
+    from matchmind.guards import scorelines
+    assert scorelines("Red Lions led the big chances 6-5 and the shot count 27-15") == []
+    assert scorelines("6-5 on big chances") == []
+    assert scorelines("Red Lions won 3-2 after extra time") == [(3, 2)]
+    assert scorelines("Red Lions lead 4-2") == [(4, 2)]

@@ -342,6 +342,8 @@ async function showRecap(card) {
   try {
     const report = await (await fetch(`/api/report/${MATCH_ID}`)).json();
     const r = report.report;
+    document.querySelector(".ensemble-head .badge").textContent =
+      report.fact_check.approved ? "3 agents · merged · fact-checked" : "3 agents · merged · not fully verified";
     $("ensemble").innerHTML = `<h4>${escapeHtml(r.title)}</h4><p>${escapeHtml(r.summary)}</p>` +
       r.sections.map((s) => `<div class="persp"><h4>${escapeHtml(s.perspective)}</h4><p>${escapeHtml(s.text)}</p></div>`).join("");
   } catch { $("ensemble").innerHTML = `<p class="hint">The ensemble report isn't ready yet.</p>`; }

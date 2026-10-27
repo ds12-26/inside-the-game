@@ -81,7 +81,15 @@ class Recap(BaseModel):
 
 class Verdict(BaseModel):
     approved: bool
-    problems: list[str] = Field(description="Each unsupported or wrong claim, empty if approved")
+    problems: list[str] = Field(description='Each problem, starting with "FALSE:", "UNSUPPORTED:" or "WORDING:"')
+
+
+def blocking(verdict):
+    """The problems that send a draft back: false or unsupported claims, not wording notes."""
+    if verdict.approved:
+        return []
+    real = [p for p in verdict.problems if not p.strip().upper().startswith("WORDING")]
+    return real if verdict.problems else ["not approved"]
 
 
 SCHEMAS = {"fan": FanLine, "analyst": AnalystCard, "broadcaster": StudioCard, "recap": Recap}
@@ -97,6 +105,12 @@ Facts:
 - Never say "again", "another", "first" or "second" about a goal, card or save unless the
   facts show how many there have been.
 - Refer to players by name, never "he" or "she".
+- An own goal is always called an own goal: say whose net it went into and which team it counts
+  for. Never say the player "scored" as if for their own team.
+- At the final whistle (final_whistle is true) the match is over: give the result (won, lost,
+  drew), not who "leads".
+- Make the call yourself: never refer to the facts or data ("described as", "the data shows").
+- Except for fans, write percentages with the % sign (69% possession).
 - Don't invent context that is not in the facts: the competition, a final or title, the stakes,
   the venue, crowd, weather or either team's history.
 - Write in the viewer's language. In Hindi, write in Devanagari, keep team and player names
@@ -150,6 +164,8 @@ CHECKER_INSTRUCTIONS = """You are the Fact-Checker for a live football broadcast
 - Approve only if every factual claim in the draft is supported: the score, who did what, which team
   is on top, counts, how good a chance was, the minute, and words like "again" or "first".
 - If a claim is not in the FACTS, check it with the match_data tools (pass match_id and at_event).
+- An own goal described as an ordinary goal ("Bell scored", "Bell made it 3-2") is a problem:
+  it must be called an own goal.
 - Before final_whistle, calling a goal "the winner", "decisive" or saying it "seals" the match is a
   problem: nobody knows yet.
 - Invented context is a problem: the crowd, competition, a final or title, venue, weather or history
@@ -162,8 +178,12 @@ CHECKER_INSTRUCTIONS = """You are the Fact-Checker for a live football broadcast
   "keeps the hope alive", leaning towards the viewer's club): only flag claims that are false,
   contradict the facts, or state as fact something the facts do not show.
 - Approve when every problem you can find is only about style, opinion, narrative or "could be
-  more precise", in any language. Never list a claim you found to be supported.
-- List each problem precisely so the writer can fix it."""
+  more precise", in any language. Never list a claim you found to be supported: if everything
+  you checked is supported or opinion, set approved to true and problems to [].
+- List each problem precisely so the writer can fix it, starting with its kind:
+  "FALSE:" contradicts the facts; "UNSUPPORTED:" a factual claim the facts don't show;
+  "WORDING:" style, opinion, interpretation or "could be more precise". Only FALSE and
+  UNSUPPORTED problems send the draft back."""
 
 
 # ---------- model, tools and the no-spoiler guard ----------
@@ -245,8 +265,11 @@ class FactChecker(Executor):
         problems = rule_problems(job)
         if not problems:
             reply = await self.agent.run(checker_prompt(job), options={"response_format": Verdict})
-            problems = [] if reply.value.approved else reply.value.problems or ["not approved"]
-        job.history.append({"draft": job.draft, "problems": problems})
+            problems = blocking(reply.value)
+            notes = [p for p in reply.value.problems if p not in problems]
+        else:
+            notes = []
+        job.history.append({"draft": job.draft, "problems": problems, "notes": notes})
         if not problems:
             await ctx.yield_output(card(job, approved=True))
         elif job.attempts < (MAX_RECAP_ATTEMPTS if job.mode == "recap" else MAX_ATTEMPTS):
@@ -297,7 +320,25 @@ def writer_prompt(job):
 
 def checker_prompt(job):
     return json.dumps({"match_id": job.match_id, "at_event": job.moment["event_id"],
+                       "match_status": match_status(job.moment),
                        "FACTS": job.moment["facts"], "DRAFT": job.draft}, ensure_ascii=False)
+
+
+def match_status(moment):
+    """Tells the Fact-Checker what is settled, so it doesn't trip over the same points."""
+    facts = moment["facts"]
+    settled = []
+    if facts.get("final_whistle"):
+        settled.append("FULL TIME: the match is over. Result words (won, winner, decisive, settled, sealed, "
+                       "made the difference) are correct about the final score and the last goal.")
+    else:
+        settled.append("LIVE: the match is still going. Nobody knows the result yet.")
+    for goal in facts.get("goals", []):
+        if goal.get("own_goal"):
+            settled.append(f"{goal['clock']}: {goal['scorer']} scored an own goal; it counts for {goal['team']}, "
+                           f"and went into the other team's net. Saying it counted for {goal['team']} is correct.")
+    settled.append("Narrative words (swung, chaotic, frantic, turning point, thriller) are WORDING, never FALSE.")
+    return " ".join(settled)
 
 
 def viewer_text(viewer):
@@ -313,15 +354,28 @@ def viewer_text(viewer):
 # ---------- checks done in code before the Fact-Checker agent ----------
 
 
-def draft_text(draft):
-    """All the words in a draft, whatever its shape."""
+def draft_text(draft, skip=()):
+    """All the words in a draft, whatever its shape; separate fields never run together."""
     parts = []
-    for value in draft.values():
+    for key, value in draft.items():
+        if key in skip:
+            continue
         if isinstance(value, str):
             parts.append(value)
+        elif isinstance(value, dict):
+            parts.append(draft_text(value))
         elif isinstance(value, list):
-            parts += [v if isinstance(v, str) else " ".join(map(str, v.values())) for v in value]
-    return " ".join(parts)
+            parts += [v if isinstance(v, str) else draft_text(v) for v in value]
+    return " | ".join(parts)
+
+
+def own_net_problems(text, facts):
+    """An own goal said to go into the wrong team's net ("into Red Lions' own net")."""
+    own_goals = [g for g in facts.get("goals", []) if g.get("own_goal")]
+    if facts.get("own_goal"):
+        own_goals.append({"team": facts["own_goal"]["goal_counts_for"]})
+    return [f"FALSE: the own goal went into the other team's net, not {g['team']}'s"
+            for g in own_goals if re.search(re.escape(g["team"]) + r"[’']?s?\s+(?:own\s+)?net", text)]
 
 
 def devanagari_share(text):
@@ -344,6 +398,11 @@ def rule_problems(job):
         if sorted(pair) not in real:
             problems.append(f"mentions the score {pair[0]}-{pair[1]}, which this match has not had; "
                             f"it is {'-'.join(map(str, facts['score'].values()))}")
+    for_fan = job.mode == "fan" or (job.mode == "recap" and job.viewer.get("role", "fan") == "fan")
+    prose = draft_text(job.draft, skip=("evidence",))      # evidence chips are label/value pairs
+    problems += own_net_problems(prose, job.moment["facts"])
+    if not for_fan and re.search(r"\b\d{1,3}\s+(?:possession|field tilt|pass accuracy|accuracy)\b", prose, re.IGNORECASE):
+        problems.append("write percentages with the % sign, e.g. 69% possession")
     if job.viewer.get("language") == "hi" and devanagari_share(text) < 0.5:
         problems.append("the viewer chose Hindi: write in Hindi (Devanagari), keeping only names in Latin letters")
     if job.mode == "fan" or (job.mode == "recap" and job.viewer.get("role", "fan") == "fan"):
@@ -382,15 +441,32 @@ def fallback_card(moment, mode, viewer, reason):
     }
 
 
+# When the agents can't produce an approved card, the broadcaster still gets the right shot.
+FALLBACK_CUES = {
+    "goal": ("GOAL", "cut_to_replay", "high", "A goal changes the score: replay it."),
+    "own_goal": ("OWN GOAL", "cut_to_replay", "high", "An own goal changes the score: replay it."),
+    "big_chance": ("BIG CHANCE", "cut_to_replay", "medium", "A big chance: worth a replay."),
+    "card": ("BOOKING", "cut_to_replay", "medium", "A booking: show the incident."),
+    "momentum_swing": ("MOMENTUM SWING", "stats_package", "medium", "The balance of play has shifted: show the territory graphic."),
+    "passing_drop": ("PASSING DROP", "stats_package", "medium", "A team's passing has dropped sharply: show the passing graphic."),
+    "check_in": ("MATCH UPDATE", "show_graphic", "low", "Show the score and match state."),
+    "kick_off": ("KICK-OFF", "show_graphic", "medium", "Play is starting: show the score and clock."),
+    "period_end": ("END OF PERIOD", "show_graphic", "high", "The period is over: show the score."),
+}
+
+
 def fallback_content(moment, mode):
     """A plain, always-true line for when the agents can't produce an approved one."""
     facts = moment["facts"]
     score = " ".join(f"{team} {goals}" for team, goals in facts["score"].items())
     line = f"{moment['clock']} {score}"
+    headline, action, priority, reason = FALLBACK_CUES.get(moment["kind"], ("UPDATE", "stay_live", "low", ""))
+    if moment["kind"] == "period_end" and facts.get("final_whistle"):
+        headline = "FULL TIME"
     return {
         "fan": {"text": line},
         "analyst": {"headline": line, "why_it_matters": "", "evidence": []},
-        "broadcaster": {"headline": moment["kind"].replace("_", " ").upper(), "lower_third": line, "talking_point": "",
-                        "director_cue": {"action": "stay_live", "priority": "low", "reason": ""}},
+        "broadcaster": {"headline": headline, "lower_third": line, "talking_point": "",
+                        "director_cue": {"action": action, "priority": priority, "reason": reason}},
         "recap": {"title": line, "paragraphs": []},
     }[mode]

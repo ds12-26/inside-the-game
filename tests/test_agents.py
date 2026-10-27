@@ -168,3 +168,53 @@ def test_hindi_viewer_gets_hindi_not_english():
 def test_portuguese_viewers_get_brazilian_portuguese():
     from matchmind.agents import viewer_text
     assert viewer_text({"language": "pt"})["language"] == "Brazilian Portuguese"
+
+
+def test_broadcaster_fallback_still_cuts_to_the_goal():
+    own_goal = next(m for m in MOMENTS if m["kind"] == "own_goal")
+    rejected = {"approved": False, "problems": ["wrong"]}
+    draft = {"headline": "x", "lower_third": "x", "talking_point": "x",
+             "director_cue": {"action": "stay_live", "priority": "low", "reason": "x"}}
+    fake = {"broadcaster": FakeAgent(draft, draft), "checker": FakeAgent(rejected, rejected)}
+    card = run_card(fake, moment=own_goal, mode="broadcaster", viewer={"role": "broadcaster", "language": "en"})
+    assert card["source"] == "template"
+    assert card["content"]["headline"] == "OWN GOAL"
+    assert card["content"]["director_cue"]["action"] == "cut_to_replay" and card["content"]["director_cue"]["reason"]
+
+
+def test_percentages_need_a_percent_sign_except_for_fans():
+    draft = {"headline": "Red Lions dominate", "why_it_matters": "Red Lions have 69 possession.",
+             "evidence": [{"label": "Possession", "value": "69%"}]}
+    fixed = {**draft, "why_it_matters": "Red Lions have 69% possession."}
+    fake = {"analyst": FakeAgent(draft, fixed), "checker": FakeAgent({"approved": True, "problems": []})}
+    card = run_card(fake, mode="analyst", viewer={"role": "analyst", "language": "en"})
+    assert card["content"]["why_it_matters"] == "Red Lions have 69% possession."
+
+
+def test_evidence_chips_never_run_together_into_a_false_alarm():
+    draft = {"headline": "Red Lions squeeze", "why_it_matters": "Red Lions have 91% field tilt.",
+             "evidence": [{"label": "Field tilt", "value": "Red Lions 91, Blue Sharks 9"},
+                          {"label": "Possession", "value": "79%"}]}
+    fake = {"analyst": FakeAgent(draft), "checker": FakeAgent({"approved": True, "problems": []})}
+    assert run_card(fake, mode="analyst", viewer={"role": "analyst", "language": "en"})["fact_check"]["attempts"] == 1
+
+
+def test_fact_checker_is_told_when_the_match_is_over():
+    from matchmind.agents import match_status
+    assert match_status(recap_moment(EVENTS, INFO)).startswith("FULL TIME")
+    assert match_status(FOX_GOAL).startswith("LIVE")
+
+
+def test_wording_notes_do_not_send_a_draft_back():
+    verdict = {"approved": False, "problems": ["WORDING: 'turning point' is interpretation"]}
+    fake = fakes([{"text": "Fox scores!"}], [verdict])
+    card = run_card(fake)
+    assert card["source"] == "ai" and card["fact_check"]["attempts"] == 1
+    assert card["fact_check"]["history"][0]["notes"] == ["WORDING: 'turning point' is interpretation"]
+
+
+def test_own_goal_into_the_wrong_net_is_caught_in_code():
+    from matchmind.agents import own_net_problems
+    facts = recap_moment(EVENTS, INFO)["facts"]
+    assert own_net_problems("Bell put the ball into Red Lions' own net", facts)
+    assert not own_net_problems("Bell put the ball into Blue Sharks' own net", facts)

@@ -81,6 +81,11 @@ misses a goal.
   for Hindi viewers, and Hindi viewers must actually get Hindi); then the Fact-Checker agent checks every claim
   (who did what, chance quality, "again"/"first", invented context such as a crowd or a
   final, calling a goal "the winner" before full time).
+- **Problems are labelled, not just listed:** the Fact-Checker marks each one FALSE,
+  UNSUPPORTED or WORDING; only the first two send a draft back, so opinion and style never
+  block good commentary. At full time it is told what is settled (the result, whose net an
+  own goal went into), and code catches an own goal credited to the wrong net and figures
+  missing their % sign.
 - **Always a safe answer:** if a draft fails twice or the model is down, a plain line built
   from the data is shown instead.
 
