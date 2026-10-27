@@ -80,10 +80,12 @@ def report(match_id: str):
 
 @app.get("/api/live/{match_id}")
 async def live(request: Request, match_id: str, role: str = "fan", language: str = "en", club: str | None = None,
-               player: str | None = None, focus: bool = False, speed: float = 30, start_after: int = 0):
+               player: str | None = None, focus: bool = False, speed: float = 30, start_after: int = 0,
+               countdown: float = 0):
     viewer = {"role": role, "language": language, "club": club or None, "player": player or None,
               "player_focus": focus}
-    return StreamingResponse(_live(request, match_id, viewer, speed, start_after), media_type="text/event-stream",
+    return StreamingResponse(_live(request, match_id, viewer, speed, start_after, min(countdown, 10)),
+                             media_type="text/event-stream",
                              headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
 
 
@@ -127,7 +129,7 @@ def _live_stats(so_far, info):
                                   "passing", "control_last_10_min", "rhythm_last_10_min")}
 
 
-async def _live(request, match_id, viewer, speed, start_after):
+async def _live(request, match_id, viewer, speed, start_after, countdown=0):
     match = _load(match_id)
     events, info = match["events"], match["match"]
     global live_matches
@@ -145,8 +147,9 @@ async def _live(request, match_id, viewer, speed, start_after):
     for moment in moments:
         pending.setdefault(moment["event_id"], []).append(moment)
 
-    yield _sse("start", {"viewer": viewer, "source": source,
+    yield _sse("start", {"viewer": viewer, "source": source, "countdown": countdown,
                          "teams": {s: info[s]["name"] for s in ("home", "away")}})
+    await asyncio.sleep(countdown)          # the page counts down 3, 2, 1; kick-off lands on "Kick-off!"
     agents, tools, out = None, None, asyncio.Queue()
     if saved is None:
         from matchmind.agents import build_agents, match_tools

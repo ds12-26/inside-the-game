@@ -2,6 +2,14 @@
 const MATCH_ID = "match_002";
 const LANGS = { en: "English", es: "Español", fr: "Français", pt: "Português", hi: "हिन्दी" };
 const PITCH_W = 105, PITCH_H = 68;
+const COUNTDOWN_S = 3;
+const KICKOFF = {
+  en: ["Getting the match ready…", "Kick-off!"],
+  es: ["Preparando el partido…", "¡Comienza!"],
+  fr: ["Préparation du match…", "Coup d'envoi !"],
+  pt: ["Preparando a partida…", "Começou!"],
+  hi: ["मैच तैयार हो रहा है…", "किक-ऑफ़!"],
+};
 
 const $ = (id) => document.getElementById(id);
 const state = { role: null, club: null, player: null, focus: false, language: "en", teams: null };
@@ -134,7 +142,12 @@ function show(id) {
   window.scrollTo(0, 0);
 }
 
-function stop() { if (source) { source.close(); source = null; } }
+function stop() {
+  if (source) { source.close(); source = null; }
+  countdownTimers.forEach(clearTimeout);
+  countdownTimers = [];
+  $("countdown").hidden = true;
+}
 
 function startMatch() {
   stop();
@@ -162,15 +175,42 @@ function startMatch() {
   $("fav").hidden = !state.player;
   overlayFeed = [];
 
-  const params = new URLSearchParams({ role: state.role, language: state.language, speed: $("speed").value });
+  showCountdown(KICKOFF[state.language][0], "");
+  const params = new URLSearchParams({ role: state.role, language: state.language, speed: $("speed").value,
+    countdown: COUNTDOWN_S });
   if (state.club) params.set("club", state.club);
   if (state.player) params.set("player", state.player);
   if (state.focus) params.set("focus", "true");
   source = new EventSource(`/api/live/${MATCH_ID}?${params}`);
-  source.addEventListener("event", (e) => onEvent(JSON.parse(e.data)));
+  source.addEventListener("start", () => runCountdown());
+  source.addEventListener("event", (e) => { hideCountdown(); onEvent(JSON.parse(e.data)); });
   source.addEventListener("stats", (e) => onStats(JSON.parse(e.data)));
   source.addEventListener("card", (e) => onCard(JSON.parse(e.data)));
   source.addEventListener("end", () => stop());
+}
+
+// Loading message until the server is ready, then 3, 2, 1, Kick-off! timed to the first event.
+let countdownTimers = [];
+function showCountdown(text, mode) {
+  const box = $("countdown");
+  box.hidden = false;
+  box.className = `countdown ${mode}`;
+  const span = $("countdown-text");
+  span.textContent = text;
+  span.style.animation = "none"; void span.offsetWidth; span.style.animation = "";
+}
+function runCountdown() {
+  countdownTimers.forEach(clearTimeout);
+  countdownTimers = [];
+  for (let n = COUNTDOWN_S; n >= 1; n--) {
+    countdownTimers.push(setTimeout(() => showCountdown(String(n), "counting"), (COUNTDOWN_S - n) * 1000));
+  }
+  countdownTimers.push(setTimeout(() => showCountdown(KICKOFF[state.language][1], "go"), COUNTDOWN_S * 1000));
+  countdownTimers.push(setTimeout(() => { countdownTimers = []; hideCountdown(); }, COUNTDOWN_S * 1000 + 900));
+}
+// Events only clear the overlay when no countdown is running (e.g. an older server without one).
+function hideCountdown() {
+  if (!countdownTimers.length) $("countdown").hidden = true;
 }
 
 function toPitch([x, y]) { return [x / 100 * PITCH_W, y / 100 * PITCH_H]; }

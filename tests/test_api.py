@@ -60,3 +60,10 @@ def test_busy_fallback_never_switches_language(monkeypatch):
     messages = sse(client.get("/api/live/match_002", params=params).text)
     assert messages[0][1]["source"] == "saved (live agents busy)"
     assert all(data["language"] == "hi" for kind, data in messages if kind == "card")
+
+
+def test_countdown_holds_kick_off_until_the_page_has_counted_down():
+    import time
+    start = time.time()
+    messages = sse(client.get("/api/live/match_002", params={"role": "analyst", "speed": 1e9, "countdown": 1}).text)
+    assert messages[0][1]["countdown"] == 1 and time.time() - start >= 1
