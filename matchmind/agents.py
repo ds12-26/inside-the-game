@@ -32,6 +32,9 @@ from matchmind.profile import LANGUAGES
 
 load_dotenv()
 
+# The language agents write in; Portuguese is Brazilian, matching the play-by-play lines.
+WRITING_LANGUAGES = {**LANGUAGES, "pt": "Brazilian Portuguese"}
+
 MAX_ATTEMPTS = 2
 MAX_RECAP_ATTEMPTS = 3        # the recap is one long piece, worth an extra try
 FAN_MAX_WORDS = 45
@@ -300,7 +303,7 @@ def checker_prompt(job):
 def viewer_text(viewer):
     return {
         "role": viewer.get("role", "fan"),
-        "language": LANGUAGES.get(viewer.get("language", "en"), "English"),
+        "language": WRITING_LANGUAGES.get(viewer.get("language", "en"), "English"),
         "supports": viewer.get("club") or "neutral",
         "favourite_player": viewer.get("player"),
         "follow_favourite_player_closely": bool(viewer.get("player_focus")),

@@ -15,7 +15,7 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "Começa o jogo, 0-0, e está tudo nivelado no arranque. Fox já entra em cena como capitão dos Red Lions, à procura de deixar a sua marca."
+        "text": "Começa o jogo, e por enquanto está tudo parelho: Red Lions e Blue Sharks trocam a bola em equilíbrio total. Fox ainda não apareceu na jogada, mas a torcida de Red Lions fica de olho no capitão."
       },
       "source": "ai",
       "fact_check": {
@@ -24,7 +24,7 @@
         "history": [
           {
             "draft": {
-              "text": "Começa o jogo, 0-0, e está tudo nivelado no arranque. Fox já entra em cena como capitão dos Red Lions, à procura de deixar a sua marca."
+              "text": "Começa o jogo, e por enquanto está tudo parelho: Red Lions e Blue Sharks trocam a bola em equilíbrio total. Fox ainda não apareceu na jogada, mas a torcida de Red Lions fica de olho no capitão."
             },
             "problems": []
           }
@@ -38,24 +38,16 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "Cartão amarelo para Ward, dos Blue Sharks, aos 2'. O Red Lions ainda segura o zero a zero, em começo bem caótico."
+        "text": "Amarelo para Ward do Blue Sharks aos 2'! O Red Lions cresce no aperto, enquanto os visitantes comandam o campo sem criar chance clara."
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 2,
+        "attempts": 1,
         "history": [
           {
             "draft": {
-              "text": "Amarelo para Ward, do Blue Sharks, já aos 2'. O Red Lions resiste, com Fox ainda sem tocar no jogo."
-            },
-            "problems": [
-              "\"Fox ainda sem tocar no jogo\" is not supported by the facts provided; there is no information here about Fox's touches or involvement."
-            ]
-          },
-          {
-            "draft": {
-              "text": "Cartão amarelo para Ward, dos Blue Sharks, aos 2'. O Red Lions ainda segura o zero a zero, em começo bem caótico."
+              "text": "Amarelo para Ward do Blue Sharks aos 2'! O Red Lions cresce no aperto, enquanto os visitantes comandam o campo sem criar chance clara."
             },
             "problems": []
           }
@@ -69,16 +61,25 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "Cartão amarelo para Price, dos Blue Sharks, aos 6'. Os Red Lions seguem no comando territorial e Fox continua atento na frente."
+        "text": "Cartão amarelo para Price, do Blue Sharks. Nos últimos minutos, o Red Lions está bem por cima e empurra o jogo para o campo de ataque."
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 1,
+        "attempts": 2,
         "history": [
           {
             "draft": {
-              "text": "Cartão amarelo para Price, dos Blue Sharks, aos 6'. Os Red Lions seguem no comando territorial e Fox continua atento na frente."
+              "text": "Cartão amarelo para Price, do Blue Sharks, e o Red Lions ganha uma boa chance de empurrar o jogo para o campo de ataque. Nos últimos minutos, o Red Lions está bem por cima, com Fox sempre perto da jogada."
+            },
+            "problems": [
+              "\"o Red Lions ganha uma boa chance de empurrar o jogo para o campo de ataque\" is not supported by the facts; the provided data shows territorial advantage for Red Lions, but no specific new chance was created by the yellow card.",
+              "\"Nos últimos minutos, o Red Lions está bem por cima\" is supported, but \"com Fox sempre perto da jogada\" is unsupported because Fox is not mentioned in the facts and no player involvement is provided."
+            ]
+          },
+          {
+            "draft": {
+              "text": "Cartão amarelo para Price, do Blue Sharks. Nos últimos minutos, o Red Lions está bem por cima e empurra o jogo para o campo de ataque."
             },
             "problems": []
           }
@@ -92,26 +93,16 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "10' e segue 0-0. O Red Lions está muito por cima no terreno nos últimos 10 minutos, enquanto o Blue Sharks caiu no passe nos últimos 5 e o jogo está caótico."
+        "text": "10', e o Red Lions manda no jogo, empurrando o Blue Sharks para trás e passando muito mais perto da área. O Blue Sharks caiu no passe, com muita perda de bola e nenhum ataque de peso até aqui."
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 2,
+        "attempts": 1,
         "history": [
           {
             "draft": {
-              "text": "10' e segue 0-0, mas o Red Lions está a empurrar o jogo para a área do Blue Sharks, com Fox sempre muito envolvido. O Blue Sharks caiu muito no passe nos últimos 5 minutos e o jogo está caótico."
-            },
-            "problems": [
-              "“Fox sempre muito envolvido” is unsupported by the provided facts; no player-level data for Fox is given.",
-              "“o Red Lions está a empurrar o jogo para a área do Blue Sharks” is a stronger specific territorial claim than the facts support; the facts show Red Lions had 94% field tilt in the last 10 minutes, but do not explicitly say they are pushing the game into the box/area.",
-              "“o Blue Sharks caiu muito no passe nos últimos 5 minutos” is supported in substance by the facts (pass accuracy dropped to 45% in the last 5 minutes), but the wording is vague; this is not necessarily a factual error."
-            ]
-          },
-          {
-            "draft": {
-              "text": "10' e segue 0-0. O Red Lions está muito por cima no terreno nos últimos 10 minutos, enquanto o Blue Sharks caiu no passe nos últimos 5 e o jogo está caótico."
+              "text": "10', e o Red Lions manda no jogo, empurrando o Blue Sharks para trás e passando muito mais perto da área. O Blue Sharks caiu no passe, com muita perda de bola e nenhum ataque de peso até aqui."
             },
             "problems": []
           }
@@ -125,7 +116,7 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "Fox quase abriu o placar, mas o remate é travado! O Red Lions está por cima, encostado no meio-campo do Blue Sharks e a criar perigo com mais posse."
+        "text": "Fox quase abre o placar! Red Lions pressiona alto e vive o melhor momento, com Fox chegando de novo para um chute forte que o goleiro salva."
       },
       "source": "ai",
       "fact_check": {
@@ -134,7 +125,7 @@
         "history": [
           {
             "draft": {
-              "text": "Fox quase abriu o placar, mas o remate é travado! O Red Lions está por cima, encostado no meio-campo do Blue Sharks e a criar perigo com mais posse."
+              "text": "Fox quase abre o placar! Red Lions pressiona alto e vive o melhor momento, com Fox chegando de novo para um chute forte que o goleiro salva."
             },
             "problems": []
           }
@@ -148,18 +139,30 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "16', e o Red Lions está mandando no jogo, com a bola quase toda no meio-campo do Blue Sharks. Fox já apareceu bem, com um remate defendido e boa presença como capitão."
+        "text": "16' Red Lions 0 Blue Sharks 0"
       },
-      "source": "ai",
+      "source": "template",
       "fact_check": {
-        "approved": true,
-        "attempts": 1,
+        "approved": false,
+        "attempts": 2,
         "history": [
           {
             "draft": {
-              "text": "16', e o Red Lions está mandando no jogo, com a bola quase toda no meio-campo do Blue Sharks. Fox já apareceu bem, com um remate defendido e boa presença como capitão."
+              "text": "16' e o Red Lions está em cima, com 81% da posse nos últimos 10 minutos e o Blue Sharks sem finalizar. Fox já apareceu bem, com 2 chutes e uma grande defesa do goleiro no chute de 12'."
             },
-            "problems": []
+            "problems": [
+              "fans should not see percentages or analyst terms; say it in plain words"
+            ]
+          },
+          {
+            "draft": {
+              "text": "16' e o Red Lions está mandando no jogo, empurrando o Blue Sharks para trás e sem deixar o rival finalizar. Fox já apareceu bem, com dois chutes, e o goleiro conseguiu salvar a chance de 12'."
+            },
+            "problems": [
+              "\"empurrando o Blue Sharks para trás\" is not supported as a factual claim; the facts show Red Lions have strong territory, but not that Blue Sharks are being pushed back in that exact way.",
+              "\"sem deixar o rival finalizar\" is false: the facts say Blue Sharks have 0 shots, but this is a broader causal claim not directly shown by the data and should be stated more carefully if used as a factual assertion.",
+              "\"o goleiro conseguiu salvar a chance de 12'\" is too vague/unsupported unless you identify the player and the save correctly; the facts only show Fox had a shot saved at 12' (event 137), not explicitly which goalkeeper made the save."
+            ]
           }
         ]
       }
@@ -171,7 +174,7 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "Golo do Red Lions! Fox aparece na área e finaliza com frieza, com Lane na assistência — 1-0 aos 28'. O Red Lions está mandando no jogo, com Fox muito participativo e já a justificar a braçadeira."
+        "text": "Gol do Red Lions! Fox aparece na hora certa e finaliza com frieza para fazer 1-0 aos 28'."
       },
       "source": "ai",
       "fact_check": {
@@ -180,7 +183,7 @@
         "history": [
           {
             "draft": {
-              "text": "Golo do Red Lions! Fox aparece na área e finaliza com frieza, com Lane na assistência — 1-0 aos 28'. O Red Lions está mandando no jogo, com Fox muito participativo e já a justificar a braçadeira."
+              "text": "Gol do Red Lions! Fox aparece na hora certa e finaliza com frieza para fazer 1-0 aos 28'."
             },
             "problems": []
           }
@@ -194,24 +197,16 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "31' e o Red Lions continua na frente, a mandar no jogo e a encurralar o Blue Sharks. Fox já marcou e está a ser muito seguro na ligação, com passes quase sempre certos."
+        "text": "Fox está brilhando: capitão e artilheiro, e o Red Lions segue mandando no jogo. Nos últimos minutos, o time controla a bola e empurra o Blue Sharks para trás."
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 2,
+        "attempts": 1,
         "history": [
           {
             "draft": {
-              "text": "31' e o Red Lions segue na frente, controlando o ritmo e empurrando o Blue Sharks para trás. Fox já deixou a sua marca e, com 95% de acerto no passe, está a comandar tudo no meio."
-            },
-            "problems": [
-              "fans should not see percentages or analyst terms; say it in plain words"
-            ]
-          },
-          {
-            "draft": {
-              "text": "31' e o Red Lions continua na frente, a mandar no jogo e a encurralar o Blue Sharks. Fox já marcou e está a ser muito seguro na ligação, com passes quase sempre certos."
+              "text": "Fox está brilhando: capitão e artilheiro, e o Red Lions segue mandando no jogo. Nos últimos minutos, o time controla a bola e empurra o Blue Sharks para trás."
             },
             "problems": []
           }
@@ -225,7 +220,7 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "35', o Red Lions continua por cima e empurra o Blue Sharks para trás, com o jogo todo inclinado para o meio-campo azul nos últimos 10 minutos. O Blue Sharks está a ter dificuldades para ligar passes, e o ritmo ficou caótico."
+        "text": "35' e o Red Lions está mandando no jogo, empurrando o Blue Sharks para trás e ganhando quase todas as bolas na frente. Fox já apareceu bem, e o Blue Sharks perdeu precisão nos passes nos últimos minutos."
       },
       "source": "ai",
       "fact_check": {
@@ -234,7 +229,7 @@
         "history": [
           {
             "draft": {
-              "text": "35', o Red Lions segue por cima e empurra o Blue Sharks para trás, com 92% de tilt territorial nos últimos 10 minutos. O passe do Blue Sharks caiu para 62% nos últimos 5 minutos, e o jogo está caótico."
+              "text": "35' e o Red Lions controla tudo: 92% do território no trecho recente e o Blue Sharks está errando muito mais na saída. Fox já deixou a marca dele, e o ritmo está bem caótico."
             },
             "problems": [
               "fans should not see percentages or analyst terms; say it in plain words"
@@ -242,7 +237,7 @@
           },
           {
             "draft": {
-              "text": "35', o Red Lions continua por cima e empurra o Blue Sharks para trás, com o jogo todo inclinado para o meio-campo azul nos últimos 10 minutos. O Blue Sharks está a ter dificuldades para ligar passes, e o ritmo ficou caótico."
+              "text": "35' e o Red Lions está mandando no jogo, empurrando o Blue Sharks para trás e ganhando quase todas as bolas na frente. Fox já apareceu bem, e o Blue Sharks perdeu precisão nos passes nos últimos minutos."
             },
             "problems": []
           }
@@ -256,7 +251,7 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "Vale fica muito perto do empate, mas o guarda-redes do Red Lions defende! No 45+1', os Red Lions seguem em vantagem por 1-0."
+        "text": "45+1' — Vale testa firme e encontra a defesa: foi uma chance real, mas o goleiro do Red Lions salva! Os Red Lions seguem na frente por 1-0 e controlam bem o fim do primeiro tempo."
       },
       "source": "ai",
       "fact_check": {
@@ -265,7 +260,7 @@
         "history": [
           {
             "draft": {
-              "text": "Vale fica muito perto do empate, mas o guarda-redes do Red Lions defende! No 45+1', os Red Lions seguem em vantagem por 1-0."
+              "text": "45+1' — Vale testa firme e encontra a defesa: foi uma chance real, mas o goleiro do Red Lions salva! Os Red Lions seguem na frente por 1-0 e controlam bem o fim do primeiro tempo."
             },
             "problems": []
           }
@@ -279,7 +274,7 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "Intervalo com os Red Lions na frente por 1-0, e o Fox já deixou a sua marca com um golo e muita presença entre linhas. O jogo está caótico no fim da primeira parte, mas os Red Lions seguram melhor a bola e o território."
+        "text": "Intervalo em 1 a 0 para o Red Lions, com o Fox marcando e comandando como capitão. Nos minutos finais, o Red Lions foi mais presente no campo rival, embora o jogo tenha ficado caótico."
       },
       "source": "ai",
       "fact_check": {
@@ -288,7 +283,7 @@
         "history": [
           {
             "draft": {
-              "text": "Intervalo com os Red Lions na frente por 1-0, e o Fox já deixou a sua marca com um golo e muita presença entre linhas. O jogo está caótico no fim da primeira parte, mas os Red Lions seguram melhor a bola e o território."
+              "text": "Intervalo em 1 a 0 para o Red Lions, com o Fox marcando e comandando como capitão. Nos minutos finais, o Red Lions foi mais presente no campo rival, embora o jogo tenha ficado caótico."
             },
             "problems": []
           }
@@ -302,16 +297,24 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "46' e o Red Lions continua na frente por 1-0, com Fox já a marcar e a comandar o jogo. Nos últimos 10 minutos, os Red Lions têm mais bola e mais território, embora a partida esteja caótica."
+        "text": "46' e o Red Lions segue na frente por 1-0, com Fox comandando no meio e participando muito do jogo. O Red Lions está mais presente no ataque, mas a partida fica bem caótica no começo da etapa final."
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 1,
+        "attempts": 2,
         "history": [
           {
             "draft": {
-              "text": "46' e o Red Lions continua na frente por 1-0, com Fox já a marcar e a comandar o jogo. Nos últimos 10 minutos, os Red Lions têm mais bola e mais território, embora a partida esteja caótica."
+              "text": "46' e o Red Lions segue na frente por 1-0, com Fox em destaque depois do gol e de 95% de acerto nos passes. O Red Lions está mais no campo de ataque, mas o jogo fica bem caótico nessa abertura da etapa final."
+            },
+            "problems": [
+              "fans should not see percentages or analyst terms; say it in plain words"
+            ]
+          },
+          {
+            "draft": {
+              "text": "46' e o Red Lions segue na frente por 1-0, com Fox comandando no meio e participando muito do jogo. O Red Lions está mais presente no ataque, mas a partida fica bem caótica no começo da etapa final."
             },
             "problems": []
           }
@@ -325,7 +328,7 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "47' e cartão amarelo para Fox, e isso dói para o Red Lions. O capitão já tinha marcado, mas agora precisa baixar a temperatura num jogo que está caótico."
+        "text": "47': Fox leva amarelo, e isso dói no Red Lions com o capitão já na mira da arbitragem. Mesmo assim, o time segue à frente por 1-0 e controla mais o jogo, embora os últimos minutos tenham sido caóticos."
       },
       "source": "ai",
       "fact_check": {
@@ -334,7 +337,7 @@
         "history": [
           {
             "draft": {
-              "text": "47' e cartão amarelo para Fox, e isso dói para o Red Lions. O capitão já tinha marcado, mas agora precisa baixar a temperatura num jogo que está caótico."
+              "text": "47': Fox leva amarelo, e isso dói no Red Lions com o capitão já na mira da arbitragem. Mesmo assim, o time segue à frente por 1-0 e controla mais o jogo, embora os últimos minutos tenham sido caóticos."
             },
             "problems": []
           }
@@ -348,7 +351,7 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "47' e cartão amarelo para Brooks, da Red Lions, numa fase bem caótica. A Red Lions segue na frente por 1-0, com Fox e o ataque a manterem a pressão."
+        "text": "47', amarelo para Brooks no Red Lions, e isso dá um susto desnecessário. O Red Lions segue na frente por 1-0, mas o momento está caótico e o Blue Sharks tenta crescer."
       },
       "source": "ai",
       "fact_check": {
@@ -357,7 +360,7 @@
         "history": [
           {
             "draft": {
-              "text": "47' e cartão amarelo para Brooks, da Red Lions, numa fase bem caótica. A Red Lions segue na frente por 1-0, com Fox e o ataque a manterem a pressão."
+              "text": "47', amarelo para Brooks no Red Lions, e isso dá um susto desnecessário. O Red Lions segue na frente por 1-0, mas o momento está caótico e o Blue Sharks tenta crescer."
             },
             "problems": []
           }
@@ -371,7 +374,7 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "54' e os Blue Sharks quase empatam! Frost aparece com uma boa chance, mas o guarda-redes salva; os Red Lions continuam à frente por 1-0."
+        "text": "54': Frost chega com uma chance real, daquelas que costuma entrar uma em três, mas o goleiro do Red Lions salva. O Blue Sharks cresce no ataque, mas o Red Lions ainda segura a vantagem por 1-0."
       },
       "source": "ai",
       "fact_check": {
@@ -380,7 +383,7 @@
         "history": [
           {
             "draft": {
-              "text": "54' e os Blue Sharks quase empatam! Frost aparece com uma boa chance, mas o guarda-redes salva; os Red Lions continuam à frente por 1-0."
+              "text": "54': Frost chega com uma chance real, daquelas que costuma entrar uma em três, mas o goleiro do Red Lions salva. O Blue Sharks cresce no ataque, mas o Red Lions ainda segura a vantagem por 1-0."
             },
             "problems": []
           }
@@ -394,7 +397,7 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "61' e o Red Lions segue na frente por 1-0, com Fox a comandar o jogo no meio-campo. Nos últimos 10 minutos, o Red Lions ficou instalado no meio-campo ofensivo, mas o ritmo está caótico."
+        "text": "61' e os Red Lions seguem na frente por 1-0, com Fox bem participativo e já com gol e 60 toques. Os últimos minutos estão caóticos, mas o Red Lions está empurrando o Blue Sharks para trás."
       },
       "source": "ai",
       "fact_check": {
@@ -403,7 +406,7 @@
         "history": [
           {
             "draft": {
-              "text": "61' e o Red Lions segue na frente por 1-0, com Fox a comandar o jogo no meio-campo. Nos últimos 10 minutos, o Red Lions ficou instalado no meio-campo ofensivo, mas o ritmo está caótico."
+              "text": "61' e os Red Lions seguem na frente por 1-0, com Fox bem participativo e já com gol e 60 toques. Os últimos minutos estão caóticos, mas o Red Lions está empurrando o Blue Sharks para trás."
             },
             "problems": []
           }
@@ -417,7 +420,7 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "Gol dos Blue Sharks aos 62': Gray aproveita a chance e empata em 1-1. O jogo está caótico, mas os Red Lions tinham mandado no último trecho e agora tudo volta a ficar aberto."
+        "text": "Gol do Blue Sharks com Gray, e é empate aos 62'! Chance bem parelha, vinda de Frost, num momento bem caótico — o Red Lions precisa responder agora."
       },
       "source": "ai",
       "fact_check": {
@@ -426,7 +429,7 @@
         "history": [
           {
             "draft": {
-              "text": "Gol dos Blue Sharks aos 62': Gray aproveita a chance e empata em 1-1. O jogo está caótico, mas os Red Lions tinham mandado no último trecho e agora tudo volta a ficar aberto."
+              "text": "Gol do Blue Sharks com Gray, e é empate aos 62'! Chance bem parelha, vinda de Frost, num momento bem caótico — o Red Lions precisa responder agora."
             },
             "problems": []
           }
@@ -440,25 +443,16 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "Park tem uma chance real, mas remata ao lado. O Red Lions continua a pressionar neste jogo caótico, com o empate a manter tudo em aberto."
+        "text": "67': Park manda pra fora uma chance real, aquela bola que costuma entrar uma vez em três. O Red Lions está mais presente no campo de ataque, mas o jogo segue caótico."
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 2,
+        "attempts": 1,
         "history": [
           {
             "draft": {
-              "text": "Park chega com uma boa oportunidade, mas atira ao lado! O Red Lions está a empurrar o jogo no meio do caos, com Fox a iniciar a jogada por perto."
-            },
-            "problems": [
-              "\"boa oportunidade\" is stronger than the provided chance description, which says it was \"a real chance, scored about 1 time in 3\"; the fact does not support upgrading it to a clear/good chance.",
-              "\"Fox a iniciar a jogada por perto\" is unsupported: the facts only identify the shot by Park and do not mention Fox or how the move started."
-            ]
-          },
-          {
-            "draft": {
-              "text": "Park tem uma chance real, mas remata ao lado. O Red Lions continua a pressionar neste jogo caótico, com o empate a manter tudo em aberto."
+              "text": "67': Park manda pra fora uma chance real, aquela bola que costuma entrar uma vez em três. O Red Lions está mais presente no campo de ataque, mas o jogo segue caótico."
             },
             "problems": []
           }
@@ -472,7 +466,7 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "70' e o Red Lions continua por cima, com mais presença no terço final e o jogo bem repartido. Amarelo para Dean, dos Blue Sharks."
+        "text": "70' e cartão amarelo para Dean, dos Blue Sharks. Jogo segue empatado em 1-1, com os Red Lions ocupando mais o campo no fim."
       },
       "source": "ai",
       "fact_check": {
@@ -481,7 +475,7 @@
         "history": [
           {
             "draft": {
-              "text": "70' e o Red Lions continua por cima, com mais presença no terço final e o jogo bem repartido. Amarelo para Dean, dos Blue Sharks."
+              "text": "70' e cartão amarelo para Dean, dos Blue Sharks. Jogo segue empatado em 1-1, com os Red Lions ocupando mais o campo no fim."
             },
             "problems": []
           }
@@ -495,7 +489,7 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "Grande aviso dos Blue Sharks: Vale atira com espaço, mas sai por cima. O Red Lions continua no jogo aos 72', com Fox sempre de olho na resposta na frente."
+        "text": "72': Vale carimba uma chance real, mas manda para fora para os Blue Sharks. O Red Lions está mais em cima nos últimos minutos, com Fox sempre no radar."
       },
       "source": "ai",
       "fact_check": {
@@ -504,7 +498,7 @@
         "history": [
           {
             "draft": {
-              "text": "Grande aviso dos Blue Sharks: Vale atira com espaço, mas sai por cima. O Red Lions continua no jogo aos 72', com Fox sempre de olho na resposta na frente."
+              "text": "72': Vale carimba uma chance real, mas manda para fora para os Blue Sharks. O Red Lions está mais em cima nos últimos minutos, com Fox sempre no radar."
             },
             "problems": []
           }
@@ -518,7 +512,7 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "76' e está tudo empatado, 1-1. O Red Lions está por cima, com Fox a liderar e o time a instalar-se no meio-campo do Blue Sharks, mas falta o último toque."
+        "text": "76' e segue 1-1, com o Red Lions mandando no jogo nos últimos minutos e empurrando o Blue Sharks para trás. Fox, mesmo amarelado, já deixou gol e muita influência no meio."
       },
       "source": "ai",
       "fact_check": {
@@ -527,7 +521,7 @@
         "history": [
           {
             "draft": {
-              "text": "76' e está tudo empatado, 1-1. O Red Lions está por cima, com Fox a liderar e o time a instalar-se no meio-campo do Blue Sharks, mas falta o último toque."
+              "text": "76' e segue 1-1, com o Red Lions mandando no jogo nos últimos minutos e empurrando o Blue Sharks para trás. Fox, mesmo amarelado, já deixou gol e muita influência no meio."
             },
             "problems": []
           }
@@ -541,18 +535,31 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "Crane vê o remate travado e os Red Lions ficam muito perto do golo, com o jogo todo inclinado para a baliza dos Blue Sharks. Fox continua na foto e os Red Lions mandam no ritmo nesta fase."
+        "text": "79' Red Lions 1 Blue Sharks 1"
       },
-      "source": "ai",
+      "source": "template",
       "fact_check": {
-        "approved": true,
-        "attempts": 1,
+        "approved": false,
+        "attempts": 2,
         "history": [
           {
             "draft": {
-              "text": "Crane vê o remate travado e os Red Lions ficam muito perto do golo, com o jogo todo inclinado para a baliza dos Blue Sharks. Fox continua na foto e os Red Lions mandam no ritmo nesta fase."
+              "text": "Crane quase recoloca o Red Lions na frente aos 79': a cabeçada foi uma chance que normalmente entra, mas o goleiro salva. O Red Lions está encurralando o Blue Sharks, com posse e território quase totais no trecho final."
             },
-            "problems": []
+            "problems": [
+              "O DRAFT diz que foi uma cabeçada, mas os FACTS só dizem que foi um chute de Crane salvo; não há indicação de cabeceio.",
+              "‘recoloca o Red Lions na frente’ é falso: o placar aos 79' está 1-1, então o Red Lions não estava vencendo.",
+              "‘uma chance que normalmente entra’ está apoiado pela chance_in_plain_words (cerca de 65%), mas a formulação ‘normalmente entra’ é aceitável; no entanto, a frase inteira também sugere que o gol teria virado o placar, o que não aconteceu.",
+              "‘o Red Lions está encurralando o Blue Sharks, com posse e território quase totais no trecho final’ é suportado pelos FACTS (80% de posse e 96% de field tilt nos últimos 10 minutos)."
+            ]
+          },
+          {
+            "draft": {
+              "text": "Crane quase marca aos 79': o chute era uma chance que costuma entrar, mas o goleiro do Blue Sharks salva. O Red Lions está encurralando o adversário, com 80% de posse e 96% de presença no terço final no trecho recente."
+            },
+            "problems": [
+              "fans should not see percentages or analyst terms; say it in plain words"
+            ]
           }
         ]
       }
@@ -573,20 +580,22 @@
         "history": [
           {
             "draft": {
-              "text": "85' e o Red Lions continua em cima, com 94% do jogo no último terço nos últimos 10 minutos, mas Park desperdiça uma grande oportunidade por cima. É pressão total, e Fox segue de perto nessa reta final."
+              "text": "Que chance do Red Lions! Park finaliza de longe e manda para fora, numa oportunidade clara demais para ficar só no susto. O time do Fox está empurrando o Blue Sharks para trás, mas o jogo segue caótico."
             },
             "problems": [
-              "fans should not see percentages or analyst terms; say it in plain words"
+              "\"oportunidade clara demais\" is not supported: the chance is 0.58 xG, which the facts describe as close to a 50-50 chance, not a clear chance.",
+              "\"finaliza de longe\" is not supported by the facts shown; the event only says Park took a shot and missed, with no distance stated.",
+              "\"O time do Fox\" invents context not present in the facts; the team is Red Lions, but no Fox reference is provided."
             ]
           },
           {
             "draft": {
-              "text": "85' O Red Lions está a encostar o Blue Sharks no seu meio-campo, mas Park falha uma oportunidade muito clara e atira por cima. Fox continua bem ligado, com o jogo a ficar caótico nesta reta final."
+              "text": "Que chance do Red Lions! Park tenta de novo e manda para fora numa chance quase de meio a meio, com o Red Lions encurralando o Blue Sharks lá atrás. Fox segue no centro das ações do Red Lions."
             },
             "problems": [
-              "\"muito clara\" is not supported by the facts: the chance is described as close to a 50-50 chance (about 58/100), not a very clear chance.",
-              "\"atira por cima\" is not supported: the event says Park's shot was off target, but not specifically that it went over the bar.",
-              "\"Fox continua bem ligado\" is unsupported because no player named Fox appears in the provided facts."
+              "A frase \"Park tenta de novo\" implica que foi a segunda tentativa recente de Park, mas os FACTS só confirmam o shot atual de Park e não dizem que ele tentou \"de novo\" nem que foi novamente uma chance.",
+              "\"Red Lions encurralando o Blue Sharks lá atrás\" is supported in spirit by the last-10-minute territory, but as written it states a live tactical picture more strongly than the facts provide; the facts only show strong territorial dominance in the last 10 minutes, not that Blue Sharks are literally pinned back.",
+              "\"Fox segue no centro das ações do Red Lions\" is unsupported: the facts provided mention Park, not Fox, and give no evidence that Fox is currently central to Red Lions' play."
             ]
           }
         ]
@@ -599,26 +608,28 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "90+3' e o Red Lions está encostando o Blue Sharks no próprio campo, com pressão constante nos minutos finais. O 1-1 segue de pé, e o passe do Blue Sharks ficou curto e nervoso na reta final."
+        "text": "90+3' Red Lions 1 Blue Sharks 1"
       },
-      "source": "ai",
+      "source": "template",
       "fact_check": {
-        "approved": true,
+        "approved": false,
         "attempts": 2,
         "history": [
           {
             "draft": {
-              "text": "90+3' e o Red Lions está a empurrar tudo para a frente, com 98% de inclinação ofensiva nos últimos 10 minutos. Mas o 1-1 continua teimoso, e o Blue Sharks está a sentir uma queda nítida no passe, com só 67% na reta final."
+              "text": "90'+3, tudo em aberto: o Red Lions está prensando, com a bola quase toda no campo de ataque, mas o empate segue no placar. O Fox acompanha bem a pressão, enquanto o Blue Sharks está sofrendo para sair jogando, com a precisão dos passes em queda."
             },
             "problems": [
-              "fans should not see percentages or analyst terms; say it in plain words"
+              "too long to read aloud: keep it under 45 words"
             ]
           },
           {
             "draft": {
-              "text": "90+3' e o Red Lions está encostando o Blue Sharks no próprio campo, com pressão constante nos minutos finais. O 1-1 segue de pé, e o passe do Blue Sharks ficou curto e nervoso na reta final."
+              "text": "90+3', tudo em aberto: o Red Lions está encurralando o Blue Sharks, com 98% das ações no terço final nos últimos 10 minutos. O Fox acompanha a pressão de perto, enquanto o passe do Blue Sharks caiu e a saída está travada."
             },
-            "problems": []
+            "problems": [
+              "fans should not see percentages or analyst terms; say it in plain words"
+            ]
           }
         ]
       }
@@ -630,24 +641,16 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "90+4' e continua empatado: 1-1. O Red Lions está encostado ao meio-campo do Blue Sharks, com Fox muito ativo e a liderar, já com um golo e trabalho enorme sem bola; nos últimos 10 minutos, o jogo ficou caótico."
+        "text": "90+4' e está tudo igual: 1-1. O Red Lions fica instalado no campo de ataque, com Fox marcando muito e já com um gol, mas o Blue Sharks resiste no caos do fim."
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 2,
+        "attempts": 1,
         "history": [
           {
             "draft": {
-              "text": "90+4' e está tudo em aberto: 1-1, com o Red Lions a carregar e o Fox a comandar no meio, já com um golo e muito trabalho sem bola. Nos últimos 10 minutos, os Red Lions ficaram instalados no meio-campo do Blue Sharks, mas o jogo está caótico."
-            },
-            "problems": [
-              "too long to read aloud: keep it under 45 words"
-            ]
-          },
-          {
-            "draft": {
-              "text": "90+4' e continua empatado: 1-1. O Red Lions está encostado ao meio-campo do Blue Sharks, com Fox muito ativo e a liderar, já com um golo e trabalho enorme sem bola; nos últimos 10 minutos, o jogo ficou caótico."
+              "text": "90+4' e está tudo igual: 1-1. O Red Lions fica instalado no campo de ataque, com Fox marcando muito e já com um gol, mas o Blue Sharks resiste no caos do fim."
             },
             "problems": []
           }
@@ -661,7 +664,7 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "91' e Red Lions recomeça a prorrogação com tudo, em cima no campo e a mandar no jogo, embora a Blue Sharks siga viva. Fox continua central: capitão, golo, muito passe limpo e presença forte dos dois lados da bola."
+        "text": "91' e segue 1-1, com o Red Lions mandando no campo e empurrando o Blue Sharks para trás. Fox está no centro de tudo: gol, 108 toques e muito trabalho sem a bola, capitão absoluto."
       },
       "source": "ai",
       "fact_check": {
@@ -670,7 +673,7 @@
         "history": [
           {
             "draft": {
-              "text": "91' e Red Lions recomeça a prorrogação com tudo, em cima no campo e a mandar no jogo, embora a Blue Sharks siga viva. Fox continua central: capitão, golo, muito passe limpo e presença forte dos dois lados da bola."
+              "text": "91' e segue 1-1, com o Red Lions mandando no campo e empurrando o Blue Sharks para trás. Fox está no centro de tudo: gol, 108 toques e muito trabalho sem a bola, capitão absoluto."
             },
             "problems": []
           }
@@ -684,26 +687,16 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "Gol do Red Lions! Reid aparece no escanteio e cabeceia para a rede, com assistência de Rook; aos 95', faz 2-1. O Red Lions domina os últimos minutos e empurra o Blue Sharks para trás."
+        "text": "GOOOL do Red Lions! Reid sobe no escanteio e testa firme para fazer 2-1, com Rook na assistência. Aos 95', os Red Lions estão em cima, com posse e território esmagadores nos minutos finais."
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 2,
+        "attempts": 1,
         "history": [
           {
             "draft": {
-              "text": "Gol do Red Lions! Reid sobe no escanteio e testa para a rede, com assistência de Rook; aos 95', o Red Lions faz 2-1 e explode na frente. Fox entra no momento certo dessa pressão toda, com o time campado no meio-campo do Blue Sharks."
-            },
-            "problems": [
-              "\"Fox entra\" is unsupported: no player named Fox or substitution is shown in the facts.",
-              "\"explodes na frente\" implies a celebratory/interpretive description not stated in the facts; the factual support only shows Red Lions leading 2-1.",
-              "\"time campado no meio-campo do Blue Sharks\" is not directly supported by the supplied facts; the facts show strong territorial dominance in the last 10 minutes, but not that the team is literally camped in Blue Sharks' half."
-            ]
-          },
-          {
-            "draft": {
-              "text": "Gol do Red Lions! Reid aparece no escanteio e cabeceia para a rede, com assistência de Rook; aos 95', faz 2-1. O Red Lions domina os últimos minutos e empurra o Blue Sharks para trás."
+              "text": "GOOOL do Red Lions! Reid sobe no escanteio e testa firme para fazer 2-1, com Rook na assistência. Aos 95', os Red Lions estão em cima, com posse e território esmagadores nos minutos finais."
             },
             "problems": []
           }
@@ -717,7 +710,7 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "103', o Red Lions pressiona mais e Crane acaba de desperdiçar uma boa oportunidade, mandando por cima. O Red Lions continua por cima no campo, mas o Blue Sharks ainda está vivo nesta prorrogação."
+        "text": "Crane sai cara a cara com uma boa chance, mas manda para fora. O Red Lions continua por cima, com mais bola e mais presença no campo de ataque."
       },
       "source": "ai",
       "fact_check": {
@@ -726,7 +719,7 @@
         "history": [
           {
             "draft": {
-              "text": "103', o Red Lions pressiona mais e Crane acaba de desperdiçar uma boa oportunidade, mandando por cima. O Red Lions continua por cima no campo, mas o Blue Sharks ainda está vivo nesta prorrogação."
+              "text": "Crane sai cara a cara com uma boa chance, mas manda para fora. O Red Lions continua por cima, com mais bola e mais presença no campo de ataque."
             },
             "problems": []
           }
@@ -740,16 +733,24 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "Gol do Blue Sharks! Cruz aparece e empata aos 105'; finalização de muito boa chance, criada por Wells. O Red Lions precisa reagir de novo, porque o jogo está vivo e muito equilibrado."
+        "text": "105': golpe duro para o Red Lions — Cruz marca para o Blue Sharks e faz 2-2 após passe de Wells. Fox precisa aparecer mais agora, porque o Red Lions está sendo empurrado para trás."
       },
       "source": "ai",
       "fact_check": {
         "approved": true,
-        "attempts": 1,
+        "attempts": 2,
         "history": [
           {
             "draft": {
-              "text": "Gol do Blue Sharks! Cruz aparece e empata aos 105'; finalização de muito boa chance, criada por Wells. O Red Lions precisa reagir de novo, porque o jogo está vivo e muito equilibrado."
+              "text": "105': golpe duro para o Red Lions — Cruz acerta a finalização e coloca o Blue Sharks na frente por 3-2, após passe de Wells. Fox precisa aparecer mais agora, porque o Red Lions está sendo empurrado para trás."
+            },
+            "problems": [
+              "mentions the score 3-2, which this match has not had; it is 2-2"
+            ]
+          },
+          {
+            "draft": {
+              "text": "105': golpe duro para o Red Lions — Cruz marca para o Blue Sharks e faz 2-2 após passe de Wells. Fox precisa aparecer mais agora, porque o Red Lions está sendo empurrado para trás."
             },
             "problems": []
           }
@@ -763,7 +764,7 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "Fim do primeiro tempo da prorrogação: 2-2, e o Red Lions segue a empurrar o jogo, com mais bola e mais remates no total. Fox está muito ligado ao jogo, com um golo e muito trabalho sem bola, mesmo com o amarelo."
+        "text": "Intervalo da prorrogação: 2-2, e o Red Lions já produziu muito mais, com Fox comandando como capitão, 1 gol e muita entrega na marcação. O Blue Sharks vem empurrando nos últimos 10 minutos, mas a partida segue totalmente aberta."
       },
       "source": "ai",
       "fact_check": {
@@ -772,7 +773,7 @@
         "history": [
           {
             "draft": {
-              "text": "Fim do primeiro tempo da prorrogação: 2-2, e o Red Lions segue a empurrar o jogo, com mais bola e mais remates no total. Fox está muito ligado ao jogo, com um golo e muito trabalho sem bola, mesmo com o amarelo."
+              "text": "Intervalo da prorrogação: 2-2, e o Red Lions já produziu muito mais, com Fox comandando como capitão, 1 gol e muita entrega na marcação. O Blue Sharks vem empurrando nos últimos 10 minutos, mas a partida segue totalmente aberta."
             },
             "problems": []
           }
@@ -786,7 +787,7 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "106', tudo empatado em 2-2 e o Red Lions está a empurrar o jogo, mas o Blue Sharks tem sido mais perigoso nos últimos 10 minutos. Fox continua muito presente, com uma exibição de capitão e um golo já no bolso."
+        "text": "106', e está tudo empatado em 2-2: o Red Lions tem mais volume, mas o Blue Sharks voltou a apertar no fim. Fox segue muito presente, com um gol, muita bola no pé e trabalho forte sem a posse."
       },
       "source": "ai",
       "fact_check": {
@@ -795,7 +796,7 @@
         "history": [
           {
             "draft": {
-              "text": "106', tudo empatado em 2-2 e o Red Lions está a empurrar o jogo, mas o Blue Sharks tem sido mais perigoso nos últimos 10 minutos. Fox continua muito presente, com uma exibição de capitão e um golo já no bolso."
+              "text": "106', e está tudo empatado em 2-2: o Red Lions tem mais volume, mas o Blue Sharks voltou a apertar no fim. Fox segue muito presente, com um gol, muita bola no pé e trabalho forte sem a posse."
             },
             "problems": []
           }
@@ -809,29 +810,26 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "113' Red Lions 2 Blue Sharks 2"
+        "text": "113', os Red Lions estão prendendo o Blue Sharks no próprio campo e Fox segue muito ligado. O passe do Blue Sharks caiu bastante e o jogo ficou bem bagunçado."
       },
-      "source": "template",
+      "source": "ai",
       "fact_check": {
-        "approved": false,
+        "approved": true,
         "attempts": 2,
         "history": [
           {
             "draft": {
-              "text": "113' e o Red Lions está a empurrar forte, com 85% de campo e 73% da bola nos últimos 10 minutos, mas o jogo está caótico e ainda está 2-2. Fox precisa aparecer nessa pressão, porque o Blue Sharks caiu no passe nos últimos 5 minutos."
+              "text": "113', e os Red Lions estão empurrando tudo para o campo do Blue Sharks, com 85% de domínio territorial nos últimos 10 minutos. Fox segue muito ligado, mas o passe dos Blue Sharks caiu muito e o jogo ficou caótico."
             },
             "problems": [
-              "fans should not see percentages or analyst terms; say it in plain words",
-              "too long to read aloud: keep it under 45 words"
+              "fans should not see percentages or analyst terms; say it in plain words"
             ]
           },
           {
             "draft": {
-              "text": "113' e o Red Lions está a carregar e a jogar quase todo o tempo no meio-campo do Blue Sharks, mas o jogo segue caótico e empatado em 2-2. Fox precisa de se mostrar nessa pressão, enquanto o passe do Blue Sharks perdeu nitidez há pouco."
+              "text": "113', os Red Lions estão prendendo o Blue Sharks no próprio campo e Fox segue muito ligado. O passe do Blue Sharks caiu bastante e o jogo ficou bem bagunçado."
             },
-            "problems": [
-              "too long to read aloud: keep it under 45 words"
-            ]
+            "problems": []
           }
         ]
       }
@@ -843,7 +841,7 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "Golo do Red Lions! Bell desvia para a própria baliza e o 3-2 sobe no relógio aos 113'; o Red Lions está por cima e empurra o Blue Sharks para trás."
+        "text": "Gol do Red Lions! Bell desvia para a própria rede, e os Red Lions voltam à frente em 3-2 aos 113'."
       },
       "source": "ai",
       "fact_check": {
@@ -852,7 +850,7 @@
         "history": [
           {
             "draft": {
-              "text": "Golo do Red Lions! Bell desvia para a própria baliza e o 3-2 sobe no relógio aos 113'; o Red Lions está por cima e empurra o Blue Sharks para trás."
+              "text": "Gol do Red Lions! Bell desvia para a própria rede, e os Red Lions voltam à frente em 3-2 aos 113'."
             },
             "problems": []
           }
@@ -866,7 +864,7 @@
       "mode": "fan",
       "language": "pt",
       "content": {
-        "text": "Fim! O Red Lions vence por 3-2 depois de um tempo extra eletrizante, com o jogo em caos total no fim. Fox fecha com gol, 140 toques e uma exibição de capitão cheia de luta."
+        "text": "Fim de jogo: 3-2 para o Red Lions! O Red Lions foi puro domínio no fim, empurrando o Blue Sharks para trás, e Fox liderou como capitão com gol, 140 toques e muita entrega nos dois lados."
       },
       "source": "ai",
       "fact_check": {
@@ -875,7 +873,7 @@
         "history": [
           {
             "draft": {
-              "text": "Fim! O Red Lions vence por 3-2 depois de um tempo extra eletrizante, com o jogo em caos total no fim. Fox fecha com gol, 140 toques e uma exibição de capitão cheia de luta."
+              "text": "Fim de jogo: 3-2 para o Red Lions! O Red Lions foi puro domínio no fim, empurrando o Blue Sharks para trás, e Fox liderou como capitão com gol, 140 toques e muita entrega nos dois lados."
             },
             "problems": []
           }
@@ -899,50 +897,48 @@
         "history": [
           {
             "draft": {
-              "title": "Fox marca cedo, mas Red Lions só fecha a noite na prorrogação",
+              "title": "Fox abre caminho, Red Lions resistem e vencem na prorrogação",
               "paragraphs": [
-                "Red Lions venceu Blue Sharks por 3 a 2 depois da prorrogação, num jogo cheio de voltas. Fox abriu o placar aos 28' com assistência de Lane, e o nome de Fox ficou no centro da história do time da casa. Blue Sharks empatou aos 62' com Gray, servido por Frost, e o duelo passou a andar em equilíbrio até a prorrogação.",
-                "Red Lions retomou a frente aos 95' com Reid, após passe de Rook, mas Blue Sharks respondeu aos 105' com Cruz, em passe de Wells. O ponto de virada veio aos 113', quando Bell marcou contra e colocou Red Lions na frente por 3 a 2, vantagem que segurou até o apito final. Nos minutos finais, Red Lions empurrou o jogo para o campo rival, com domínio claro da posse e do território, mas de forma caótica.",
-                "Para a torcida do Red Lions, a noite teve o toque de Fox no começo, liderança durante grande parte do jogo e resistência até o fim. Fox ainda deixou a marca como capitão, com participação forte na frente, enquanto Red Lions criou muito mais, finalizou mais e foi o time que mais insistiu até arrancar a vitória."
+                "Red Lions bateu Blue Sharks por 3 a 2 depois da prorrogação, numa partida que teve viradas e resposta constante dos dois lados. Fox marcou aos 28', assistido por Lane, e deu o tom do domínio inicial dos Red Lions. Gray empatou aos 62', Reid recolocou Red Lions na frente aos 95', Cruz voltou a igualar aos 105' e Bell fez um gol contra aos 113', o lance que fechou o placar.",
+                "No jogo inteiro, Red Lions foi o time que mais mandou na partida: teve 85 de domínio territorial, 69 de posse e 110 entradas na área final, além de 776 passes certos em 838 tentados. Blue Sharks foi mais direto e eficiente em alguns momentos, mas passou muito tempo correndo atrás, com menos posse, menos território e bem menos ações no terço final.",
+                "Fox ficou no centro da história para o torcedor: capitão, gol no primeiro tempo e muita presença na armação, com 140 toques, 6 finalizações, 88 de acerto no passe e 5 desarmes ganhos. No fim, a pressão dos Red Lions na reta final da prorrogação pesou, mesmo com o jogo ainda aberto até o gol contra de Bell."
               ]
             },
             "problems": [
-              "“Red Lions venceu Blue Sharks por 3 a 2 depois da prorrogação” is supported, but “Fox abriu o placar aos 28' com assistência de Lane” is not supported by the checked facts/tools here because Fox’s player story shows the 28' goal, but no tool output provided the assist Lane for that goal.",
-              "“o nome de Fox ficou no centro da história do time da casa” is interpretive/narrative, not a factual claim from the match data.",
-              "“O ponto de virada veio aos 113', quando Bell marcou contra e colocou Red Lions na frente por 3 a 2” is supported as a goal by Bell’s own goal at 113', but “ponto de virada” is a subjective framing.",
-              "“vantagem que segurou até o apito final” is fine on its own, but “Nos minutos finais, Red Lions empurrou o jogo para o campo rival, com domínio claro da posse e do território” goes beyond the supplied facts unless it is tied specifically to the last-10-minute territory numbers; “domínio claro” is also subjective.",
-              "“Fox ainda deixou a marca como capitão, com participação forte na frente” is not fully supported: Fox is captain, but “participação forte na frente” is a subjective assessment.",
-              "“Red Lions criou muito mais, finalizou mais e foi o time que mais insistiu até arrancar a vitória” is supported numerically in broad terms (more xG, shots, possession, final-third entries), but “arrancar a vitória” is narrative/style rather than a factual claim."
+              "“Bell fez um gol contra aos 113'” is unsupported and incorrect: the facts list Bell as the scorer for Red Lions at 113' and mark it as an own goal, but the draft states it as a generic ‘gol contra’ without the supported scoring detail; if referring to the score event, it should specify that Bell’s own goal made it 3-2.",
+              "“a lance que fechou o placar” / “the move that closed the score” is a problem because the match facts do show final_whistle=true, but the draft frames the 113' own goal as the decisive ending without stating clearly that the match had already reached final whistle and after extra time; avoid implying unsupported match narrative beyond the facts.",
+              "“Blue Sharks foi mais direto e eficiente em alguns momentos” is not supported by the provided facts. The passing/territory data shows lower possession and territory, but no factual basis is given for ‘more direct’ or ‘efficient’ as a performance judgment.",
+              "“No jogo inteiro, Red Lions foi o time que mais mandou na partida” is broadly supported by territory/possession, but the phrasing can overstate with ‘mandou na partida’; the facts support domination in possession and field tilt, not a categorical narrative claim."
             ]
           },
           {
             "draft": {
-              "title": "Fox abre o caminho, Red Lions segura o drama na prorrogação",
+              "title": "Fox puxa os Red Lions, e a prorrogação decide um 3 a 2 cheio de resposta",
               "paragraphs": [
-                "Red Lions bateu Blue Sharks por 3 a 2 no fim da prorrogação. Fox colocou Red Lions na frente aos 28', Gray empatou aos 62' para Blue Sharks, Reid recolocou Red Lions na frente aos 95' e Cruz igualou aos 105'. Aos 113', Bell fez gol contra e deixou o placar em 3 a 2, resultado que se manteve até o apito final.",
-                "No jogo todo, Red Lions teve mais bola, mais território e mais volume: 69% de posse, 85% de presença no terço final e 27 finalizações, contra 31%, 15% e 15 de Blue Sharks. Também criou as melhores chances, mas perdeu várias oportunidades claras, então precisou de uma noite cheia de reviravoltas para transformar domínio em vitória.",
-                "Para a torcida do Red Lions, Fox foi um nome central desde o começo: o capitão marcou, somou 140 toques, acertou 88% dos passes e ainda ajudou bastante sem a bola. No trecho final, Red Lions ficou muito tempo no campo rival e, nos últimos 10 minutos, teve 79% da posse e 91% da ação ofensiva naquela faixa, embora o ritmo tenha sido caótico até o fim."
+                "Red Lions venceu Blue Sharks por 3 a 2 no fim da prorrogação, em um jogo que mudou várias vezes de mãos. Fox abriu o placar aos 28', com assistência de Lane, Gray empatou aos 62', Reid recolocou Red Lions na frente aos 95', Cruz fez 2 a 2 aos 105' e, aos 113', Bell marcou contra e colocou Red Lions em vantagem no placar pela última vez.",
+                "No jogo inteiro, Red Lions controlou mais a bola e o território: terminou com 69 de posse, 85 de domínio territorial, 110 entradas no terço final e 776 passes certos em 838 tentados. Blue Sharks teve menos a bola e menos presença no campo de ataque, mas manteve a partida viva com os empates e com o gol de Cruz na prorrogação.",
+                "Para o torcedor dos Red Lions, Fox foi o nome mais marcante: capitão, autor do primeiro gol e muito presente na criação, com 140 toques, 6 finalizações, 88 de acerto nos passes e 5 desarmes ganhos. A reta final foi tensa e aberta, mas a pressão dos Red Lions nos minutos finais da prorrogação acabou pesando para confirmar a vitória."
               ]
             },
             "problems": [
-              "fans should not see percentages or analyst terms; say it in plain words"
+              "The title says “Fox puxa os Red Lions” as if Fox was the standout driver of the result; that is opinion and is not directly supported as a factual claim by the provided data.",
+              "“Bell marcou contra” is incorrect: the facts list Bell’s 113' goal as an own goal, but the scorer should not be described as having scored in the normal sense; it was a goal against by Bell.",
+              "“A pressão dos Red Lions nos minutos finais da prorrogação acabou pesando para confirmar a vitória” goes beyond the facts. The data support strong territorial control and chaos in the last 10 minutes, but not that this pressure was what confirmed the win."
             ]
           },
           {
             "draft": {
-              "title": "Fox guia o Red Lions numa prorrogação de pura tensão",
+              "title": "Red Lions vence na prorrogação em um 3 a 2 de viradas e reação",
               "paragraphs": [
-                "O Red Lions venceu o Blue Sharks por 3 a 2 depois da prorrogação, em uma partida cheia de viradas. Fox abriu o placar aos 28', Gray empatou aos 62', Reid recolocou o Red Lions na frente aos 95' e Cruz fez 2 a 2 aos 105'. Aos 113', Bell marcou contra, e o Red Lions segurou a vantagem até o fim.",
-                "O Red Lions mandou no jogo do começo ao fim: teve muito mais bola, passou quase o tempo todo no campo do Blue Sharks e criou bem mais chances. O time também finalizou muito mais e chegou mais vezes com perigo, mas desperdiçou várias oportunidades, então precisou insistir até a prorrogação para transformar domínio em gol.",
-                "Para a torcida do Red Lions, Fox foi central: marcou, usou a braçadeira e ainda apareceu bastante na construção do jogo. Nos minutos finais, o Red Lions empurrou o Blue Sharks para trás e terminou o duelo em ritmo caótico, com pressão constante até o apito final."
+                "Red Lions bateu Blue Sharks por 3 a 2 após a prorrogação, em uma partida que mudou de lado várias vezes. Fox abriu o placar aos 28' com passe de Lane, Gray empatou aos 62', Reid recolocou Red Lions na frente aos 95', Cruz deixou tudo igual aos 105' e, aos 113', um gol contra de Bell recolocou Red Lions em vantagem.",
+                "No jogo inteiro, Red Lions foi mais dono da bola e do campo: terminou com 69 de posse, 85 de domínio territorial, 110 entradas no terço final e 776 passes certos em 838 tentados. Blue Sharks teve menos bola e menos presença ofensiva, mas foi eficiente o bastante para manter a disputa aberta até o fim da prorrogação.",
+                "Para o torcedor dos Red Lions, Fox deixou sua marca cedo e também apareceu muito no jogo: foi capitão, fez 1 gol, finalizou 6 vezes, somou 140 toques, acertou 88 dos passes e venceu 5 desarmes. A reta final foi caótica, com Red Lions esmagando o território nos últimos 10 minutos, e a equipe de Fox soube sobreviver ao vai e vem até o apito final."
               ]
             },
             "problems": [
-              "“O Red Lions venceu o Blue Sharks por 3 a 2 depois da prorrogação” está correto, mas “segurou a vantagem até o fim” é impreciso: o jogo já está no 120+1' e os factos dizem que houve apito final, porém a formulação sugere apenas narrativa; não é um erro factual claro.",
-              "“O Red Lions mandou no jogo do começo ao fim” é suportado em termos gerais, mas a frase “passou quase o tempo todo no campo do Blue Sharks” é demasiado absoluta; os dados mostram domínio territorial do Red Lions, porém não permitem afirmar “quase o tempo todo” com precisão factual.",
-              "“Aos 113', Bell marcou contra” está correto como gol contra do Bell, mas o draft omite que isso foi o 3-2 final do jogo já em tempo de prorrogação; esta omissão não é erro factual, apenas falta de precisão.",
-              "“Para a torcida do Red Lions” inventa contexto de torcida/apoio que não está nos factos.",
-              "“Fox foi central: marcou, usou a braçadeira e ainda apareceu bastante na construção do jogo” contém uma afirmação não suportada: os factos mostram que Fox é capitão e marcou, mas não mostram que ele “apareceu bastante na construção do jogo” em termos gerais; o que há é um perfil com passes, toques e momentos recentes, insuficiente para essa conclusão abrangente."
+              "O título diz que o Red Lions ‘vence na prorrogação’; isso não aparece nos fatos e, sendo o período a 120+1' com final de jogo, o mais seguro é evitar qualquer formulação de vitória/fechamento que sugira decisão antes do apito final — aqui o placar final só é conhecido porque os fatos já trazem final_whistle, mas a redação em tom de encerramento pode ser problemática.",
+              "‘Blue Sharks foi eficiente’ é contradito pelos fatos: a equipe terminou com finishing_vs_xg de -0.48, então não pode ser descrita como eficiente/clinical.",
+              "‘Red Lions esmagando o território nos últimos 10 minutos’ é forte demais para os dados; os fatos suportam domínio territorial claro (91% field tilt e 79% posse no recorte), mas não a linguagem de esmagamento como afirmação factual."
             ]
           }
         ]

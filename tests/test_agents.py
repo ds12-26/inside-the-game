@@ -163,3 +163,8 @@ def test_hindi_viewer_gets_hindi_not_english():
                  [{"approved": True, "problems": []}])
     card = run_card(fake, viewer={**FAN, "language": "hi"})
     assert card["content"]["text"] == "Fox का गोल! Red Lions आगे।"
+
+
+def test_portuguese_viewers_get_brazilian_portuguese():
+    from matchmind.agents import viewer_text
+    assert viewer_text({"language": "pt"})["language"] == "Brazilian Portuguese"
