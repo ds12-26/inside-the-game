@@ -51,3 +51,12 @@ def test_cards_never_arrive_before_their_moment():
             seen = data["id"]
         if kind == "card":
             assert data["event_id"] <= seen
+
+
+def test_busy_fallback_never_switches_language(monkeypatch):
+    from matchmind import api
+    monkeypatch.setattr(api, "live_matches", api.MAX_LIVE_MATCHES)      # pretend live agents are busy
+    params = {"role": "fan", "language": "hi", "club": "Blue Sharks", "speed": 1e9}
+    messages = sse(client.get("/api/live/match_002", params=params).text)
+    assert messages[0][1]["source"] == "saved (live agents busy)"
+    assert all(data["language"] == "hi" for kind, data in messages if kind == "card")

@@ -21,7 +21,7 @@ import json
 import os
 from pathlib import Path
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import FileResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
@@ -79,11 +79,11 @@ def report(match_id: str):
 
 
 @app.get("/api/live/{match_id}")
-async def live(match_id: str, role: str = "fan", language: str = "en", club: str | None = None,
+async def live(request: Request, match_id: str, role: str = "fan", language: str = "en", club: str | None = None,
                player: str | None = None, focus: bool = False, speed: float = 30, start_after: int = 0):
     viewer = {"role": role, "language": language, "club": club or None, "player": player or None,
               "player_focus": focus}
-    return StreamingResponse(_live(match_id, viewer, speed, start_after), media_type="text/event-stream",
+    return StreamingResponse(_live(request, match_id, viewer, speed, start_after), media_type="text/event-stream",
                              headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
 
 
@@ -106,8 +106,8 @@ def _saved_cards(match_id, viewer):
 
 
 def _nearest_saved(match_id, viewer):
-    """A saved run for the same role, used when too many matches are being written live."""
-    for path in sorted(RUNS_DIR.glob(f"{match_id}-{viewer['role']}-*.json")):
+    """A saved run for the same role and language, used when too many matches are being written live."""
+    for path in sorted(RUNS_DIR.glob(f"{match_id}-{viewer['role']}-{viewer['language']}-*.json")):
         return json.loads(path.read_text())["cards"]
     return None
 
@@ -127,7 +127,7 @@ def _live_stats(so_far, info):
                                   "passing", "control_last_10_min", "rhythm_last_10_min")}
 
 
-async def _live(match_id, viewer, speed, start_after):
+async def _live(request, match_id, viewer, speed, start_after):
     match = _load(match_id)
     events, info = match["events"], match["match"]
     global live_matches
@@ -165,6 +165,8 @@ async def _live(match_id, viewer, speed, start_after):
     try:
         seen = []
         async for e in stream(events, speed=speed, start_after=start_after):
+            if await request.is_disconnected():
+                return                     # the viewer left: stop, free the live slot
             seen.append(e)
             yield _sse("event", _pitch_event(e, viewer["language"]))
             if len(seen) % STATS_EVERY == 0 or e["type"] in ("shot", "own_goal"):
