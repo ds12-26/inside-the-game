@@ -262,3 +262,11 @@ def test_code_catches_xg_as_percent_wrong_language_and_pronouns():
     assert problems("Amarelo para Ward, e o Blue Sharks leva a primeira advertência do jogo.", "pt") == ""
     assert "not he/his" in problems("Fox's goal, his work all game")
     assert problems("Fox scores for Red Lions!") == ""
+
+
+def test_attempted_passes_are_not_called_completed():
+    from matchmind.agents import completed_pass_problems
+    facts = recap_moment(EVENTS, INFO)["facts"]
+    assert completed_pass_problems("838 passes completed at 93% accuracy", facts)
+    assert not completed_pass_problems("completed 776 of 838 passes at 93%", facts)
+    assert not completed_pass_problems("776 passes completed", facts)

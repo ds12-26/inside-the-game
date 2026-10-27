@@ -113,7 +113,7 @@ before the 105th-minute equaliser.
     az login                      # the agents sign in with your Azure CLI account
 
     uvicorn matchmind.api:app --port 8000          # the app: http://localhost:8000
-    python -m pytest                                # 68 tests, no Azure needed
+    python -m pytest                                # 69 tests, no Azure needed
 
 Demo links on the live app (saved runs: instant, no model calls):
 - [Red Lions fan following Fox (English)](https://inside-the-game.calmocean-9ce9113c.eastus2.azurecontainerapps.io/?role=fan&club=Red+Lions&player=Fox&focus=1)
@@ -150,7 +150,7 @@ Other entry points:
 | `matchmind/replay.py`, `api.py` | Live replay and the web API (Server-Sent Events) |
 | `web/` | The single-page app |
 | `runs/` | Saved demo runs: every card with its fact-check history |
-| `tests/` | 68 tests: stats against the data, agents with fake models, MCP, API |
+| `tests/` | 69 tests: stats against the data, agents with fake models, MCP, API |
 
 ## How every number is calculated
 All statistics are computed in plain Python in `matchmind/stats.py`; no model produces a

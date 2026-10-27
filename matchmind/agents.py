@@ -396,6 +396,17 @@ def wrong_language(text, language):
     return english >= 3 and english > target
 
 
+def completed_pass_problems(text, facts):
+    """'838 passes completed' when 838 were attempted: the number completed must match the data."""
+    passing = facts.get("passing") or {}
+    completed = {v["completed"] for v in passing.values()}
+    if not completed:
+        return []
+    claims = re.findall(r"(\d+)\s+(?:passes\s+completed|completed\s+passes)|complet\w*\s+(\d+)\s+(?:of\s+\d+\s+)?passes", text, re.IGNORECASE)
+    wrong = sorted({int(a or b) for a, b in claims} - completed)
+    return [f"FALSE: {n} passes were not completed; completed passes were {sorted(completed)}" for n in wrong]
+
+
 def own_net_problems(text, facts):
     """An own goal said to go into the wrong team's net ("into Red Lions' own net")."""
     own_goals = [g for g in facts.get("goals", []) if g.get("own_goal")]
@@ -428,6 +439,7 @@ def rule_problems(job):
     for_fan = job.mode == "fan" or (job.mode == "recap" and job.viewer.get("role", "fan") == "fan")
     prose = draft_text(job.draft, skip=("evidence",))      # evidence chips are label/value pairs
     problems += own_net_problems(prose, job.moment["facts"])
+    problems += completed_pass_problems(prose, job.moment["facts"])
     if not for_fan and re.search(r"\b\d{1,3}\s+(?:possession|field tilt|pass accuracy|accuracy)\b", prose, re.IGNORECASE):
         problems.append("write percentages with the % sign, e.g. 69% possession")
     if re.search(r"\d\s*%\s*(?:of\s+)?(?:the\s+)?xG|xG\s+(?:of\s+)?\d+\s*%", text, re.IGNORECASE):
