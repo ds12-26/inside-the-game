@@ -71,8 +71,8 @@
     <span class="spacer"></span>
     <label class="speed">Speed
       <select id="speed">
-        <option value="15">Slow</option><option value="30" selected>Normal</option>
-        <option value="60">Fast</option><option value="240">Very fast</option>
+        <option value="0.5">Slow</option><option value="1" selected>Normal</option>
+        <option value="2">Fast</option>
       </select>
     </label>
     <button id="restart" class="ghost">Restart</button>
@@ -111,6 +111,7 @@
         <g id="flash" class="flash" opacity="0"><text x="52.5" y="38">GOAL</text></g>
       </svg>
       <div class="countdown" id="countdown" hidden><span id="countdown-text"></span></div>
+      <div class="ff" id="ff" hidden></div>
       <div class="lower-third" id="lower-third" hidden>
         <div class="lt-headline" id="lt-headline"></div>
         <div class="lt-text" id="lt-text"></div>
@@ -127,8 +128,8 @@
       <h2>Who's on top</h2>
       <div class="tilt"><span id="tilt-home"></span><div class="tilt-bar"><div id="tilt-fill"></div></div><span id="tilt-away"></span></div>
       <p class="plain" id="tilt-words">&nbsp;</p>
-      <h2>Big moments</h2>
-      <ol class="feed" id="fan-feed"></ol>
+      <h2>Match timeline</h2>
+      <ol class="timeline" id="fan-feed"></ol>
     </aside>
 
     <!-- analyst: live numbers + explained moments -->

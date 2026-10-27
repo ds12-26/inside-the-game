@@ -79,7 +79,7 @@ input { flex: 1; }
 
 /* program picture */
 .program { position: relative; background: #08110b; border-radius: var(--radius); overflow: hidden; }
-#pitch { display: block; width: 100%; height: auto; }
+#pitch { display: block; width: 100%; height: auto; max-height: 58vh; }   /* commentary stays in view */
 .grass { fill: var(--grass); }
 .lines * { fill: none; stroke: var(--grass-line); stroke-width: 0.35; }
 .end-label { fill: rgba(255,255,255,.35); font-size: 2.4px; text-anchor: middle; font-weight: 700; letter-spacing: .1em; }
@@ -100,6 +100,20 @@ input { flex: 1; }
   animation: tick 1s ease-out; }
 .countdown.go span { font-size: clamp(48px, 9vw, 96px); color: var(--on-dark); animation: tick .9s ease-out; }
 @keyframes tick { from { transform: scale(1.35); opacity: 0; } 25% { opacity: 1; } to { transform: scale(1); opacity: 1; } }
+.ff { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 2;
+  background: rgba(5, 10, 8, .78); color: var(--on-dark); padding: 10px 18px; border-radius: 999px;
+  font-weight: 700; font-size: 18px; white-space: nowrap; }
+.program.fast #ball, .program.fast #trail { opacity: 0; }
+#ball, #trail { transition: opacity .3s; }
+.tag { transition: opacity .3s; }
+.tag.off { opacity: 0; }
+.timeline { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+.timeline li { display: flex; gap: 10px; align-items: baseline; padding: 8px 10px; border-radius: 8px;
+  background: var(--bg); border: 1px solid var(--line); animation: rise .35s ease-out; }
+.timeline .icon { width: 22px; text-align: center; }
+.timeline .t { color: var(--accent-text); font-weight: 700; min-width: 44px; font-variant-numeric: tabular-nums; }
+.timeline .what { font-weight: 700; }
+.timeline li.goal { border-color: var(--accent-text); background: rgba(245, 197, 66, .12); }
 .bug { position: absolute; top: 14px; left: 14px; display: flex; align-items: stretch; font-weight: 800; z-index: 2;
   border-radius: 6px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,.5); font-size: 15px; }
 .bug > span { padding: 6px 10px; }

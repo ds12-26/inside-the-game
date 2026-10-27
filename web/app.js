@@ -3,6 +3,34 @@ const MATCH_ID = "match_002";
 const LANGS = { en: "English", es: "Español", fr: "Français", pt: "Português", hi: "हिन्दी" };
 const PITCH_W = 105, PITCH_H = 68;
 const COUNTDOWN_S = 3;
+// Only actions worth calling out get a play-by-play line and a name tag.
+const KEY_TYPES = new Set(["shot", "own_goal", "save", "card", "corner"]);
+const FAST_FORWARD = {
+  en: "⏩ Fast-forwarding to the next big moment", es: "⏩ Avanzando a la próxima jugada clave",
+  fr: "⏩ Avance rapide jusqu'au prochain temps fort", pt: "⏩ Avançando para o próximo lance importante",
+  hi: "⏩ अगले बड़े पल तक आगे बढ़ रहे हैं",
+};
+// One short line per moment for the fan timeline.
+const ICONS = { goal: "⚽", own_goal: "⚽", big_chance: "🎯", card: "🟨", kick_off: "▶️", period_end: "⏸️",
+  momentum_swing: "📈", passing_drop: "📉" };
+const TITLES = {
+  en: { goal: "Goal: {player} ({team})", own_goal: "Own goal: {player}", big_chance: "Big chance: {player}",
+    card: "Yellow card: {player}", kick_off: "Kick-off", period_end: "End of period", final: "Full time",
+    momentum_swing: "Momentum swing", passing_drop: "{team} losing the ball" },
+  es: { goal: "Gol: {player} ({team})", own_goal: "Gol en propia: {player}", big_chance: "Ocasión: {player}",
+    card: "Amarilla: {player}", kick_off: "Comienza", period_end: "Fin del periodo", final: "Final del partido",
+    momentum_swing: "Cambio de dominio", passing_drop: "{team} pierde el balón" },
+  fr: { goal: "But : {player} ({team})", own_goal: "Contre son camp : {player}", big_chance: "Occasion : {player}",
+    card: "Carton jaune : {player}", kick_off: "Coup d'envoi", period_end: "Fin de période", final: "Fin du match",
+    momentum_swing: "Le match bascule", passing_drop: "{team} perd le ballon" },
+  pt: { goal: "Gol: {player} ({team})", own_goal: "Gol contra: {player}", big_chance: "Chance: {player}",
+    card: "Amarelo: {player}", kick_off: "Começou", period_end: "Fim do período", final: "Fim de jogo",
+    momentum_swing: "Virada no domínio", passing_drop: "{team} perde a bola" },
+  hi: { goal: "गोल: {player} ({team})", own_goal: "आत्मघाती गोल: {player}", big_chance: "बड़ा मौका: {player}",
+    card: "पीला कार्ड: {player}", kick_off: "किक-ऑफ़", period_end: "पीरियड ख़त्म", final: "फ़ुल टाइम",
+    momentum_swing: "खेल का रुख़ बदला", passing_drop: "{team} गेंद गंवा रहा है" },
+};
+
 const KICKOFF = {
   en: ["Getting the match ready…", "Kick-off!"],
   es: ["Preparando el partido…", "¡Comienza!"],
@@ -174,6 +202,9 @@ function startMatch() {
   $("lower-third").parentElement.classList.remove("lt-on");
   $("fulltime").hidden = true;
   $("fav").hidden = !state.player;
+  $("ff").hidden = true;
+  $("ff").parentElement.classList.remove("fast");
+
   overlayFeed = [];
 
   showCountdown(KICKOFF[state.language][0], "");
@@ -186,6 +217,7 @@ function startMatch() {
   source.addEventListener("start", () => runCountdown());
   source.addEventListener("event", (e) => { hideCountdown(); onEvent(JSON.parse(e.data)); });
   source.addEventListener("stats", (e) => onStats(JSON.parse(e.data)));
+  source.addEventListener("pace", (e) => onPace(JSON.parse(e.data).pace));
   source.addEventListener("card", (e) => onCard(JSON.parse(e.data)));
   source.addEventListener("end", () => stop());
 }
@@ -221,22 +253,36 @@ function onEvent(e) {
   const [sx, sy] = toPitch(e.start);
   const [ex, ey] = e.end ? toPitch(e.end) : [sx, sy];
   const ball = $("ball");
-  ball.style.setProperty("--move", `${Math.max(120, 9000 / Number($("speed").value))}ms`);
+  ball.style.setProperty("--move", `${Math.round(700 / Number($("speed").value))}ms`);   // glide, don't jump
   ball.setAttribute("transform", `translate(${ex} ${ey})`);
   const trail = $("trail");
   trail.setAttribute("x1", sx); trail.setAttribute("y1", sy);
   trail.setAttribute("x2", ex); trail.setAttribute("y2", ey);
-  $("ball-tag").textContent = e.player;
+  // A name only for a key action or the favourite player; after a big moment play pauses,
+  // so the name stays up long enough to read.
   const tag = ball.querySelector(".tag");
-  tag.setAttribute("class", `tag ${e.side}`);
+  const named = KEY_TYPES.has(e.type) || e.player === state.player;
+  if (named) $("ball-tag").textContent = e.player;
+  tag.setAttribute("class", `tag ${e.side}${named ? "" : " off"}`);
   // keep the name on the pitch: below the ball at the top edge, nudged inwards at the goal lines
   const dx = ex > PITCH_W - 9 ? PITCH_W - 9 - ex : ex < 9 ? 9 - ex : 0;
   tag.setAttribute("transform", `translate(${dx} ${ey < 8 ? 9.5 : 0})`);
-  if (e.line) $("pbp").textContent = `${e.clock}  ${e.line}`;
+  finishEvent(e);
+}
+
+function finishEvent(e) {
+  if (e.line && KEY_TYPES.has(e.type)) $("pbp").textContent = `${e.clock}  ${e.line}`;
   if ((e.type === "shot" && e.outcome === "goal") || e.type === "own_goal") {
     const flash = $("flash");
     flash.classList.remove("show"); void flash.getBBox(); flash.classList.add("show");
   }
+}
+
+function onPace(pace) {
+  const fast = pace === "fast";
+  $("ff").textContent = FAST_FORWARD[state.language];
+  $("ff").hidden = !fast;
+  $("ff").parentElement.classList.toggle("fast", fast);
 }
 
 function onStats(s) {
@@ -280,7 +326,8 @@ function onCard(card) {
   if (card.kind === "recap") return showRecap(card);
   if (card.mode === "fan") {
     setNarration(c.text, card);
-    addFeed("fan-feed", `<span class="t">${card.clock}</span>${escapeHtml(c.text)}`);
+    $("pbp").textContent = "\u00a0";                  // the commentary now says it: one line at a time
+    addTimeline(card);
   } else if (card.mode === "analyst") {
     setNarration(c.headline, card);
     const evidence = (c.evidence || []).map((x) => `<span>${escapeHtml(x.label)} <b>${escapeHtml(x.value)}</b></span>`).join("");
@@ -326,6 +373,18 @@ function checkHistory(card) {
   }).join("");
   const tail = card.source === "ai" ? "" : `<p class="hint">Rejected twice, so a plain line that is always true was shown instead.</p>`;
   return `<p class="hint">Written by the ${{ fan: "Narrator", analyst: "Analyst", broadcaster: "Studio Producer", recap: "Recap" }[card.mode]} agent, checked by the Fact-Checker agent against the match data.</p>${parts}${tail}`;
+}
+
+function addTimeline(card) {
+  if (!ICONS[card.kind]) return;                       // check-ins are commentary only
+  const titles = TITLES[state.language];
+  const title = (card.final ? titles.final : titles[card.kind])
+    .replace("{player}", card.player ?? "").replace("{team}", card.team ?? "");
+  const li = document.createElement("li");
+  if (card.kind === "goal" || card.kind === "own_goal") li.className = "goal";
+  li.innerHTML = `<span class="icon">${card.final ? "🏁" : ICONS[card.kind]}</span><span class="t">${card.clock}</span>` +
+    `<span class="what">${escapeHtml(title)}</span>`;
+  $("fan-feed").prepend(li);
 }
 
 function addFeed(id, html, cls) {

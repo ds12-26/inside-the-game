@@ -28,8 +28,8 @@ from pydantic import BaseModel
 
 from matchmind import data, playbyplay, stats
 from matchmind.commentary import RUNS_DIR, run_name
-from matchmind.moments import recap_moment, scout, viewer_facts
-from matchmind.replay import stream
+from matchmind.moments import EVENT_KINDS, recap_moment, scout, viewer_facts
+from matchmind.replay import highlights
 from matchmind.welcome_agent import welcome
 
 WEB_DIR = Path(__file__).resolve().parent.parent / "web"
@@ -80,7 +80,7 @@ def report(match_id: str):
 
 @app.get("/api/live/{match_id}")
 async def live(request: Request, match_id: str, role: str = "fan", language: str = "en", club: str | None = None,
-               player: str | None = None, focus: bool = False, speed: float = 30, start_after: int = 0,
+               player: str | None = None, focus: bool = False, speed: float = 1, start_after: int = 0,
                countdown: float = 0):
     viewer = {"role": role, "language": language, "club": club or None, "player": player or None,
               "player_focus": focus}
@@ -143,9 +143,17 @@ async def _live(request, match_id, viewer, speed, start_after, countdown=0):
     cards_at = {}
     for card in saved or []:
         cards_at.setdefault(card["event_id"], []).append(card)
-    pending = {}
+    pending, by_key = {}, {}
     for moment in moments:
         pending.setdefault(moment["event_id"], []).append(moment)
+        by_key[(moment["event_id"], moment["kind"])] = moment
+    key_ids = {m["event_id"] for m in moments if m["kind"] in EVENT_KINDS}
+
+    def who(card):
+        """Who and what a card is about, for the timeline (saved runs don't store it)."""
+        m = by_key.get((card["event_id"], card["kind"]), {})
+        return {**card, "player": m.get("player"), "team": m.get("team"),
+                "final": bool(m.get("facts", {}).get("final_whistle"))}
 
     yield _sse("start", {"viewer": viewer, "source": source, "countdown": countdown,
                          "teams": {s: info[s]["name"] for s in ("home", "away")}})
@@ -162,21 +170,24 @@ async def _live(request, match_id, viewer, speed, start_after, countdown=0):
         from matchmind.agents import write_card
         mode = "recap" if moment["kind"] == "recap" else viewer["role"]
         card = await write_card(agents, match_id, viewer_facts(moment, events, info, viewer["player"]), mode, viewer)
-        await out.put(_sse("card", card))
+        await out.put(_sse("card", who(card)))
 
     tasks = []
     try:
-        seen = []
-        async for e in stream(events, speed=speed, start_after=start_after):
+        seen, current_pace = [], None
+        async for e, pace in highlights(events, key_ids, speed=speed, start_after=start_after):
             if await request.is_disconnected():
                 return                     # the viewer left: stop, free the live slot
             seen.append(e)
+            if pace != current_pace:
+                current_pace = pace
+                yield _sse("pace", {"pace": pace})
             yield _sse("event", _pitch_event(e, viewer["language"]))
             if len(seen) % STATS_EVERY == 0 or e["type"] in ("shot", "own_goal"):
                 yield _sse("stats", _live_stats(stats.events_until(events, e["id"]), info))
             if saved is not None:
                 for card in cards_at.get(e["id"], []):
-                    yield _sse("card", card)
+                    yield _sse("card", who(card))
             else:
                 tasks += [asyncio.create_task(write(m)) for m in pending.get(e["id"], [])]
             while not out.empty():
