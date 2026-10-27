@@ -75,11 +75,14 @@ input { flex: 1; }
 #viewer-label { color: var(--muted); font-size: 14px; }
 .speed { color: var(--muted); font-size: 14px; display: flex; gap: 6px; align-items: center; }
 .speed select { padding: 4px 8px; }
-.stage { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 16px; padding: 16px; max-width: 1400px; margin: 0 auto; align-items: start; }
+/* the pitch is at most 64% of the screen height so the commentary stays in view; frame and panel centred together */
+.stage { display: grid; grid-template-columns: minmax(0, calc(64vh * 111 / 74)) 340px; justify-content: center;
+  gap: 16px; padding: 16px; margin: 0 auto; align-items: start; }
 
 /* program picture */
-.program { position: relative; background: #08110b; border-radius: var(--radius); overflow: hidden; }
-#pitch { display: block; width: 100%; height: auto; max-height: 58vh; }   /* commentary stays in view */
+.program { position: relative; background: #08110b; border-radius: var(--radius); overflow: hidden;
+  width: 100%; }
+#pitch { display: block; width: 100%; height: auto; }
 .grass { fill: var(--grass); }
 .lines * { fill: none; stroke: var(--grass-line); stroke-width: 0.35; }
 .end-label { fill: rgba(255,255,255,.35); font-size: 2.4px; text-anchor: middle; font-weight: 700; letter-spacing: .1em; }
@@ -187,6 +190,7 @@ dialog pre { max-height: 60vh; overflow: auto; background: var(--bg); padding: 1
 
 @media (max-width: 900px) {
   .stage { grid-template-columns: 1fr; }
+  .ff { font-size: 14px; white-space: normal; text-align: center; max-width: 80%; }
   .roles { grid-template-columns: 1fr; }
   .lower-third { max-width: 88%; bottom: 140px; }
   .narration { padding-right: 0; padding-bottom: 28px; }
