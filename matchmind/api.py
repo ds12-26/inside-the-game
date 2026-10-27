@@ -1,0 +1,171 @@
+"""
+The web API and the page that serves each viewer's experience.
+
+    GET  /                          the app (web/index.html)
+    GET  /api/matches               match picker
+    GET  /api/match/{id}            teams and squads (never the result)
+    POST /api/welcome               Welcome agent: picks and/or free text -> profile and follow-ups
+    GET  /api/live/{id}?...         Server-Sent Events: the match replayed live, with play-by-play,
+                                    live stats and fact-checked agent cards for this viewer
+    GET  /api/report/{id}           the full-time ensemble report
+
+Cards come from a saved run when one exists for this viewer (instant, reliable for demos);
+otherwise the agents write them live as each moment happens.
+
+Usage:
+    uvicorn matchmind.api:app --port 8000
+"""
+
+import asyncio
+import json
+from pathlib import Path
+
+from fastapi import FastAPI, HTTPException
+from fastapi.responses import FileResponse, StreamingResponse
+from fastapi.staticfiles import StaticFiles
+from pydantic import BaseModel
+
+from matchmind import data, playbyplay, stats
+from matchmind.commentary import RUNS_DIR, run_name
+from matchmind.moments import recap_moment, scout, viewer_facts
+from matchmind.replay import stream
+from matchmind.welcome_agent import welcome
+
+WEB_DIR = Path(__file__).resolve().parent.parent / "web"
+STATS_EVERY = 10          # events between live stats updates
+
+app = FastAPI(title="Inside the Game")
+app.mount("/static", StaticFiles(directory=WEB_DIR), name="static")
+
+
+class WelcomeRequest(BaseModel):
+    match_id: str = "match_002"
+    picks: dict = {}
+    message: str = ""
+
+
+@app.get("/")
+def index():
+    return FileResponse(WEB_DIR / "index.html")
+
+
+@app.get("/api/matches")
+def matches():
+    return data.list_matches()
+
+
+@app.get("/api/match/{match_id}")
+def match(match_id: str):
+    info = _load(match_id)["match"]
+    return {"match_id": match_id,
+            "teams": {s: {k: info[s][k] for k in ("name", "short", "players")} for s in ("home", "away")}}
+
+
+@app.post("/api/welcome")
+async def welcome_viewer(request: WelcomeRequest):
+    info = _load(request.match_id)["match"]
+    return await asyncio.to_thread(welcome, info, request.picks, request.message)
+
+
+@app.get("/api/report/{match_id}")
+def report(match_id: str):
+    path = RUNS_DIR / f"{match_id}-ensemble.json"
+    if not path.exists():
+        raise HTTPException(404, "No ensemble report yet: run python -m matchmind.ensemble")
+    return json.loads(path.read_text())
+
+
+@app.get("/api/live/{match_id}")
+async def live(match_id: str, role: str = "fan", language: str = "en", club: str | None = None,
+               player: str | None = None, focus: bool = False, speed: float = 30, start_after: int = 0):
+    viewer = {"role": role, "language": language, "club": club or None, "player": player or None,
+              "player_focus": focus}
+    return StreamingResponse(_live(match_id, viewer, speed, start_after), media_type="text/event-stream",
+                             headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
+
+
+def _load(match_id):
+    try:
+        return data.load_match(match_id)
+    except FileNotFoundError:
+        raise HTTPException(404, f"No match {match_id}")
+
+
+def _sse(kind, payload):
+    return f"event: {kind}\ndata: {json.dumps(payload, ensure_ascii=False)}\n\n"
+
+
+def _saved_cards(match_id, viewer):
+    path = RUNS_DIR / f"{run_name(match_id, viewer)}.json"
+    if not path.exists():
+        return None
+    return json.loads(path.read_text())["cards"]
+
+
+def _pitch_event(e, language):
+    """An event for the pitch view: positions turned to the home team's direction (home attacks right)."""
+    flip = (lambda p: p) if e["side"] == "home" else (lambda p: [100 - p[0], 100 - p[1]])
+    return {"id": e["id"], "clock": stats.clock(e), "period": e["period"], "side": e["side"], "team": e["team"],
+            "player": e["player"], "type": e["type"], "outcome": e["outcome"],
+            "start": flip(e["start"]), "end": flip(e["end"]) if e["end"] else None,
+            "line": playbyplay.line(e, language)}
+
+
+def _live_stats(so_far, info):
+    state = stats.match_state(so_far, info)
+    return {k: state[k] for k in ("clock", "score", "expected_goals", "territory", "territory_last_10_min",
+                                  "passing", "control_last_10_min", "rhythm_last_10_min")}
+
+
+async def _live(match_id, viewer, speed, start_after):
+    match = _load(match_id)
+    events, info = match["events"], match["match"]
+    saved = _saved_cards(match_id, viewer)
+    moments = scout(events, info) + [recap_moment(events, info)]
+    cards_at = {}
+    for card in saved or []:
+        cards_at.setdefault(card["event_id"], []).append(card)
+    pending = {}
+    for moment in moments:
+        pending.setdefault(moment["event_id"], []).append(moment)
+
+    yield _sse("start", {"viewer": viewer, "source": "saved" if saved else "live",
+                         "teams": {s: info[s]["name"] for s in ("home", "away")}})
+    agents, tools, out = None, None, asyncio.Queue()
+    if saved is None:
+        from matchmind.agents import build_agents, match_tools
+        tools = match_tools()
+        await tools.__aenter__()
+        agents = build_agents(tools=tools)
+
+    async def write(moment):
+        from matchmind.agents import write_card
+        mode = "recap" if moment["kind"] == "recap" else viewer["role"]
+        card = await write_card(agents, match_id, viewer_facts(moment, events, info, viewer["player"]), mode, viewer)
+        await out.put(_sse("card", card))
+
+    tasks = []
+    try:
+        seen = []
+        async for e in stream(events, speed=speed, start_after=start_after):
+            seen.append(e)
+            yield _sse("event", _pitch_event(e, viewer["language"]))
+            if len(seen) % STATS_EVERY == 0 or e["type"] in ("shot", "own_goal"):
+                yield _sse("stats", _live_stats(stats.events_until(events, e["id"]), info))
+            if saved is not None:
+                for card in cards_at.get(e["id"], []):
+                    yield _sse("card", card)
+            else:
+                tasks += [asyncio.create_task(write(m)) for m in pending.get(e["id"], [])]
+            while not out.empty():
+                yield out.get_nowait()
+        for task in asyncio.as_completed(tasks):
+            await task
+            while not out.empty():
+                yield out.get_nowait()
+        yield _sse("end", {"score": {info[s]["name"]: n for s, n in stats.score(events).items()}})
+    finally:
+        for task in tasks:
+            task.cancel()
+        if tools is not None:
+            await tools.__aexit__(None, None, None)
