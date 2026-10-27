@@ -18,6 +18,7 @@ Usage:
 
 import asyncio
 import json
+import os
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
@@ -33,6 +34,8 @@ from matchmind.welcome_agent import welcome
 
 WEB_DIR = Path(__file__).resolve().parent.parent / "web"
 STATS_EVERY = 10          # events between live stats updates
+MAX_LIVE_MATCHES = int(os.environ.get("MAX_LIVE_MATCHES", "2"))   # caps model cost on a public URL
+live_matches = 0
 
 app = FastAPI(title="Inside the Game")
 app.mount("/static", StaticFiles(directory=WEB_DIR), name="static")
@@ -102,6 +105,13 @@ def _saved_cards(match_id, viewer):
     return json.loads(path.read_text())["cards"]
 
 
+def _nearest_saved(match_id, viewer):
+    """A saved run for the same role, used when too many matches are being written live."""
+    for path in sorted(RUNS_DIR.glob(f"{match_id}-{viewer['role']}-*.json")):
+        return json.loads(path.read_text())["cards"]
+    return None
+
+
 def _pitch_event(e, language):
     """An event for the pitch view: positions turned to the home team's direction (home attacks right)."""
     flip = (lambda p: p) if e["side"] == "home" else (lambda p: [100 - p[0], 100 - p[1]])
@@ -120,7 +130,13 @@ def _live_stats(so_far, info):
 async def _live(match_id, viewer, speed, start_after):
     match = _load(match_id)
     events, info = match["events"], match["match"]
+    global live_matches
     saved = _saved_cards(match_id, viewer)
+    source = "saved"
+    if saved is None and live_matches >= MAX_LIVE_MATCHES:
+        saved, source = _nearest_saved(match_id, viewer), "saved (live agents busy)"
+    if saved is None:
+        source = "live"
     moments = scout(events, info) + [recap_moment(events, info)]
     cards_at = {}
     for card in saved or []:
@@ -129,11 +145,12 @@ async def _live(match_id, viewer, speed, start_after):
     for moment in moments:
         pending.setdefault(moment["event_id"], []).append(moment)
 
-    yield _sse("start", {"viewer": viewer, "source": "saved" if saved else "live",
+    yield _sse("start", {"viewer": viewer, "source": source,
                          "teams": {s: info[s]["name"] for s in ("home", "away")}})
     agents, tools, out = None, None, asyncio.Queue()
     if saved is None:
         from matchmind.agents import build_agents, match_tools
+        live_matches += 1
         tools = match_tools()
         await tools.__aenter__()
         agents = build_agents(tools=tools)
@@ -168,4 +185,5 @@ async def _live(match_id, viewer, speed, start_after):
         for task in tasks:
             task.cancel()
         if tools is not None:
+            live_matches -= 1
             await tools.__aexit__(None, None, None)
