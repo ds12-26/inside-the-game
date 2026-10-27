@@ -34,7 +34,7 @@ from matchmind.welcome_agent import welcome
 
 WEB_DIR = Path(__file__).resolve().parent.parent / "web"
 STATS_EVERY = 10          # events between live stats updates
-CARD_WAIT_S = 20          # live play waits this long at a moment for its commentary, so words match the pitch
+CARD_WAIT_S = 30          # live play waits this long at a moment for its commentary, so words match the pitch
 MAX_LIVE_MATCHES = int(os.environ.get("MAX_LIVE_MATCHES", "2"))   # caps model cost on a public URL
 live_matches = 0
 

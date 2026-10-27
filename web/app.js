@@ -3,6 +3,11 @@ const MATCH_ID = "match_002";
 const LANGS = { en: "English", es: "Español", fr: "Français", pt: "Português", hi: "हिन्दी" };
 const PITCH_W = 105, PITCH_H = 68;
 const COUNTDOWN_S = 3;
+const START_FAILED = {
+  en: "Couldn't start the match. Press Restart.", es: "No se pudo iniciar el partido. Pulsa «Restart».",
+  fr: "Impossible de lancer le match. Appuyez sur « Restart ».", pt: "Não foi possível iniciar a partida. Toque em «Restart».",
+  hi: "मैच शुरू नहीं हो सका। «Restart» दबाएँ।",
+};
 // Only actions worth calling out get a play-by-play line and a name tag.
 const KEY_TYPES = new Set(["shot", "own_goal", "save", "card", "corner"]);
 // Shown automatically while quiet play is skipped; nothing to click.
@@ -90,7 +95,11 @@ async function init() {
   if (q.get("role")) {
     Object.assign(state, { role: q.get("role"), club: q.get("club"), player: q.get("player"),
       focus: q.has("focus"), language: q.get("language") || "en" });
-    if (q.get("speed")) $("speed").value = q.get("speed");
+    const speed = Number(q.get("speed"));
+    if (speed > 0) {                                   // a speed the menu doesn't list is added, not dropped
+      if (![...$("speed").options].some((o) => Number(o.value) === speed)) $("speed").add(new Option(`${speed}×`, speed));
+      $("speed").value = [...$("speed").options].find((o) => Number(o.value) === speed).value;
+    }
     refresh();
     startMatch();
   }
@@ -221,6 +230,13 @@ function startMatch() {
   source.addEventListener("pace", (e) => onPace(JSON.parse(e.data).pace));
   source.addEventListener("card", (e) => onCard(JSON.parse(e.data)));
   source.addEventListener("end", () => { onPace("slow"); stop(); });
+  let started = false;
+  source.addEventListener("start", () => { started = true; });
+  source.onerror = () => {                             // never leave the viewer on an endless loading screen
+    if (started) return;                               // mid-match the browser reconnects by itself
+    source.close();
+    showCountdown(START_FAILED[state.language], "");
+  };
 }
 
 // Loading message until the server is ready, then 3, 2, 1, Kick-off! timed to the first event.
