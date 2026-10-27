@@ -85,7 +85,8 @@ misses a goal.
   UNSUPPORTED or WORDING; only the first two send a draft back, so opinion and style never
   block good commentary. At full time it is told what is settled (the result, whose net an
   own goal went into), and code catches an own goal credited to the wrong net and figures
-  missing their % sign.
+  missing their % sign, xG written as a percentage, English slipping into Spanish, French or
+  Portuguese commentary, and he/she for players whose gender the data doesn't record.
 - **Always a safe answer:** if a draft fails twice or the model is down, a plain line built
   from the data is shown instead.
 
@@ -112,14 +113,18 @@ before the 105th-minute equaliser.
     az login                      # the agents sign in with your Azure CLI account
 
     uvicorn matchmind.api:app --port 8000          # the app: http://localhost:8000
-    python -m pytest                                # 52 tests, no Azure needed
+    python -m pytest                                # 68 tests, no Azure needed
 
-Demo links (saved runs, instant, no model calls):
-- Red Lions fan following Fox (English): `/?role=fan&club=Red+Lions&player=Fox&focus=1`
-- Analyst: `/?role=analyst` · Broadcaster: `/?role=broadcaster`
-- The same fan in Hindi: `/?role=fan&club=Red+Lions&player=Fox&focus=1&language=hi`
-- A Blue Sharks fan following the 40-year-old keeper Moss, in Spanish:
-  `/?role=fan&club=Blue+Sharks&player=Moss&focus=1&language=es`
+Demo links on the live app (saved runs: instant, no model calls):
+- [Red Lions fan following Fox (English)](https://inside-the-game.calmocean-9ce9113c.eastus2.azurecontainerapps.io/?role=fan&club=Red+Lions&player=Fox&focus=1)
+- [Analyst](https://inside-the-game.calmocean-9ce9113c.eastus2.azurecontainerapps.io/?role=analyst) · [Broadcaster](https://inside-the-game.calmocean-9ce9113c.eastus2.azurecontainerapps.io/?role=broadcaster)
+- The same fan in [Hindi](https://inside-the-game.calmocean-9ce9113c.eastus2.azurecontainerapps.io/?role=fan&club=Red+Lions&player=Fox&focus=1&language=hi),
+  [Spanish](https://inside-the-game.calmocean-9ce9113c.eastus2.azurecontainerapps.io/?role=fan&club=Red+Lions&player=Fox&focus=1&language=es),
+  [French](https://inside-the-game.calmocean-9ce9113c.eastus2.azurecontainerapps.io/?role=fan&club=Red+Lions&player=Fox&focus=1&language=fr) or
+  [Brazilian Portuguese](https://inside-the-game.calmocean-9ce9113c.eastus2.azurecontainerapps.io/?role=fan&club=Red+Lions&player=Fox&focus=1&language=pt)
+- [A Blue Sharks fan following the 40-year-old keeper Moss, in Spanish](https://inside-the-game.calmocean-9ce9113c.eastus2.azurecontainerapps.io/?role=fan&club=Blue+Sharks&player=Moss&focus=1&language=es)
+
+Locally, the same links work on `http://localhost:8000`.
 
 Any other combination is written live by the agents as the match plays.
 
@@ -145,7 +150,7 @@ Other entry points:
 | `matchmind/replay.py`, `api.py` | Live replay and the web API (Server-Sent Events) |
 | `web/` | The single-page app |
 | `runs/` | Saved demo runs: every card with its fact-check history |
-| `tests/` | 52 tests: stats against the data, agents with fake models, MCP, API |
+| `tests/` | 68 tests: stats against the data, agents with fake models, MCP, API |
 
 ## How every number is calculated
 All statistics are computed in plain Python in `matchmind/stats.py`; no model produces a

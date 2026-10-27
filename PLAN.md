@@ -65,7 +65,7 @@ match_002.json ──► Replay engine (live stream, speed-up)
 | 2 | 1:35–3:20 | Moment Scout, Explainer, Fact-Checker, Producer, Recap | One command prints checked cards for a Spanish fan and an English analyst |
 | 3 | 3:20–4:20 | FastAPI + web page | The same moment shows as two different cards side by side |
 | 4 | 4:20–5:00 | Deploy to Azure Container Apps | A public URL works |
-| 5 | 5:00–5:20 | Stretch: Azure AI Speech | Key moments play as audio |
+| 5 | 5:00–5:20 | ~~Stretch: Azure AI Speech~~ (cut, see ROADMAP) | — |
 | 6 | 5:20–6:00 | README, ROADMAP, demo video | Submitted |
 
 Cut order if late: Speech → Copilot share (Claude builds the frontend) → one container app instead of two → deployment (demo locally).
