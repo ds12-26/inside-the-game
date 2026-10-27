@@ -32,4 +32,9 @@ describes only what exists.
   *Tech:* Azure Kubernetes Service (AKS) with autoscaling per match.
 
 ## Cut during the build
-(Filled in as we go.)
+- **Dribble success rate.** Every dribble in the synthetic data is recorded as "lost", so a
+  success rate would always read 0%. Next: extend the data generator to record successful
+  dribbles too (the brief's "data innovation" track).
+- **Measured ball and shot speed.** Event times are whole seconds, so speeds are estimates
+  from distance over time, shown only when a save follows within 1-2 s. Next: sub-second
+  timestamps or tracking data.
