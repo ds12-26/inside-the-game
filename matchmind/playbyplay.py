@@ -72,6 +72,22 @@ LINES = {
         "cross": "{player} cruza na área.",
         "own_goal": "Gol contra de {player}!",
     },
+    "hi": {
+        "kick_off": "{team} ने किक-ऑफ़ किया।",
+        "pass_final_third": "{player} ने गेंद आख़िरी तिहाई में पहुँचाई।",
+        "pass_long": "{player} का लंबा पास।",
+        "shot_goal": "{player} का गोल!",
+        "shot_saved": "{player} का शॉट, और बचाव!",
+        "shot_off_target": "{player} का शॉट, बाहर।",
+        "shot_blocked": "{player} का शॉट ब्लॉक हो गया।",
+        "tackle": "{player} का ज़बरदस्त टैकल।",
+        "interception": "{player} ने खेल पढ़ा और गेंद छीन ली।",
+        "foul": "{player} का {fouled} पर फ़ाउल।",
+        "card": "{player} को पीला कार्ड।",
+        "corner": "{team} को कॉर्नर, {player} लेंगे।",
+        "cross": "{player} का क्रॉस।",
+        "own_goal": "आत्मघाती गोल! गेंद {player} से लगकर अंदर।",
+    },
 }
 
 

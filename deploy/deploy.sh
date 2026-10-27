@@ -5,8 +5,8 @@
 #        |
 #        +--> Microsoft Foundry project model (managed identity, no key in the container)
 #
-# One image runs both apps. The image is built in Azure Container Registry, so
-# Docker is not needed locally. Reads the Azure OpenAI and Foundry settings from .env.
+# One image runs both apps. GitHub Actions builds it and pushes it to Azure Container
+# Registry, so Docker is not needed locally. Reads the Azure OpenAI and Foundry settings from .env.
 #
 # Usage: deploy/deploy.sh            (first run creates everything; later runs update)
 
@@ -26,7 +26,11 @@ IMAGE="$ACR.azurecr.io/inside-the-game:$TAG"
 
 echo "== registry and image ($IMAGE)"
 az acr show -n "$ACR" -g "$RG" >/dev/null 2>&1 || az acr create -n "$ACR" -g "$RG" -l "$LOCATION" --sku Basic -o none
-az acr build -r "$ACR" -t "inside-the-game:$TAG" . -o none
+# GitHub Actions (.github/workflows/image.yml) builds and pushes the image on every push to
+# main. Fall back to building in Azure if that image isn't there (needs ACR Tasks).
+if ! az acr repository show-tags -n "$ACR" --repository inside-the-game -o tsv 2>/dev/null | grep -qx "$TAG"; then
+  az acr build -r "$ACR" -t "inside-the-game:$TAG" . -o none
+fi
 
 echo "== container apps environment"
 az containerapp env show -n "$ENV_NAME" -g "$RG" >/dev/null 2>&1 || \

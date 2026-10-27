@@ -23,8 +23,9 @@ describes only what exists.
   *Tech:* Azure Cosmos DB with vector search, or Azure Database for PostgreSQL with pgvector.
 
 ## Experience
-- **More languages, including non-Latin scripts.** Needs a script-aware version of the
-  text guard (today it rejects non-Latin text by design).
+- **More languages and scripts.** Hindi (Devanagari) is supported, with a script-aware guard.
+  Next: Arabic, Japanese, Korean and others, each with its own allowed scripts and native
+  play-by-play lines, and native-speaker review of the templates.
   *Tech:* Azure OpenAI, Azure AI Translator.
 
 ## Production

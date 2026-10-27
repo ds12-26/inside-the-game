@@ -1,6 +1,6 @@
 // Inside the Game: welcome flow and the three live experiences.
 const MATCH_ID = "match_002";
-const LANGS = { en: "English", es: "Español", fr: "Français", pt: "Português" };
+const LANGS = { en: "English", es: "Español", fr: "Français", pt: "Português", hi: "हिन्दी" };
 const PITCH_W = 105, PITCH_H = 68;
 
 const $ = (id) => document.getElementById(id);

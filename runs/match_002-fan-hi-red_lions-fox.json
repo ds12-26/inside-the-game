@@ -1,0 +1,952 @@
+{
+  "match_id": "match_002",
+  "viewer": {
+    "role": "fan",
+    "language": "hi",
+    "club": "Red Lions",
+    "player": "Fox",
+    "player_focus": true
+  },
+  "cards": [
+    {
+      "event_id": 1,
+      "clock": "1'",
+      "kind": "kick_off",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "शुरुआत में ही खेल बराबरी पर है, 1' पर स्कोर 0-0 है। Fox रेड Lions की कप्तानी संभाल रहे हैं, और अभी दोनों टीमें शांत, नियंत्रित शुरुआत कर रही हैं।"
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "शुरुआत में ही खेल बराबरी पर है, 1' पर स्कोर 0-0 है। Fox रेड Lions की कप्तानी संभाल रहे हैं, और अभी दोनों टीमें शांत, नियंत्रित शुरुआत कर रही हैं।"
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 24,
+      "clock": "2'",
+      "kind": "card",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "2' पर Blue Sharks के Ward को yellow card! Red Lions के लिए शुरुआती बढ़त का मौका, क्योंकि खेल अभी अव्यवस्थित है और Blue Sharks ने ज्यादातर दबाव बनाया है."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "2' पर Blue Sharks के Ward को yellow card! Red Lions के लिए शुरुआती बढ़त का मौका, क्योंकि खेल अभी अव्यवस्थित है और Blue Sharks ने ज्यादातर दबाव बनाया है."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 74,
+      "clock": "6'",
+      "kind": "card",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "Price पर पीला कार्ड! Red Lions ने पिछले 10 मिनट में दबाव बनाया है, 0-0 पर खेल काफी अस्त-व्यस्त दिख रहा है."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "Price पर पीला कार्ड! Red Lions ने पिछले 10 मिनट में दबाव बनाया है, 0-0 पर खेल काफी अस्त-व्यस्त दिख रहा है."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 121,
+      "clock": "10'",
+      "kind": "passing_drop",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "10' पर Red Lions दबाव बनाए हुए हैं, लेकिन अभी तक गोल नहीं मिला। Blue Sharks की पासिंग अभी गिर गई है, और Fox की टीम के लिए यह अच्छा संकेत है क्योंकि खेल ज्यादातर उनके आधे में चल रहा है."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 2,
+        "history": [
+          {
+            "draft": {
+              "text": "10' पर Red Lions ने दबाव बनाए रखा है, लेकिन अभी तक गोल नहीं मिला; Blue Sharks की पासिंग अभी काफी गिर गई है। Fox की टीम के लिए यह अच्छा संकेत है, क्योंकि मैदान ज्यादातर Blue Sharks के आधे में ही खेला जा रहा है."
+            },
+            "problems": [
+              "too long to read aloud: keep it under 45 words"
+            ]
+          },
+          {
+            "draft": {
+              "text": "10' पर Red Lions दबाव बनाए हुए हैं, लेकिन अभी तक गोल नहीं मिला। Blue Sharks की पासिंग अभी गिर गई है, और Fox की टीम के लिए यह अच्छा संकेत है क्योंकि खेल ज्यादातर उनके आधे में चल रहा है."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 137,
+      "clock": "12'",
+      "kind": "big_chance",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "12' पर Red Lions के लिए बड़ा मौका! Fox की करीब-बराबर वाली कोशिश बचा ली गई, और Red Lions अभी भी पूरी तरह दबाव में, जबकि Blue Sharks अब तक कोई शॉट नहीं ले पाए हैं."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "12' पर Red Lions के लिए बड़ा मौका! Fox की करीब-बराबर वाली कोशिश बचा ली गई, और Red Lions अभी भी पूरी तरह दबाव में, जबकि Blue Sharks अब तक कोई शॉट नहीं ले पाए हैं."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 192,
+      "clock": "16'",
+      "kind": "check_in",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "16' पर Red Lions दबाव बनाए हुए हैं, और Fox का हाल अब तक अच्छा है—10 छुए, 2 शॉट और एक बचाया गया मजबूत प्रयास। स्कोर 0-0 है, लेकिन Red Lions ने खेल को Blue Sharks की आधी में ही जकड़ रखा है."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "16' पर Red Lions दबाव बनाए हुए हैं, और Fox का हाल अब तक अच्छा है—10 छुए, 2 शॉट और एक बचाया गया मजबूत प्रयास। स्कोर 0-0 है, लेकिन Red Lions ने खेल को Blue Sharks की आधी में ही जकड़ रखा है."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 352,
+      "clock": "28'",
+      "kind": "goal",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "Fox! 28' में Red Lions आगे हैं, और कप्तान Fox ने Lane की मदद से ठंडा फिनिश किया। अभी Red Lions खेल पर पूरी तरह पकड़ बनाए हुए हैं, जबकि Fox दिनभर खतरनाक रहे हैं."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "Fox! 28' में Red Lions आगे हैं, और कप्तान Fox ने Lane की मदद से ठंडा फिनिश किया। अभी Red Lions खेल पर पूरी तरह पकड़ बनाए हुए हैं, जबकि Fox दिनभर खतरनाक रहे हैं."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 375,
+      "clock": "31'",
+      "kind": "momentum_swing",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "31' पर Red Lions 1-0 से आगे हैं और Fox का असर साफ़ दिख रहा है—कप्तान ने गोल भी किया है और बीच के हिस्से में खेल को चलाया है। Blue Sharks अभी तक बहुत सीमित हैं, बस 1 शॉट के साथ."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "31' पर Red Lions 1-0 से आगे हैं और Fox का असर साफ़ दिख रहा है—कप्तान ने गोल भी किया है और बीच के हिस्से में खेल को चलाया है। Blue Sharks अभी तक बहुत सीमित हैं, बस 1 शॉट के साथ."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 441,
+      "clock": "35'",
+      "kind": "passing_drop",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "35' Red Lions 1 Blue Sharks 0"
+      },
+      "source": "template",
+      "fact_check": {
+        "approved": false,
+        "attempts": 2,
+        "history": [
+          {
+            "draft": {
+              "text": "35' पर Blue Sharks की पासिंग बुरी तरह गिर गई है, पिछले 5 मिनट में केवल 62% सटीकता। Red Lions पूरी तरह ऊपर चढ़े हुए हैं और Fox की टीम 1-0 से आराम से आगे है।"
+            },
+            "problems": [
+              "fans should not see percentages or analyst terms; say it in plain words"
+            ]
+          },
+          {
+            "draft": {
+              "text": "35' पर Blue Sharks की पासिंग बिखर गई है, और Red Lions ने खेल को उनके आधे में ही दबा रखा है। Fox की टीम 1-0 से आगे है, और यह लाल टीम अभी पूरी तरह नियंत्रण में दिख रही है।"
+            },
+            "problems": [
+              "\"Fox की टीम\" का समर्थन FACTS में नहीं है; समर्थित टीम नाम Red Lions और Blue Sharks हैं।",
+              "\"35' पर ...\" और \"1-0 से आगे\" FACTS के साथ संगत हैं, लेकिन \"यह लाल टीम अभी पूरी तरह नियंत्रण में दिख रही है\" को FACTS केवल अंतिम 10 मिनट के लिए 'chaotic' बताता है; पूरे मैच या अभी पूरी तरह नियंत्रण का दावा समर्थित नहीं है।",
+              "\"पासिंग बिखर गई है\" का कारण-असर वाला बयान Blue Sharks के हालिया पास-accuracy drop (80% से 62%) से कुछ हद तक मेल खाता है, लेकिन 'बिखर गई है' एक मजबूत निष्कर्ष है जिसे FACTS सीधे नहीं बताता; इसे अधिक सावधानी से कहना चाहिए।",
+              "\"खेल को उनके आधे में ही दबा रखा है\" समर्थित नहीं है यदि इसे पूरे मैच के रूप में पढ़ा जाए; FACTS केवल last 10 min में Red Lions की field tilt 92% और possession 68% दिखाता है, इसलिए यह दावे को उस समय-खंड तक सीमित करना होगा।"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 586,
+      "clock": "45+1'",
+      "kind": "big_chance",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "45+1' पर Vale का शॉट Red Lions के लिए खतरा बनता है, लेकिन keeper ने बचा लिया। Red Lions 1-0 से आगे हैं."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 2,
+        "history": [
+          {
+            "draft": {
+              "text": "45+1' पर Vale की कोशिश Red Lions के लिए खतरा बनती है, लेकिन बचाव हो जाता है। Red Lions 1-0 से आगे हैं और Fox भी अभी तक खेल में असर डालते दिख रहे हैं।"
+            },
+            "problems": [
+              "\"Vale की कोशिश Red Lions के लिए खतरा बनती है\" गलत है: Vale Blue Sharks का खिलाड़ी है, और यह शॉट Blue Sharks की तरफ से था.",
+              "\"Fox भी अभी तक खेल में असर डालते दिख रहे हैं\" FACTS में Fox के बारे में कोई जानकारी नहीं है, इसलिए यह असमर्थित दावा है."
+            ]
+          },
+          {
+            "draft": {
+              "text": "45+1' पर Vale का शॉट Red Lions के लिए खतरा बनता है, लेकिन keeper ने बचा लिया। Red Lions 1-0 से आगे हैं."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 604,
+      "clock": "45+2'",
+      "kind": "period_end",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "45+2' पर Red Lions 1-0 से आगे हैं, और Fox की कप्तानी में यह बढ़त बिल्कुल जायज़ लग रही है। Red Lions ने खेल को पकड़ रखा है, जबकि Blue Sharks थोड़े बिखरे और chaotic दिख रहे हैं।"
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "45+2' पर Red Lions 1-0 से आगे हैं, और Fox की कप्तानी में यह बढ़त बिल्कुल जायज़ लग रही है। Red Lions ने खेल को पकड़ रखा है, जबकि Blue Sharks थोड़े बिखरे और chaotic दिख रहे हैं।"
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 605,
+      "clock": "46'",
+      "kind": "kick_off",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "46' पर Red Lions 1-0 से आगे हैं, और Fox की बढ़िया पहली half के बाद अभी भी वही पकड़ बनाकर चल रहे हैं। पिछले 10 मिनट में Red Lions ने ज़्यादा गेंद रखी है, जबकि खेल थोड़ा बिखरा हुआ है।"
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "46' पर Red Lions 1-0 से आगे हैं, और Fox की बढ़िया पहली half के बाद अभी भी वही पकड़ बनाकर चल रहे हैं। पिछले 10 मिनट में Red Lions ने ज़्यादा गेंद रखी है, जबकि खेल थोड़ा बिखरा हुआ है।"
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 626,
+      "clock": "47'",
+      "kind": "card",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "47' पर Fox को पीला कार्ड, और Red Lions के कप्तान अब सावधान रहेंगे। फिर भी Red Lions 1-0 से आगे हैं, और Fox ने पहले ही गोल के साथ असर छोड़ा है."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "47' पर Fox को पीला कार्ड, और Red Lions के कप्तान अब सावधान रहेंगे। फिर भी Red Lions 1-0 से आगे हैं, और Fox ने पहले ही गोल के साथ असर छोड़ा है."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 631,
+      "clock": "47'",
+      "kind": "card",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "47' पर Red Lions के Brooks को पीला कार्ड, और अभी मुकाबला काफ़ी अव्यवस्थित है। Red Lions 1-0 से आगे हैं, लेकिन Blue Sharks दबाव बनाने की कोशिश कर रहे हैं।"
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "47' पर Red Lions के Brooks को पीला कार्ड, और अभी मुकाबला काफ़ी अव्यवस्थित है। Red Lions 1-0 से आगे हैं, लेकिन Blue Sharks दबाव बनाने की कोशिश कर रहे हैं।"
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 706,
+      "clock": "54'",
+      "kind": "big_chance",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "54' पर Blue Sharks ने झटका दिया—Frost की real chance Red Lions के keeper ने बचा ली, और Red Lions अब भी 1-0 से आगे हैं। पिछले 10 मिनट काफ़ी chaotic रहे हैं, लेकिन Red Lions ने बढ़त थाम रखी है।"
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "54' पर Blue Sharks ने झटका दिया—Frost की real chance Red Lions के keeper ने बचा ली, और Red Lions अब भी 1-0 से आगे हैं। पिछले 10 मिनट काफ़ी chaotic रहे हैं, लेकिन Red Lions ने बढ़त थाम रखी है।"
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 796,
+      "clock": "61'",
+      "kind": "check_in",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "61' पर Red Lions 1-0 से आगे हैं, और पिछले 10 मिनट में वे Blue Sharks की आधी में जमे हुए हैं। Fox ने गोल किया है, और कप्तान का यह प्रदर्शन Red Lions को आगे खींच रहा है।"
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 2,
+        "history": [
+          {
+            "draft": {
+              "text": "61' पर Red Lions 1-0 से आगे हैं, और पिछले 10 मिनट में Red Lions ने खेल को Blue Sharks की आधी में दबाए रखा है, भले ही control काफ़ी chaotic रहा। Fox का प्रदर्शन भी अहम है—captain ने गोल किया है और अब तक 60 touches के साथ मैच में पूरी पकड़ बनाए हुए हैं।"
+            },
+            "problems": [
+              "too long to read aloud: keep it under 45 words"
+            ]
+          },
+          {
+            "draft": {
+              "text": "61' पर Red Lions 1-0 से आगे हैं, और पिछले 10 मिनट में वे Blue Sharks की आधी में जमे हुए हैं। Fox ने गोल किया है, और कप्तान का यह प्रदर्शन Red Lions को आगे खींच रहा है।"
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 809,
+      "clock": "62'",
+      "kind": "goal",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "62' पर Blue Sharks ने बराबरी कर दी—Gray ने Frost की मदद से करीब 50-50 वाले मौके को गोल में बदला। अभी Red Lions ज़्यादा आगे खेल रहे थे, लेकिन खेल काफ़ी अराजक हो गया है."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "62' पर Blue Sharks ने बराबरी कर दी—Gray ने Frost की मदद से करीब 50-50 वाले मौके को गोल में बदला। अभी Red Lions ज़्यादा आगे खेल रहे थे, लेकिन खेल काफ़ी अराजक हो गया है."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 865,
+      "clock": "67'",
+      "kind": "big_chance",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "67' पर Park को एक असली मौका मिलता है, लेकिन शॉट निशाने से बाहर चला जाता है। पिछले 10 मिनट में खेल काफ़ी उथल-पुथल भरा रहा है, और Red Lions थोड़ा ज़्यादा आगे खेल रहे हैं।"
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 2,
+        "history": [
+          {
+            "draft": {
+              "text": "67' पर Red Lions का बहुत अच्छा मौका Park के पास आता है, लेकिन निशाना चूक जाता है। पिछले 10 मिनट में Red Lions ज़्यादा खतरनाक दिखे हैं, जबकि खेल काफ़ी chaotic है।"
+            },
+            "problems": [
+              "\"बहुत अच्छा मौका\" unsupported: the facts describe Park's chance as \"a real chance, scored about 1 time in 3\" and xG 0.39, which is not shown as a very clear or great chance.",
+              "\"Red Lions ज़्यादा खतरनाक दिखे हैं\" is not supported by the last-10-minute territory facts: Red Lions lead field tilt 56% but trail possession 47% vs Blue Sharks 53%, so the draft states an overall edge that the facts do not directly show."
+            ]
+          },
+          {
+            "draft": {
+              "text": "67' पर Park को एक असली मौका मिलता है, लेकिन शॉट निशाने से बाहर चला जाता है। पिछले 10 मिनट में खेल काफ़ी उथल-पुथल भरा रहा है, और Red Lions थोड़ा ज़्यादा आगे खेल रहे हैं।"
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 906,
+      "clock": "70'",
+      "kind": "card",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "70' Red Lions 1 Blue Sharks 1"
+      },
+      "source": "template",
+      "fact_check": {
+        "approved": false,
+        "attempts": 2,
+        "history": [
+          {
+            "draft": {
+              "text": "70' पर Dean को Yellow card, और Red Lions के लिए यह अच्छा संकेत है। अभी Red Lions ज़्यादा आगे खेल रहे हैं और Fox भी खेल में जुड़ते दिख रहे हैं, जबकि स्कोर 1-1 है।"
+            },
+            "problems": [
+              "“Red Lions के लिए यह अच्छा संकेत है” is not supported by the facts as an objective claim; the facts only show a yellow card to Blue Sharks’ Dean, not that it is necessarily a good sign for Red Lions.",
+              "“अभी Red Lions ज़्यादा आगे खेल रहे हैं” is supported by the last-10-minute territory data, but the draft gives no time window and could be read as a general match claim; the broader match-state numbers also show Red Lions ahead territorially overall, so this should be stated more precisely as a recent trend if that is what is meant.",
+              "“Fox भी खेल में जुड़ते दिख रहे हैं” is unsupported: no player named Fox appears in the provided facts or match state."
+            ]
+          },
+          {
+            "draft": {
+              "text": "70' पर Blue Sharks के Dean को पीला कार्ड। Red Lions अभी ज़्यादा आगे खेल रहे हैं, और Fox का मैच भी असरदार है — एक गोल, 73 छूअनें, और लगातार दबाव।"
+            },
+            "problems": [
+              "“Red Lions अभी ज़्यादा आगे खेल रहे हैं” is supported by the match state, but “Fox का मैच भी असरदार है — एक गोल, 73 छूअनें, और लगातार दबाव” is not fully supported: Fox has 73 touches and 1 goal, but the provided facts do not show “लगातार दबाव” as a factual stat or event.",
+              "The draft says Fox has “73 छूअनें” and a goal, which is supported, but it omits that Fox is the captain and has also received a yellow card; omission is not a factual error, so no issue there. The only unsupported factual claim is “लगातार दबाव.”"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 934,
+      "clock": "72'",
+      "kind": "big_chance",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "72' पर Blue Sharks के Vale का अच्छा मौका था, लेकिन शॉट बाहर चला गया। पिछले 10 मिनट में Red Lions ने ज़्यादा ज़मीन पकड़ी हुई है, और स्कोर 1-1 है."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 2,
+        "history": [
+          {
+            "draft": {
+              "text": "72' पर Blue Sharks की Vale के पास बड़ा मौका था, लेकिन शॉट बाहर चला गया। Red Lions अभी भी ज़्यादा आगे खेल रहे हैं, और Fox पर नज़र बनी हुई है."
+            },
+            "problems": [
+              "\"बड़ा मौका\" unsupported: the provided chance description says \"a real chance, scored about 1 time in 3,\" which is not a \"big\" or \"great\" chance.",
+              "\"Red Lions अभी भी ज़्यादा आगे खेल रहे हैं\" is not directly supported as an absolute claim; the facts show Red Lions had more field tilt in the last 10 minutes, but the wording \"still more advanced\" is a narrative inference.",
+              "\"Fox पर नज़र बनी हुई है\" is unsupported: no Fox player or related fact is provided in the facts."
+            ]
+          },
+          {
+            "draft": {
+              "text": "72' पर Blue Sharks के Vale का अच्छा मौका था, लेकिन शॉट बाहर चला गया। पिछले 10 मिनट में Red Lions ने ज़्यादा ज़मीन पकड़ी हुई है, और स्कोर 1-1 है."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 981,
+      "clock": "76'",
+      "kind": "check_in",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "76' पर स्कोर 1-1 है, और Red Lions गेंद व इलाके दोनों में दबदबा बनाए हुए हैं। Fox का मैच अभी तक मजबूत रहा है — गोल, 86 छुए, और कप्तान के तौर पर टैकलिंग में भी असरदार।"
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "76' पर स्कोर 1-1 है, और Red Lions गेंद व इलाके दोनों में दबदबा बनाए हुए हैं। Fox का मैच अभी तक मजबूत रहा है — गोल, 86 छुए, और कप्तान के तौर पर टैकलिंग में भी असरदार।"
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1029,
+      "clock": "79'",
+      "kind": "big_chance",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "79' पर Red Lions का बड़ा मौका बचा! Crane की जोरदार कोशिश रोक दी गई, और Red Lions अभी भी Blue Sharks को उनके ही हिस्से में दबाए हुए हैं."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "79' पर Red Lions का बड़ा मौका बचा! Crane की जोरदार कोशिश रोक दी गई, और Red Lions अभी भी Blue Sharks को उनके ही हिस्से में दबाए हुए हैं."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1119,
+      "clock": "85'",
+      "kind": "big_chance",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "85' पर Red Lions का दबदबा है, लेकिन Park का शॉट बाहर चला गया—यह करीब 50-50 का मौका था। स्कोर 1-1 है, और पिछले 10 मिनट में खेल काफ़ी अराजक रहा है।"
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 2,
+        "history": [
+          {
+            "draft": {
+              "text": "85' पर Red Lions ने दबाव कसा हुआ है, लेकिन Park का बड़ा मौका लक्ष्य से बाहर चला गया। Fox की तरफ भी सबकी नज़र रहेगी, क्योंकि Red Lions अब Blue Sharks को उनके ही आधे में घेर रहे हैं।"
+            },
+            "problems": [
+              "“Red Lions अब Blue Sharks को उनके ही आधे में घेर रहे हैं” समर्थित नहीं है: दिए गए तथ्यों में केवल पिछले 10 मिनट का field tilt (94% Red Lions) और possession (68%) है, but not specifically that they are pinning Blue Sharks in their own half as a fact.",
+              "“Park का बड़ा मौका” तथ्य से मेल नहीं खाता: shot xG 0.58 है, जिसे तथ्य के अनुसार “close to a 50-50 chance” कहा गया है, न कि ‘बड़ा’ या very clear chance.",
+              "“Fox की तरफ भी सबकी नज़र रहेगी” तथ्य-आधारित दावा नहीं है; Fox के बारे में कोई जानकारी facts में नहीं दी गई है."
+            ]
+          },
+          {
+            "draft": {
+              "text": "85' पर Red Lions का दबदबा है, लेकिन Park का शॉट बाहर चला गया—यह करीब 50-50 का मौका था। स्कोर 1-1 है, और पिछले 10 मिनट में खेल काफ़ी अराजक रहा है।"
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1201,
+      "clock": "90+3'",
+      "kind": "passing_drop",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "90+3' पर Red Lions ने खेल अपने कब्जे में रखा है, लेकिन 1-1 है और Blue Sharks की पासिंग अभी लड़खड़ा रही है। Fox की शुरुआती कोशिश याद आती है, पर अब Red Lions को आख़िरी धक्का चाहिए।"
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "90+3' पर Red Lions ने खेल अपने कब्जे में रखा है, लेकिन 1-1 है और Blue Sharks की पासिंग अभी लड़खड़ा रही है। Fox की शुरुआती कोशिश याद आती है, पर अब Red Lions को आख़िरी धक्का चाहिए।"
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1218,
+      "clock": "90+4'",
+      "kind": "period_end",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "90+4' पर स्कोर 1-1 है, और Red Lions ने आख़िरी 10 मिनट में लगभग पूरी तरह Blue Sharks को उनके ही आधे में धकेल दिया। Fox ने कप्तान की तरह कमान संभाली, 1 गोल के साथ और गेंद पर गहरा असर छोड़ा।"
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 2,
+        "history": [
+          {
+            "draft": {
+              "text": "90+4' पर स्कोर 1-1 है, और Red Lions ने अंत तक दबाव बनाए रखा—पिछले 10 मिनट में लगभग पूरी तरह Blue Sharks के आधे में खेल। Fox ने कप्तानी के साथ बड़ा काम किया, 1 गोल और लगातार गेंद पर असर, लेकिन जीत का मौका अब भी टल गया है।"
+            },
+            "problems": [
+              "too long to read aloud: keep it under 45 words"
+            ]
+          },
+          {
+            "draft": {
+              "text": "90+4' पर स्कोर 1-1 है, और Red Lions ने आख़िरी 10 मिनट में लगभग पूरी तरह Blue Sharks को उनके ही आधे में धकेल दिया। Fox ने कप्तान की तरह कमान संभाली, 1 गोल के साथ और गेंद पर गहरा असर छोड़ा।"
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1219,
+      "clock": "91'",
+      "kind": "kick_off",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "91' पर Red Lions अब भी दबाव में हैं, लेकिन Fox की टीम ने खेल को Blue Sharks के आधे में ही जकड़ रखा है। पिछले 10 मिनट में नियंत्रण अव्यवस्थित है, और बराबरी के बाद यहां हर गेंद भारी लग रही है।"
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "91' पर Red Lions अब भी दबाव में हैं, लेकिन Fox की टीम ने खेल को Blue Sharks के आधे में ही जकड़ रखा है। पिछले 10 मिनट में नियंत्रण अव्यवस्थित है, और बराबरी के बाद यहां हर गेंद भारी लग रही है।"
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1268,
+      "clock": "95'",
+      "kind": "goal",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "95' पर Red Lions को बढ़त! Reid ने Rook के कॉर्नर पर हेडर से गोल ठोका, और यह उनके लिए तालिका पर देर से आया बड़ा पल है।"
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "95' पर Red Lions को बढ़त! Reid ने Rook के कॉर्नर पर हेडर से गोल ठोका, और यह उनके लिए तालिका पर देर से आया बड़ा पल है।"
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1363,
+      "clock": "103'",
+      "kind": "big_chance",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "103' Red Lions 2 Blue Sharks 1"
+      },
+      "source": "template",
+      "fact_check": {
+        "approved": false,
+        "attempts": 2,
+        "history": [
+          {
+            "draft": {
+              "text": "103' पर Red Lions ने दबाव बनाए रखा है, लेकिन Crane का प्रयास लक्ष्य से बाहर चला गया। Fox पर नज़र बनी हुई है, और अभी भी Red Lions 2-1 से आगे हैं."
+            },
+            "problems": [
+              "The draft mentions Fox, but the provided facts only identify the shot by Crane; Fox is not supported by the facts.",
+              "“Red Lions 2-1 से आगे हैं” is supported, but the phrasing “पर Red Lions ने दबाव बनाए रखा है” is not a factual claim directly shown by the event data; the last events show a shot after a tackle, not overall pressure."
+            ]
+          },
+          {
+            "draft": {
+              "text": "103' पर Crane का शॉट बाहर चला गया — यह एक असली मौका था, जिसे अक्सर गोल किया जाता है। Red Lions 2-1 से आगे हैं."
+            },
+            "problems": [
+              "The draft says the chance was 'often scored' / 'a real chance, usually converted', but the provided facts classify it as 'a real chance, scored about 1 time in 3' and the xG is 0.34, so it is not accurate to imply it is commonly finished.",
+              "The claim that Red Lions are 2-1 up is supported, but the wording '103' par' is only valid if it refers to the broadcast clock at the provided event; otherwise it should be tied explicitly to 103'."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1379,
+      "clock": "105'",
+      "kind": "goal",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "105' पर Blue Sharks फिर से आगे! Cruz ने करीब 50-50 मौके को गोल में बदला, और Red Lions अब जवाब ढूंढ रहे हैं।"
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "105' पर Blue Sharks फिर से आगे! Cruz ने करीब 50-50 मौके को गोल में बदला, और Red Lions अब जवाब ढूंढ रहे हैं।"
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1396,
+      "clock": "105+1'",
+      "kind": "period_end",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "पहले हाफ के अतिरिक्त समय का विराम है, 2-2। Red Lions ने ज़्यादा मौके बनाए हैं, और Fox का दिन अभी भी खास है—एक गोल, कप्तानी, और 119 छूने के साथ पूरा असर।"
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "पहले हाफ के अतिरिक्त समय का विराम है, 2-2। Red Lions ने ज़्यादा मौके बनाए हैं, और Fox का दिन अभी भी खास है—एक गोल, कप्तानी, और 119 छूने के साथ पूरा असर।"
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1397,
+      "clock": "106'",
+      "kind": "kick_off",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "106' पर स्कोर 2-2 है, और Red Lions ने खेल का ज़्यादातर हिस्सा आगे रखा है, लेकिन Blue Sharks ने हाल के 10 मिनट में दबाव बनाया है। Fox शांत नहीं, पर अभी भी असरदार हैं—गोल, 119 टच, और कप्तान की तरह हर जगह मौजूद।"
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "106' पर स्कोर 2-2 है, और Red Lions ने खेल का ज़्यादातर हिस्सा आगे रखा है, लेकिन Blue Sharks ने हाल के 10 मिनट में दबाव बनाया है। Fox शांत नहीं, पर अभी भी असरदार हैं—गोल, 119 टच, और कप्तान की तरह हर जगह मौजूद।"
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1501,
+      "clock": "113'",
+      "kind": "passing_drop",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "113' Red Lions 2 Blue Sharks 2"
+      },
+      "source": "template",
+      "fact_check": {
+        "approved": false,
+        "attempts": 2,
+        "history": [
+          {
+            "draft": {
+              "text": "113' पर Red Lions पूरी तरह चढ़े हुए हैं, लेकिन स्कोर 2-2 है और Blue Sharks ने दबाव में बस 60% पास पूरे किए हैं। खेल बहुत उथल-पुथल भरा है, और Fox पर नज़र रहेगी।"
+            },
+            "problems": [
+              "fans should not see percentages or analyst terms; say it in plain words"
+            ]
+          },
+          {
+            "draft": {
+              "text": "113' पर Red Lions पूरी तरह दबे हुए हैं, लेकिन स्कोर 2-2 है और Blue Sharks दबाव में बिखरे हुए दिख रहे हैं। Fox पर भी नज़र है, जो हर छुए हुए गेंद के साथ खेल में हैं।"
+            },
+            "problems": [
+              "\"Blue Sharks दबाव में बिखरे हुए दिख रहे हैं\" FACTS से नहीं मिलता; last 10 minutes में control 'chaotic' है, लेकिन Blue Sharks के बारे में collapse/breaking up का सीधा तथ्य नहीं दिया गया।",
+              "\"Fox पर भी नज़र है, जो हर छुए हुए गेंद के साथ खेल में हैं\" में Fox के बारे में कोई supporting fact नहीं है; यह player-specific claim match data से सत्यापित नहीं है।"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1504,
+      "clock": "113'",
+      "kind": "own_goal",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "Bell का own goal! Red Lions फिर आगे 3-2, और 113' पर Blue Sharks की रक्षापंक्ति पर भारी दबाव दिख रहा है।"
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "Bell का own goal! Red Lions फिर आगे 3-2, और 113' पर Blue Sharks की रक्षापंक्ति पर भारी दबाव दिख रहा है।"
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1609,
+      "clock": "120+1'",
+      "kind": "period_end",
+      "mode": "fan",
+      "language": "hi",
+      "content": {
+        "text": "फाइनल सीटी! Red Lions ने 3-2 से जीत दर्ज की, और Fox ने कप्तानी में पूरा मैच संभाले रखा। अतिरिक्त समय के आख़िरी हिस्से में Red Lions ने दबाव बनाए रखा, जबकि Blue Sharks ने कड़ा जवाब दिया।"
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "फाइनल सीटी! Red Lions ने 3-2 से जीत दर्ज की, और Fox ने कप्तानी में पूरा मैच संभाले रखा। अतिरिक्त समय के आख़िरी हिस्से में Red Lions ने दबाव बनाए रखा, जबकि Blue Sharks ने कड़ा जवाब दिया।"
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1609,
+      "clock": "120+1'",
+      "kind": "recap",
+      "mode": "recap",
+      "language": "hi",
+      "content": {
+        "title": "Fox के गोल के साथ Red Lions ने 3-2 की रोमांचक एक्स्ट्रा-टाइम जीत हासिल की",
+        "paragraphs": [
+          "Red Lions ने 28' पर Fox के गोल से शुरुआत की, और Lane की मदद से 1-0 की बढ़त ले ली। Blue Sharks ने 62' पर Gray के गोल से वापसी की, फिर 95' पर Reid ने Red Lions को फिर आगे किया, लेकिन 105' पर Cruz ने स्कोर 2-2 कर दिया।",
+          "इसके बाद 113' पर Bell के आत्मघाती गोल से Red Lions फिर 3-2 से आगे निकल गए, और यही अंतिम स्कोर रहा। पूरे मैच में Red Lions का दबदबा साफ दिखा: 838 पासों में 776 पूरे, 69 का कब्ज़ा, 110 बार अंतिम तीसरे में प्रवेश, और खेल के ज़्यादातर हिस्से में ऊंची पंक्ति के साथ नियंत्रण।",
+          "Fox का प्रदर्शन Red Lions के लिए खास रहा — 1 गोल, 6 शॉट, 140 छुए, 5 सफल टैकल, 4 इंटरसेप्शन, और कप्तान के तौर पर लगातार असर। आख़िरी 10 मिनट में Red Lions ने लगभग पूरा दबाव बनाए रखा, लेकिन खेल का मिज़ाज बहुत अव्यवस्थित रहा, और उसी उथल-पुथल में Red Lions ने बढ़त बचाकर मैच खत्म किया।"
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 2,
+        "history": [
+          {
+            "draft": {
+              "title": "Fox के गोल से बढ़त, फिर एक्स्ट्रा टाइम में Red Lions की जीत",
+              "paragraphs": [
+                "Red Lions ने 28' में Fox के गोल से बढ़त ली, और Lane की मदद से यह शुरुआती झटका Blue Sharks पर भारी पड़ा। बाद में Gray ने 62' पर बराबरी की, Reid ने 95' पर Red Lions को फिर आगे किया, और Cruz ने 105' पर स्कोर फिर 2-2 कर दिया।",
+                "अंत में Bell के आत्मघाती गोल ने 113' पर Red Lions को 3-2 से आगे कर दिया, और वहीं से मैच उनके पक्ष में चला गया। पूरे मैच में Red Lions ने खेल पर ज्यादा पकड़ रखी: गेंद पर ज्यादा नियंत्रण, ऊंची लाइन, 838 पासों में 776 पूरे, और अंतिम तीसरे में 110 प्रवेश — जबकि Blue Sharks ने कम मौके बनाए और ज्यादातर पीछा ही करते रहे।",
+                "अंतिम 10 मिनट में Red Lions ने लगभग पूरी तरह दबाव बनाए रखा, और मैच का मिज़ाज बहुत अव्यवस्थित था। Fox का रात का काम खास रहा — 1 गोल, 6 शॉट, 140 छुए, कप्तान की तरह टीम को आगे खींचते हुए Red Lions को यह कड़ा मुकाबला अपने नाम कराने में बड़ी भूमिका निभाई।"
+              ]
+            },
+            "problems": [
+              "“Blue Sharks ने कम मौके बनाए” unsupported: facts show Blue Sharks had 15 shots, 7 on target, 5 big chances, so this is not established by the data and could be misleading.",
+              "“वहीं से मैच उनके पक्ष में चला गया” is a result-sealing implication. Even though final whistle is reached, the draft presents it as a causal fact not shown directly by the facts; if kept, it should be phrased more carefully as the decisive lead rather than an unsupported narrative claim."
+            ]
+          },
+          {
+            "draft": {
+              "title": "Fox के गोल के साथ Red Lions ने 3-2 की रोमांचक एक्स्ट्रा-टाइम जीत हासिल की",
+              "paragraphs": [
+                "Red Lions ने 28' पर Fox के गोल से शुरुआत की, और Lane की मदद से 1-0 की बढ़त ले ली। Blue Sharks ने 62' पर Gray के गोल से वापसी की, फिर 95' पर Reid ने Red Lions को फिर आगे किया, लेकिन 105' पर Cruz ने स्कोर 2-2 कर दिया।",
+                "इसके बाद 113' पर Bell के आत्मघाती गोल से Red Lions फिर 3-2 से आगे निकल गए, और यही अंतिम स्कोर रहा। पूरे मैच में Red Lions का दबदबा साफ दिखा: 838 पासों में 776 पूरे, 69 का कब्ज़ा, 110 बार अंतिम तीसरे में प्रवेश, और खेल के ज़्यादातर हिस्से में ऊंची पंक्ति के साथ नियंत्रण।",
+                "Fox का प्रदर्शन Red Lions के लिए खास रहा — 1 गोल, 6 शॉट, 140 छुए, 5 सफल टैकल, 4 इंटरसेप्शन, और कप्तान के तौर पर लगातार असर। आख़िरी 10 मिनट में Red Lions ने लगभग पूरा दबाव बनाए रखा, लेकिन खेल का मिज़ाज बहुत अव्यवस्थित रहा, और उसी उथल-पुथल में Red Lions ने बढ़त बचाकर मैच खत्म किया।"
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    }
+  ]
+}

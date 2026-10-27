@@ -19,8 +19,9 @@ EXPERIENCES = {"fan": "fan_live", "analyst": "analyst_desk", "broadcaster": "stu
 # How much detail each role gets by default.
 DEPTHS = {"fan": "casual", "analyst": "detailed", "broadcaster": "studio"}
 
-# Latin-script languages only for now, so the Latin-text guard still applies.
-LANGUAGES = {"en": "English", "es": "Spanish", "fr": "French", "pt": "Portuguese"}
+# Model text is checked against each language's script (guards.SCRIPTS): Hindi may use
+# Devanagari, the others only Latin letters.
+LANGUAGES = {"en": "English", "es": "Spanish", "fr": "French", "pt": "Portuguese", "hi": "Hindi"}
 
 # Metrics a viewer can choose to follow; each can be computed from the event data.
 METRICS = {

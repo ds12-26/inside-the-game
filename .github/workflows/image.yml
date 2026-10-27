@@ -1,0 +1,29 @@
+name: image
+
+# Builds the container image and pushes it to Azure Container Registry on every
+# push to main; deploy/deploy.sh then runs it on Azure Container Apps.
+# Needs repository secrets ACR_USERNAME and ACR_PASSWORD.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  REGISTRY: insidethegamee2769a99.azurecr.io
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: ${{ vars.DEPLOY_ENABLED == 'true' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ secrets.ACR_USERNAME }}
+          password: ${{ secrets.ACR_PASSWORD }}
+      - name: Build and push
+        run: |
+          TAG=$(git rev-parse --short HEAD)
+          docker build -t $REGISTRY/inside-the-game:$TAG -t $REGISTRY/inside-the-game:latest .
+          docker push --all-tags $REGISTRY/inside-the-game

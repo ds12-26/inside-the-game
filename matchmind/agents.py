@@ -18,6 +18,7 @@ import json
 import os
 import re
 import sys
+import unicodedata
 from dataclasses import dataclass, field
 from typing import Literal
 
@@ -26,7 +27,7 @@ from agent_framework import (Agent, Executor, MCPStdioTool, MCPStreamableHTTPToo
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
 
-from matchmind.guards import check_latin_text, scorelines
+from matchmind.guards import check_script, scorelines
 from matchmind.profile import LANGUAGES
 
 load_dotenv()
@@ -95,7 +96,9 @@ Facts:
 - Refer to players by name, never "he" or "she".
 - Don't invent context that is not in the facts: the competition, a final or title, the stakes,
   the venue, crowd, weather or either team's history.
-- Write in the viewer's language."""
+- Write in the viewer's language. In Hindi, write in Devanagari, keep team and player names
+  exactly as given (in Latin letters), and use Western digits (1-0, 28'). Translate every
+  phrase from the facts (e.g. chance_in_plain_words, "chaotic") rather than copying English."""
 
 INSTRUCTIONS = {
     "fan": """You are the live TV commentator for one football fan, calling the match as it happens.
@@ -155,8 +158,8 @@ CHECKER_INSTRUCTIONS = """You are the Fact-Checker for a live football broadcast
 - Judge facts, not style or tone. Commentary is allowed opinion and emotion ("a huge night",
   "keeps the hope alive", leaning towards the viewer's club): only flag claims that are false,
   contradict the facts, or state as fact something the facts do not show.
-- Approve when every problem you can find is only about style. Never list a claim you found
-  to be supported.
+- Approve when every problem you can find is only about style, opinion, narrative or "could be
+  more precise", in any language. Never list a claim you found to be supported.
 - List each problem precisely so the writer can fix it."""
 
 
@@ -318,11 +321,18 @@ def draft_text(draft):
     return " ".join(parts)
 
 
+def devanagari_share(text):
+    """Share of words in Devanagari, skipping names (capitalised Latin words) and numbers."""
+    words = [w for w in re.findall(r"\w+", text) if not w.isdigit() and not (w[0].isupper() and w.isascii())]
+    hindi = sum(any("DEVANAGARI" in unicodedata.name(c, "") for c in w) for w in words)
+    return hindi / len(words) if words else 1
+
+
 def rule_problems(job):
     """Problems any reader would spot, found without a model."""
     text, problems = draft_text(job.draft), []
     try:
-        check_latin_text(text)
+        check_script(text, job.viewer.get("language", "en"))
     except ValueError as error:
         problems.append(str(error))
     facts = job.moment["facts"]
@@ -331,6 +341,8 @@ def rule_problems(job):
         if sorted(pair) not in real:
             problems.append(f"mentions the score {pair[0]}-{pair[1]}, which this match has not had; "
                             f"it is {'-'.join(map(str, facts['score'].values()))}")
+    if job.viewer.get("language") == "hi" and devanagari_share(text) < 0.5:
+        problems.append("the viewer chose Hindi: write in Hindi (Devanagari), keeping only names in Latin letters")
     if job.mode == "fan" or (job.mode == "recap" and job.viewer.get("role", "fan") == "fan"):
         if re.search(r"\d[.,]\d", text):
             problems.append("fans should not see decimals; describe the chance in words")

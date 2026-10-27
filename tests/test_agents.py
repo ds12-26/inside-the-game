@@ -147,3 +147,19 @@ def test_passing_drop_alerts_the_director():
     assert len(drops) == 4 and all(m["team"] == "Blue Sharks" for m in drops)
     first = drops[0]["facts"]["passing_drop"]
     assert first["pass_accuracy_pct_match_so_far"] - first["pass_accuracy_pct_last_5_min"] >= 15
+
+
+def test_hindi_viewers_may_get_devanagari_but_english_viewers_may_not():
+    hindi = {"text": "Fox का गोल! Red Lions 1-0 से आगे।"}
+    fake = fakes([hindi], [{"approved": True, "problems": []}])
+    assert run_card(fake, viewer={**FAN, "language": "hi"})["content"] == hindi
+    fake = fakes([hindi, {"text": "Fox scores!"}], [{"approved": True, "problems": []}])
+    card = run_card(fake)                                          # English viewer
+    assert card["content"]["text"] == "Fox scores!" and "unexpected character" in card["fact_check"]["history"][0]["problems"][0]
+
+
+def test_hindi_viewer_gets_hindi_not_english():
+    fake = fakes([{"text": "GOAL! Fox scores for Red Lions!"}, {"text": "Fox का गोल! Red Lions आगे।"}],
+                 [{"approved": True, "problems": []}])
+    card = run_card(fake, viewer={**FAN, "language": "hi"})
+    assert card["content"]["text"] == "Fox का गोल! Red Lions आगे।"

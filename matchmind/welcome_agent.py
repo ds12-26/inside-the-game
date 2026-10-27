@@ -25,7 +25,7 @@ import argparse
 import json
 import re
 
-from matchmind.guards import check_latin_text, scorelines
+from matchmind.guards import check_script, scorelines
 from matchmind.data import load_match, squads
 from matchmind.profile import DEPTHS, LANGUAGES, METRICS, ROLES, Profile
 
@@ -108,6 +108,19 @@ TEXT = {
         "unknown_club": "Não encontramos \"{value}\" nesta partida. Qual clube você quer dizer?",
         "unknown_player": "Não encontramos \"{value}\" nesta partida. Qual jogador você quer dizer?",
     },
+    "hi": {
+        "start": "स्वागत है! बताइए आप कौन हैं: फ़ैन, विश्लेषक या ब्रॉडकास्टर।",
+        "fan": "स्वागत है! आपका फ़ैन व्यू तैयार है।",
+        "analyst": "स्वागत है! आपकी एनालिस्ट डेस्क तैयार है।",
+        "broadcaster": "स्वागत है! आपका स्टूडियो व्यू तैयार है।",
+        "club": "हम मैच को {club} की नज़र से देखेंगे।",
+        "player": "{player} पूरे मैच में फ़ोकस में रहेंगे।",
+        "ask_role": "क्या आप फ़ैन हैं, विश्लेषक या ब्रॉडकास्टर?",
+        "ask_club": "आप किस क्लब को सपोर्ट करते हैं? (या न्यूट्रल रहें)",
+        "ask_metric": "क्या कोई एक आँकड़ा है जिसे आप फ़ॉलो करना चाहते हैं?",
+        "unknown_club": "इस मैच में \"{value}\" नहीं मिला। आपका मतलब कौन-सा क्लब है?",
+        "unknown_player": "इस मैच में \"{value}\" नहीं मिला। आपका मतलब कौन-सा खिलाड़ी है?",
+    },
 }
 
 # Answers that mean "none, thanks" for the optional choices.
@@ -117,13 +130,14 @@ NONE_ANSWERS = {"", "none", "neutral", "no", "skip", "null"}
 ROLE_WORDS = {
     "broadcaster": ["broadcast", "presenter", "producer", "studio", "commentator", "journalist", "media"],
     "analyst": ["analyst", "analysis", "data", "stats", "tactic", "scout", "coach"],
-    "fan": ["fan", "support", "aficionado", "supporter", "torcedor", "hincha"],
+    "fan": ["fan", "support", "aficionado", "supporter", "torcedor", "hincha", "फ़ैन", "फैन", "समर्थक"],
 }
 LANGUAGE_WORDS = {
     "en": ["english", "inglés", "anglais", "inglês"],
     "es": ["spanish", "español", "espanol", "espagnol", "espanhol"],
     "fr": ["french", "français", "francais", "francés", "francês"],
     "pt": ["portuguese", "português", "portugues", "portugués", "portugais"],
+    "hi": ["hindi", "हिंदी", "हिन्दी"],
 }
 METRIC_WORDS = {
     "xg": ["xg", "expected goals"],
@@ -283,13 +297,13 @@ def template_greeting(profile):
     return " ".join(parts)
 
 
-def greeting_problems(greeting):
+def greeting_problems(greeting, language="en"):
     """Why a model greeting can't be shown, or an empty list."""
     problems = []
     if not isinstance(greeting, str) or not greeting.strip():
         return ["greeting is empty"]
     try:
-        check_latin_text(greeting)
+        check_script(greeting, language)
     except ValueError as error:
         problems.append(str(error))
     if scorelines(greeting) or re.search(r"\d", greeting):
@@ -336,7 +350,7 @@ def welcome(match_info, picks=None, message="", ask=None, use_ai=True):
 
     greeting = template_greeting(profile)
     greeting_source = "template"
-    if model_greeting is not None and not greeting_problems(model_greeting) and not rejected:
+    if model_greeting is not None and not greeting_problems(model_greeting, profile.language) and not rejected:
         greeting, greeting_source = model_greeting.strip(), "ai"
 
     result = {

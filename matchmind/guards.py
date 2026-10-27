@@ -6,6 +6,10 @@ import re
 import unicodedata
 
 
+# Scripts each language may use. Latin is always allowed: team and player names are Latin.
+SCRIPTS = {"hi": ("LATIN", "DEVANAGARI")}
+
+
 def check_latin_text(text):
     """Raise if the text contains letters from a non-Latin script.
 
@@ -13,9 +17,15 @@ def check_latin_text(text):
     (e.g. a Devanagari fragment inside "decisive"). Accented Latin letters such
     as é or ñ are fine.
     """
+    check_script(text, "en")
+
+
+def check_script(text, language):
+    """Raise if the text contains letters from a script the viewer's language doesn't use."""
+    allowed = SCRIPTS.get(language, ("LATIN",))
     for char in text:
-        if char.isalpha() and "LATIN" not in unicodedata.name(char, ""):
-            raise ValueError(f"unexpected non-Latin character '{char}' in text")
+        if char.isalpha() and not unicodedata.name(char, "").startswith(allowed):
+            raise ValueError(f"unexpected character '{char}' for language '{language}'")
 
 
 # "3-2" or "3–2", but not "11-pass", and not a stat like "27-15 on shots".

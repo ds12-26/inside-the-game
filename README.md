@@ -22,7 +22,7 @@ trust it: a model that invents a "second goal" or a "final" is worse than no com
 
 | Viewer | Experience |
 |---|---|
-| **Fan** | TV-broadcast screen: animated pitch with player name tags, scoreboard bug, live commentary in their language leaning towards their club, their favourite player followed all match, "who's on top" in plain words. xG is never shown as a decimal: a 0.26 chance is "scored about 1 time in 4". |
+| **Fan** | TV-broadcast screen: animated pitch with player name tags, scoreboard bug, live commentary in their language (English by default; Spanish, French, Portuguese or Hindi) leaning towards their club, their favourite player followed all match, "who's on top" in plain words. xG is never shown as a decimal: a 0.26 chance is "scored about 1 time in 4". |
 | **Analyst** | Live numbers (xG, field tilt, possession, pass accuracy and difficulty, progressive passes, control vs chaos, tempo) and "why it matters" cards with 2-4 pieces of evidence each. |
 | **Broadcaster** | Lower-third graphics and talking points for every moment, plus **director cues**: *cut to replay*, *stats package*, *player camera*, *show graphic* or *stay live*, with priority and the reason. All cards are timed, machine-readable JSON a graphics system can render. |
 | **Everyone, at full time** | Their own recap, plus an **ensemble report**: the Narrator, Analyst and Broadcaster write in parallel and a Coordinator merges the three perspectives. |
@@ -77,7 +77,8 @@ misses a goal.
 - **No spoilers, enforced in code:** a function middleware caps every MCP tool call at the
   current moment, whatever the agent asks for.
 - **Two layers of checking:** code catches a score the match never had, decimals or jargon
-  shown to fans, and non-Latin slips; then the Fact-Checker agent checks every claim
+  shown to fans, text in the wrong script for the viewer's language (Devanagari is allowed only
+  for Hindi viewers, and Hindi viewers must actually get Hindi); then the Fact-Checker agent checks every claim
   (who did what, chance quality, "again"/"first", invented context such as a crowd or a
   final, calling a goal "the winner" before full time).
 - **Always a safe answer:** if a draft fails twice or the model is down, a plain line built
@@ -106,12 +107,14 @@ before the 105th-minute equaliser.
     az login                      # the agents sign in with your Azure CLI account
 
     uvicorn matchmind.api:app --port 8000          # the app: http://localhost:8000
-    python -m pytest                                # 48 tests, no Azure needed
+    python -m pytest                                # 52 tests, no Azure needed
 
 Demo links (saved runs, instant, no model calls):
-- Spanish Blue Sharks fan following Moss: `/?role=fan&club=Blue+Sharks&player=Moss&focus=1&language=es`
-- English Red Lions fan following Fox: `/?role=fan&club=Red+Lions&player=Fox&focus=1&language=en`
+- Red Lions fan following Fox (English): `/?role=fan&club=Red+Lions&player=Fox&focus=1`
 - Analyst: `/?role=analyst` · Broadcaster: `/?role=broadcaster`
+- The same fan in Hindi: `/?role=fan&club=Red+Lions&player=Fox&focus=1&language=hi`
+- A Blue Sharks fan following the 40-year-old keeper Moss, in Spanish:
+  `/?role=fan&club=Blue+Sharks&player=Moss&focus=1&language=es`
 
 Any other combination is written live by the agents as the match plays.
 
@@ -133,11 +136,11 @@ Other entry points:
 | `matchmind/ensemble.py` | Full-time fan-out / fan-in ensemble report |
 | `matchmind/mcp_server.py` | Match Data MCP server |
 | `matchmind/welcome_agent.py`, `profile.py` | Welcome agent and the viewer profile |
-| `matchmind/playbyplay.py` | Instant play-by-play lines in English, Spanish, French and Portuguese |
+| `matchmind/playbyplay.py` | Instant play-by-play lines in English, Spanish, French, Portuguese and Hindi |
 | `matchmind/replay.py`, `api.py` | Live replay and the web API (Server-Sent Events) |
 | `web/` | The single-page app |
 | `runs/` | Saved demo runs: every card with its fact-check history |
-| `tests/` | 48 tests: stats against the data, agents with fake models, MCP, API |
+| `tests/` | 52 tests: stats against the data, agents with fake models, MCP, API |
 
 ## How every number is calculated
 All statistics are computed in plain Python in `matchmind/stats.py`; no model produces a

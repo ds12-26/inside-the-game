@@ -96,3 +96,15 @@ def test_fan_is_asked_for_a_club_until_they_answer_even_neutral():
 def test_player_focus_needs_a_player():
     result = welcome(MATCH, picks={"role": "fan", "club": "neutral", "player_focus": True}, use_ai=False)
     assert result["profile"]["player_focus"] is False
+
+
+def test_hindi_is_understood_offline_and_greets_in_hindi():
+    result = welcome(MATCH, message="Red Lions fan, Hindi please", use_ai=False)
+    assert result["profile"]["language"] == "hi"
+    assert result["greeting"].startswith("स्वागत है")
+
+
+def test_play_by_play_in_hindi():
+    from matchmind.playbyplay import line
+    goal = next(e for e in load_match("match_002")["events"] if e["type"] == "shot" and e["outcome"] == "goal")
+    assert line(goal, "hi") == "Fox का गोल!"
