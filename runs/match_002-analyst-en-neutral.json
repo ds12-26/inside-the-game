@@ -1,0 +1,2036 @@
+{
+  "match_id": "match_002",
+  "viewer": {
+    "role": "analyst",
+    "language": "en",
+    "club": null,
+    "player": null,
+    "player_focus": false
+  },
+  "cards": [
+    {
+      "event_id": 1,
+      "clock": "1'",
+      "kind": "kick_off",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Kick-off starts level, controlled",
+        "why_it_matters": "Both teams begin with identical territory and possession, so neither side has seized control of the match rhythm yet. With no shots or xG, the game is still in its possession phase, where early pressure and field tilt will decide who starts pinning the other back.",
+        "evidence": [
+          {
+            "label": "Clock",
+            "value": "1'"
+          },
+          {
+            "label": "Score",
+            "value": "Red Lions 0-0 Blue Sharks"
+          },
+          {
+            "label": "Field tilt",
+            "value": "Red Lions 50% / Blue Sharks 50%"
+          },
+          {
+            "label": "xG",
+            "value": "Red Lions 0 / Blue Sharks 0"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Kick-off starts level, controlled",
+              "why_it_matters": "Both teams begin with identical territory and possession, so neither side has seized control of the match rhythm yet. With no shots or xG, the game is still in its possession phase, where early pressure and field tilt will decide who starts pinning the other back.",
+              "evidence": [
+                {
+                  "label": "Clock",
+                  "value": "1'"
+                },
+                {
+                  "label": "Score",
+                  "value": "Red Lions 0-0 Blue Sharks"
+                },
+                {
+                  "label": "Field tilt",
+                  "value": "Red Lions 50% / Blue Sharks 50%"
+                },
+                {
+                  "label": "xG",
+                  "value": "Red Lions 0 / Blue Sharks 0"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 24,
+      "clock": "2'",
+      "kind": "card",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Ward booked in chaotic start",
+        "why_it_matters": "This yellow card fits a very chaotic opening: neither team has settled into control, and Blue Sharks are already spending most of the pressure in advanced areas. With Blue Sharks holding 100% of field tilt in the last 10 minutes but no shot quality yet, the card shows early defensive strain rather than a settled attacking pattern.",
+        "evidence": [
+          {
+            "label": "clock",
+            "value": "2'"
+          },
+          {
+            "label": "field tilt last 10 min",
+            "value": "Blue Sharks 100%"
+          },
+          {
+            "label": "possession last 10 min",
+            "value": "Blue Sharks 53%"
+          },
+          {
+            "label": "cards",
+            "value": "Ward: yellow"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Ward booked in chaotic start",
+              "why_it_matters": "This yellow card fits a very chaotic opening: neither team has settled into control, and Blue Sharks are already spending most of the pressure in advanced areas. With Blue Sharks holding 100% of field tilt in the last 10 minutes but no shot quality yet, the card shows early defensive strain rather than a settled attacking pattern.",
+              "evidence": [
+                {
+                  "label": "clock",
+                  "value": "2'"
+                },
+                {
+                  "label": "field tilt last 10 min",
+                  "value": "Blue Sharks 100%"
+                },
+                {
+                  "label": "possession last 10 min",
+                  "value": "Blue Sharks 53%"
+                },
+                {
+                  "label": "cards",
+                  "value": "Ward: yellow"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 74,
+      "clock": "6'",
+      "kind": "card",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Price booked under heavy pressure",
+        "why_it_matters": "Blue Sharks are already defending more than they are dictating, with Red Lions owning the last 10 minutes territorially. A yellow for Price fits a chaotic spell where Blue Sharks are under pressure and forced into riskier defending rather than controlling the game.",
+        "evidence": [
+          {
+            "label": "clock",
+            "value": "6'"
+          },
+          {
+            "label": "field tilt last 10 min",
+            "value": "Red Lions 83%"
+          },
+          {
+            "label": "possession last 10 min",
+            "value": "Blue Sharks 38%"
+          },
+          {
+            "label": "control last 10 min",
+            "value": "chaotic"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Price booked under heavy pressure",
+              "why_it_matters": "Blue Sharks are already defending more than they are dictating, with Red Lions owning the last 10 minutes territorially. A yellow for Price fits a chaotic spell where Blue Sharks are under pressure and forced into riskier defending rather than controlling the game.",
+              "evidence": [
+                {
+                  "label": "clock",
+                  "value": "6'"
+                },
+                {
+                  "label": "field tilt last 10 min",
+                  "value": "Red Lions 83%"
+                },
+                {
+                  "label": "possession last 10 min",
+                  "value": "Blue Sharks 38%"
+                },
+                {
+                  "label": "control last 10 min",
+                  "value": "chaotic"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 137,
+      "clock": "12'",
+      "kind": "big_chance",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Fox denied from close range",
+        "why_it_matters": "Red Lions have been forcing the game deep into Blue Sharks’ end, with complete field tilt in the last 10 minutes and 71% of possession. Fox’s 0.54 xG chance shows the pressure is creating high-value looks, but the finish was stopped before the early dominance turned into a lead.",
+        "evidence": [
+          {
+            "label": "Clock",
+            "value": "12'"
+          },
+          {
+            "label": "Red Lions xG",
+            "value": "0.81"
+          },
+          {
+            "label": "Red Lions field tilt last 10 min",
+            "value": "100"
+          },
+          {
+            "label": "Red Lions possession last 10 min",
+            "value": "71%"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Fox denied from close range",
+              "why_it_matters": "Red Lions have been forcing the game deep into Blue Sharks’ end, with complete field tilt in the last 10 minutes and 71% of possession. Fox’s 0.54 xG chance shows the pressure is creating high-value looks, but the finish was stopped before the early dominance turned into a lead.",
+              "evidence": [
+                {
+                  "label": "Clock",
+                  "value": "12'"
+                },
+                {
+                  "label": "Red Lions xG",
+                  "value": "0.81"
+                },
+                {
+                  "label": "Red Lions field tilt last 10 min",
+                  "value": "100"
+                },
+                {
+                  "label": "Red Lions possession last 10 min",
+                  "value": "71%"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 192,
+      "clock": "16'",
+      "kind": "check_in",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Red Lions monopolise the early territory",
+        "why_it_matters": "Red Lions are pinning Blue Sharks deep, with almost all final-third activity and possession coming from one side of the pitch. That territorial squeeze has created shots and xG without a breakthrough yet, while Blue Sharks have been reduced to almost no attacking presence, so the game rhythm is firmly under Red Lions' control.",
+        "evidence": [
+          {
+            "label": "Score",
+            "value": "0-0"
+          },
+          {
+            "label": "Red Lions xG",
+            "value": "0.81"
+          },
+          {
+            "label": "Red Lions field tilt",
+            "value": "98%"
+          },
+          {
+            "label": "Blue Sharks shots",
+            "value": "0"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Red Lions monopolise the early territory",
+              "why_it_matters": "Red Lions are pinning Blue Sharks deep, with almost all final-third activity and possession coming from one side of the pitch. That territorial squeeze has created shots and xG without a breakthrough yet, while Blue Sharks have been reduced to almost no attacking presence, so the game rhythm is firmly under Red Lions' control.",
+              "evidence": [
+                {
+                  "label": "Score",
+                  "value": "0-0"
+                },
+                {
+                  "label": "Red Lions xG",
+                  "value": "0.81"
+                },
+                {
+                  "label": "Red Lions field tilt",
+                  "value": "98%"
+                },
+                {
+                  "label": "Blue Sharks shots",
+                  "value": "0"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 352,
+      "clock": "28'",
+      "kind": "goal",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Fox rewards Red Lions pressure",
+        "why_it_matters": "Red Lions have turned control into territory and chances, with 78% field tilt and 62% possession in the last 10 minutes. Fox’s finish from a 0.26 xG chance fits that pattern: sustained pressure has forced Blue Sharks into a passive, low-output spell.",
+        "evidence": [
+          {
+            "label": "Score",
+            "value": "Red Lions 1, Blue Sharks 0"
+          },
+          {
+            "label": "Fox xG",
+            "value": "0.26"
+          },
+          {
+            "label": "Red Lions xG",
+            "value": "1.32"
+          },
+          {
+            "label": "Last 10 min field tilt",
+            "value": "Red Lions 78%, Blue Sharks 22%"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Fox rewards Red Lions pressure",
+              "why_it_matters": "Red Lions have turned control into territory and chances, with 78% field tilt and 62% possession in the last 10 minutes. Fox’s finish from a 0.26 xG chance fits that pattern: sustained pressure has forced Blue Sharks into a passive, low-output spell.",
+              "evidence": [
+                {
+                  "label": "Score",
+                  "value": "Red Lions 1, Blue Sharks 0"
+                },
+                {
+                  "label": "Fox xG",
+                  "value": "0.26"
+                },
+                {
+                  "label": "Red Lions xG",
+                  "value": "1.32"
+                },
+                {
+                  "label": "Last 10 min field tilt",
+                  "value": "Red Lions 78%, Blue Sharks 22%"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 375,
+      "clock": "31'",
+      "kind": "momentum_swing",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Red Lions seize territory",
+        "why_it_matters": "Red Lions are turning possession into sustained field position, with 67% field tilt in the last 10 minutes showing the game has been played largely in Blue Sharks’ half. That control is producing volume and chance quality, while Blue Sharks have been pushed into a low-event spell with almost no attacking threat.",
+        "evidence": [
+          {
+            "label": "Score",
+            "value": "Red Lions 1-0 Blue Sharks"
+          },
+          {
+            "label": "Last 10 min field tilt",
+            "value": "Red Lions 67%"
+          },
+          {
+            "label": "Last 10 min possession",
+            "value": "Red Lions 52%"
+          },
+          {
+            "label": "xG",
+            "value": "Red Lions 1.46, Blue Sharks 0.08"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Red Lions seize territory",
+              "why_it_matters": "Red Lions are turning possession into sustained field position, with 67% field tilt in the last 10 minutes showing the game has been played largely in Blue Sharks’ half. That control is producing volume and chance quality, while Blue Sharks have been pushed into a low-event spell with almost no attacking threat.",
+              "evidence": [
+                {
+                  "label": "Score",
+                  "value": "Red Lions 1-0 Blue Sharks"
+                },
+                {
+                  "label": "Last 10 min field tilt",
+                  "value": "Red Lions 67%"
+                },
+                {
+                  "label": "Last 10 min possession",
+                  "value": "Red Lions 52%"
+                },
+                {
+                  "label": "xG",
+                  "value": "Red Lions 1.46, Blue Sharks 0.08"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 586,
+      "clock": "45+1'",
+      "kind": "big_chance",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Vale forces a save",
+        "why_it_matters": "Blue Sharks have spent the recent phase without territorial control, so this chance came from limited possession rather than sustained pressure. Red Lions still lead 1-0, and the save underlines the gap in overall chance quality because Blue Sharks sit on 0.43 xG from 3 shots while Red Lions have 1.5 xG from 12 shots.",
+        "evidence": [
+          {
+            "label": "Score",
+            "value": "Red Lions 1-0 Blue Sharks"
+          },
+          {
+            "label": "Blue Sharks xG",
+            "value": "0.43"
+          },
+          {
+            "label": "Blue Sharks shots",
+            "value": "3 shots"
+          },
+          {
+            "label": "Last 10 min field tilt",
+            "value": "22%"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 2,
+        "history": [
+          {
+            "draft": {
+              "headline": "Vale tests Red Lions keeper",
+              "why_it_matters": "Blue Sharks have had to attack from narrow territory, with just 22% field tilt in the last 10 minutes, so Vale's chance came from limited but dangerous possession rather than sustained control. Red Lions still lead 1-0, and the save fits a match where Blue Sharks have generated only 0.43 xG from 3 shots while Red Lions have controlled the stronger overall chance volume.",
+              "evidence": [
+                {
+                  "label": "Score",
+                  "value": "Red Lions 1-0 Blue Sharks"
+                },
+                {
+                  "label": "Blue Sharks xG",
+                  "value": "0.43"
+                },
+                {
+                  "label": "Red Sharks shot count",
+                  "value": "3 shots"
+                },
+                {
+                  "label": "Last 10 min field tilt",
+                  "value": "22%"
+                }
+              ]
+            },
+            "problems": [
+              "The evidence label says \"Red Sharks shot count\"; the team in the facts is Blue Sharks, so this team name is wrong.",
+              "The draft says Red Lions have \"controlled the stronger overall chance volume\". The facts only show Red Lions have 1.5 xG to Blue Sharks' 0.43, which supports stronger chance volume, but the wording is a summary/opinion rather than a precise factual claim. If intended as fact, it should be tied directly to the xG numbers."
+            ]
+          },
+          {
+            "draft": {
+              "headline": "Vale forces a save",
+              "why_it_matters": "Blue Sharks have spent the recent phase without territorial control, so this chance came from limited possession rather than sustained pressure. Red Lions still lead 1-0, and the save underlines the gap in overall chance quality because Blue Sharks sit on 0.43 xG from 3 shots while Red Lions have 1.5 xG from 12 shots.",
+              "evidence": [
+                {
+                  "label": "Score",
+                  "value": "Red Lions 1-0 Blue Sharks"
+                },
+                {
+                  "label": "Blue Sharks xG",
+                  "value": "0.43"
+                },
+                {
+                  "label": "Blue Sharks shots",
+                  "value": "3 shots"
+                },
+                {
+                  "label": "Last 10 min field tilt",
+                  "value": "22%"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 604,
+      "clock": "45+2'",
+      "kind": "period_end",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Red Lions control, Blue Sharks chase",
+        "why_it_matters": "Red Lions have the lead, but the main pattern is not dominance by score alone: Red Lions have turned more territory and possession into a steady shot volume, while Blue Sharks have been forced into a more chaotic rhythm. The xG gap shows the game is being played more often in Red Lions’ preferred zones, and Blue Sharks need cleaner access and better finishing to change the flow.",
+        "evidence": [
+          {
+            "label": "Score",
+            "value": "Red Lions 1-0 Blue Sharks"
+          },
+          {
+            "label": "xG",
+            "value": "Red Lions 1.5, Blue Sharks 0.47"
+          },
+          {
+            "label": "Shots",
+            "value": "Red Lions 12, Blue Sharks 5"
+          },
+          {
+            "label": "Last 10 min possession",
+            "value": "Red Lions 63%, Blue Sharks 37%"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Red Lions control, Blue Sharks chase",
+              "why_it_matters": "Red Lions have the lead, but the main pattern is not dominance by score alone: Red Lions have turned more territory and possession into a steady shot volume, while Blue Sharks have been forced into a more chaotic rhythm. The xG gap shows the game is being played more often in Red Lions’ preferred zones, and Blue Sharks need cleaner access and better finishing to change the flow.",
+              "evidence": [
+                {
+                  "label": "Score",
+                  "value": "Red Lions 1-0 Blue Sharks"
+                },
+                {
+                  "label": "xG",
+                  "value": "Red Lions 1.5, Blue Sharks 0.47"
+                },
+                {
+                  "label": "Shots",
+                  "value": "Red Lions 12, Blue Sharks 5"
+                },
+                {
+                  "label": "Last 10 min possession",
+                  "value": "Red Lions 63%, Blue Sharks 37%"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 605,
+      "clock": "46'",
+      "kind": "kick_off",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "46' Red Lions 1 Blue Sharks 0",
+        "why_it_matters": "",
+        "evidence": []
+      },
+      "source": "template",
+      "fact_check": {
+        "approved": false,
+        "attempts": 2,
+        "history": [
+          {
+            "draft": {
+              "headline": "Break starts with Red control",
+              "why_it_matters": "Red Lions begin the second half with the territorial edge, so the restart reflects a team that has been dictating where play happens rather than just protecting a lead. Blue Sharks have been forced into lower field tilt and possession, which points to a match rhythm leaning toward pressure and transition instead of sustained Blue control.",
+              "evidence": [
+                {
+                  "label": "score",
+                  "value": "Red Lions 1, Blue Sharks 0"
+                },
+                {
+                  "label": "field tilt last 10 min",
+                  "value": "Red Lions 67%"
+                },
+                {
+                  "label": "possession last 10 min",
+                  "value": "Red Lions 64%"
+                },
+                {
+                  "label": "control last 10 min",
+                  "value": "chaotic"
+                }
+              ]
+            },
+            "problems": [
+              "The draft says Red Lions are starting the second half or the restart, but the match clock is already 46', so this is not a separate restart event claim supported by the facts.",
+              "The draft says Blue Sharks have been forced into lower field tilt and possession; while the last-10-minute numbers do show Red ahead, the draft implies a broader match-level pattern without support. The full-match territory data also shows Red Lions with 85% field tilt and 71% possession, which should be used if making a general claim.",
+              "The draft’s claim that the match is leaning toward pressure and transition is stronger than the facts show. The only supported description is that the last 10 minutes have been chaotic; any broader stylistic interpretation is not directly established by the facts."
+            ]
+          },
+          {
+            "draft": {
+              "headline": "Red Lions control, Blue threaten little",
+              "why_it_matters": "Red Lions are in front because the match has been played mostly in Blue Sharks’ half, with a strong territorial share and more possession across the whole game. The danger for Blue Sharks is that the game has also been chaotic, so Red Lions have combined control with the cleaner chance volume and a better shot output against xG.",
+              "evidence": [
+                {
+                  "label": "score",
+                  "value": "Red Lions 1, Blue Sharks 0"
+                },
+                {
+                  "label": "field tilt",
+                  "value": "Red Lions 85%"
+                },
+                {
+                  "label": "possession",
+                  "value": "Red Lions 71%"
+                },
+                {
+                  "label": "control",
+                  "value": "chaotic"
+                }
+              ]
+            },
+            "problems": [
+              "The draft says Red Lions have a strong territorial share and more possession across the whole game, but the provided facts only support those numbers for the last 10 minutes, not for the full match.",
+              "The evidence claims Red Lions have 85% field tilt, but the facts show 67% in the last 10 minutes.",
+              "The evidence claims Red Lions have 71% possession, but the facts show 64% in the last 10 minutes.",
+              "The draft says Red Lions have combined control with the cleaner chance volume and a better shot output against xG. The facts do show Red Lions lead in xG and shots, but they do not establish a 'cleaner chance volume' or that the shot output is specifically 'against xG'.",
+              "The statement 'Blue threaten little' is an interpretation not directly supported by the facts; the facts only show Blue Sharks have fewer shots and lower xG so far."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 626,
+      "clock": "47'",
+      "kind": "card",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Fox’s booking disrupts Red Lions",
+        "why_it_matters": "The yellow card lands in a period that has already been chaotic, so it can push Red Lions away from control and invite Blue Sharks into transitions. Red Lions still have the territorial edge over the last 10 minutes, but the game is not being managed cleanly enough for a side protecting a 1-0 lead.",
+        "evidence": [
+          {
+            "label": "Clock",
+            "value": "47'"
+          },
+          {
+            "label": "Score",
+            "value": "Red Lions 1, Blue Sharks 0"
+          },
+          {
+            "label": "Territory last 10 min",
+            "value": "Red Lions 57% field tilt, 58% possession"
+          },
+          {
+            "label": "Control last 10 min",
+            "value": "chaotic"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Fox’s booking disrupts Red Lions",
+              "why_it_matters": "The yellow card lands in a period that has already been chaotic, so it can push Red Lions away from control and invite Blue Sharks into transitions. Red Lions still have the territorial edge over the last 10 minutes, but the game is not being managed cleanly enough for a side protecting a 1-0 lead.",
+              "evidence": [
+                {
+                  "label": "Clock",
+                  "value": "47'"
+                },
+                {
+                  "label": "Score",
+                  "value": "Red Lions 1, Blue Sharks 0"
+                },
+                {
+                  "label": "Territory last 10 min",
+                  "value": "Red Lions 57% field tilt, 58% possession"
+                },
+                {
+                  "label": "Control last 10 min",
+                  "value": "chaotic"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 631,
+      "clock": "47'",
+      "kind": "card",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Brooks booked amid chaotic spell",
+        "why_it_matters": "The yellow card fits a second-half stretch where control has slipped into chaos, even though Red Lions still have a slight territorial edge. That usually signals a team protecting a lead under pressure rather than dictating rhythm, with Brooks' foul/card reflecting the need to break up Blue Sharks' momentum.",
+        "evidence": [
+          {
+            "label": "Clock",
+            "value": "47'"
+          },
+          {
+            "label": "Score",
+            "value": "Red Lions 1, Blue Sharks 0"
+          },
+          {
+            "label": "Territory last 10 min",
+            "value": "Red Lions 56% field tilt"
+          },
+          {
+            "label": "Control last 10 min",
+            "value": "chaotic"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Brooks booked amid chaotic spell",
+              "why_it_matters": "The yellow card fits a second-half stretch where control has slipped into chaos, even though Red Lions still have a slight territorial edge. That usually signals a team protecting a lead under pressure rather than dictating rhythm, with Brooks' foul/card reflecting the need to break up Blue Sharks' momentum.",
+              "evidence": [
+                {
+                  "label": "Clock",
+                  "value": "47'"
+                },
+                {
+                  "label": "Score",
+                  "value": "Red Lions 1, Blue Sharks 0"
+                },
+                {
+                  "label": "Territory last 10 min",
+                  "value": "Red Lions 56% field tilt"
+                },
+                {
+                  "label": "Control last 10 min",
+                  "value": "chaotic"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 706,
+      "clock": "54'",
+      "kind": "big_chance",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Frost's chance keeps Blue Sharks alive",
+        "why_it_matters": "Blue Sharks have forced a genuine opening in a chaotic spell, but the save shows Red Lions are still surviving the pressure rather than being pinned back cleanly. The chance fits a game where territory is split and control is unstable, with Blue Sharks needing better shot quality to turn pressure into an equalizer.",
+        "evidence": [
+          {
+            "label": "Clock",
+            "value": "54'"
+          },
+          {
+            "label": "Shot xG",
+            "value": "0.35 xG"
+          },
+          {
+            "label": "Red Lions xG",
+            "value": "1.52 xG"
+          },
+          {
+            "label": "Blue Sharks shots on target",
+            "value": "3"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Frost's chance keeps Blue Sharks alive",
+              "why_it_matters": "Blue Sharks have forced a genuine opening in a chaotic spell, but the save shows Red Lions are still surviving the pressure rather than being pinned back cleanly. The chance fits a game where territory is split and control is unstable, with Blue Sharks needing better shot quality to turn pressure into an equalizer.",
+              "evidence": [
+                {
+                  "label": "Clock",
+                  "value": "54'"
+                },
+                {
+                  "label": "Shot xG",
+                  "value": "0.35 xG"
+                },
+                {
+                  "label": "Red Lions xG",
+                  "value": "1.52 xG"
+                },
+                {
+                  "label": "Blue Sharks shots on target",
+                  "value": "3"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 796,
+      "clock": "61'",
+      "kind": "check_in",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Red Lions squeeze control",
+        "why_it_matters": "Red Lions are pairing a lead with sustained territory, turning the game into a possession-and-pressure battle rather than an open exchange. Blue Sharks have spent the last 10 minutes chasing the ball, and that imbalance is shaping the rhythm even without a bigger scoreline.",
+        "evidence": [
+          {
+            "label": "Clock",
+            "value": "61'"
+          },
+          {
+            "label": "Score",
+            "value": "Red Lions 1-0 Blue Sharks"
+          },
+          {
+            "label": "Field tilt last 10 min",
+            "value": "Red Lions 79%"
+          },
+          {
+            "label": "xG",
+            "value": "Red Lions 1.52, Blue Sharks 0.82"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Red Lions squeeze control",
+              "why_it_matters": "Red Lions are pairing a lead with sustained territory, turning the game into a possession-and-pressure battle rather than an open exchange. Blue Sharks have spent the last 10 minutes chasing the ball, and that imbalance is shaping the rhythm even without a bigger scoreline.",
+              "evidence": [
+                {
+                  "label": "Clock",
+                  "value": "61'"
+                },
+                {
+                  "label": "Score",
+                  "value": "Red Lions 1-0 Blue Sharks"
+                },
+                {
+                  "label": "Field tilt last 10 min",
+                  "value": "Red Lions 79%"
+                },
+                {
+                  "label": "xG",
+                  "value": "Red Lions 1.52, Blue Sharks 0.82"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 809,
+      "clock": "62'",
+      "kind": "goal",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Gray levels it from distance",
+        "why_it_matters": "Blue Sharks have turned a low-control spell into a level score despite Red Lions owning most of the territory in the last 10 minutes. The goal fits a chaotic rhythm: Blue Sharks have fewer chances overall, but Gray finished a 0.47 xG chance to punish a moment when Red Lions were pushing high.",
+        "evidence": [
+          {
+            "label": "Score",
+            "value": "Red Lions 1, Blue Sharks 1"
+          },
+          {
+            "label": "Last 10 min field tilt",
+            "value": "Red Lions 71%, Blue Sharks 29%"
+          },
+          {
+            "label": "Last 10 min possession",
+            "value": "Red Lions 63%, Blue Sharks 37%"
+          },
+          {
+            "label": "Shot xG",
+            "value": "0.47"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Gray levels it from distance",
+              "why_it_matters": "Blue Sharks have turned a low-control spell into a level score despite Red Lions owning most of the territory in the last 10 minutes. The goal fits a chaotic rhythm: Blue Sharks have fewer chances overall, but Gray finished a 0.47 xG chance to punish a moment when Red Lions were pushing high.",
+              "evidence": [
+                {
+                  "label": "Score",
+                  "value": "Red Lions 1, Blue Sharks 1"
+                },
+                {
+                  "label": "Last 10 min field tilt",
+                  "value": "Red Lions 71%, Blue Sharks 29%"
+                },
+                {
+                  "label": "Last 10 min possession",
+                  "value": "Red Lions 63%, Blue Sharks 37%"
+                },
+                {
+                  "label": "Shot xG",
+                  "value": "0.47"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 865,
+      "clock": "67'",
+      "kind": "big_chance",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Park misses a 0.39 xG chance",
+        "why_it_matters": "Red Lions are still matching Blue Sharks in a level game, but this shot shows how pressure has not yet turned into a goal. The last 10 minutes have been chaotic, so even with Red Lions ahead in xG and territorial tilt, one finish can still swing the rhythm without changing the score.",
+        "evidence": [
+          {
+            "label": "Clock",
+            "value": "67'"
+          },
+          {
+            "label": "Score",
+            "value": "Red Lions 1, Blue Sharks 1"
+          },
+          {
+            "label": "xG",
+            "value": "Park xG 0.39"
+          },
+          {
+            "label": "Last 10 min territory",
+            "value": "Red Lions 56% field tilt, 47% possession"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 2,
+        "history": [
+          {
+            "draft": {
+              "headline": "Park wastes a big chance",
+              "why_it_matters": "Red Lions are creating the more dangerous chances, but this one underlines the gap between pressure and finishing. With the match still chaotic and level, a missed 0.39 xG shot keeps the game open instead of turning territorial control into a lead.",
+              "evidence": [
+                {
+                  "label": "Clock",
+                  "value": "67'"
+                },
+                {
+                  "label": "Score",
+                  "value": "Red Lions 1, Blue Sharks 1"
+                },
+                {
+                  "label": "xG",
+                  "value": "Park xG 0.39"
+                },
+                {
+                  "label": "Last 10 min territory",
+                  "value": "Red Lions 56% field tilt, 47% possession"
+                }
+              ]
+            },
+            "problems": [
+              "“big chance” is unsupported and too strong for this shot: the facts say Park’s chance was 0.39 xG and “a real chance, scored about 1 time in 3,” not a big or very clear chance.",
+              "“Red Lions are creating the more dangerous chances” is not fully supported by the supplied facts. Red Lions lead on xG and shots, but the draft does not cite a basis for the comparative claim about chance danger beyond this single shot.",
+              "“keeps the game open instead of turning territorial control into a lead” is an unsupported inference. The facts show the match is level and the last 10 minutes were chaotic, but they do not establish that this shot specifically would have turned territorial control into a lead."
+            ]
+          },
+          {
+            "draft": {
+              "headline": "Park misses a 0.39 xG chance",
+              "why_it_matters": "Red Lions are still matching Blue Sharks in a level game, but this shot shows how pressure has not yet turned into a goal. The last 10 minutes have been chaotic, so even with Red Lions ahead in xG and territorial tilt, one finish can still swing the rhythm without changing the score.",
+              "evidence": [
+                {
+                  "label": "Clock",
+                  "value": "67'"
+                },
+                {
+                  "label": "Score",
+                  "value": "Red Lions 1, Blue Sharks 1"
+                },
+                {
+                  "label": "xG",
+                  "value": "Park xG 0.39"
+                },
+                {
+                  "label": "Last 10 min territory",
+                  "value": "Red Lions 56% field tilt, 47% possession"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 906,
+      "clock": "70'",
+      "kind": "card",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Dean booked in a tense phase",
+        "why_it_matters": "Blue Sharks are being forced to defend more territory, with Red Lions carrying 66% field tilt in the last 10 minutes. Dean’s yellow in midfield adds risk to Blue Sharks’ control at a moment when the match is still balanced and every turnover matters.",
+        "evidence": [
+          {
+            "label": "Score",
+            "value": "Red Lions 1, Blue Sharks 1"
+          },
+          {
+            "label": "Last 10 min field tilt",
+            "value": "Red Lions 66%, Blue Sharks 34%"
+          },
+          {
+            "label": "Last 10 min possession",
+            "value": "Red Lions 51%, Blue Sharks 49%"
+          },
+          {
+            "label": "Dean cards",
+            "value": "yellow"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Dean booked in a tense phase",
+              "why_it_matters": "Blue Sharks are being forced to defend more territory, with Red Lions carrying 66% field tilt in the last 10 minutes. Dean’s yellow in midfield adds risk to Blue Sharks’ control at a moment when the match is still balanced and every turnover matters.",
+              "evidence": [
+                {
+                  "label": "Score",
+                  "value": "Red Lions 1, Blue Sharks 1"
+                },
+                {
+                  "label": "Last 10 min field tilt",
+                  "value": "Red Lions 66%, Blue Sharks 34%"
+                },
+                {
+                  "label": "Last 10 min possession",
+                  "value": "Red Lions 51%, Blue Sharks 49%"
+                },
+                {
+                  "label": "Dean cards",
+                  "value": "yellow"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 934,
+      "clock": "72'",
+      "kind": "big_chance",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Vale misses from a half-chance",
+        "why_it_matters": "This is a warning sign more than a huge missed opportunity: Vale’s shot carried 0.31 xG, which is a real chance but not a clear one. Blue Sharks are still level, yet Red Lions have controlled territory in the recent spell, so Blue Sharks need to turn limited openings into cleaner shots to shift the rhythm.",
+        "evidence": [
+          {
+            "label": "Clock",
+            "value": "72'"
+          },
+          {
+            "label": "Shot xG",
+            "value": "0.31"
+          },
+          {
+            "label": "Field tilt last 10 min",
+            "value": "Red Lions 73%"
+          },
+          {
+            "label": "Score",
+            "value": "Red Lions 1, Blue Sharks 1"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 2,
+        "history": [
+          {
+            "draft": {
+              "headline": "Vale misses a big chance",
+              "why_it_matters": "Blue Sharks are still creating enough to threaten, but the shot being off target shows the chance quality is not being converted. With Red Lions holding 73% field tilt in the last 10 minutes, Blue Sharks are scoring from fewer territorial openings and need cleaner execution in a balanced phase.",
+              "evidence": [
+                {
+                  "label": "Clock",
+                  "value": "72'"
+                },
+                {
+                  "label": "Shot xG",
+                  "value": "0.31"
+                },
+                {
+                  "label": "Field tilt last 10 min",
+                  "value": "Red Lions 73%"
+                },
+                {
+                  "label": "Score",
+                  "value": "Red Lions 1, Blue Sharks 1"
+                }
+              ]
+            },
+            "problems": [
+              "\"big chance\" is not supported: the fact states the shot had xG 0.31 and chance_in_plain_words says \"a real chance, scored about 1 time in 3,\" which is not a big/very clear chance.",
+              "\"Blue Sharks are scoring from fewer territorial openings\" is unsupported: the facts show they have 27% field tilt in the last 10 minutes, but do not state anything about scoring from those openings.",
+              "\"need cleaner execution in a balanced phase\" is fine as commentary, but the phrase \"balanced phase\" should be tied to the provided control_last_10_min only if used as fact; otherwise it is interpretive."
+            ]
+          },
+          {
+            "draft": {
+              "headline": "Vale misses from a half-chance",
+              "why_it_matters": "This is a warning sign more than a huge missed opportunity: Vale’s shot carried 0.31 xG, which is a real chance but not a clear one. Blue Sharks are still level, yet Red Lions have controlled territory in the recent spell, so Blue Sharks need to turn limited openings into cleaner shots to shift the rhythm.",
+              "evidence": [
+                {
+                  "label": "Clock",
+                  "value": "72'"
+                },
+                {
+                  "label": "Shot xG",
+                  "value": "0.31"
+                },
+                {
+                  "label": "Field tilt last 10 min",
+                  "value": "Red Lions 73%"
+                },
+                {
+                  "label": "Score",
+                  "value": "Red Lions 1, Blue Sharks 1"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 981,
+      "clock": "76'",
+      "kind": "check_in",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Red Lions pin Blue Sharks back",
+        "why_it_matters": "Red Lions have turned the last 10 minutes into sustained territory, which usually signals control rather than a transition game. With 94% field tilt and 76% possession in that spell, the pressure is forcing Blue Sharks deep while the match stays level, so the next chance is likely to come from sustained buildup rather than chaos.",
+        "evidence": [
+          {
+            "label": "Clock",
+            "value": "76'"
+          },
+          {
+            "label": "Last 10 min field tilt",
+            "value": "Red Lions: 94%"
+          },
+          {
+            "label": "Last 10 min possession",
+            "value": "Red Lions: 76%"
+          },
+          {
+            "label": "Score",
+            "value": "Red Lions 1, Blue Sharks 1"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Red Lions pin Blue Sharks back",
+              "why_it_matters": "Red Lions have turned the last 10 minutes into sustained territory, which usually signals control rather than a transition game. With 94% field tilt and 76% possession in that spell, the pressure is forcing Blue Sharks deep while the match stays level, so the next chance is likely to come from sustained buildup rather than chaos.",
+              "evidence": [
+                {
+                  "label": "Clock",
+                  "value": "76'"
+                },
+                {
+                  "label": "Last 10 min field tilt",
+                  "value": "Red Lions: 94%"
+                },
+                {
+                  "label": "Last 10 min possession",
+                  "value": "Red Lions: 76%"
+                },
+                {
+                  "label": "Score",
+                  "value": "Red Lions 1, Blue Sharks 1"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1029,
+      "clock": "79'",
+      "kind": "big_chance",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Crane denied from a big chance",
+        "why_it_matters": "Red Lions have been pinning Blue Sharks deep, so this chance fits a spell of controlled territory rather than open trading. With 96% field tilt and 80% possession in the last 10 minutes, the chance came from sustained pressure, but the save keeps the score level despite Red Lions leading the xG battle.",
+        "evidence": [
+          {
+            "label": "Clock",
+            "value": "79'"
+          },
+          {
+            "label": "xG on shot",
+            "value": "0.65"
+          },
+          {
+            "label": "Field tilt last 10 min",
+            "value": "96%"
+          },
+          {
+            "label": "Possession last 10 min",
+            "value": "80%"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Crane denied from a big chance",
+              "why_it_matters": "Red Lions have been pinning Blue Sharks deep, so this chance fits a spell of controlled territory rather than open trading. With 96% field tilt and 80% possession in the last 10 minutes, the chance came from sustained pressure, but the save keeps the score level despite Red Lions leading the xG battle.",
+              "evidence": [
+                {
+                  "label": "Clock",
+                  "value": "79'"
+                },
+                {
+                  "label": "xG on shot",
+                  "value": "0.65"
+                },
+                {
+                  "label": "Field tilt last 10 min",
+                  "value": "96%"
+                },
+                {
+                  "label": "Possession last 10 min",
+                  "value": "80%"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1119,
+      "clock": "85'",
+      "kind": "big_chance",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Park misses from prime territory",
+        "why_it_matters": "Red Lions are forcing the match deep into Blue Sharks' end, but the final action is becoming rushed and chaotic rather than controlled. A 0.58 xG chance ending off target shows territory is there, yet the finishing touch is not matching the pressure or the quality of the openings.",
+        "evidence": [
+          {
+            "label": "Clock",
+            "value": "85'"
+          },
+          {
+            "label": "Score",
+            "value": "Red Lions 1-1 Blue Sharks"
+          },
+          {
+            "label": "Red Lions xG",
+            "value": "3.27"
+          },
+          {
+            "label": "Last 10 min field tilt",
+            "value": "Red Lions 94%"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Park misses from prime territory",
+              "why_it_matters": "Red Lions are forcing the match deep into Blue Sharks' end, but the final action is becoming rushed and chaotic rather than controlled. A 0.58 xG chance ending off target shows territory is there, yet the finishing touch is not matching the pressure or the quality of the openings.",
+              "evidence": [
+                {
+                  "label": "Clock",
+                  "value": "85'"
+                },
+                {
+                  "label": "Score",
+                  "value": "Red Lions 1-1 Blue Sharks"
+                },
+                {
+                  "label": "Red Lions xG",
+                  "value": "3.27"
+                },
+                {
+                  "label": "Last 10 min field tilt",
+                  "value": "Red Lions 94%"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1218,
+      "clock": "90+4'",
+      "kind": "period_end",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Red Lions squeeze, but cannot finish",
+        "why_it_matters": "Red Lions have owned the territory and shot volume, but the 1-1 score shows that control has not turned into separation. The last 10 minutes were chaotic, which explains how Blue Sharks could survive under pressure and keep the match level despite being pinned back.",
+        "evidence": [
+          {
+            "label": "Score",
+            "value": "1-1"
+          },
+          {
+            "label": "Red Lions xG",
+            "value": "3.31"
+          },
+          {
+            "label": "Red Lions shots",
+            "value": "20 shots"
+          },
+          {
+            "label": "Last 10 min field tilt",
+            "value": "98"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Red Lions squeeze, but cannot finish",
+              "why_it_matters": "Red Lions have owned the territory and shot volume, but the 1-1 score shows that control has not turned into separation. The last 10 minutes were chaotic, which explains how Blue Sharks could survive under pressure and keep the match level despite being pinned back.",
+              "evidence": [
+                {
+                  "label": "Score",
+                  "value": "1-1"
+                },
+                {
+                  "label": "Red Lions xG",
+                  "value": "3.31"
+                },
+                {
+                  "label": "Red Lions shots",
+                  "value": "20 shots"
+                },
+                {
+                  "label": "Last 10 min field tilt",
+                  "value": "98"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1219,
+      "clock": "91'",
+      "kind": "kick_off",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Red Lions forcing total territory",
+        "why_it_matters": "Red Lions have pinned Blue Sharks deep, turning the extra-time rhythm into sustained pressure rather than settled possession. The shot and xG gap shows Red Lions are creating far more volume, but the level score means Blue Sharks are surviving by keeping the game chaotic enough to blunt that dominance.",
+        "evidence": [
+          {
+            "label": "Score",
+            "value": "Red Lions 1-1 Blue Sharks"
+          },
+          {
+            "label": "Field tilt last 10 min",
+            "value": "Red Lions 93% / Blue Sharks 7%"
+          },
+          {
+            "label": "Possession last 10 min",
+            "value": "Red Lions 67% / Blue Sharks 33%"
+          },
+          {
+            "label": "xG",
+            "value": "Red Lions 3.31 / Blue Sharks 1.62"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Red Lions forcing total territory",
+              "why_it_matters": "Red Lions have pinned Blue Sharks deep, turning the extra-time rhythm into sustained pressure rather than settled possession. The shot and xG gap shows Red Lions are creating far more volume, but the level score means Blue Sharks are surviving by keeping the game chaotic enough to blunt that dominance.",
+              "evidence": [
+                {
+                  "label": "Score",
+                  "value": "Red Lions 1-1 Blue Sharks"
+                },
+                {
+                  "label": "Field tilt last 10 min",
+                  "value": "Red Lions 93% / Blue Sharks 7%"
+                },
+                {
+                  "label": "Possession last 10 min",
+                  "value": "Red Lions 67% / Blue Sharks 33%"
+                },
+                {
+                  "label": "xG",
+                  "value": "Red Lions 3.31 / Blue Sharks 1.62"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1268,
+      "clock": "95'",
+      "kind": "goal",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Reid’s header caps Red pressure",
+        "why_it_matters": "Red Lions have turned sustained territorial pressure into a late lead, with nearly all recent action pinned in Blue Sharks’ end. The goal fits a match that has become chaotic and stop-start in extra time, but Red Lions still keep forcing high-value entries and set-piece danger.",
+        "evidence": [
+          {
+            "label": "Score",
+            "value": "Red Lions 2, Blue Sharks 1"
+          },
+          {
+            "label": "Shot xG",
+            "value": "0.68"
+          },
+          {
+            "label": "Last 10 min field tilt",
+            "value": "Red Lions 98%, Blue Sharks 2%"
+          },
+          {
+            "label": "Last 10 min possession",
+            "value": "Red Lions 73%, Blue Sharks 27%"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Reid’s header caps Red pressure",
+              "why_it_matters": "Red Lions have turned sustained territorial pressure into a late lead, with nearly all recent action pinned in Blue Sharks’ end. The goal fits a match that has become chaotic and stop-start in extra time, but Red Lions still keep forcing high-value entries and set-piece danger.",
+              "evidence": [
+                {
+                  "label": "Score",
+                  "value": "Red Lions 2, Blue Sharks 1"
+                },
+                {
+                  "label": "Shot xG",
+                  "value": "0.68"
+                },
+                {
+                  "label": "Last 10 min field tilt",
+                  "value": "Red Lions 98%, Blue Sharks 2%"
+                },
+                {
+                  "label": "Last 10 min possession",
+                  "value": "Red Lions 73%, Blue Sharks 27%"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1363,
+      "clock": "103'",
+      "kind": "big_chance",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Crane wastes a decent chance",
+        "why_it_matters": "Red Lions have the territorial edge in the last 10 minutes, but the control picture is still balanced, so this miss keeps the game from tipping fully in their favour. With 4.55 xG from 24 shots, the pressure is there; the issue is turning those moments into a finish that matches the volume.",
+        "evidence": [
+          {
+            "label": "Score",
+            "value": "Red Lions 2-1 Blue Sharks"
+          },
+          {
+            "label": "Shot xG",
+            "value": "0.34"
+          },
+          {
+            "label": "Red Lions xG",
+            "value": "4.55"
+          },
+          {
+            "label": "Red Lions field tilt last 10 min",
+            "value": "64%"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 2,
+        "history": [
+          {
+            "draft": {
+              "headline": "Crane misses a big chance",
+              "why_it_matters": "Red Lions are still controlling territory, with the ball and final-third work leaning their way in extra time. But this chance going off target shows the attack is not fully matching the volume of pressure, leaving the game closer than Red Lions would want.",
+              "evidence": [
+                {
+                  "label": "Score",
+                  "value": "Red Lions 2-1 Blue Sharks"
+                },
+                {
+                  "label": "Shot xG",
+                  "value": "0.34"
+                },
+                {
+                  "label": "Red Lions xG",
+                  "value": "4.55"
+                },
+                {
+                  "label": "Red Lions field tilt last 10 min",
+                  "value": "64%"
+                }
+              ]
+            },
+            "problems": [
+              "Headline says 'Crane misses a big chance', but the provided chance description says this was 'a real chance, scored about 1 time in 3' and 0.34 xG; that is not clearly a 'big chance'.",
+              "'Red Lions are still controlling territory' is too strong for the facts: last 10 minutes territory is 64% field tilt and 66% possession for Red Lions, but control last 10 minutes is explicitly 'balanced', not clear dominance.",
+              "'With the ball and final-third work leaning their way in extra time' is broadly supported by the territory numbers, but 'control' or strong dominance is not; the wording overstates the control claim as fact."
+            ]
+          },
+          {
+            "draft": {
+              "headline": "Crane wastes a decent chance",
+              "why_it_matters": "Red Lions have the territorial edge in the last 10 minutes, but the control picture is still balanced, so this miss keeps the game from tipping fully in their favour. With 4.55 xG from 24 shots, the pressure is there; the issue is turning those moments into a finish that matches the volume.",
+              "evidence": [
+                {
+                  "label": "Score",
+                  "value": "Red Lions 2-1 Blue Sharks"
+                },
+                {
+                  "label": "Shot xG",
+                  "value": "0.34"
+                },
+                {
+                  "label": "Red Lions xG",
+                  "value": "4.55"
+                },
+                {
+                  "label": "Red Lions field tilt last 10 min",
+                  "value": "64%"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1379,
+      "clock": "105'",
+      "kind": "goal",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Cruz punishes a high-value chance",
+        "why_it_matters": "Blue Sharks are turning territory into danger at the right end of extra time: 66% field tilt in the last 10 minutes shows sustained pressure, even though overall possession is still split. Cruz's finish also fits the game state, because a 0.49 xG chance converts a period of balanced control into a decisive attacking moment rather than a low-probability strike.",
+        "evidence": [
+          {
+            "label": "Clock",
+            "value": "105'"
+          },
+          {
+            "label": "Score",
+            "value": "Red Lions 2, Blue Sharks 2"
+          },
+          {
+            "label": "Shot xG",
+            "value": "0.49"
+          },
+          {
+            "label": "Last 10 min field tilt",
+            "value": "Blue Sharks 66%"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Cruz punishes a high-value chance",
+              "why_it_matters": "Blue Sharks are turning territory into danger at the right end of extra time: 66% field tilt in the last 10 minutes shows sustained pressure, even though overall possession is still split. Cruz's finish also fits the game state, because a 0.49 xG chance converts a period of balanced control into a decisive attacking moment rather than a low-probability strike.",
+              "evidence": [
+                {
+                  "label": "Clock",
+                  "value": "105'"
+                },
+                {
+                  "label": "Score",
+                  "value": "Red Lions 2, Blue Sharks 2"
+                },
+                {
+                  "label": "Shot xG",
+                  "value": "0.49"
+                },
+                {
+                  "label": "Last 10 min field tilt",
+                  "value": "Blue Sharks 66%"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1396,
+      "clock": "105+1'",
+      "kind": "period_end",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Blue Sharks edge the territory",
+        "why_it_matters": "Blue Sharks had 62% of final-third actions in the last 10 minutes despite only 41% possession, so the game was not about sustained ball control but about where the decisive actions were happening. Even with control marked as balanced, that territorial edge explains how the match stayed level at 2-2 in a tense extra-time rhythm.",
+        "evidence": [
+          {
+            "label": "Score",
+            "value": "2-2"
+          },
+          {
+            "label": "Blue Sharks field tilt",
+            "value": "62%"
+          },
+          {
+            "label": "Blue Sharks possession",
+            "value": "41%"
+          },
+          {
+            "label": "control last 10 min",
+            "value": "balanced"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 2,
+        "history": [
+          {
+            "draft": {
+              "headline": "Blue Sharks seize territory",
+              "why_it_matters": "Blue Sharks have pushed the game higher up the pitch in the last 10 minutes, taking 62% of final-third actions despite only 41% possession. That shift shows a spell of pressure and directness that has tilted the rhythm toward chaos, even though the match remains level at 2-2.",
+              "evidence": [
+                {
+                  "label": "Score",
+                  "value": "2-2"
+                },
+                {
+                  "label": "Blue Sharks field tilt",
+                  "value": "62%"
+                },
+                {
+                  "label": "Blue Sharks possession",
+                  "value": "41%"
+                },
+                {
+                  "label": "Red Lions xG",
+                  "value": "4.55"
+                }
+              ]
+            },
+            "problems": [
+              "The claim that Blue Sharks have ‘pushed the game higher up the pitch in the last 10 minutes’ is not supported by the provided facts. The facts only show they had 62% of final-third actions in that window, not that they advanced the game higher up the pitch.",
+              "The phrase ‘tilted the rhythm toward chaos’ is not supported and contradicts the match state data, which says control in the last 10 minutes is ‘balanced’."
+            ]
+          },
+          {
+            "draft": {
+              "headline": "Blue Sharks edge the territory",
+              "why_it_matters": "Blue Sharks had 62% of final-third actions in the last 10 minutes despite only 41% possession, so the game was not about sustained ball control but about where the decisive actions were happening. Even with control marked as balanced, that territorial edge explains how the match stayed level at 2-2 in a tense extra-time rhythm.",
+              "evidence": [
+                {
+                  "label": "Score",
+                  "value": "2-2"
+                },
+                {
+                  "label": "Blue Sharks field tilt",
+                  "value": "62%"
+                },
+                {
+                  "label": "Blue Sharks possession",
+                  "value": "41%"
+                },
+                {
+                  "label": "control last 10 min",
+                  "value": "balanced"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1397,
+      "clock": "106'",
+      "kind": "kick_off",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Balanced battle reaches extra time",
+        "why_it_matters": "The game has shifted from Red Lions control to a more even, back-and-forth rhythm, with Blue Sharks taking more final-third territory in the last 10 minutes. Despite that territorial edge, Red Lions still have the stronger chance quality overall, so the match is being decided by who can turn pressure into a cleaner finish.",
+        "evidence": [
+          {
+            "label": "Clock",
+            "value": "106'"
+          },
+          {
+            "label": "Score",
+            "value": "Red Lions 2, Blue Sharks 2"
+          },
+          {
+            "label": "Red Lions xG",
+            "value": "4.55"
+          },
+          {
+            "label": "Blue Sharks field tilt last 10 min",
+            "value": "58%"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Balanced battle reaches extra time",
+              "why_it_matters": "The game has shifted from Red Lions control to a more even, back-and-forth rhythm, with Blue Sharks taking more final-third territory in the last 10 minutes. Despite that territorial edge, Red Lions still have the stronger chance quality overall, so the match is being decided by who can turn pressure into a cleaner finish.",
+              "evidence": [
+                {
+                  "label": "Clock",
+                  "value": "106'"
+                },
+                {
+                  "label": "Score",
+                  "value": "Red Lions 2, Blue Sharks 2"
+                },
+                {
+                  "label": "Red Lions xG",
+                  "value": "4.55"
+                },
+                {
+                  "label": "Blue Sharks field tilt last 10 min",
+                  "value": "58%"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1504,
+      "clock": "113'",
+      "kind": "own_goal",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Bell own goal breaks deadlock",
+        "why_it_matters": "Red Lions have been forcing the game high up the pitch, with 85% field tilt and 75% possession in the last 10 minutes, so the own goal fits a spell of sustained pressure rather than a clean chance. The match has also turned chaotic in extra time, and Blue Sharks' defending under pressure has finally cracked after a game played well beyond parity.",
+        "evidence": [
+          {
+            "label": "Clock",
+            "value": "113'"
+          },
+          {
+            "label": "Score",
+            "value": "Red Lions 3, Blue Sharks 2"
+          },
+          {
+            "label": "Last 10 min field tilt",
+            "value": "Red Lions 85%"
+          },
+          {
+            "label": "Last 10 min possession",
+            "value": "Red Lions 75%"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Bell own goal breaks deadlock",
+              "why_it_matters": "Red Lions have been forcing the game high up the pitch, with 85% field tilt and 75% possession in the last 10 minutes, so the own goal fits a spell of sustained pressure rather than a clean chance. The match has also turned chaotic in extra time, and Blue Sharks' defending under pressure has finally cracked after a game played well beyond parity.",
+              "evidence": [
+                {
+                  "label": "Clock",
+                  "value": "113'"
+                },
+                {
+                  "label": "Score",
+                  "value": "Red Lions 3, Blue Sharks 2"
+                },
+                {
+                  "label": "Last 10 min field tilt",
+                  "value": "Red Lions 85%"
+                },
+                {
+                  "label": "Last 10 min possession",
+                  "value": "Red Lions 75%"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1609,
+      "clock": "120+1'",
+      "kind": "period_end",
+      "mode": "analyst",
+      "language": "en",
+      "content": {
+        "headline": "Red Lions end under pressure",
+        "why_it_matters": "The last stretch was overwhelmingly Red Lions territory, but the game state still stayed chaotic, showing possession did not fully translate into clean control. Blue Sharks spent the final 10 minutes almost entirely defending, yet the match remained open because the scoreline was only decided by a narrow xG edge and a late lead rather than total dominance.",
+        "evidence": [
+          {
+            "label": "Score",
+            "value": "Red Lions 3, Blue Sharks 2"
+          },
+          {
+            "label": "xG",
+            "value": "Red Lions 4.61, Blue Sharks 2.48"
+          },
+          {
+            "label": "Field tilt last 10 min",
+            "value": "Red Lions 91%, Blue Sharks 9%"
+          },
+          {
+            "label": "Possession last 10 min",
+            "value": "Red Lions 79%, Blue Sharks 21%"
+          }
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Red Lions end under pressure",
+              "why_it_matters": "The last stretch was overwhelmingly Red Lions territory, but the game state still stayed chaotic, showing possession did not fully translate into clean control. Blue Sharks spent the final 10 minutes almost entirely defending, yet the match remained open because the scoreline was only decided by a narrow xG edge and a late lead rather than total dominance.",
+              "evidence": [
+                {
+                  "label": "Score",
+                  "value": "Red Lions 3, Blue Sharks 2"
+                },
+                {
+                  "label": "xG",
+                  "value": "Red Lions 4.61, Blue Sharks 2.48"
+                },
+                {
+                  "label": "Field tilt last 10 min",
+                  "value": "Red Lions 91%, Blue Sharks 9%"
+                },
+                {
+                  "label": "Possession last 10 min",
+                  "value": "Red Lions 79%, Blue Sharks 21%"
+                }
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1609,
+      "clock": "120+1'",
+      "kind": "recap",
+      "mode": "recap",
+      "language": "en",
+      "content": {
+        "title": "Red Lions edge Blue Sharks after a wild extra-time swing",
+        "paragraphs": [
+          "Red Lions won 3-2 after extra time in a match that kept flipping back and forth. Fox opened the scoring in the 28th minute from Lane's assist, Gray levelled for Blue Sharks in the 62nd, and Reid restored Red Lions' lead in the 95th from Rook's pass. Blue Sharks hit back through Cruz in the 105th, assisted by Wells, before Bell's own goal in the 113th settled it for Red Lions.",
+          "Red Lions had the better of the game overall, with 4.61 expected goals to 2.48, 27 shots to 15, and 11 shots on target to 7. They also controlled territory and possession for most of the match, finishing with 85 field tilt and 69 possession, while Blue Sharks spent much more time deeper and had to live off fewer attacks.",
+          "The turning point came in the final stretch of extra time, when Red Lions kept the pressure on and forced the decisive mistake. Even so, Blue Sharks stayed alive through the equaliser at 105 minutes, and the last ten minutes were chaotic, but Red Lions finished the stronger side and kept pushing until the winner arrived."
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "title": "Red Lions edge Blue Sharks after a wild extra-time swing",
+              "paragraphs": [
+                "Red Lions won 3-2 after extra time in a match that kept flipping back and forth. Fox opened the scoring in the 28th minute from Lane's assist, Gray levelled for Blue Sharks in the 62nd, and Reid restored Red Lions' lead in the 95th from Rook's pass. Blue Sharks hit back through Cruz in the 105th, assisted by Wells, before Bell's own goal in the 113th settled it for Red Lions.",
+                "Red Lions had the better of the game overall, with 4.61 expected goals to 2.48, 27 shots to 15, and 11 shots on target to 7. They also controlled territory and possession for most of the match, finishing with 85 field tilt and 69 possession, while Blue Sharks spent much more time deeper and had to live off fewer attacks.",
+                "The turning point came in the final stretch of extra time, when Red Lions kept the pressure on and forced the decisive mistake. Even so, Blue Sharks stayed alive through the equaliser at 105 minutes, and the last ten minutes were chaotic, but Red Lions finished the stronger side and kept pushing until the winner arrived."
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    }
+  ]
+}

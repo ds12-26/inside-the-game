@@ -1,0 +1,799 @@
+{
+  "match_id": "match_002",
+  "viewer": {
+    "role": "fan",
+    "language": "es",
+    "club": "Blue Sharks",
+    "player": "Moss",
+    "player_focus": true
+  },
+  "cards": [
+    {
+      "event_id": 1,
+      "clock": "1'",
+      "kind": "kick_off",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "Arranca el partido con todo nivelado: 0-0 y reparto perfecto de la pelota. De momento, Moss está sin trabajo bajo palos para los Blue Sharks."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "Arranca el partido con todo nivelado: 0-0 y reparto perfecto de la pelota. De momento, Moss está sin trabajo bajo palos para los Blue Sharks."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 24,
+      "clock": "2'",
+      "kind": "card",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "Tarjeta amarilla para Ward en el 2’, y eso frena un arranque ya caótico. Los Blue Sharks mandan arriba, pero por ahora sin remate ni ocasión clara."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "Tarjeta amarilla para Ward en el 2’, y eso frena un arranque ya caótico. Los Blue Sharks mandan arriba, pero por ahora sin remate ni ocasión clara."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 74,
+      "clock": "6'",
+      "kind": "card",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "Tarjeta amarilla para Price, y eso le corta el ímpetu a los Blue Sharks en estos compases. El partido sigue 0-0, pero el Red Lions está mandando mucho más en este tramo."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "Tarjeta amarilla para Price, y eso le corta el ímpetu a los Blue Sharks en estos compases. El partido sigue 0-0, pero el Red Lions está mandando mucho más en este tramo."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 137,
+      "clock": "12'",
+      "kind": "big_chance",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "¡Paradón de los Blue Sharks! Fox probó con una ocasión muy peligrosa y el 0-0 sigue intacto, mientras los Red Lions aprietan con todo."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 2,
+        "history": [
+          {
+            "draft": {
+              "text": "¡Paradón de los Blue Sharks! Fox soltó un remate muy claro y el marcador sigue 0-0, con los Red Lions mandando y Moss todavía esperando su momento."
+            },
+            "problems": [
+              "The draft says Fox's shot was 'muy claro' ('very clear'), but the facts describe it as a close to 50-50 chance (xG 0.54), which is not a very clear chance.",
+              "The draft says 'Moss todavía esperando su momento,' but the provided facts do not mention any player named Moss or support that claim."
+            ]
+          },
+          {
+            "draft": {
+              "text": "¡Paradón de los Blue Sharks! Fox probó con una ocasión muy peligrosa y el 0-0 sigue intacto, mientras los Red Lions aprietan con todo."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 192,
+      "clock": "16'",
+      "kind": "check_in",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "16' y sigue el 0-0, pero el Blue Sharks está metido atrás. Moss ya sostiene al equipo con dos paradas y evita que el Red Lions convierta su dominio en gol."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "16' y sigue el 0-0, pero el Blue Sharks está metido atrás. Moss ya sostiene al equipo con dos paradas y evita que el Red Lions convierta su dominio en gol."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 352,
+      "clock": "28'",
+      "kind": "goal",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "Gol de Fox, y el Red Lions se pone 1-0 a los 28'. Moss ya llevaba tres paradas, pero esta vez no puede evitarlo; el Blue Sharks sigue sufriendo atrás."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "Gol de Fox, y el Red Lions se pone 1-0 a los 28'. Moss ya llevaba tres paradas, pero esta vez no puede evitarlo; el Blue Sharks sigue sufriendo atrás."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 375,
+      "clock": "31'",
+      "kind": "momentum_swing",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "31' y el 1-0 sigue pesando para el Blue Sharks, pero Moss mantiene vivo al equipo con 4 paradas ya. El Red Lions manda en el tramo reciente, aunque no ha cerrado el partido."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "31' y el 1-0 sigue pesando para el Blue Sharks, pero Moss mantiene vivo al equipo con 4 paradas ya. El Red Lions manda en el tramo reciente, aunque no ha cerrado el partido."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 586,
+      "clock": "45+1'",
+      "kind": "big_chance",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "¡La ha tenido Vale para Blue Sharks en el 45+1'! Buena parada del portero, y se les escapa una oportunidad real justo antes del descanso."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 2,
+        "history": [
+          {
+            "draft": {
+              "text": "¡La ha tenido Vale para Blue Sharks! Gran parada del portero: una ocasión muy buena que se escapa justo antes del descanso."
+            },
+            "problems": [
+              "“una ocasión muy buena” is too strong for the reported chance quality: the facts describe it as “a real chance, scored about 1 time in 3,” not a very clear or great chance.",
+              "“justo antes del descanso” is acceptable in meaning, but the only exact clock given is 45+1'; if you want precision, state the minute explicitly."
+            ]
+          },
+          {
+            "draft": {
+              "text": "¡La ha tenido Vale para Blue Sharks en el 45+1'! Buena parada del portero, y se les escapa una oportunidad real justo antes del descanso."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 604,
+      "clock": "45+2'",
+      "kind": "period_end",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "Descanso en 45+2': mandan los Red Lions por 1-0, pero Moss mantiene vivos a los Blue Sharks con 5 paradas. En el tramo final del primer tiempo, el partido ha sido caótico y los Blue Sharks necesitan más peso arriba."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "Descanso en 45+2': mandan los Red Lions por 1-0, pero Moss mantiene vivos a los Blue Sharks con 5 paradas. En el tramo final del primer tiempo, el partido ha sido caótico y los Blue Sharks necesitan más peso arriba."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 605,
+      "clock": "46'",
+      "kind": "kick_off",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "Arranca la segunda mitad con los Blue Sharks por detrás, pero Moss ya ha sostenido al equipo con cinco paradas. El tramo final del primer tiempo fue caótico y Red Lions ha llevado más peligro."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "Arranca la segunda mitad con los Blue Sharks por detrás, pero Moss ya ha sostenido al equipo con cinco paradas. El tramo final del primer tiempo fue caótico y Red Lions ha llevado más peligro."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 626,
+      "clock": "47'",
+      "kind": "card",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "Tarjeta amarilla para Fox, capitán de los Red Lions, al arrancar la segunda parte. Los Blue Sharks siguen por detrás y Moss necesita más balón para meterles en apuros."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "Tarjeta amarilla para Fox, capitán de los Red Lions, al arrancar la segunda parte. Los Blue Sharks siguen por detrás y Moss necesita más balón para meterles en apuros."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 631,
+      "clock": "47'",
+      "kind": "card",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "Tarjeta amarilla para Brooks en los Red Lions, y el partido se calienta en el inicio de la segunda mitad. El 1-0 sigue en el marcador, con los Blue Sharks buscando meter a Moss más en juego."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "Tarjeta amarilla para Brooks en los Red Lions, y el partido se calienta en el inicio de la segunda mitad. El 1-0 sigue en el marcador, con los Blue Sharks buscando meter a Moss más en juego."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 706,
+      "clock": "54'",
+      "kind": "big_chance",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "¡Paradón! Frost saca un remate muy peligroso, pero el portero de los Red Lions mantiene el 1-0 y corta el impulso de los Blue Sharks."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "¡Paradón! Frost saca un remate muy peligroso, pero el portero de los Red Lions mantiene el 1-0 y corta el impulso de los Blue Sharks."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 796,
+      "clock": "61'",
+      "kind": "check_in",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "61' y el Blue Sharks sigue vivo gracias a Moss, que ya lleva cinco paradas y sostiene al equipo pese al 1-0. Los Red Lions aprietan y mandan con claridad, pero aún no lo rematan."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "61' y el Blue Sharks sigue vivo gracias a Moss, que ya lleva cinco paradas y sostiene al equipo pese al 1-0. Los Red Lions aprietan y mandan con claridad, pero aún no lo rematan."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 809,
+      "clock": "62'",
+      "kind": "goal",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "¡Gol de los Blue Sharks! Gray la mete tras la asistencia de Frost y empata el partido en el 62'; Moss sigue en escena en un tramo muy caótico, con los Blue Sharks resistiendo y golpeando."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "¡Gol de los Blue Sharks! Gray la mete tras la asistencia de Frost y empata el partido en el 62'; Moss sigue en escena en un tramo muy caótico, con los Blue Sharks resistiendo y golpeando."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 865,
+      "clock": "67'",
+      "kind": "big_chance",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "¡Qué ocasión para los Red Lions! Park tiene una oportunidad real y la manda fuera, y el empate sigue en el 67'."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 2,
+        "history": [
+          {
+            "draft": {
+              "text": "¡Qué ocasión para los Red Lions! Park se encuentra una oportunidad muy buena y la manda fuera, y el partido sigue empatado en el 67'."
+            },
+            "problems": [
+              "“una oportunidad muy buena” is too strong for the given chance description; FACTS say it was “a real chance, scored about 1 time in 3,” and the shot had xG 0.39, which does not support calling it a very good chance."
+            ]
+          },
+          {
+            "draft": {
+              "text": "¡Qué ocasión para los Red Lions! Park tiene una oportunidad real y la manda fuera, y el empate sigue en el 67'."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 906,
+      "clock": "70'",
+      "kind": "card",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "Tarjeta amarilla para Dean en el 70'. El partido sigue igualado, pero los Blue Sharks ahora deben tener cuidado porque Red Lions está empujando más en campo rival."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "Tarjeta amarilla para Dean en el 70'. El partido sigue igualado, pero los Blue Sharks ahora deben tener cuidado porque Red Lions está empujando más en campo rival."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 934,
+      "clock": "72'",
+      "kind": "big_chance",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "Vale prueba desde la izquierda, pero se va fuera; era una ocasión real. En el 72', sigue el empate y Blue Sharks se mantiene muy vivo."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 2,
+        "history": [
+          {
+            "draft": {
+              "text": "¡Qué oportunidad para Blue Sharks! Vale la empuja desde la izquierda, pero se va fuera; en el 72', el partido sigue igualado y Blue Sharks busca golpear con más colmillo."
+            },
+            "problems": [
+              "\"¡Qué oportunidad para Blue Sharks!\" overstates the chance. The facts describe Vale's shot as off target with xG 0.31 and chance_in_plain_words as \"a real chance, scored about 1 time in 3,\" not a big/clear chance.",
+              "\"Vale la empuja desde la izquierda\" is unsupported. The facts only say Vale, a Blue Sharks LW, took an off-target shot; they do not show that he \"pushed it\" or any specific action beyond the shot itself.",
+              "\"Blue Sharks busca golpear con más colmillo\" is a stylistic opinion and not a factual issue, but if meant literally it is not supported by the provided facts."
+            ]
+          },
+          {
+            "draft": {
+              "text": "Vale prueba desde la izquierda, pero se va fuera; era una ocasión real. En el 72', sigue el empate y Blue Sharks se mantiene muy vivo."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 981,
+      "clock": "76'",
+      "kind": "check_in",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "76' y sigue el 1-1: los Red Lions mandan mucho en estos últimos minutos, pero los Blue Sharks resisten. Moss está firme bajo palos con 5 paradas y mantiene vivo el empate."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "76' y sigue el 1-1: los Red Lions mandan mucho en estos últimos minutos, pero los Blue Sharks resisten. Moss está firme bajo palos con 5 paradas y mantiene vivo el empate."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1029,
+      "clock": "79'",
+      "kind": "big_chance",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "¡Gran parada de Moss! Crane se planta con una ocasión muy clara y el empate sigue vivo para los Blue Sharks."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "¡Gran parada de Moss! Crane se planta con una ocasión muy clara y el empate sigue vivo para los Blue Sharks."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1119,
+      "clock": "85'",
+      "kind": "big_chance",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "¡Uf, Park la manda fuera desde una ocasión muy buena para el Red Lions! El Blue Sharks sufre muchísimo atrás en un tramo caótico, con el partido igualado en el 85'."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 2,
+        "history": [
+          {
+            "draft": {
+              "text": "¡Uf, Park la manda fuera desde una posición clarísima y el susto es enorme para los Blue Sharks! El Red Lions sigue volcado arriba, pero Moss y compañía aguantan como pueden en un tramo totalmente caótico."
+            },
+            "problems": [
+              "“desde una posición clarísima” is not supported by the facts: the shot is rated 0.58 xG, which the provided plain-language label describes as close to a 50-50 chance, not a very clear chance.",
+              "The draft refers to “Moss y compañía” as if Moss is a known player or defender in the facts, but no player named Moss appears in the provided facts."
+            ]
+          },
+          {
+            "draft": {
+              "text": "¡Uf, Park la manda fuera desde una ocasión muy buena para el Red Lions! El Blue Sharks sufre muchísimo atrás en un tramo caótico, con el partido igualado en el 85'."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1218,
+      "clock": "90+4'",
+      "kind": "period_end",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "90+4' y sigue 1-1: los Red Lions aprietan con todo, pero Moss sostiene al Blue Sharks con siete paradas. El cierre es puro caos y el empate sigue vivo."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "90+4' y sigue 1-1: los Red Lions aprietan con todo, pero Moss sostiene al Blue Sharks con siete paradas. El cierre es puro caos y el empate sigue vivo."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1219,
+      "clock": "91'",
+      "kind": "kick_off",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "91' y sigue el 1-1: el tramo va caótico y el Red Lions domina muchísimo el territorio. Moss ya suma 7 paradas y mantiene vivo al Blue Sharks."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 2,
+        "history": [
+          {
+            "draft": {
+              "text": "91' y sigue el 1-1: el partido está caótico y el Blue Sharks aguanta encerrado atrás. Moss ya suma 7 paradas y aparece de nuevo como el muro azul."
+            },
+            "problems": [
+              "“el Blue Sharks aguanta encerrado atrás” is not fully supported as a factual claim: the facts show Blue Sharks had only 7% of field tilt and 33% possession in the last 10 minutes, but not that they were literally ‘encerrado atrás’.",
+              "“Moss ya suma 7 paradas” is supported, but “aparece de nuevo como el muro azul” is a stylistic metaphor, not a factual claim; if treated as fact, it is unsupported."
+            ]
+          },
+          {
+            "draft": {
+              "text": "91' y sigue el 1-1: el tramo va caótico y el Red Lions domina muchísimo el territorio. Moss ya suma 7 paradas y mantiene vivo al Blue Sharks."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1268,
+      "clock": "95'",
+      "kind": "goal",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "Gol de Red Lions: Reid cabecea el córner de Rook y castiga al límite, 2-1. Qué mazazo para Blue Sharks; Moss ha sostenido todo lo posible, pero ahora toca remar en la prórroga."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "Gol de Red Lions: Reid cabecea el córner de Rook y castiga al límite, 2-1. Qué mazazo para Blue Sharks; Moss ha sostenido todo lo posible, pero ahora toca remar en la prórroga."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1363,
+      "clock": "103'",
+      "kind": "big_chance",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "Crane se gira en el área y la manda fuera: una ocasión real para los Red Lions, pero se pierde. Los Blue Sharks aguantan con el reloj en 103' y siguen a un gol."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "Crane se gira en el área y la manda fuera: una ocasión real para los Red Lions, pero se pierde. Los Blue Sharks aguantan con el reloj en 103' y siguen a un gol."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1379,
+      "clock": "105'",
+      "kind": "goal",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "¡Gol de Blue Sharks! Cruz la mete y pone el 2-2 en la prórroga; Wells participa en la jugada y los Blue Sharks están apretando mucho arriba."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "¡Gol de Blue Sharks! Cruz la mete y pone el 2-2 en la prórroga; Wells participa en la jugada y los Blue Sharks están apretando mucho arriba."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1396,
+      "clock": "105+1'",
+      "kind": "period_end",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "105+1' y seguimos 2-2 en la primera parte de la prórroga. Blue Sharks aprietan más arriba, y Moss mantiene vivo el empate con 8 paradas; partido muy abierto y todo por decidir."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 2,
+        "history": [
+          {
+            "draft": {
+              "text": "Descanso del primer tiempo extra y sigue el 2-2: Blue Sharks han empujado más en los últimos minutos, con Moss sosteniendo el empate con ocho paradas. Partido vivo, muy abierto, y todo por decidir."
+            },
+            "problems": [
+              "\"Descanso del primer tiempo extra\" is not supported: the facts show 105+1' in the first half of extra time, but not that it is halftime.",
+              "\"Blue Sharks han empujado más en los últimos minutos\" is contradicted by the last-10-minute territory: Blue Sharks had more field tilt (62% vs 38%), but Red Lions had more possession (59% vs 41%); 'más' as a general claim of pushing harder is not fully supported.",
+              "\"Moss sosteniendo el empate con ocho paradas\" is supported by the facts, but note that it should not imply he made only the recent saves; this is okay as factual support is present."
+            ]
+          },
+          {
+            "draft": {
+              "text": "105+1' y seguimos 2-2 en la primera parte de la prórroga. Blue Sharks aprietan más arriba, y Moss mantiene vivo el empate con 8 paradas; partido muy abierto y todo por decidir."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1397,
+      "clock": "106'",
+      "kind": "kick_off",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "106' y sigue el 2-2: los Blue Sharks llevan el peso en este tramo, con Moss sosteniendo todo atrás tras sus 8 paradas. Partido abierto, con cada posesión oliendo a gol."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "106' y sigue el 2-2: los Blue Sharks llevan el peso en este tramo, con Moss sosteniendo todo atrás tras sus 8 paradas. Partido abierto, con cada posesión oliendo a gol."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1504,
+      "clock": "113'",
+      "kind": "own_goal",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "¡Gol en propia puerta de Bell! Qué golpe para los Blue Sharks: el Red Lions se pone 3-2 en el 113', con el tramo final totalmente caótico."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "¡Gol en propia puerta de Bell! Qué golpe para los Blue Sharks: el Red Lions se pone 3-2 en el 113', con el tramo final totalmente caótico."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1609,
+      "clock": "120+1'",
+      "kind": "period_end",
+      "mode": "fan",
+      "language": "es",
+      "content": {
+        "text": "Final del partido: el Blue Sharks cae 3-2 tras una batalla larguísima. Moss deja una actuación enorme con 9 paradas, sosteniendo al equipo hasta el límite."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "text": "Final del partido: el Blue Sharks cae 3-2 tras una batalla larguísima. Moss deja una actuación enorme con 9 paradas, sosteniendo al equipo hasta el límite."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1609,
+      "clock": "120+1'",
+      "kind": "recap",
+      "mode": "recap",
+      "language": "es",
+      "content": {
+        "title": "El Red Lions se lo llevó al filo del alargue",
+        "paragraphs": [
+          "El Red Lions ganó 3-2 al Blue Sharks en 120+1' tras un partido que cambió de dueño varias veces. Fox abrió el marcador a los 28' con pase de Lane, Gray empató a los 62' tras asistencia de Frost, Reid puso el 2-1 a los 95' con pase de Rook, y Cruz igualó 2-2 a los 105' con asistencia de Wells. El 3-2 llegó a los 113' con un gol en propia puerta de Bell.",
+          "El Red Lions llevó la iniciativa casi todo el partido: tuvo más balón, más campo a favor y mucho más volumen de pase, con 776 pases completados y 110 entradas al último tercio, frente a 321 pases completados y 31 entradas del Blue Sharks. Aun así, el Blue Sharks encontró vida en el tramo grande del alargue y mantuvo el duelo abierto hasta el final.",
+          "La gran figura del Blue Sharks fue Moss, que firmó 9 paradas y sostuvo al equipo cuando más sufrió. Para el Blue Sharks fue una noche de resistencia y golpes de respuesta, pero el final le terminó favoreciendo al Red Lions en una prórroga muy caótica."
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "title": "El Red Lions se lo llevó al filo del alargue",
+              "paragraphs": [
+                "El Red Lions ganó 3-2 al Blue Sharks en 120+1' tras un partido que cambió de dueño varias veces. Fox abrió el marcador a los 28' con pase de Lane, Gray empató a los 62' tras asistencia de Frost, Reid puso el 2-1 a los 95' con pase de Rook, y Cruz igualó 2-2 a los 105' con asistencia de Wells. El 3-2 llegó a los 113' con un gol en propia puerta de Bell.",
+                "El Red Lions llevó la iniciativa casi todo el partido: tuvo más balón, más campo a favor y mucho más volumen de pase, con 776 pases completados y 110 entradas al último tercio, frente a 321 pases completados y 31 entradas del Blue Sharks. Aun así, el Blue Sharks encontró vida en el tramo grande del alargue y mantuvo el duelo abierto hasta el final.",
+                "La gran figura del Blue Sharks fue Moss, que firmó 9 paradas y sostuvo al equipo cuando más sufrió. Para el Blue Sharks fue una noche de resistencia y golpes de respuesta, pero el final le terminó favoreciendo al Red Lions en una prórroga muy caótica."
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    }
+  ]
+}

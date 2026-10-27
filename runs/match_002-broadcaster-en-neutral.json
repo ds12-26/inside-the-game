@@ -1,0 +1,867 @@
+{
+  "match_id": "match_002",
+  "viewer": {
+    "role": "broadcaster",
+    "language": "en",
+    "club": null,
+    "player": null,
+    "player_focus": false
+  },
+  "cards": [
+    {
+      "event_id": 1,
+      "clock": "1'",
+      "kind": "kick_off",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Early Balance",
+        "lower_third": "Red Lions 0-0 Blue Sharks at 1'",
+        "talking_point": "It is level at 1', with both Red Lions and Blue Sharks starting at 50% possession."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Early Balance",
+              "lower_third": "Red Lions 0-0 Blue Sharks at 1'",
+              "talking_point": "It is level at 1', with both Red Lions and Blue Sharks starting at 50% possession."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 24,
+      "clock": "2'",
+      "kind": "card",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Early Yellow Card",
+        "lower_third": "Ward of Blue Sharks is booked at 2'",
+        "talking_point": "Ward has been booked for Blue Sharks at 2', with the match still 0-0."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Early Yellow Card",
+              "lower_third": "Ward of Blue Sharks is booked at 2'",
+              "talking_point": "Ward has been booked for Blue Sharks at 2', with the match still 0-0."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 74,
+      "clock": "6'",
+      "kind": "card",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Yellow for Price",
+        "lower_third": "Blue Sharks defender Price is booked in the first half.",
+        "talking_point": "Price has been shown a yellow card, and Blue Sharks have been under pressure with 83% field tilt against them in the last 10 minutes."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Yellow for Price",
+              "lower_third": "Blue Sharks defender Price is booked in the first half.",
+              "talking_point": "Price has been shown a yellow card, and Blue Sharks have been under pressure with 83% field tilt against them in the last 10 minutes."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 137,
+      "clock": "12'",
+      "kind": "big_chance",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Fox Denied",
+        "lower_third": "Fox’s shot was saved from a 0.54 xG chance.",
+        "talking_point": "Fox has already had two shots, and that saved chance was worth 0.54 xG."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Fox Denied",
+              "lower_third": "Fox’s shot was saved from a 0.54 xG chance.",
+              "talking_point": "Fox has already had two shots, and that saved chance was worth 0.54 xG."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 192,
+      "clock": "16'",
+      "kind": "check_in",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Red Lions Press",
+        "lower_third": "Red Lions have 98% field tilt and 81% possession in the last 10 minutes.",
+        "talking_point": "Red Lions are on top territorially, with 98% field tilt and 81% possession over the last 10 minutes."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Red Lions Press",
+              "lower_third": "Red Lions have 98% field tilt and 81% possession in the last 10 minutes.",
+              "talking_point": "Red Lions are on top territorially, with 98% field tilt and 81% possession over the last 10 minutes."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 352,
+      "clock": "28'",
+      "kind": "goal",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Fox Scores",
+        "lower_third": "Fox puts Red Lions 1-0 ahead at 28'.",
+        "talking_point": "Fox has given Red Lions the lead at 28', and Red Lions have 1.32 xG from 9 shots."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Fox Scores",
+              "lower_third": "Fox puts Red Lions 1-0 ahead at 28'.",
+              "talking_point": "Fox has given Red Lions the lead at 28', and Red Lions have 1.32 xG from 9 shots."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 375,
+      "clock": "31'",
+      "kind": "momentum_swing",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Red Lions On Top",
+        "lower_third": "Red Lions lead 1-0 after 31 minutes.",
+        "talking_point": "Red Lions have turned pressure into a lead, with 1.46 xG from 10 shots compared with Blue Sharks’ 0.08."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Red Lions On Top",
+              "lower_third": "Red Lions lead 1-0 after 31 minutes.",
+              "talking_point": "Red Lions have turned pressure into a lead, with 1.46 xG from 10 shots compared with Blue Sharks’ 0.08."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 586,
+      "clock": "45+1'",
+      "kind": "big_chance",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Vale Denied",
+        "lower_third": "Blue Sharks’ Vale sees a 0.33 xG chance saved at 45+1'.",
+        "talking_point": "Vale had a real chance there, but the save keeps Blue Sharks at 0 goals, while Red Lions lead 1-0."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Vale Denied",
+              "lower_third": "Blue Sharks’ Vale sees a 0.33 xG chance saved at 45+1'.",
+              "talking_point": "Vale had a real chance there, but the save keeps Blue Sharks at 0 goals, while Red Lions lead 1-0."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 604,
+      "clock": "45+2'",
+      "kind": "period_end",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Red Lions Lead",
+        "lower_third": "Red Lions lead 1-0 at 45+2' after a chaotic spell.",
+        "talking_point": "Red Lions lead 1-0 at 45+2', with 1.5 expected goals to Blue Sharks' 0.47."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Red Lions Lead",
+              "lower_third": "Red Lions lead 1-0 at 45+2' after a chaotic spell.",
+              "talking_point": "Red Lions lead 1-0 at 45+2', with 1.5 expected goals to Blue Sharks' 0.47."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 605,
+      "clock": "46'",
+      "kind": "kick_off",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Red Lions Lead",
+        "lower_third": "Red Lions 1-0 after 46 minutes; Blue Sharks have 0.47 xG.",
+        "talking_point": "Red Lions lead 1-0 at 46 minutes, with 1.5 xG from 12 shots compared with Blue Sharks' 0.47 xG."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Red Lions Lead",
+              "lower_third": "Red Lions 1-0 after 46 minutes; Blue Sharks have 0.47 xG.",
+              "talking_point": "Red Lions lead 1-0 at 46 minutes, with 1.5 xG from 12 shots compared with Blue Sharks' 0.47 xG."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 626,
+      "clock": "47'",
+      "kind": "card",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Fox Booked",
+        "lower_third": "Red Lions captain Fox receives a yellow card at 47'.",
+        "talking_point": "Fox has been shown a yellow card at 47', and Red Lions still lead 1-0."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Fox Booked",
+              "lower_third": "Red Lions captain Fox receives a yellow card at 47'.",
+              "talking_point": "Fox has been shown a yellow card at 47', and Red Lions still lead 1-0."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 631,
+      "clock": "47'",
+      "kind": "card",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Brooks Booked",
+        "lower_third": "Yellow card for Red Lions defender Brooks at 47'.",
+        "talking_point": "Brooks has been booked for Red Lions at 47', and Blue Sharks trail 1-0 despite 0.47 xG."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Brooks Booked",
+              "lower_third": "Yellow card for Red Lions defender Brooks at 47'.",
+              "talking_point": "Brooks has been booked for Red Lions at 47', and Blue Sharks trail 1-0 despite 0.47 xG."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 706,
+      "clock": "54'",
+      "kind": "big_chance",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Frost Denied",
+        "lower_third": "Frost's shot was saved; Blue Sharks remain one goal behind.",
+        "talking_point": "Frost had a real chance from 0.35 xG, but the save kept Blue Sharks at 0-1."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Frost Denied",
+              "lower_third": "Frost's shot was saved; Blue Sharks remain one goal behind.",
+              "talking_point": "Frost had a real chance from 0.35 xG, but the save kept Blue Sharks at 0-1."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 796,
+      "clock": "61'",
+      "kind": "check_in",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Red Lions Ahead",
+        "lower_third": "Red Lions lead 1-0 at 61 minutes.",
+        "talking_point": "Red Lions lead 1-0, with 1.52 xG to Blue Sharks' 0.82."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Red Lions Ahead",
+              "lower_third": "Red Lions lead 1-0 at 61 minutes.",
+              "talking_point": "Red Lions lead 1-0, with 1.52 xG to Blue Sharks' 0.82."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 809,
+      "clock": "62'",
+      "kind": "goal",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Gray Levels It",
+        "lower_third": "Gray scores for Blue Sharks to make it 1-1 at 62'.",
+        "talking_point": "Gray has converted a chance worth 0.47 xG, and the match is level at 1-1."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Gray Levels It",
+              "lower_third": "Gray scores for Blue Sharks to make it 1-1 at 62'.",
+              "talking_point": "Gray has converted a chance worth 0.47 xG, and the match is level at 1-1."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 865,
+      "clock": "67'",
+      "kind": "big_chance",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Park Chance Wide",
+        "lower_third": "Park fires off target in a 0.39 xG chance at 67'.",
+        "talking_point": "Park has had four shots, and Red Lions have 1.91 xG from 14 attempts."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Park Chance Wide",
+              "lower_third": "Park fires off target in a 0.39 xG chance at 67'.",
+              "talking_point": "Park has had four shots, and Red Lions have 1.91 xG from 14 attempts."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 906,
+      "clock": "70'",
+      "kind": "card",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Dean Booked",
+        "lower_third": "Blue Sharks midfielder Dean receives a yellow card at 70'.",
+        "talking_point": "Blue Sharks midfielder Dean is booked at 70', with the match level at 1-1 and Red Lions leading xG 1.91 to 1.31."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Dean Booked",
+              "lower_third": "Blue Sharks midfielder Dean receives a yellow card at 70'.",
+              "talking_point": "Blue Sharks midfielder Dean is booked at 70', with the match level at 1-1 and Red Lions leading xG 1.91 to 1.31."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 934,
+      "clock": "72'",
+      "kind": "big_chance",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Big Chance Missed",
+        "lower_third": "Vale sends a 0.31 xG chance off target for Blue Sharks.",
+        "talking_point": "Vale has just missed a real chance, and Blue Sharks are still level at 1-1."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Big Chance Missed",
+              "lower_third": "Vale sends a 0.31 xG chance off target for Blue Sharks.",
+              "talking_point": "Vale has just missed a real chance, and Blue Sharks are still level at 1-1."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 981,
+      "clock": "76'",
+      "kind": "check_in",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Red Lions Pushing",
+        "lower_third": "Red Lions have 94% field tilt in the last 10 minutes.",
+        "talking_point": "Red Lions are controlling territory, with 94% field tilt and 76% possession in the last 10 minutes."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Red Lions Pushing",
+              "lower_third": "Red Lions have 94% field tilt in the last 10 minutes.",
+              "talking_point": "Red Lions are controlling territory, with 94% field tilt and 76% possession in the last 10 minutes."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1029,
+      "clock": "79'",
+      "kind": "big_chance",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Crane Denied",
+        "lower_third": "Crane’s 0.65 xG shot was saved at 79'.",
+        "talking_point": "Crane has had four shots, and this chance carried 0.65 xG."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Crane Denied",
+              "lower_third": "Crane’s 0.65 xG shot was saved at 79'.",
+              "talking_point": "Crane has had four shots, and this chance carried 0.65 xG."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1119,
+      "clock": "85'",
+      "kind": "big_chance",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Late Pressure Builds",
+        "lower_third": "Park misses a big chance for Red Lions at 85'.",
+        "talking_point": "Park has six shots and that chance carried 0.58 xG, as Red Lions keep the pressure on."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Late Pressure Builds",
+              "lower_third": "Park misses a big chance for Red Lions at 85'.",
+              "talking_point": "Park has six shots and that chance carried 0.58 xG, as Red Lions keep the pressure on."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1218,
+      "clock": "90+4'",
+      "kind": "period_end",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Late Chaos",
+        "lower_third": "90+4': 1-1, Red Lions 98% field tilt in the last 10 minutes",
+        "talking_point": "Red Lions have dominated the last 10 minutes with 98% field tilt, but the score remains 1-1."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Late Chaos",
+              "lower_third": "90+4': 1-1, Red Lions 98% field tilt in the last 10 minutes",
+              "talking_point": "Red Lions have dominated the last 10 minutes with 98% field tilt, but the score remains 1-1."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1219,
+      "clock": "91'",
+      "kind": "kick_off",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Red Lions Pressing",
+        "lower_third": "Red Lions have 93% field tilt in the last 10 minutes.",
+        "talking_point": "Red Lions are dominating territory, with 93% field tilt in the last 10 minutes, while the match stays level at 1-1."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 2,
+        "history": [
+          {
+            "draft": {
+              "headline": "Red Lions on top",
+              "lower_third": "Red Lions have 93% field tilt in the last 10 minutes.",
+              "talking_point": "Red Lions are dominating territory, with 93% field tilt in the last 10 minutes, but the match remains level at 1-1."
+            },
+            "problems": [
+              "The headline says ‘Red Lions on top,’ but the match is level at 1-1, so this is not supported as a factual statement about the scoreline.",
+              "The lower third says ‘Red Lions have 93% field tilt in the last 10 minutes.’ The 93% figure is correct for the last 10 minutes, but the phrasing should reflect that this is a territorial stat, not that they are winning the match.",
+              "The talking point says ‘Red Lions are dominating territory, with 93% field tilt in the last 10 minutes, but the match remains level at 1-1.’ This is supported overall, but the wording ‘on top’ in the headline overstates the match status given the tied score."
+            ]
+          },
+          {
+            "draft": {
+              "headline": "Red Lions Pressing",
+              "lower_third": "Red Lions have 93% field tilt in the last 10 minutes.",
+              "talking_point": "Red Lions are dominating territory, with 93% field tilt in the last 10 minutes, while the match stays level at 1-1."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1268,
+      "clock": "95'",
+      "kind": "goal",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Reid Heads In",
+        "lower_third": "Reid scores from a corner at 95'",
+        "talking_point": "Reid has scored with Red Lions on 4.19 xG from 22 shots."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Reid Heads In",
+              "lower_third": "Reid scores from a corner at 95'",
+              "talking_point": "Reid has scored with Red Lions on 4.19 xG from 22 shots."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1363,
+      "clock": "103'",
+      "kind": "big_chance",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Big Chance Missed",
+        "lower_third": "Crane fires off target in 103' as Red Lions lead 2-1.",
+        "talking_point": "Crane has had six shots, and this one carried 0.34 xG but went off target."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Big Chance Missed",
+              "lower_third": "Crane fires off target in 103' as Red Lions lead 2-1.",
+              "talking_point": "Crane has had six shots, and this one carried 0.34 xG but went off target."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1379,
+      "clock": "105'",
+      "kind": "goal",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Cruz Levels It",
+        "lower_third": "Blue Sharks score through Cruz in extra time.",
+        "talking_point": "Cruz has equalised for Blue Sharks at 2-2, and Blue Sharks have 2 goals from 15 shots."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Cruz Levels It",
+              "lower_third": "Blue Sharks score through Cruz in extra time.",
+              "talking_point": "Cruz has equalised for Blue Sharks at 2-2, and Blue Sharks have 2 goals from 15 shots."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1396,
+      "clock": "105+1'",
+      "kind": "period_end",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Level At Half Time",
+        "lower_third": "Red Lions and Blue Sharks are tied 2-2 at 105+1'.",
+        "talking_point": "The match is level at 2-2 after 105+1', with Red Lions generating 4.55 xG to Blue Sharks' 2.48."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Level At Half Time",
+              "lower_third": "Red Lions and Blue Sharks are tied 2-2 at 105+1'.",
+              "talking_point": "The match is level at 2-2 after 105+1', with Red Lions generating 4.55 xG to Blue Sharks' 2.48."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1397,
+      "clock": "106'",
+      "kind": "kick_off",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Extra-Time Balance",
+        "lower_third": "Red Lions 2-2 Blue Sharks at 106'.",
+        "talking_point": "Red Lions have 4.55 xG to Blue Sharks' 2.48, but the score remains level at 2-2."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Extra-Time Balance",
+              "lower_third": "Red Lions 2-2 Blue Sharks at 106'.",
+              "talking_point": "Red Lions have 4.55 xG to Blue Sharks' 2.48, but the score remains level at 2-2."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1504,
+      "clock": "113'",
+      "kind": "own_goal",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Own Goal Decides It",
+        "lower_third": "Bell turns it in; Red Lions lead 3-2 after 113'.",
+        "talking_point": "Bell’s own goal has put Red Lions 3-2 ahead at 113', and Red Lions have 4.61 xG to Blue Sharks' 2.48."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Own Goal Decides It",
+              "lower_third": "Bell turns it in; Red Lions lead 3-2 after 113'.",
+              "talking_point": "Bell’s own goal has put Red Lions 3-2 ahead at 113', and Red Lions have 4.61 xG to Blue Sharks' 2.48."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1609,
+      "clock": "120+1'",
+      "kind": "period_end",
+      "mode": "broadcaster",
+      "language": "en",
+      "content": {
+        "headline": "Red Lions Edge It",
+        "lower_third": "Red Lions lead Blue Sharks 3-2 at 120+1'.",
+        "talking_point": "Red Lions are ahead 3-2 at 120+1', with 4.61 xG to Blue Sharks' 2.48."
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "headline": "Red Lions Edge It",
+              "lower_third": "Red Lions lead Blue Sharks 3-2 at 120+1'.",
+              "talking_point": "Red Lions are ahead 3-2 at 120+1', with 4.61 xG to Blue Sharks' 2.48."
+            },
+            "problems": []
+          }
+        ]
+      }
+    },
+    {
+      "event_id": 1609,
+      "clock": "120+1'",
+      "kind": "recap",
+      "mode": "recap",
+      "language": "en",
+      "content": {
+        "title": "Red Lions edge a late, wild extra-time finish",
+        "paragraphs": [
+          "Red Lions won 3-2 after extra time in a match that swung back and forth before ending in a frantic final spell. Fox put Red Lions ahead in the 28th minute from Lane’s assist, Gray levelled for Blue Sharks in the 62nd minute, and Reid restored Red Lions’ lead in the 95th minute from Rook’s assist.",
+          "Blue Sharks answered in the 105th minute through Cruz, set up by Wells, but the decisive moment came in the 113th minute when Bell turned the ball into his own net. Red Lions finished with 27 shots to 15 and 11 on target to 7, while Blue Sharks still stayed alive with five big chances of their own.",
+          "The control was mostly Red Lions’ from start to finish: 69 possession, 85 field tilt and 110 entries into the final third across the match, backed by 93 passing accuracy. The last 10 minutes were chaotic, but Red Lions spent almost all of that spell on the front foot, and that territorial push helped them see it out at 120+1' after a match full of momentum shifts."
+        ]
+      },
+      "source": "ai",
+      "fact_check": {
+        "approved": true,
+        "attempts": 1,
+        "history": [
+          {
+            "draft": {
+              "title": "Red Lions edge a late, wild extra-time finish",
+              "paragraphs": [
+                "Red Lions won 3-2 after extra time in a match that swung back and forth before ending in a frantic final spell. Fox put Red Lions ahead in the 28th minute from Lane’s assist, Gray levelled for Blue Sharks in the 62nd minute, and Reid restored Red Lions’ lead in the 95th minute from Rook’s assist.",
+                "Blue Sharks answered in the 105th minute through Cruz, set up by Wells, but the decisive moment came in the 113th minute when Bell turned the ball into his own net. Red Lions finished with 27 shots to 15 and 11 on target to 7, while Blue Sharks still stayed alive with five big chances of their own.",
+                "The control was mostly Red Lions’ from start to finish: 69 possession, 85 field tilt and 110 entries into the final third across the match, backed by 93 passing accuracy. The last 10 minutes were chaotic, but Red Lions spent almost all of that spell on the front foot, and that territorial push helped them see it out at 120+1' after a match full of momentum shifts."
+              ]
+            },
+            "problems": []
+          }
+        ]
+      }
+    }
+  ]
+}

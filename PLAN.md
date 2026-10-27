@@ -32,6 +32,15 @@ match_002.json ──► Replay engine (live stream, speed-up)
    Recap agent: full-time recap per profile, score-checked
 ```
 
+## Product decisions (from Diti)
+- **Welcome agent** asks who you are (fan, analyst, broadcaster) and takes each to their own experience.
+- **Fan experience is the star**: a Narrator agent gives live TV-style commentary on a TV-broadcast
+  screen (animated pitch, scoreboard bug, caption bar), spoken aloud with a mute button.
+- **Analyst and broadcaster**: lighter but real. Analyst cards explain why moments matter;
+  the broadcaster gets timed overlay graphics and a recap.
+- **xG**: decimals for analysts and broadcasters; fans get it in plain words, never decimals.
+- Insights that matter most: pass quality, territorial dominance, expected goals, player stories.
+
 ## Hero technologies
 
 | Technology | Use |
