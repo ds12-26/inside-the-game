@@ -9,7 +9,6 @@ COPY data data
 COPY runs runs
 COPY web web
 
-EXPOSE 8000
-# The same image runs the web app (default) or the Match Data MCP server:
-#   python -m matchmind.mcp_server --port 8001
-CMD ["uvicorn", "matchmind.api:app", "--host", "0.0.0.0", "--port", "8000"]
+EXPOSE 8000 8001
+# The same image runs the web app (default) or, with APP_ROLE=mcp, the Match Data MCP server.
+CMD ["sh", "-c", "if [ \"$APP_ROLE\" = mcp ]; then exec python -m matchmind.mcp_server --port 8001; else exec uvicorn matchmind.api:app --host 0.0.0.0 --port 8000; fi"]

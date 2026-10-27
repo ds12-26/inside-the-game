@@ -42,7 +42,7 @@ if az containerapp show -n "$MCP" -g "$RG" >/dev/null 2>&1; then
 else
   az containerapp create -n "$MCP" -g "$RG" --environment "$ENV_NAME" --image "$IMAGE" \
     --registry-server "$ACR.azurecr.io" --registry-identity system \
-    --command python --args -m matchmind.mcp_server --port 8001 \
+    --env-vars APP_ROLE=mcp \
     --target-port 8001 --ingress internal --min-replicas 0 --max-replicas 2 -o none
 fi
 MCP_FQDN=$(az containerapp show -n "$MCP" -g "$RG" --query properties.configuration.ingress.fqdn -o tsv)
