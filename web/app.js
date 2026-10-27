@@ -226,7 +226,9 @@ function onEvent(e) {
   trail.setAttribute("x1", sx); trail.setAttribute("y1", sy);
   trail.setAttribute("x2", ex); trail.setAttribute("y2", ey);
   $("ball-tag").textContent = e.player;
-  ball.querySelector(".tag").setAttribute("class", `tag ${e.side}`);
+  const tag = ball.querySelector(".tag");
+  tag.setAttribute("class", `tag ${e.side}`);
+  tag.setAttribute("transform", ey < 8 ? "translate(0 9.5)" : "");   // near the top edge: name below the ball
   if (e.line) $("pbp").textContent = `${e.clock}  ${e.line}`;
   if ((e.type === "shot" && e.outcome === "goal") || e.type === "own_goal") {
     const flash = $("flash");
