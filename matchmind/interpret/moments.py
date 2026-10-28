@@ -5,7 +5,7 @@ Rules, not a model, so it is instant and never misses a goal. Each moment
 carries the facts the agents may use, all computed from events up to that moment.
 """
 
-from matchmind import stats
+from matchmind.interpret import stats
 
 BIG_CHANCE_XG = stats.BIG_CHANCE_XG
 CHECK_IN_EVERY_MIN = 15       # a "how's it going" summary this often

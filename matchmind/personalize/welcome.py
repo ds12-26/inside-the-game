@@ -16,18 +16,18 @@ Rules:
     greetings are used, so taps alone always produce a valid profile
 
 Usage:
-    python -m matchmind.welcome_agent                         # interactive
-    python -m matchmind.welcome_agent --text "analyst, I care about xG"
-    python -m matchmind.welcome_agent --no-ai --role fan      # free, offline
+    python -m matchmind.personalize.welcome                         # interactive
+    python -m matchmind.personalize.welcome --text "analyst, I care about xG"
+    python -m matchmind.personalize.welcome --no-ai --role fan      # free, offline
 """
 
 import argparse
 import json
 import re
 
-from matchmind.guards import check_script, scorelines
-from matchmind.data import load_match, squads
-from matchmind.profile import DEPTHS, LANGUAGES, METRICS, ROLES, Profile
+from matchmind.agents.guards import check_script, scorelines
+from matchmind.ingest.data import load_match, squads
+from matchmind.personalize.profile import DEPTHS, LANGUAGES, METRICS, ROLES, Profile
 
 SYSTEM_PROMPT = """You are the Welcome agent in a football match intelligence app.
 A viewer has told you about themselves. Work out their profile, then greet them.
@@ -322,7 +322,7 @@ def welcome(match_info, picks=None, message="", ask=None, use_ai=True):
 
     if message.strip() and use_ai:
         if ask is None:
-            from matchmind.llm import ask_json as ask
+            from matchmind.agents.llm import ask_json as ask
         try:
             payload = {
                 "message": message,

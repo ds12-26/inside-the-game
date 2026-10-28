@@ -3,11 +3,11 @@ Runs a whole match through the agents for one viewer: every moment the Moment
 Scout finds, then the full-time recap. Moments are independent (each only sees
 the match up to its own event), so they run in parallel.
 
-Saved runs in runs/ let the demo replay instantly without calling the model.
+Saved runs in data/runs/ let the demo replay instantly without calling the model.
 
 Usage:
-    python -m matchmind.commentary --role fan --club "Blue Sharks" --player Moss --focus --language es
-    python -m matchmind.commentary --role analyst
+    python -m matchmind.agents.commentary --role fan --club "Blue Sharks" --player Moss --focus --language es
+    python -m matchmind.agents.commentary --role analyst
 """
 
 import argparse
@@ -16,10 +16,10 @@ import json
 from pathlib import Path
 
 from matchmind.agents import build_agents, match_tools, write_card
-from matchmind.data import load_match
-from matchmind.moments import recap_moment, scout, viewer_facts
+from matchmind.ingest.data import load_match
+from matchmind.interpret.moments import recap_moment, scout, viewer_facts
 
-RUNS_DIR = Path(__file__).resolve().parent.parent / "runs"
+RUNS_DIR = Path(__file__).resolve().parents[2] / "data" / "runs"
 
 
 def run_name(match_id, viewer):

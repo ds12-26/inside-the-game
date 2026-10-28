@@ -7,7 +7,7 @@ import json
 
 from mcp import Client
 
-from matchmind.mcp_server import server
+from matchmind.mcp.server import server
 
 
 def call(tool, **arguments):

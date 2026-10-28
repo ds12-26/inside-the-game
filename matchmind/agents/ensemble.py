@@ -10,7 +10,7 @@ Coordinator merges them into one multi-perspective report, which the Fact-Checke
 verifies, because merging is exactly where new mistakes creep in.
 
 Usage:
-    python -m matchmind.ensemble
+    python -m matchmind.agents.ensemble
 """
 
 import argparse
@@ -23,9 +23,9 @@ from pydantic import BaseModel, Field
 
 from matchmind.agents import (MAX_RECAP_ATTEMPTS, Job, Recap, Verdict, blocking, build_agents, chat_client,
                               checker_prompt, current_event, match_tools, no_spoilers, rule_problems)
-from matchmind.commentary import RUNS_DIR
-from matchmind.data import load_match
-from matchmind.moments import recap_moment
+from matchmind.agents.commentary import RUNS_DIR
+from matchmind.ingest.data import load_match
+from matchmind.interpret.moments import recap_moment
 
 PERSPECTIVES = {
     "fan": "From the stands",

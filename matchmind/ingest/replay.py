@@ -8,7 +8,7 @@ waited out, since match minutes restart or overlap there (45+2' then 45').
 
 import asyncio
 
-from matchmind.stats import seconds
+from matchmind.interpret.stats import seconds
 
 
 async def stream(events, speed=60, start_after=0):

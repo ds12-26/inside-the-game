@@ -6,8 +6,8 @@ import json
 
 from fastapi.testclient import TestClient
 
-from matchmind.api import app
-from matchmind.data import load_match
+from matchmind.render.api import app
+from matchmind.ingest.data import load_match
 
 client = TestClient(app)
 
@@ -54,7 +54,7 @@ def test_cards_never_arrive_before_their_moment():
 
 
 def test_busy_fallback_never_switches_language(monkeypatch):
-    from matchmind import api
+    from matchmind.render import api
     monkeypatch.setattr(api, "live_matches", api.MAX_LIVE_MATCHES)      # pretend live agents are busy
     params = {"role": "fan", "language": "hi", "club": "Blue Sharks", "speed": 1e9}
     messages = sse(client.get("/api/live/match_002", params=params).text)
@@ -72,7 +72,7 @@ def test_countdown_holds_kick_off_until_the_page_has_counted_down():
 def test_live_commentary_arrives_before_play_moves_on(monkeypatch):
     """When agents write live, play waits at each moment so the words match the pitch."""
     import asyncio
-    from matchmind import agents, api
+    from matchmind import agents
 
     async def write_card(agents_, match_id, moment, mode, viewer):
         await asyncio.sleep(0.01)                              # the agents take a moment

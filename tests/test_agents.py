@@ -7,8 +7,8 @@ import json
 from types import SimpleNamespace
 
 from matchmind.agents import current_event, no_spoilers, write_card
-from matchmind.data import load_match
-from matchmind.moments import plain_xg, recap_moment, scout, viewer_facts
+from matchmind.ingest.data import load_match
+from matchmind.interpret.moments import plain_xg, recap_moment, scout, viewer_facts
 
 MATCH = load_match("match_002")
 EVENTS, INFO = MATCH["events"], MATCH["match"]
@@ -130,7 +130,7 @@ def test_recap_knows_every_goal_and_the_final_score():
 
 
 def test_ensemble_fans_out_to_three_views_and_fact_checks_the_merge():
-    from matchmind.ensemble import ensemble_report
+    from matchmind.agents.ensemble import ensemble_report
 
     view = {"title": "Red Lions win", "paragraphs": ["Red Lions won 3-2."]}
     report = {"title": "Red Lions edge it", "summary": "Red Lions won 3-2 after extra time.",
@@ -235,7 +235,7 @@ def test_fallback_recap_still_gives_the_result_and_the_goals():
 
 
 def test_fan_recap_gets_plain_words_not_percentages():
-    from matchmind.moments import plain_words
+    from matchmind.interpret.moments import plain_words
     facts = plain_words(recap_moment(EVENTS, INFO)["facts"])
     assert "passing" not in facts and "territory_whole_match" not in facts
     assert "Red Lions had the ball about two-thirds of the time." in facts["in_plain_words"]
@@ -246,7 +246,7 @@ def test_fan_recap_gets_plain_words_not_percentages():
 
 
 def test_fan_recap_favourite_player_in_words():
-    from matchmind.moments import plain_words
+    from matchmind.interpret.moments import plain_words
     facts = plain_words(viewer_facts(recap_moment(EVENTS, INFO), EVENTS, INFO, "Fox")["facts"])
     assert "pass_accuracy_pct" not in facts["favourite_player"]
     assert facts["favourite_player"]["passing_in_words"] == "most passes found a teammate"

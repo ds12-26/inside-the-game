@@ -7,8 +7,8 @@ agent only sees what has happened so far (no spoilers), and the server keeps no
 state between calls.
 
 Usage:
-    python -m matchmind.mcp_server                 # Streamable HTTP on :8001/mcp
-    python -m matchmind.mcp_server --stdio
+    python -m matchmind.mcp.server                 # Streamable HTTP on :8001/mcp
+    python -m matchmind.mcp.server --stdio
 """
 
 import argparse
@@ -17,7 +17,9 @@ from functools import lru_cache
 from mcp.server.mcpserver import MCPServer
 from mcp.server.mcpserver.exceptions import ToolError
 
-from matchmind import data, stats
+from matchmind.ingest import data
+
+from matchmind.interpret import stats
 
 server = MCPServer(
     name="match-data",

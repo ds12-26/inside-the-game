@@ -3,8 +3,8 @@ Tests for the Welcome agent, using a fake model (free, no Azure key needed).
 Run with:  python -m pytest
 """
 
-from matchmind.data import list_matches, load_match
-from matchmind.welcome_agent import welcome
+from matchmind.ingest.data import list_matches, load_match
+from matchmind.personalize.welcome import welcome
 
 MATCH = load_match("match_002")["match"]   # Red Lions vs Blue Sharks
 
@@ -105,6 +105,6 @@ def test_hindi_is_understood_offline_and_greets_in_hindi():
 
 
 def test_play_by_play_in_hindi():
-    from matchmind.playbyplay import line
+    from matchmind.render.playbyplay import line
     goal = next(e for e in load_match("match_002")["events"] if e["type"] == "shot" and e["outcome"] == "goal")
     assert line(goal, "hi") == "Fox का गोल!"

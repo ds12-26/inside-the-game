@@ -13,7 +13,7 @@ Cards come from a saved run when one exists for this viewer (instant, reliable f
 otherwise the agents write them live as each moment happens.
 
 Usage:
-    uvicorn matchmind.api:app --port 8000
+    uvicorn matchmind.render.api:app --port 8000
 """
 
 import asyncio
@@ -26,13 +26,17 @@ from fastapi.responses import FileResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
-from matchmind import data, playbyplay, stats
-from matchmind.commentary import RUNS_DIR, run_name
-from matchmind.moments import EVENT_KINDS, recap_moment, scout, viewer_facts
-from matchmind.replay import highlights
-from matchmind.welcome_agent import welcome
+from matchmind.ingest import data
 
-WEB_DIR = Path(__file__).resolve().parent.parent / "web"
+from matchmind.interpret import stats
+
+from matchmind.render import playbyplay
+from matchmind.agents.commentary import RUNS_DIR, run_name
+from matchmind.interpret.moments import EVENT_KINDS, recap_moment, scout, viewer_facts
+from matchmind.ingest.replay import highlights
+from matchmind.personalize.welcome import welcome
+
+WEB_DIR = Path(__file__).resolve().parents[2] / "web"
 STATS_EVERY = 10          # events between live stats updates
 CARD_WAIT_S = 30          # live play waits this long at a moment for its commentary, so words match the pitch
 MAX_LIVE_MATCHES = int(os.environ.get("MAX_LIVE_MATCHES", "2"))   # caps model cost on a public URL
@@ -75,7 +79,7 @@ async def welcome_viewer(request: WelcomeRequest):
 def report(match_id: str):
     path = RUNS_DIR / f"{match_id}-ensemble.json"
     if not path.exists():
-        raise HTTPException(404, "No ensemble report yet: run python -m matchmind.ensemble")
+        raise HTTPException(404, "No ensemble report yet: run python -m matchmind.agents.ensemble")
     return json.loads(path.read_text())
 
 

@@ -1,11 +1,11 @@
 """
-Read-only access to the synthetic matches in data/.
+Read-only access to the synthetic matches in data/matches/.
 """
 
 import json
 from pathlib import Path
 
-DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+DATA_DIR = Path(__file__).resolve().parents[2] / "data" / "matches"
 
 
 def list_matches():

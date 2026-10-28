@@ -5,9 +5,9 @@ plus facts from the synthetic match that the agents rely on.
 
 import asyncio
 
-from matchmind import stats
-from matchmind.data import load_match
-from matchmind.replay import stream
+from matchmind.interpret import stats
+from matchmind.ingest.data import load_match
+from matchmind.ingest.replay import stream
 
 MATCH = load_match("match_002")
 INFO, EVENTS = MATCH["match"], MATCH["events"]
@@ -119,7 +119,7 @@ def test_pass_distance_and_difficulty_by_hand():
 
 
 def test_scorelines_skip_statistics_named_before_or_after():
-    from matchmind.guards import scorelines
+    from matchmind.agents.guards import scorelines
     assert scorelines("Red Lions led the big chances 6-5 and the shot count 27-15") == []
     assert scorelines("6-5 on big chances") == []
     assert scorelines("Red Lions won 3-2 after extra time") == [(3, 2)]

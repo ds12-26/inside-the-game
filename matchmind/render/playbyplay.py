@@ -5,7 +5,7 @@ Only events a TV commentator would call out get a line; routine passes in
 midfield move the ball on the pitch but stay silent.
 """
 
-from matchmind import stats
+from matchmind.interpret import stats
 
 LINES = {
     "en": {

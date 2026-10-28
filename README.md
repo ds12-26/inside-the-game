@@ -10,7 +10,7 @@ data by another agent before it reaches the screen.
 Built for the *Inside the Game* developer hackathon (Microsoft × Premier League).
 All data is synthetic.
 
-**Live demo:** https://inside-the-game.calmocean-9ce9113c.eastus2.azurecontainerapps.io (first load after a quiet spell can take ~30 s while the app wakes up) · **Roadmap:** [ROADMAP.md](ROADMAP.md)
+**Live demo:** https://inside-the-game.calmocean-9ce9113c.eastus2.azurecontainerapps.io (first load after a quiet spell can take ~30 s while the app wakes up) · **Roadmap:** [docs/ROADMAP.md](docs/ROADMAP.md)
 
 ## The problem
 Scorelines don't explain matches, and one broadcast can't serve everyone. A casual fan
@@ -72,7 +72,7 @@ misses a goal.
   time; a Coordinator merges them and the Fact-Checker verifies the merge.
 
 ### Why you can trust it
-- **Code computes every number** ([matchmind/stats.py](matchmind/stats.py)); agents only
+- **Code computes every number** ([matchmind/interpret/stats.py](matchmind/interpret/stats.py)); agents only
   write words around facts. Definitions are below.
 - **No spoilers, enforced in code:** a function middleware caps every MCP tool call at the
   current moment, whatever the agent asks for.
@@ -100,7 +100,7 @@ before the 105th-minute equaliser.
 | Technology | How it is used |
 |---|---|
 | **Microsoft Agent Framework** | All agents (`Agent`), the per-moment workflow and the fan-out/fan-in ensemble (`WorkflowBuilder`, `Executor`), the no-spoilers function middleware, MCP tools (`MCPStdioTool`, `MCPStreamableHTTPTool`). |
-| **Model Context Protocol** | [matchmind/mcp_server.py](matchmind/mcp_server.py): the Match Data MCP server exposing events and statistics as tools; runs as its own internal container app. |
+| **Model Context Protocol** | [matchmind/mcp/server.py](matchmind/mcp/server.py): the Match Data MCP server exposing events and statistics as tools; runs as its own internal container app. |
 | **Microsoft Foundry** | The agents run on a model deployed in a Foundry project (`FoundryChatClient`), authenticated with Azure CLI locally and managed identity in Azure. |
 | **Azure OpenAI** | The Welcome agent's profile reading. |
 | **Azure Container Apps** | Web app (public) and MCP server (internal) from one image built in Azure Container Registry: [deploy/deploy.sh](deploy/deploy.sh). |
@@ -112,7 +112,7 @@ before the 105th-minute equaliser.
     cp .env.example .env          # Foundry project endpoint and model; Azure OpenAI for the Welcome agent
     az login                      # the agents sign in with your Azure CLI account
 
-    uvicorn matchmind.api:app --port 8000          # the app: http://localhost:8000
+    uvicorn matchmind.render.api:app --port 8000   # the app: http://localhost:8000
     python -m pytest                                # 69 tests, no Azure needed
 
 Demo links on the live app (saved runs: instant, no model calls):
@@ -130,30 +130,33 @@ Any other combination is written live by the agents as the match plays.
 
 Other entry points:
 
-    python -m matchmind.commentary --role fan --club "Blue Sharks" --player Moss --focus --language es
-    python -m matchmind.ensemble                    # full-time ensemble report
-    python -m matchmind.mcp_server                  # MCP server on :8001/mcp
-    python -m matchmind.welcome_agent               # Welcome agent in the terminal
+    python -m matchmind.agents.commentary --role fan --club "Blue Sharks" --player Moss --focus --language es
+    python -m matchmind.agents.ensemble             # full-time ensemble report
+    python -m matchmind.mcp.server                  # MCP server on :8001/mcp
+    python -m matchmind.personalize.welcome         # Welcome agent in the terminal
     deploy/deploy.sh                                # deploy to Azure Container Apps
 
 ## Project layout
+The package follows the brief's pipeline: ingest → interpret → explain (agents) → render,
+personalized for each viewer, with the MCP server as the agents' source of facts.
 
 | Path | What |
 |---|---|
-| `matchmind/stats.py` | Every statistic, from the events seen so far |
-| `matchmind/moments.py` | Moment Scout rules and the facts each moment carries |
-| `matchmind/agents.py` | Agents, prompts, the writer → Fact-Checker workflow, code checks |
-| `matchmind/ensemble.py` | Full-time fan-out / fan-in ensemble report |
-| `matchmind/mcp_server.py` | Match Data MCP server |
-| `matchmind/welcome_agent.py`, `profile.py` | Welcome agent and the viewer profile |
-| `matchmind/playbyplay.py` | Instant play-by-play lines in English, Spanish, French, Portuguese and Hindi |
-| `matchmind/replay.py`, `api.py` | Live replay and the web API (Server-Sent Events) |
+| `matchmind/ingest/` | `data.py` loads matches; `replay.py` streams them live with highlights pacing |
+| `matchmind/interpret/` | `stats.py` computes every statistic; `moments.py` is the Moment Scout and the facts each moment carries |
+| `matchmind/mcp/` | `server.py`: the Match Data MCP server |
+| `matchmind/agents/` | `prompts.py` (what each agent returns and is told), `checks.py` (mistakes caught in code), `workflow.py` (model, MCP tools, no-spoilers guard, writer → Fact-Checker loop, fallbacks), `ensemble.py` (full-time fan-out / fan-in), `commentary.py` (saved demo runs), `guards.py`, `llm.py` |
+| `matchmind/personalize/` | `welcome.py` (Welcome agent) and `profile.py` (the viewer profile) |
+| `matchmind/render/` | `api.py` (web API, Server-Sent Events) and `playbyplay.py` (instant lines in five languages) |
 | `web/` | The single-page app |
-| `runs/` | Saved demo runs: every card with its fact-check history |
-| `tests/` | 69 tests: stats against the data, agents with fake models, MCP, API |
+| `data/matches/` | The synthetic match |
+| `data/runs/` | Saved demo runs: every card with its fact-check history |
+| `tests/` | 69 tests: stats against the data, agents with fake models, MCP, API, Welcome agent |
+| `deploy/deploy.sh`, `Dockerfile` | Azure Container Apps deployment |
+| `docs/` | `ROADMAP.md` (what's next) and `PLAN.md` (the build plan) |
 
 ## How every number is calculated
-All statistics are computed in plain Python in `matchmind/stats.py`; no model produces a
+All statistics are computed in plain Python in `matchmind/interpret/stats.py`; no model produces a
 number. The pitch is treated as 105 x 68 m. Data coordinates run 0-100 from the acting
 team's own goal (x) and across the pitch (y).
 

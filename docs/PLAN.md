@@ -54,7 +54,7 @@ match_002.json ──► Replay engine (live stream, speed-up)
 | Microsoft Foundry project | Model deployment and tracing |
 | Azure Container Apps | Hosting the API and MCP server |
 | GitHub Copilot Agent Mode | Used for real on part of the build (frontend or tests) |
-| Fabric, Cosmos DB, AKS | Roadmap only (see ROADMAP.md) |
+| Fabric, Cosmos DB, AKS | Roadmap only (see [ROADMAP.md](ROADMAP.md)) |
 
 ## Phases
 
