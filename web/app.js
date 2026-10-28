@@ -3,6 +3,11 @@ const MATCH_ID = "match_002";
 const LANGS = { en: "English", es: "Español", fr: "Français", pt: "Português", hi: "हिन्दी" };
 const PITCH_W = 105, PITCH_H = 68;
 const COUNTDOWN_S = 3;
+const METRIC_LABELS = {
+  pass_accuracy: "Pass accuracy", xg: "Expected goals (xG)", shots: "Shots",
+  tackles: "Tackles won", interceptions: "Interceptions", dribbles: "Dribbles",
+  saves: "Saves", possession: "Possession",
+};
 const START_FAILED = {
   en: "Couldn't start the match. Press Restart.", es: "No se pudo iniciar el partido. Pulsa «Restart».",
   fr: "Impossible de lancer le match. Appuyez sur « Restart ».", pt: "Não foi possível iniciar a partida. Toque em «Restart».",
@@ -46,7 +51,7 @@ const KICKOFF = {
 };
 
 const $ = (id) => document.getElementById(id);
-const state = { role: null, club: null, player: null, focus: false, language: "en", teams: null };
+const state = { role: null, club: null, player: null, focus: false, focus_metric: null, language: "en", teams: null };
 let source = null;
 let overlayFeed = [];
 
@@ -94,7 +99,7 @@ async function init() {
   const q = new URLSearchParams(location.search);
   if (q.get("role")) {
     Object.assign(state, { role: q.get("role"), club: q.get("club"), player: q.get("player"),
-      focus: q.has("focus"), language: q.get("language") || "en" });
+      focus: q.has("focus"), focus_metric: q.get("focus_metric"), language: q.get("language") || "en" });
     const speed = Number(q.get("speed"));
     if (speed > 0) {                                   // a speed the menu doesn't list is added, not dropped
       if (![...$("speed").options].some((o) => Number(o.value) === speed)) $("speed").add(new Option(`${speed}×`, speed));
@@ -145,7 +150,8 @@ async function askWelcomeAgent() {
     body: JSON.stringify({ match_id: MATCH_ID, picks, message }),
   })).json();
   const p = res.profile;
-  Object.assign(state, { role: p.role ?? state.role, club: p.club, player: p.player, focus: p.player_focus, language: p.language });
+  Object.assign(state, { role: p.role ?? state.role, club: p.club, player: p.player, focus: p.player_focus,
+    focus_metric: p.focus_metric, language: p.language });
   reply.innerHTML = `<strong>${escapeHtml(res.greeting)}</strong>`;
   for (const q of res.follow_ups) {
     const div = document.createElement("div");
@@ -162,6 +168,7 @@ async function askWelcomeAgent() {
         if (q.field === "role") state.role = value;
         if (q.field === "club") state.club = value;
         if (q.field === "player") state.player = value;
+        if (q.field === "focus_metric") state.focus_metric = value;
         div.remove();
         refresh();
       };
@@ -201,6 +208,7 @@ function startMatch() {
   $("viewer-label").textContent = [
     { fan: "Fan", analyst: "Analyst", broadcaster: "Broadcaster" }[state.role],
     state.club || "neutral", state.player ? `★ ${state.player}` : null, LANGS[state.language],
+    state.focus_metric ? `Tracking ${METRIC_LABELS[state.focus_metric] || state.focus_metric}` : null,
   ].filter(Boolean).join(" · ");
   for (const id of ["fan-feed", "analyst-feed", "cues", "talking", "numbers", "recap-body", "ensemble"]) $(id).innerHTML = "";
   $("bug-score").textContent = "0 – 0";
@@ -223,6 +231,7 @@ function startMatch() {
   if (state.club) params.set("club", state.club);
   if (state.player) params.set("player", state.player);
   if (state.focus) params.set("focus", "true");
+  if (state.focus_metric) params.set("focus_metric", state.focus_metric);
   source = new EventSource(`/api/live/${MATCH_ID}?${params}`);
   source.addEventListener("start", () => runCountdown());
   source.addEventListener("event", (e) => { hideCountdown(); onEvent(JSON.parse(e.data)); });
@@ -321,7 +330,10 @@ function onStats(s) {
     row("Progressive passes", (t) => s.passing[t].progressive_completed) +
     row("Avg pass difficulty", (t) => s.passing[t].avg_difficulty ?? "–") +
     `<tr><th>Game state, last 10'</th><td colspan="2">${s.control_last_10_min.state}</td></tr>` +
-    `<tr><th>Tempo</th><td colspan="2">${s.rhythm_last_10_min.actions_per_min ?? "–"} actions/min</td></tr>`;
+    `<tr><th>Tempo</th><td colspan="2">${s.rhythm_last_10_min.actions_per_min ?? "–"} actions/min</td></tr>` +
+    (s.focus_metric ? row(METRIC_LABELS[s.focus_metric.metric] || s.focus_metric.metric,
+      (t) => s.focus_metric.values[t] ?? "–",
+      ["pass_accuracy_pct", "possession_pct"].includes(s.focus_metric.label) ? "%" : "") : "");
 }
 
 function updateFavourite() {

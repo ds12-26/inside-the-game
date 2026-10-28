@@ -32,8 +32,9 @@ from matchmind.interpret import stats
 
 from matchmind.render import playbyplay
 from matchmind.agents.commentary import RUNS_DIR, run_name
-from matchmind.interpret.moments import EVENT_KINDS, recap_moment, scout, viewer_facts
+from matchmind.interpret.moments import EVENT_KINDS, focus_metric_facts, recap_moment, scout, viewer_facts
 from matchmind.ingest.replay import highlights
+from matchmind.personalize.profile import METRICS
 from matchmind.personalize.welcome import welcome
 
 WEB_DIR = Path(__file__).resolve().parents[2] / "web"
@@ -85,10 +86,10 @@ def report(match_id: str):
 
 @app.get("/api/live/{match_id}")
 async def live(request: Request, match_id: str, role: str = "fan", language: str = "en", club: str | None = None,
-               player: str | None = None, focus: bool = False, speed: float = 1, start_after: int = 0,
-               countdown: float = 0):
+               player: str | None = None, focus: bool = False, focus_metric: str | None = None, speed: float = 1,
+               start_after: int = 0, countdown: float = 0):
     viewer = {"role": role, "language": language, "club": club or None, "player": player or None,
-              "player_focus": focus}
+              "player_focus": focus, "focus_metric": focus_metric if focus_metric in METRICS else None}
     return StreamingResponse(_live(request, match_id, viewer, speed, start_after, min(countdown, 10)),
                              media_type="text/event-stream",
                              headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
@@ -128,17 +129,20 @@ def _pitch_event(e, language):
             "line": playbyplay.line(e, language)}
 
 
-def _live_stats(so_far, info):
+def _live_stats(so_far, info, focus_metric=None):
     state = stats.match_state(so_far, info)
-    return {k: state[k] for k in ("clock", "score", "expected_goals", "territory", "territory_last_10_min",
-                                  "passing", "control_last_10_min", "rhythm_last_10_min")}
+    result = {k: state[k] for k in ("clock", "score", "expected_goals", "territory", "territory_last_10_min",
+                                    "passing", "control_last_10_min", "rhythm_last_10_min")}
+    if focus_metric:
+        result["focus_metric"] = focus_metric_facts(so_far, info, focus_metric)
+    return result
 
 
 async def _live(request, match_id, viewer, speed, start_after, countdown=0):
     match = _load(match_id)
     events, info = match["events"], match["match"]
     global live_matches
-    saved = _saved_cards(match_id, viewer)
+    saved = None if viewer["focus_metric"] else _saved_cards(match_id, viewer)
     source = "saved"
     if saved is None and live_matches >= MAX_LIVE_MATCHES:
         saved, source = _nearest_saved(match_id, viewer), "saved (live agents busy)"
@@ -174,7 +178,9 @@ async def _live(request, match_id, viewer, speed, start_after, countdown=0):
     async def write(moment):
         from matchmind.agents import write_card
         mode = "recap" if moment["kind"] == "recap" else viewer["role"]
-        card = await write_card(agents, match_id, viewer_facts(moment, events, info, viewer["player"]), mode, viewer)
+        card = await write_card(agents, match_id,
+                                viewer_facts(moment, events, info, viewer["player"], viewer["focus_metric"]),
+                                mode, viewer)
         await out.put(_sse("card", who(card)))
 
     tasks = []
@@ -189,7 +195,7 @@ async def _live(request, match_id, viewer, speed, start_after, countdown=0):
                 yield _sse("pace", {"pace": pace})
             yield _sse("event", _pitch_event(e, viewer["language"]))
             if len(seen) % STATS_EVERY == 0 or e["type"] in ("shot", "own_goal"):
-                yield _sse("stats", _live_stats(stats.events_until(events, e["id"]), info))
+                yield _sse("stats", _live_stats(stats.events_until(events, e["id"]), info, viewer["focus_metric"]))
             if saved is not None:
                 for card in cards_at.get(e["id"], []):
                     yield _sse("card", who(card))

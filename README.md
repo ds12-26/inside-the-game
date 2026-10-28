@@ -23,7 +23,7 @@ trust it: a model that invents a "second goal" or a "final" is worse than no com
 | Viewer | Experience |
 |---|---|
 | **Fan** | Paced like TV highlights: quiet play fast-forwards, each big moment slows down to near real time and pauses so you can read it. TV-broadcast screen: animated pitch with player name tags, scoreboard bug, live commentary in their language (English by default; Spanish, French, Portuguese or Hindi) leaning towards their club, their favourite player followed all match, "who's on top" in plain words. xG is never shown as a decimal: a 0.26 chance is "scored about 1 time in 4". |
-| **Analyst** | Live numbers (xG, field tilt, possession, pass accuracy and difficulty, progressive passes, control vs chaos, tempo) and "why it matters" cards with 2-4 pieces of evidence each. |
+| **Analyst** | Live numbers (xG, field tilt, possession, pass accuracy and difficulty, progressive passes, control vs chaos, tempo) and "why it matters" cards with 2-4 pieces of evidence each. Analysts can pin one metric (such as tackles, saves or xG) and see its live team totals alongside the analysis. |
 | **Broadcaster** | Lower-third graphics and talking points for every moment, plus **director cues**: *cut to replay*, *stats package*, *player camera*, *show graphic* or *stay live*, with priority and the reason. All cards are timed, machine-readable JSON a graphics system can render. |
 | **Everyone, at full time** | Their own recap, plus an **ensemble report**: the Narrator, Analyst and Broadcaster write in parallel and a Coordinator merges the three perspectives. |
 
@@ -53,7 +53,7 @@ Fact-Checker rejected and why, and the rewrite.
 ### Agents
 | Agent | Job |
 |---|---|
-| **Welcome** | Turns quick picks and/or a sentence ("I support Blue Sharks, love Moss, en español") into a checked profile and routes the viewer. Unknown clubs and players are rejected against the real squads and asked again. |
+| **Welcome** | Turns quick picks and/or a sentence ("I support Blue Sharks, love Moss, en español") into a checked profile and routes the viewer. Unknown clubs and players are rejected against the real squads and asked again; analysts can choose a metric to track throughout the match. |
 | **Narrator** (fan) | Live TV-style commentary, partisan but fair, plain words, no decimals, at most 35 words. |
 | **Analyst** | Headline, why the moment matters (control vs chaos, territory, pressure, finishing vs xG, rhythm), and evidence copied from the stats. |
 | **Studio Producer** (broadcaster) | Graphics text, a talking point and a director cue. |

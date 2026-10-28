@@ -124,19 +124,57 @@ def scores_so_far(events, match_info):
     return scores
 
 
-def viewer_facts(moment, events, match_info, player):
-    """The moment's facts plus how the viewer's favourite player is doing at that point."""
-    if not player or (moment["kind"] not in FAVOURITE_KINDS and moment["player"] != player
-                      and not (moment["kind"] in ("goal", "own_goal") and _keeper_of_team_conceding(moment, match_info, player))):
+def focus_metric_facts(events, match_info, metric):
+    """The selected metric's current value for each team, computed from events so far."""
+    teams = {side: match_info[side]["name"] for side in ("home", "away")}
+    if metric == "pass_accuracy":
+        values = {team: stats.pass_quality(events, team=team)["accuracy_pct"] for team in teams.values()}
+        label = "pass_accuracy_pct"
+    elif metric in ("xg", "shots"):
+        expected = stats.expected_goals(events, match_info)["teams"]
+        key = "xg" if metric == "xg" else "shots"
+        values = {team: expected[team][key] for team in teams.values()}
+        label = key
+    elif metric == "possession":
+        values = {team: stats.territory(events, match_info)[team]["possession_pct"] for team in teams.values()}
+        label = "possession_pct"
+    else:
+        event_filter = {"tackles": ("tackle", "won"), "interceptions": ("interception", "won"),
+                        "dribbles": ("dribble", None), "saves": ("save", "saved")}.get(metric)
+        if event_filter is None:
+            return None
+        event_type, outcome = event_filter
+        values = {team: sum(e["type"] == event_type and e["team"] == team
+                            and (outcome is None or e["outcome"] == outcome) for e in events)
+                  for team in teams.values()}
+        label = metric
+    return {"metric": metric, "label": label, "values": values}
+
+
+def viewer_facts(moment, events, match_info, player, focus_metric=None):
+    """The moment's facts plus the viewer's favourite player and selected metric."""
+    follows_player = player and (
+        moment["kind"] in FAVOURITE_KINDS or moment["player"] == player
+        or (moment["kind"] in ("goal", "own_goal")
+            and _keeper_of_team_conceding(moment, match_info, player))
+    )
+    if not follows_player and not focus_metric:
         return moment
     so_far = stats.events_until(events, moment["event_id"])
-    story = stats.player_story(so_far, match_info, player)
-    favourite = {k: story[k] for k in ("player", "team", "position", "notes", "touches", "goals", "assists",
-                                        "shots", "saves", "tackles_won", "interceptions", "cards")}
-    favourite["pass_accuracy_pct"] = story["passing"]["accuracy_pct"]
-    favourite["recent_moments"] = story["moments"][-3:]
-    favourite["involved_in_this_moment"] = moment["player"] == player
-    return {**moment, "facts": {**moment["facts"], "favourite_player": favourite}}
+    facts = moment["facts"]
+    if follows_player:
+        story = stats.player_story(so_far, match_info, player)
+        favourite = {k: story[k] for k in ("player", "team", "position", "notes", "touches", "goals", "assists",
+                                            "shots", "saves", "tackles_won", "interceptions", "cards")}
+        favourite["pass_accuracy_pct"] = story["passing"]["accuracy_pct"]
+        favourite["recent_moments"] = story["moments"][-3:]
+        favourite["involved_in_this_moment"] = moment["player"] == player
+        facts = {**facts, "favourite_player": favourite}
+    if focus_metric:
+        focused = focus_metric_facts(so_far, match_info, focus_metric)
+        if focused:
+            facts = {**facts, "focus_metric": focused}
+    return {**moment, "facts": facts}
 
 
 def recap_moment(events, match_info):

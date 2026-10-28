@@ -53,6 +53,21 @@ def test_cards_never_arrive_before_their_moment():
             assert data["event_id"] <= seen
 
 
+def test_live_stats_include_the_selected_metric_and_default_stays_unchanged():
+    from matchmind.render.api import _live_stats
+
+    match = load_match("match_002")
+    events, info = match["events"][:100], match["match"]
+    focused = _live_stats(events, info, "tackles")
+    assert focused["focus_metric"]["metric"] == "tackles"
+    assert focused["focus_metric"]["values"] == {
+        info[side]["name"]: sum(e["type"] == "tackle" and e["outcome"] == "won"
+                                and e["team"] == info[side]["name"] for e in events)
+        for side in ("home", "away")
+    }
+    assert "focus_metric" not in _live_stats(events, info)
+
+
 def test_busy_fallback_never_switches_language(monkeypatch):
     from matchmind.render import api
     monkeypatch.setattr(api, "live_matches", api.MAX_LIVE_MATCHES)      # pretend live agents are busy

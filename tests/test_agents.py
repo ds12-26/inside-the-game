@@ -8,6 +8,7 @@ from types import SimpleNamespace
 
 from matchmind.agents import current_event, no_spoilers, write_card
 from matchmind.ingest.data import load_match
+from matchmind.interpret import stats
 from matchmind.interpret.moments import plain_xg, recap_moment, scout, viewer_facts
 
 MATCH = load_match("match_002")
@@ -59,6 +60,14 @@ def test_favourite_player_facts_only_when_relevant():
     assert "favourite_player" not in viewer_facts(card, EVENTS, INFO, "Fox")["facts"]
     assert viewer_facts(FOX_GOAL, EVENTS, INFO, "Fox")["facts"]["favourite_player"]["goals"] == 1
     assert "favourite_player" in viewer_facts(FOX_GOAL, EVENTS, INFO, "Moss")["facts"]   # the keeper who conceded
+
+
+def test_selected_metric_is_attached_to_the_moment_as_past_only_facts():
+    moment = viewer_facts(FOX_GOAL, EVENTS, INFO, "Fox", "shots")
+    values = moment["facts"]["focus_metric"]["values"]
+    expected = stats.expected_goals(EVENTS[:FOX_GOAL["event_id"]], INFO)["teams"]
+    assert values == {team: data["shots"] for team, data in expected.items()}
+    assert moment["facts"]["favourite_player"]["player"] == "Fox"
 
 
 def test_fans_get_chances_in_plain_words():

@@ -108,6 +108,8 @@ INSTRUCTIONS = {
 - headline: what happened and what it means, at most 8 words.
 - why_it_matters: two sentences on the pattern behind it: control vs chaos, territory and
   field tilt, pressure, finishing against xG, or game rhythm. Explain cause, not just events.
+- If the viewer selected a focus_metric, prioritize that metric when it is relevant to this moment.
+  Use the focus_metric facts or match_data tools; do not infer a value that is not available.
 - evidence: 2-4 statistics with units, copied exactly from the FACTS or tools. Decimals are fine.
 """ + SHARED_RULES,
     "broadcaster": """You are the producer's assistant on a live football broadcast. For each moment you write
@@ -218,4 +220,5 @@ def viewer_text(viewer):
         "supports": viewer.get("club") or "neutral",
         "favourite_player": viewer.get("player"),
         "follow_favourite_player_closely": bool(viewer.get("player_focus")),
+        "focus_metric": viewer.get("focus_metric"),
     }
